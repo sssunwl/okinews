@@ -1,53 +1,118 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import os
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
-import re
-import os
-from dotenv import load_dotenv
 
-# --- 載入環境變數 ---
-load_dotenv()
-TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
-CHAT_ID = os.getenv("CHAT_ID")
+# 取得 GitHub Actions Secret
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
+CHAT_ID = os.environ.get("CHAT_ID")
 
-# --- Telegram 發送函式 ---
+if not TELEGRAM_TOKEN or not CHAT_ID:
+    raise ValueError("請在 GitHub Actions 設定 TELEGRAM_TOKEN 和 CHAT_ID Secret")
+
+# Telegram 發送訊息
 def send_telegram(message):
-    if not TELEGRAM_TOKEN or not CHAT_ID:
-        print("Telegram TOKEN 或 CHAT_ID 未設定")
-        return
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
-    for chunk in [message[i:i+3500] for i in range(0, len(message), 3500)]:
-        res = requests.post(url, data={"chat_id": CHAT_ID, "text": chunk, "parse_mode": "Markdown"})
-        if not res.ok:
-            print("Telegram 發送失敗：", res.status_code, res.text)
+    payload = {
+        "chat_id": CHAT_ID,
+        "text": message,
+        "parse_mode": "Markdown"
+    }
+    r = requests.post(url, data=payload)
+    r.raise_for_status()
+    return r.json()
 
-# --- 日期解析 ---
-def parse_date_naha(text):
-    try:
-        start, end = text.strip().split(" - ")
-        start_dt = datetime.strptime(start, "%Y/%m/%d")
-        end_dt = datetime.strptime(end, "%Y/%m/%d")
-        return start_dt, end_dt
-    except:
-        return None, None
+# 判斷活動是否在今天之後
+def is_future_event(start_date, end_date=None):
+    today = datetime.today()
+    if end_date is None:
+        return start_date >= today
+    return end_date >= today
 
-def parse_date_oki(text):
-    match = re.findall(r"(\d{4})年(\d{1,2})月(\d{1,2})日", text)
-    if len(match) >= 2:
-        start = datetime(int(match[0][0]), int(match[0][1]), int(match[0][2]))
-        end = datetime(int(match[1][0]), int(match[1][1]), int(match[1][2]))
-        return start, end
-    return None, None
+# Visit Okinawa Japan
+def fetch_visitokinawa():
+    url = "https://visitokinawajapan.com/zh-hant/discover/events/"
+    res = requests.get(url)
+    soup = BeautifulSoup(res.text, "html.parser")
+    events = []
+    # 只抓 dt 標籤作活動名稱，日期網站沒提供
+    for dt in soup.select("dt"):
+        name = dt.get_text(strip=True)
+        if name:
+            events.append((None, name))
+    return url, events
 
-today = datetime.now()
+# Okinawa Story
+def fetch_okinawastory():
+    url = "https://www.okinawastory.jp/event/"
+    res = requests.get(url)
+    soup = BeautifulSoup(res.text, "html.parser")
+    events = []
+    for p in soup.select("p.os-c-list-cmn__lead.os-c-list-cmn-tile-event-lead"):
+        text = p.get_text(strip=True)
+        if text:
+            # 將日子解析成 start_date, end_date
+            try:
+                date_range = text.replace("年","-").replace("月","-").replace("日","").replace("(","").replace(")","").split("〜")
+                start_date = datetime.strptime(date_range[0].strip(), "%Y-%m-%d")
+                end_date = datetime.strptime(date_range[1].strip(), "%Y-%m-%d") if len(date_range) > 1 else start_date
+                if is_future_event(start_date, end_date):
+                    name_tag = p.find_previous_sibling("a")
+                    name = name_tag.get_text(strip=True) if name_tag else "未知活動"
+                    events.append((f"{start_date.strftime('%Y/%m/%d')} - {end_date.strftime('%Y/%m/%d')}", name))
+            except:
+                continue
+    return url, events
 
-# --- Okinawa Story ---
-story_url = "https://www.okinawastory.jp/event/"
-story_res = requests.get(story_url)
-story_soup = BeautifulSoup(story_res.text, "html.parser")
-story_events = []
-for tile in story_soup.select("li.os-c-list-cmn-tile-event"):
-    title_tag = tile.select_one("a.os-c-list-cmn__title-link")
-    date_tag = tile.select_one("p.os-c-list-cmn__lead.os-c-list-cmn-tile-event-lead")
-    if title_tag and date_tag:
-        name = title_tag.get_text(strip=T
+# Naha Navi
+def fetch_nahanavi():
+    url = "https://www.naha-navi.or.jp/event/"
+    res = requests.get(url)
+    soup = BeautifulSoup(res.text, "html.parser")
+    events = []
+    for entry in soup.select("div.entry-card__contents"):
+        name_tag = entry.select_one("h2.entry-card__title")
+        date_tag = entry.select_one("span.icon-schedule span")
+        if name_tag and date_tag:
+            try:
+                dates = date_tag.get_text(strip=True).split(" - ")
+                start_date = datetime.strptime(dates[0], "%Y/%m/%d")
+                end_date = datetime.strptime(dates[1], "%Y/%m/%d") if len(dates) > 1 else start_date
+                if is_future_event(start_date, end_date):
+                    name = name_tag.get_text(strip=True)
+                    events.append((f"{start_date.strftime('%Y/%m/%d')} - {end_date.strftime('%Y/%m/%d')}", name))
+            except:
+                continue
+    return url, events
+
+# 組合訊息
+def main():
+    messages = []
+
+    for fetcher, title in [(fetch_visitokinawa, "Visit Okinawa Japan"),
+                           (fetch_okinawastory, "Okinawa Story"),
+                           (fetch_nahanavi, "Naha Navi")]:
+        site_url, events = fetcher()
+        if events:
+            msg = f"來自 {title} 的最新活動 ({site_url})：\n"
+            for date, name in events:
+                if date:
+                    msg += f"{date}\n{name}\n"
+                else:
+                    msg += f"{name}\n"
+            messages.append(msg)
+        else:
+            messages.append(f"{title}：今天沒有新的活動 ({site_url})\n")
+
+    full_msg = "\n".join(messages)
+    if full_msg:
+        send_telegram(full_msg)
+        print("Telegram 發送成功")
+    else:
+        print("沒有新活動可發送")
+
+if __name__ == "__main__":
+    main()
