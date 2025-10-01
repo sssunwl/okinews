@@ -6,7 +6,7 @@ TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
 CHAT_ID = os.environ.get("CHAT_ID")
 
 websites = [
-    {"name": "Visit Okinawa", "url": "https://www.visitokinawa.jp/events", "selector": "h2.event-title"},
+    {"name": "Visit Okinawa", "url": "https://visitokinawajapan.com/", "selector": "h2.event-title"},
     {"name": "Okinawa Story", "url": "https://www.okinawastory.jp/", "selector": "div.event-title a"},
     {"name": "Naha Navi", "url": "https://www.naha-navi.or.jp/?utm_source=chatgpt.com", "selector": "div.news-list a"},
 ]
