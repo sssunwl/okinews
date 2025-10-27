@@ -1,166 +1,90 @@
-import os
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
+import os
 
-# Telegram 設定
+# Telegram 設定（從環境變數讀）
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
 
-# 網站資訊
-SITES = [
-    {
-        "name": "Visit Okinawa Japan",
-        "url": "https://visitokinawajapan.com/zh-hant/discover/events/"
-    },
-    {
-        "name": "Okinawa Story",
-        "url": "https://www.okinawastory.jp/event/"
-    },
-    {
-        "name": "Naha Navi",
-        "url": "https://www.naha-navi.or.jp/event/"
-    }
-]
+# 目標網站
+URL = "https://visitokinawajapan.com/zh-hant/discover/events/"
+HEADERS = {"User-Agent": "Mozilla/5.0"}
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
-}
-
-def fetch_visitokinawa():
-    URL = "https://visitokinawajapan.com/zh-hant/discover/events/"
-    try:
-        resp = requests.get(URL, headers=HEADERS, timeout=10)
-        resp.raise_for_status()
-    except requests.RequestException as e:
-        print(f"抓取 Visit Okinawa Japan 發生錯誤：{e}")
-        return []
-
-    soup = BeautifulSoup(resp.text, "html.parser")
+def get_visit_okinawa_events():
+    print("開始抓取 Visit Okinawa Japan 最新即時活動...")
     events = []
 
-    # 取活動列表
-    for card in soup.select(".card__body"):
-        name_tag = card.select_one(".card__title")
-        date_tag = card.select_one(".card__meta-date")
-        if name_tag:
-            name = name_tag.get_text(strip=True)
-            date = date_tag.get_text(strip=True) if date_tag else ""
-            
-            # 過濾過期
-            if date:
-                try:
-                    start_date = datetime.strptime(date.split("-")[0].strip(), "%Y/%m/%d")
-                    if start_date < datetime.now():
-                        continue
-                except:
-                    pass
-
-            events.append({"name": name, "date": date})
-    return events
-
-def fetch_okinawastory():
-    URL = "https://www.okinawastory.jp/event/"
     try:
-        resp = requests.get(URL, headers=HEADERS, timeout=10)
-        resp.raise_for_status()
-    except requests.RequestException as e:
-        print(f"抓取 Okinawa Story 發生錯誤：{e}")
-        return []
+        res = requests.get(URL, headers=HEADERS, timeout=15)
+        res.raise_for_status()
+    except Exception as e:
+        print("⚠️ 無法連線至網站：", e)
+        return events
 
-    soup = BeautifulSoup(resp.text, "html.parser")
-    events = []
+    soup = BeautifulSoup(res.text, "html.parser")
 
-    for card in soup.select(".os-c-list-cmn-tile-event"):
-        name_tag = card.select_one(".os-c-list-cmn__title")
-        date_tag = card.select_one(".os-c-list-cmn__lead")
-        if name_tag:
-            name = name_tag.get_text(strip=True)
-            date = date_tag.get_text(strip=True) if date_tag else ""
-            
-            # 過濾過期
-            if date:
-                try:
-                    start_date = datetime.strptime(date.split("〜")[0].strip().replace("年","/").replace("月","/").replace("日",""), "%Y/%m/%d")
-                    if start_date < datetime.now():
-                        continue
-                except:
-                    pass
+    # 找到 "最新即時活動" 區塊
+    section = soup.find("h2", string="最新即時活動")
+    if not section:
+        print("⚠️ 找不到『最新即時活動』區塊。")
+        return events
 
-            events.append({"name": name, "date": date})
+    container = section.find_next("div")  # 下一個 div 內包含活動卡片
+    if not container:
+        print("⚠️ 找不到活動列表。")
+        return events
+
+    # 找出每個活動區塊
+    for item in container.find_all("a", href=True):
+        name_tag = item.find("dt")
+        date_tag = item.find("div", class_="e-content")
+
+        if not name_tag:
+            continue
+
+        name = name_tag.get_text(strip=True)
+        date = date_tag.get_text(strip=True) if date_tag else ""
+        link = item["href"]
+        if not link.startswith("http"):
+            link = "https://visitokinawajapan.com" + link
+
+        # 過濾已結束的活動
+        if date and "-" in date:
+            try:
+                end_date = date.split("-")[-1].strip()
+                end_dt = datetime.strptime(end_date, "%Y/%m/%d")
+                if end_dt < datetime.now():
+                    continue
+            except Exception:
+                pass
+
+        events.append({"name": name, "date": date, "url": link})
+
+    print(f"✅ 共找到 {len(events)} 個未來活動")
     return events
 
-def fetch_nahanavi():
-    URL = "https://www.naha-navi.or.jp/event/"
-    try:
-        resp = requests.get(URL, headers=HEADERS, timeout=10)
-        resp.raise_for_status()
-    except requests.RequestException as e:
-        print(f"抓取 Naha Navi 發生錯誤：{e}")
-        return []
-
-    soup = BeautifulSoup(resp.text, "html.parser")
-    events = []
-
-    for card in soup.select(".entry-card__contents"):
-        name_tag = card.select_one(".entry-card__title")
-        date_tag = card.select_one(".icon-schedule span")
-        if name_tag:
-            name = name_tag.get_text(strip=True)
-            date = date_tag.get_text(strip=True) if date_tag else ""
-
-            # 過濾過期
-            if date:
-                try:
-                    start_date = datetime.strptime(date.split("-")[0].strip(), "%Y/%m/%d")
-                    if start_date < datetime.now():
-                        continue
-                except:
-                    pass
-
-            events.append({"name": name, "date": date})
-    return events
-
-def send_telegram(message):
+def send_to_telegram(events):
     if not TELEGRAM_TOKEN or not CHAT_ID:
-        print("Telegram Token 或 Chat ID 未設定")
+        print("⚠️ 未設定 TELEGRAM_TOKEN 或 CHAT_ID，略過發送。")
         return
-    url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
+
+    if not events:
+        message = "本週沒有新的活動。"
+    else:
+        message = "📅 沖繩最新即時活動\n\n"
+        for e in events:
+            message += f"{e['date']}\n[{e['name']}]({e['url']})\n"
+
+    send_url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
+    data = {"chat_id": CHAT_ID, "text": message, "parse_mode": "Markdown"}
     try:
-        resp = requests.post(url, data={"chat_id": CHAT_ID, "text": message, "parse_mode": "Markdown"})
+        resp = requests.post(send_url, data=data)
         resp.raise_for_status()
-    except requests.RequestException as e:
-        print(f"Telegram 發送失敗：{e}")
-
-def main():
-    site_fetch_map = {
-        "Visit Okinawa Japan": fetch_visitokinawa,
-        "Okinawa Story": fetch_okinawastory,
-        "Naha Navi": fetch_nahanavi
-    }
-
-    messages = []
-    for site in SITES:
-        name = site["name"]
-        url = site["url"]
-        print(f"開始抓取 {name} → {url}")
-        events = site_fetch_map[name]()
-        print(f"{name}：抓到 {len(events)} 個活動")
-
-        if events:
-            msg = f"來自 {name} 的最新活動 ({url})：\n"
-            for event in events:
-                if event["date"]:
-                    msg += f"- {event['date']}\n  {event['name']}\n"
-                else:
-                    msg += f"- {event['name']}\n"
-            messages.append(msg)
-        else:
-            messages.append(f"{name}：今天沒有新的活動 ({url})")
-
-    # 合併訊息
-    final_message = "\n\n".join(messages)
-    send_telegram(final_message)
+        print("Telegram 發送成功 ✅")
+    except Exception as e:
+        print("Telegram 發送失敗：", e)
 
 if __name__ == "__main__":
-    main()
+    events = get_visit_okinawa_events()
+    send_to_telegram(events)
