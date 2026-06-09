@@ -152,11 +152,14 @@ def get_okinawastory_events():
             date_tag = container.find("p", class_="os-c-list-cmn__lead") if container else None
             date_text = date_tag.get_text(strip=True) if date_tag else ""
 
-            # 過濾已結束活動
+            # 過濾已結束活動 + 只保留 90 天內開始的活動
             if date_text and "〜" in date_text:
-                end_part = date_text.split("〜")[-1].strip()
-                end_dt = parse_date_jp(end_part)
+                parts = date_text.split("〜")
+                start_dt = parse_date_jp(parts[0].strip())
+                end_dt = parse_date_jp(parts[-1].strip())
                 if end_dt and end_dt < now:
+                    continue
+                if start_dt and start_dt > now + timedelta(days=90):
                     continue
 
             events.append({
