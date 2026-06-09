@@ -1,23 +1,39 @@
 name: Okinawa Events Crawler
+
 on:
   schedule:
-    - cron: '0 23 * * *'  # 每天 UTC 23:00 = JST 08:00
-  workflow_dispatch: # 可以手動觸發
+    - cron: "0 23 * * *"  # 每天 08:00 JST
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
-  crawler:
+  crawl:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
         with:
-          python-version: '3.10'
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
       - name: Install dependencies
         run: pip install requests beautifulsoup4 lxml
+
       - name: Run crawler
-        run: python okinawa_events_crawler.py
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           CHAT_ID: ${{ secrets.CHAT_ID }}
+        run: python okinawa_events_crawler.py
 
+      - name: Commit seen_events.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add seen_events.json
+          git diff --staged --quiet || git commit -m "chore: update seen events [skip ci]"
+          git push
