@@ -73,14 +73,19 @@ def get_visitokinawa_events():
     soup = BeautifulSoup(res.text, "lxml")
 
     for a in soup.find_all("a", href=True):
+        link = a["href"]
+        # 只保留真實 URL，跳過 javascript: 和其他非 http 連結
+        if link.startswith("javascript:") or not link.startswith(("http", "/")):
+            continue
+
         dt_tag = a.find("dt")
         date_div = a.find("div", class_="e-content")
         if not dt_tag or not date_div:
             continue
 
-        name = dt_tag.get_text(strip=True).strip(")")
+        name = dt_tag.get_text(strip=True)
         date_text = date_div.get_text(strip=True)
-        link = a["href"]
+
         if link.startswith("/"):
             link = "https://visitokinawajapan.com" + link
 
@@ -109,14 +114,14 @@ def get_visitokinawa_events():
 
 
 def get_okinawastory_events():
-    """okinawastory.jp — 日文來源，爬全部 8 頁（~216 筆活動）"""
+    """okinawastory.jp — 日文來源，爬全部頁數（~216 筆活動）"""
     base = "https://www.okinawastory.jp"
     events = []
     now = datetime.now()
     seen_hrefs = set()
 
-    for page in range(1, 9):
-        url = f"{base}/event/?month=all&page={page}"
+    for page in range(1, 20):
+        url = f"{base}/event?month=all&page={page}" if page > 1 else f"{base}/event?month=all"
         try:
             res = requests.get(url, headers=HEADERS, timeout=15)
             res.raise_for_status()
@@ -125,22 +130,26 @@ def get_okinawastory_events():
             break
 
         soup = BeautifulSoup(res.text, "lxml")
-        found_on_page = 0
 
-        for a in soup.find_all("a", href=True):
-            href = a["href"]
+        title_links = soup.find_all("a", class_="os-c-list-cmn__title-link")
+        if not title_links:
+            break  # 已到末頁
+
+        for a in title_links:
+            href = a.get("href", "")
             if not re.match(r'^/event/\d+', href):
                 continue
             if href in seen_hrefs:
                 continue
             seen_hrefs.add(href)
 
-            name_tag = a.find("h3", class_="event-title")
-            name_ja = name_tag.get_text(strip=True) if name_tag else ""
+            name_ja = a.get_text(strip=True)
             if not name_ja:
                 continue
 
-            date_tag = a.find("p", class_="event-date")
+            # 日期在父層 div 的兄弟 p 標籤
+            container = a.find_parent("div", class_="os-c-list-cmn__inner")
+            date_tag = container.find("p", class_="os-c-list-cmn__lead") if container else None
             date_text = date_tag.get_text(strip=True) if date_tag else ""
 
             # 過濾已結束活動
@@ -157,11 +166,6 @@ def get_okinawastory_events():
                 "url": base + href,
                 "source": "okinawastory"
             })
-            found_on_page += 1
-
-        # 若該頁沒有活動，代表已到末頁
-        if found_on_page == 0:
-            break
 
     print(f"✅ okinawastory: {len(events)} 筆（翻譯前）")
     return events
@@ -235,6 +239,7 @@ def _post_telegram(api_url, text):
 
 def main():
     is_friday = datetime.now().weekday() == 4
+    is_manual = os.getenv("MANUAL_TRIGGER") == "1"
 
     all_events = merge([
         get_visitokinawa_events(),
@@ -258,14 +263,16 @@ def main():
     else:
         print("今日無新活動，略過通知。")
 
-    # 週五：完整活動總覽
-    if is_friday:
-        msg = f"📅 沖繩活動週報（共 {len(all_events)} 個）\n\n"
+    # 週五 或 手動觸發：完整活動總覽
+    if is_friday or is_manual:
+        msg = f"📅 沖繩活動總覽（共 {len(all_events)} 個）\n\n"
         for e in all_events:
             msg += format_event(e)
         send_telegram(msg)
 
-    save_seen(seen | {e["url"] for e in all_events})
+    # 清除 seen 中的 javascript: 殘留，只保留正常 URL
+    clean_seen = {u for u in seen if u.startswith("http")}
+    save_seen(clean_seen | {e["url"] for e in all_events})
 
 
 if __name__ == "__main__":

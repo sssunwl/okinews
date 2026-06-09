@@ -11,6 +11,8 @@ permissions:
 jobs:
   crawl:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - uses: actions/checkout@v4
@@ -28,6 +30,7 @@ jobs:
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           CHAT_ID: ${{ secrets.CHAT_ID }}
+          MANUAL_TRIGGER: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
         run: python okinawa_events_crawler.py
 
       - name: Commit seen_events.json
