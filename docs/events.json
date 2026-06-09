@@ -1,11 +1,353 @@
 [
   {
+    "name": "今天是 🎨 國際博物館日",
+    "name_zh": "🎨 國際博物館日",
+    "date_start": "2025-05-18",
+    "date_end": "2025-05-18",
+    "url": "",
+    "source": "today_is",
+    "category": "文化",
+    "stars": 3
+  },
+  {
+    "name": "今天是 🌳 森林日",
+    "name_zh": "🌳 森林日",
+    "date_start": "2025-05-20",
+    "date_end": "2025-05-20",
+    "url": "",
+    "source": "today_is",
+    "category": "自然",
+    "stars": 4
+  },
+  {
+    "name": "今天是 🌾 小滿",
+    "name_zh": "🌾 小滿",
+    "date_start": "2025-05-21",
+    "date_end": "2025-05-21",
+    "url": "",
+    "source": "today_is",
+    "category": "節氣",
+    "stars": 5
+  },
+  {
+    "name": "今天是 🪸 國際生物多樣性日",
+    "name_zh": "🪸 國際生物多樣性日",
+    "date_start": "2025-05-22",
+    "date_end": "2025-05-22",
+    "url": "",
+    "source": "today_is",
+    "category": "海洋",
+    "stars": 5
+  },
+  {
+    "name": "今天是 ☕ 主婦休息日",
+    "name_zh": "☕ 主婦休息日",
+    "date_start": "2025-05-25",
+    "date_end": "2025-05-25",
+    "url": "",
+    "source": "today_is",
+    "category": "生活",
+    "stars": 2
+  },
+  {
+    "name": "今天是 ♨️ 風呂日",
+    "name_zh": "♨️ 風呂日",
+    "date_start": "2025-05-26",
+    "date_end": "2025-05-26",
+    "url": "",
+    "source": "today_is",
+    "category": "文化",
+    "stars": 2
+  },
+  {
+    "name": "今天是 😊 幸福日",
+    "name_zh": "😊 幸福日",
+    "date_start": "2025-05-29",
+    "date_end": "2025-05-29",
+    "url": "",
+    "source": "today_is",
+    "category": "生活",
+    "stars": 3
+  },
+  {
+    "name": "今天是 ♻️ 零垃圾日",
+    "name_zh": "♻️ 零垃圾日",
+    "date_start": "2025-05-30",
+    "date_end": "2025-05-30",
+    "url": "",
+    "source": "today_is",
+    "category": "永續",
+    "stars": 5
+  },
+  {
+    "name": "今天是 🍶 泡盛之日",
+    "name_zh": "🍶 泡盛之日",
+    "date_start": "2025-06-01",
+    "date_end": "2025-06-01",
+    "url": "",
+    "source": "today_is",
+    "category": "沖繩",
+    "stars": 5
+  },
+  {
+    "name": "今天是 🦷 蟲牙預防日",
+    "name_zh": "🦷 蟲牙預防日",
+    "date_start": "2025-06-04",
+    "date_end": "2025-06-04",
+    "url": "",
+    "source": "today_is",
+    "category": "文化",
+    "stars": 2
+  },
+  {
+    "name": "今天是 🌊 世界海洋日",
+    "name_zh": "🌊 世界海洋日",
+    "date_start": "2025-06-08",
+    "date_end": "2025-06-08",
+    "url": "",
+    "source": "today_is",
+    "category": "海洋",
+    "stars": 5
+  },
+  {
+    "name": "今天是 🎮 國際玩樂日",
+    "name_zh": "🎮 國際玩樂日",
+    "date_start": "2025-06-11",
+    "date_end": "2025-06-11",
+    "url": "",
+    "source": "today_is",
+    "category": "生活",
+    "stars": 2
+  },
+  {
+    "name": "今天是 🕊️ 沖繩戰跡紀念",
+    "name_zh": "🕊️ 沖繩戰跡紀念",
+    "date_start": "2025-06-15",
+    "date_end": "2025-06-15",
+    "url": "",
+    "source": "today_is",
+    "category": "歷史",
+    "stars": 4
+  },
+  {
+    "name": "今天是 ☀️ 夏至",
+    "name_zh": "☀️ 夏至",
+    "date_start": "2025-06-21",
+    "date_end": "2025-06-21",
+    "url": "",
+    "source": "today_is",
+    "category": "節氣",
+    "stars": 5
+  },
+  {
+    "name": "今天是 🕊️ 慰靈之日",
+    "name_zh": "🕊️ 慰靈之日",
+    "date_start": "2025-06-23",
+    "date_end": "2025-06-23",
+    "url": "",
+    "source": "today_is",
+    "category": "沖繩",
+    "stars": 5
+  },
+  {
+    "name": "今天是 ♨️ 露天風呂日",
+    "name_zh": "♨️ 露天風呂日",
+    "date_start": "2025-06-26",
+    "date_end": "2025-06-26",
+    "url": "",
+    "source": "today_is",
+    "category": "文化",
+    "stars": 2
+  },
+  {
+    "name": "今天是 ⛩️ 夏越之祓",
+    "name_zh": "⛩️ 夏越之祓",
+    "date_start": "2025-06-30",
+    "date_end": "2025-06-30",
+    "url": "",
+    "source": "today_is",
+    "category": "傳統",
+    "stars": 5
+  },
+  {
+    "name": "今天是 🏖️ 海開季",
+    "name_zh": "🏖️ 海開季",
+    "date_start": "2025-07-01",
+    "date_end": "2025-07-01",
+    "url": "",
+    "source": "today_is",
+    "category": "夏日",
+    "stars": 5
+  },
+  {
+    "name": "今天是 🎋 七夕",
+    "name_zh": "🎋 七夕",
+    "date_start": "2025-07-07",
+    "date_end": "2025-07-07",
+    "url": "",
+    "source": "today_is",
+    "category": "傳統",
+    "stars": 5
+  },
+  {
+    "name": "今天是 🫘 納豆日",
+    "name_zh": "🫘 納豆日",
+    "date_start": "2025-07-10",
+    "date_end": "2025-07-10",
+    "url": "",
+    "source": "today_is",
+    "category": "文化",
+    "stars": 2
+  },
+  {
+    "name": "今天是 🌊 海之日",
+    "name_zh": "🌊 海之日",
+    "date_start": "2025-07-15",
+    "date_end": "2025-07-15",
+    "url": "",
+    "source": "today_is",
+    "category": "傳統",
+    "stars": 5
+  },
+  {
+    "name": "今天是 🍔 漢堡日",
+    "name_zh": "🍔 漢堡日",
+    "date_start": "2025-07-20",
+    "date_end": "2025-07-20",
+    "url": "",
+    "source": "today_is",
+    "category": "文化",
+    "stars": 3
+  },
+  {
+    "name": "今天是 ☀️ 大暑",
+    "name_zh": "☀️ 大暑",
+    "date_start": "2025-07-22",
+    "date_end": "2025-07-22",
+    "url": "",
+    "source": "today_is",
+    "category": "節氣",
+    "stars": 4
+  },
+  {
+    "name": "今天是 🍧 刨冰日",
+    "name_zh": "🍧 刨冰日",
+    "date_start": "2025-07-25",
+    "date_end": "2025-07-25",
+    "url": "",
+    "source": "today_is",
+    "category": "夏日",
+    "stars": 5
+  },
+  {
+    "name": "今天是 🎨 國際博物館日",
+    "name_zh": "🎨 國際博物館日",
+    "date_start": "2026-05-18",
+    "date_end": "2026-05-18",
+    "url": "",
+    "source": "today_is",
+    "category": "文化",
+    "stars": 3
+  },
+  {
+    "name": "今天是 🌳 森林日",
+    "name_zh": "🌳 森林日",
+    "date_start": "2026-05-20",
+    "date_end": "2026-05-20",
+    "url": "",
+    "source": "today_is",
+    "category": "自然",
+    "stars": 4
+  },
+  {
+    "name": "今天是 🌾 小滿",
+    "name_zh": "🌾 小滿",
+    "date_start": "2026-05-21",
+    "date_end": "2026-05-21",
+    "url": "",
+    "source": "today_is",
+    "category": "節氣",
+    "stars": 5
+  },
+  {
+    "name": "今天是 🪸 國際生物多樣性日",
+    "name_zh": "🪸 國際生物多樣性日",
+    "date_start": "2026-05-22",
+    "date_end": "2026-05-22",
+    "url": "",
+    "source": "today_is",
+    "category": "海洋",
+    "stars": 5
+  },
+  {
+    "name": "今天是 ☕ 主婦休息日",
+    "name_zh": "☕ 主婦休息日",
+    "date_start": "2026-05-25",
+    "date_end": "2026-05-25",
+    "url": "",
+    "source": "today_is",
+    "category": "生活",
+    "stars": 2
+  },
+  {
+    "name": "今天是 ♨️ 風呂日",
+    "name_zh": "♨️ 風呂日",
+    "date_start": "2026-05-26",
+    "date_end": "2026-05-26",
+    "url": "",
+    "source": "today_is",
+    "category": "文化",
+    "stars": 2
+  },
+  {
+    "name": "今天是 😊 幸福日",
+    "name_zh": "😊 幸福日",
+    "date_start": "2026-05-29",
+    "date_end": "2026-05-29",
+    "url": "",
+    "source": "today_is",
+    "category": "生活",
+    "stars": 3
+  },
+  {
+    "name": "今天是 ♻️ 零垃圾日",
+    "name_zh": "♻️ 零垃圾日",
+    "date_start": "2026-05-30",
+    "date_end": "2026-05-30",
+    "url": "",
+    "source": "today_is",
+    "category": "永續",
+    "stars": 5
+  },
+  {
+    "name": "今天是 🍶 泡盛之日",
+    "name_zh": "🍶 泡盛之日",
+    "date_start": "2026-06-01",
+    "date_end": "2026-06-01",
+    "url": "",
+    "source": "today_is",
+    "category": "沖繩",
+    "stars": 5
+  },
+  {
+    "name": "今天是 🦷 蟲牙預防日",
+    "name_zh": "🦷 蟲牙預防日",
+    "date_start": "2026-06-04",
+    "date_end": "2026-06-04",
+    "url": "",
+    "source": "today_is",
+    "category": "文化",
+    "stars": 2
+  },
+  {
     "name": "『弥勒世果報─かなさ─』",
     "name_zh": "「彌勒亞的財富──迦那那──」",
     "date_start": "2026-06-04",
     "date_end": "2026-06-28",
     "url": "https://www.okinawastory.jp/event/600022255",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "Tasar World Championships 2026 in Kunigami",
@@ -13,7 +355,9 @@
     "date_start": "2026-06-04",
     "date_end": "2026-06-13",
     "url": "https://www.okinawastory.jp/event/600021570",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "アニマル・アート Vol.6",
@@ -21,7 +365,9 @@
     "date_start": "2026-06-05",
     "date_end": "2026-06-15",
     "url": "https://www.okinawastory.jp/event/600022372",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "suikara祭り　-おかげさまで４周年-",
@@ -29,7 +375,9 @@
     "date_start": "2026-06-05",
     "date_end": "2026-06-15",
     "url": "https://www.okinawastory.jp/event/600022162",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "Kasaneawase Pop up Store",
@@ -37,7 +385,9 @@
     "date_start": "2026-06-06",
     "date_end": "2026-06-23",
     "url": "https://www.okinawastory.jp/event/600022343",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "【恩納村博物館】令和8年度慰霊の日特別展「うんなぬ戦争（イクサ）」開催のお知らせ",
@@ -45,7 +395,9 @@
     "date_start": "2026-06-06",
     "date_end": "2026-07-12",
     "url": "https://www.okinawastory.jp/event/600022250",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "龍球魔女マルシェ",
@@ -53,7 +405,9 @@
     "date_start": "2026-06-06",
     "date_end": "2026-08-11",
     "url": "https://www.okinawastory.jp/event/600022160",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "企画展 | 外来種いつでもどこでも移動ミュージアム",
@@ -61,7 +415,19 @@
     "date_start": "2026-06-07",
     "date_end": "2026-06-28",
     "url": "https://www.okinawastory.jp/event/600022299",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
+  },
+  {
+    "name": "今天是 🌊 世界海洋日",
+    "name_zh": "🌊 世界海洋日",
+    "date_start": "2026-06-08",
+    "date_end": "2026-06-08",
+    "url": "",
+    "source": "today_is",
+    "category": "海洋",
+    "stars": 5
   },
   {
     "name": "サボー・シルヴィア絵画展「空へ飛び立て」開催＠道の駅かでな",
@@ -69,7 +435,9 @@
     "date_start": "2026-06-08",
     "date_end": "2026-06-14",
     "url": "https://www.okinawastory.jp/event/600022318",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "令和８年度平和企画展 『八重瀬の戦争と復興 －収容所から帰村そして復興へ－』開催のお知らせ",
@@ -77,7 +445,9 @@
     "date_start": "2026-06-09",
     "date_end": "2026-07-12",
     "url": "https://www.okinawastory.jp/event/600022354",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "第7回末吉社18",
@@ -85,7 +455,9 @@
     "date_start": "2026-06-09",
     "date_end": "2026-06-14",
     "url": "https://www.okinawastory.jp/event/600022115",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "令和8年度 平和資料展開催のお知らせ",
@@ -93,7 +465,9 @@
     "date_start": "2026-06-10",
     "date_end": "2026-06-30",
     "url": "https://www.okinawastory.jp/event/600022352",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "キュリオのもののけ展",
@@ -101,7 +475,19 @@
     "date_start": "2026-06-10",
     "date_end": "2026-06-16",
     "url": "https://www.okinawastory.jp/event/600021883",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
+  },
+  {
+    "name": "今天是 🎮 國際玩樂日",
+    "name_zh": "🎮 國際玩樂日",
+    "date_start": "2026-06-11",
+    "date_end": "2026-06-11",
+    "url": "",
+    "source": "today_is",
+    "category": "生活",
+    "stars": 2
   },
   {
     "name": "儀間比呂志・中山良彦『戦がやってきた－沖縄戦版画集—』版画展",
@@ -109,7 +495,9 @@
     "date_start": "2026-06-11",
     "date_end": "2026-06-28",
     "url": "https://www.okinawastory.jp/event/600022336",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "6/11（木）～8/30（日）　田島征彦　おきなわ絵本原画展開催！",
@@ -117,7 +505,9 @@
     "date_start": "2026-06-11",
     "date_end": "2026-08-30",
     "url": "https://www.okinawastory.jp/event/600022285",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "楽園朝涼み～蓮・睡蓮と台湾朝食～2026",
@@ -125,7 +515,19 @@
     "date_start": "2026-06-13",
     "date_end": "2026-09-27",
     "url": "https://www.okinawastory.jp/event/600022215",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
+  },
+  {
+    "name": "今天是 🕊️ 沖繩戰跡紀念",
+    "name_zh": "🕊️ 沖繩戰跡紀念",
+    "date_start": "2026-06-15",
+    "date_end": "2026-06-15",
+    "url": "",
+    "source": "today_is",
+    "category": "歷史",
+    "stars": 4
   },
   {
     "name": "令和8年度与那原町民平和の日・慰霊の日企画展「戦世（いくさぬゆー ）と 今世（なまぬゆー） －与那原の戦争と平和について考える－」を開催します",
@@ -133,7 +535,9 @@
     "date_start": "2026-06-15",
     "date_end": "2026-06-28",
     "url": "https://www.okinawastory.jp/event/600022249",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "糸滿龍舟大賽",
@@ -141,7 +545,9 @@
     "date_start": "2026-06-18",
     "date_end": "2026-06-18",
     "url": "https://visitokinawajapan.com/zh-hant/discover/events/itoman-hare/",
-    "source": "visitokinawa"
+    "source": "visitokinawa",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "初夏の早朝にだけ現れる水面の幻想的な光景「絶景サガリバナクルーズ」",
@@ -149,7 +555,9 @@
     "date_start": "2026-06-18",
     "date_end": "2026-07-25",
     "url": "https://www.okinawastory.jp/event/600022334",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "UMESHISO工房展 「おしゃべりないきものたち」",
@@ -157,7 +565,9 @@
     "date_start": "2026-06-18",
     "date_end": "2026-06-29",
     "url": "https://www.okinawastory.jp/event/600022321",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "『野ばらの月～a line～』",
@@ -165,7 +575,9 @@
     "date_start": "2026-06-19",
     "date_end": "2026-06-23",
     "url": "https://www.okinawastory.jp/event/600022371",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "令和8年度 平和企画展「写真と証言で見る西原の戦争」開催のお知らせ",
@@ -173,7 +585,9 @@
     "date_start": "2026-06-19",
     "date_end": "2026-09-06",
     "url": "https://www.okinawastory.jp/event/600022344",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "シーウッドホテル恒例の 「スペシャル・フレンチ・ディナー」を6月に開催！ 2人のシェフの友情が奏でる特別なディナー！",
@@ -181,7 +595,9 @@
     "date_start": "2026-06-19",
     "date_end": "2026-06-20",
     "url": "https://www.okinawastory.jp/event/600022123",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "1日1組限定　西表島の星空を仰ぐ「ティンガーラディナークルーズ」",
@@ -189,7 +605,9 @@
     "date_start": "2026-06-20",
     "date_end": "2026-09-26",
     "url": "https://www.okinawastory.jp/event/600022335",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "6月20日・21日「グスーヨー！32軍壕へメンソーレ2026版",
@@ -197,7 +615,9 @@
     "date_start": "2026-06-20",
     "date_end": "2026-06-21",
     "url": "https://www.okinawastory.jp/event/600022322",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "世界キリンの日イベント",
@@ -205,7 +625,9 @@
     "date_start": "2026-06-20",
     "date_end": "2026-06-21",
     "url": "https://www.okinawastory.jp/event/600022320",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "第27回サバニ帆漕レース・第49回座間味ヨットレース 開催について",
@@ -213,7 +635,19 @@
     "date_start": "2026-06-20",
     "date_end": "2026-06-27",
     "url": "https://www.okinawastory.jp/event/600022068",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
+  },
+  {
+    "name": "今天是 ☀️ 夏至",
+    "name_zh": "☀️ 夏至",
+    "date_start": "2026-06-21",
+    "date_end": "2026-06-21",
+    "url": "",
+    "source": "today_is",
+    "category": "節氣",
+    "stars": 5
   },
   {
     "name": "Eisa之夜",
@@ -221,7 +655,19 @@
     "date_start": "2026-06-21",
     "date_end": "2026-08-09",
     "url": "https://visitokinawajapan.com/zh-hant/discover/events/eisa-night/",
-    "source": "visitokinawa"
+    "source": "visitokinawa",
+    "category": "",
+    "stars": 0
+  },
+  {
+    "name": "今天是 🕊️ 慰靈之日",
+    "name_zh": "🕊️ 慰靈之日",
+    "date_start": "2026-06-23",
+    "date_end": "2026-06-23",
+    "url": "",
+    "source": "today_is",
+    "category": "沖繩",
+    "stars": 5
   },
   {
     "name": "世界遺産の国イタリア「太陽がいっぱい」",
@@ -229,7 +675,19 @@
     "date_start": "2026-06-23",
     "date_end": "2026-06-28",
     "url": "https://www.okinawastory.jp/event/600022114",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
+  },
+  {
+    "name": "今天是 ♨️ 露天風呂日",
+    "name_zh": "♨️ 露天風呂日",
+    "date_start": "2026-06-26",
+    "date_end": "2026-06-26",
+    "url": "",
+    "source": "today_is",
+    "category": "文化",
+    "stars": 2
   },
   {
     "name": "草野球沖縄一決定戦 第31回 オリオンスーパーベースボール2026",
@@ -237,7 +695,9 @@
     "date_start": "2026-06-27",
     "date_end": "2026-11-01",
     "url": "https://www.okinawastory.jp/event/600022185",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "DRUM TAO 2026 新作舞台「THE HUMAN」",
@@ -245,7 +705,9 @@
     "date_start": "2026-06-27",
     "date_end": "2026-06-28",
     "url": "https://www.okinawastory.jp/event/600022124",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "第3回 琉球ガラス市",
@@ -253,7 +715,19 @@
     "date_start": "2026-06-27",
     "date_end": "2026-06-28",
     "url": "https://www.okinawastory.jp/event/600021890",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
+  },
+  {
+    "name": "今天是 ⛩️ 夏越之祓",
+    "name_zh": "⛩️ 夏越之祓",
+    "date_start": "2026-06-30",
+    "date_end": "2026-06-30",
+    "url": "",
+    "source": "today_is",
+    "category": "傳統",
+    "stars": 5
   },
   {
     "name": "O2Y -Okinawa to Yanbaru- 2026",
@@ -261,7 +735,19 @@
     "date_start": "2026-06-30",
     "date_end": "2026-07-05",
     "url": "https://www.okinawastory.jp/event/600022210",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
+  },
+  {
+    "name": "今天是 🏖️ 海開季",
+    "name_zh": "🏖️ 海開季",
+    "date_start": "2026-07-01",
+    "date_end": "2026-07-01",
+    "url": "",
+    "source": "today_is",
+    "category": "夏日",
+    "stars": 5
   },
   {
     "name": "夏休みパネル展「在りし日の首里城パネル展」開催！【7/１～8/15】",
@@ -269,7 +755,9 @@
     "date_start": "2026-07-01",
     "date_end": "2026-08-15",
     "url": "https://www.okinawastory.jp/event/600022366",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "湧田焼　沖縄・静謐の美～神田淡平コレクション～",
@@ -277,7 +765,9 @@
     "date_start": "2026-07-03",
     "date_end": "2026-07-26",
     "url": "https://www.okinawastory.jp/event/600022353",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "【歓迎～めんそーれ～】Ｊリーグ「ジュビロ磐田」夏季トレーニングキャンプ期間決定！！",
@@ -285,7 +775,9 @@
     "date_start": "2026-07-03",
     "date_end": "2026-07-14",
     "url": "https://www.okinawastory.jp/event/600022294",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "第37回日本最西端与那国島国際カジキ釣り大会　競技参加者の募集について",
@@ -293,7 +785,9 @@
     "date_start": "2026-07-03",
     "date_end": "2026-07-05",
     "url": "https://www.okinawastory.jp/event/600022181",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "久米島ハワイアンフェスティバル 2026",
@@ -301,7 +795,9 @@
     "date_start": "2026-07-03",
     "date_end": "2026-07-04",
     "url": "https://www.okinawastory.jp/event/600021862",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "海洋博公園夏日祭典",
@@ -309,7 +805,9 @@
     "date_start": "2026-07-04",
     "date_end": "2026-07-04",
     "url": "https://visitokinawajapan.com/zh-hant/discover/events/ocean-expo-park-summer-festival/",
-    "source": "visitokinawa"
+    "source": "visitokinawa",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "うつろう庭園",
@@ -317,7 +815,19 @@
     "date_start": "2026-07-04",
     "date_end": "2026-07-12",
     "url": "https://www.okinawastory.jp/event/600022238",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
+  },
+  {
+    "name": "今天是 🎋 七夕",
+    "name_zh": "🎋 七夕",
+    "date_start": "2026-07-07",
+    "date_end": "2026-07-07",
+    "url": "",
+    "source": "today_is",
+    "category": "傳統",
+    "stars": 5
   },
   {
     "name": "2026/27シーズン 夏季トレーニングキャンプ実施について　浦和レッズ",
@@ -325,7 +835,9 @@
     "date_start": "2026-07-08",
     "date_end": "2026-07-26",
     "url": "https://www.okinawastory.jp/event/600022362",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "【2026年 夏の打上げ花火のご案内】25日間開催 お部屋のバルコニーから花火を愉しむ沖縄リゾートステイを",
@@ -333,7 +845,9 @@
     "date_start": "2026-07-09",
     "date_end": "2026-08-29",
     "url": "https://www.okinawastory.jp/event/600022208",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "夏の夜空と水盤を彩る、全25回の打上げ花火開催",
@@ -341,7 +855,19 @@
     "date_start": "2026-07-09",
     "date_end": "2026-08-29",
     "url": "https://www.okinawastory.jp/event/600022207",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
+  },
+  {
+    "name": "今天是 🫘 納豆日",
+    "name_zh": "🫘 納豆日",
+    "date_start": "2026-07-10",
+    "date_end": "2026-07-10",
+    "url": "",
+    "source": "today_is",
+    "category": "文化",
+    "stars": 2
   },
   {
     "name": "ビオスの丘 サガリバナ×星あそび｜一夜花と七夕ものがたりに出会う、特別な二夜",
@@ -349,7 +875,9 @@
     "date_start": "2026-07-11",
     "date_end": "2026-07-12",
     "url": "https://www.okinawastory.jp/event/600022049",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "2026/27シーズン キャンプ会場およびスケジュールの決定について　湘南ベルマーレ",
@@ -357,7 +885,19 @@
     "date_start": "2026-07-13",
     "date_end": "2026-07-26",
     "url": "https://www.okinawastory.jp/event/600022184",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
+  },
+  {
+    "name": "今天是 🌊 海之日",
+    "name_zh": "🌊 海之日",
+    "date_start": "2026-07-15",
+    "date_end": "2026-07-15",
+    "url": "",
+    "source": "today_is",
+    "category": "傳統",
+    "stars": 5
   },
   {
     "name": "夏季二次キャンプ(沖縄県うるま市)実施のお知らせ　藤枝MYFC",
@@ -365,7 +905,9 @@
     "date_start": "2026-07-17",
     "date_end": "2026-07-26",
     "url": "https://www.okinawastory.jp/event/600022363",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "冨田伊織 新世界『透明標本』展",
@@ -373,7 +915,9 @@
     "date_start": "2026-07-17",
     "date_end": "2026-09-06",
     "url": "https://www.okinawastory.jp/event/600022340",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "沖縄ビールとお祭り屋台で沖縄・夏の夜を愉しむ『OKINAWA SUMMER NIGHT FEST』を開催 ～５日間限定のガーデン沖縄三線ライブ・世界各地のビールを味わうWEEKイベントも～",
@@ -381,7 +925,9 @@
     "date_start": "2026-07-17",
     "date_end": "2026-08-31",
     "url": "https://www.okinawastory.jp/event/600022236",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "南島洞穴探險",
@@ -389,7 +935,9 @@
     "date_start": "2026-07-18",
     "date_end": "2026-09-30",
     "url": "https://visitokinawajapan.com/zh-hant/discover/events/cave-exploration-southern-okinawa/",
-    "source": "visitokinawa"
+    "source": "visitokinawa",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "OKINAWA FREEDIVING CUP 2026 沖縄フリーダイビングカップ2026　沖縄大会(恩納村真栄田岬)",
@@ -397,7 +945,9 @@
     "date_start": "2026-07-18",
     "date_end": "2026-07-19",
     "url": "https://www.okinawastory.jp/event/600022295",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "佐藤健寿展 奇界／沖縄",
@@ -405,7 +955,9 @@
     "date_start": "2026-07-18",
     "date_end": "2026-09-23",
     "url": "https://www.okinawastory.jp/event/600022221",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "第38回いへやまつり",
@@ -413,7 +965,9 @@
     "date_start": "2026-07-18",
     "date_end": "2026-07-19",
     "url": "https://www.okinawastory.jp/event/600022073",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "第19回豊見城ハーリー大会",
@@ -421,7 +975,9 @@
     "date_start": "2026-07-19",
     "date_end": "2026-07-20",
     "url": "https://www.okinawastory.jp/event/600022195",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "MasterPeace 2026",
@@ -429,7 +985,19 @@
     "date_start": "2026-07-19",
     "date_end": "2026-07-20",
     "url": "https://www.okinawastory.jp/event/600021853",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
+  },
+  {
+    "name": "今天是 🍔 漢堡日",
+    "name_zh": "🍔 漢堡日",
+    "date_start": "2026-07-20",
+    "date_end": "2026-07-20",
+    "url": "",
+    "source": "today_is",
+    "category": "文化",
+    "stars": 3
   },
   {
     "name": "サマーイベント2026【夏のゆいまつり】7/20～8/29毎日開催",
@@ -437,7 +1005,29 @@
     "date_start": "2026-07-20",
     "date_end": "2026-08-29",
     "url": "https://www.okinawastory.jp/event/600022234",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
+  },
+  {
+    "name": "今天是 ☀️ 大暑",
+    "name_zh": "☀️ 大暑",
+    "date_start": "2026-07-22",
+    "date_end": "2026-07-22",
+    "url": "",
+    "source": "today_is",
+    "category": "節氣",
+    "stars": 4
+  },
+  {
+    "name": "今天是 🍧 刨冰日",
+    "name_zh": "🍧 刨冰日",
+    "date_start": "2026-07-25",
+    "date_end": "2026-07-25",
+    "url": "",
+    "source": "today_is",
+    "category": "夏日",
+    "stars": 5
   },
   {
     "name": "～劇場版～ KIMUTAKA × RYUJIN mix. 開催のお知らせ",
@@ -445,7 +1035,9 @@
     "date_start": "2026-07-25",
     "date_end": "2026-07-26",
     "url": "https://www.okinawastory.jp/event/600022211",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "第3回沖縄空手世界大会",
@@ -453,7 +1045,9 @@
     "date_start": "2026-07-30",
     "date_end": "2026-08-02",
     "url": "https://www.okinawastory.jp/event/600021645",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "8.1（土）「INSPIRATION OKINAWA 2026」",
@@ -461,7 +1055,9 @@
     "date_start": "2026-08-01",
     "date_end": "2026-08-02",
     "url": "https://www.okinawastory.jp/event/600022368",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "與那原大拔河祭",
@@ -469,7 +1065,9 @@
     "date_start": "2026-08-15",
     "date_end": "2026-08-16",
     "url": "https://visitokinawajapan.com/zh-hant/discover/events/yonabaru-tug-of-war-festival/",
-    "source": "visitokinawa"
+    "source": "visitokinawa",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "【開催日程決定！】第４４回（2026）与那原大綱曳まつりの日程が決まりました",
@@ -477,7 +1075,9 @@
     "date_start": "2026-08-15",
     "date_end": "2026-08-16",
     "url": "https://www.okinawastory.jp/event/600021889",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "沖縄県豊見城市でのプレシーズンマッチ開催のお知らせ　東京グレートベアーズ",
@@ -485,7 +1085,9 @@
     "date_start": "2026-08-22",
     "date_end": "2026-08-23",
     "url": "https://www.okinawastory.jp/event/600022361",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "サマー・ファミリー・シアター2026～なはーとでなつやすみ～",
@@ -493,7 +1095,9 @@
     "date_start": "2026-08-22",
     "date_end": "2026-08-23",
     "url": "https://www.okinawastory.jp/event/600021902",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "「第22回 ジュニアゴルフ・カヌチャカップ」開催【8/29(土)・30(日)】",
@@ -501,7 +1105,9 @@
     "date_start": "2026-08-29",
     "date_end": "2026-08-30",
     "url": "https://www.okinawastory.jp/event/600022351",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "「オリオンビアフェスト2026」の開催について",
@@ -509,7 +1115,9 @@
     "date_start": "2026-09-05",
     "date_end": "2026-09-06",
     "url": "https://www.okinawastory.jp/event/600022355",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
   },
   {
     "name": "今年の久米島まつりは９月５日(土)６日(日)に開催！",
@@ -517,6 +1125,248 @@
     "date_start": "2026-09-05",
     "date_end": "2026-09-06",
     "url": "https://www.okinawastory.jp/event/600022209",
-    "source": "okinawastory"
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0
+  },
+  {
+    "name": "今天是 🎨 國際博物館日",
+    "name_zh": "🎨 國際博物館日",
+    "date_start": "2027-05-18",
+    "date_end": "2027-05-18",
+    "url": "",
+    "source": "today_is",
+    "category": "文化",
+    "stars": 3
+  },
+  {
+    "name": "今天是 🌳 森林日",
+    "name_zh": "🌳 森林日",
+    "date_start": "2027-05-20",
+    "date_end": "2027-05-20",
+    "url": "",
+    "source": "today_is",
+    "category": "自然",
+    "stars": 4
+  },
+  {
+    "name": "今天是 🌾 小滿",
+    "name_zh": "🌾 小滿",
+    "date_start": "2027-05-21",
+    "date_end": "2027-05-21",
+    "url": "",
+    "source": "today_is",
+    "category": "節氣",
+    "stars": 5
+  },
+  {
+    "name": "今天是 🪸 國際生物多樣性日",
+    "name_zh": "🪸 國際生物多樣性日",
+    "date_start": "2027-05-22",
+    "date_end": "2027-05-22",
+    "url": "",
+    "source": "today_is",
+    "category": "海洋",
+    "stars": 5
+  },
+  {
+    "name": "今天是 ☕ 主婦休息日",
+    "name_zh": "☕ 主婦休息日",
+    "date_start": "2027-05-25",
+    "date_end": "2027-05-25",
+    "url": "",
+    "source": "today_is",
+    "category": "生活",
+    "stars": 2
+  },
+  {
+    "name": "今天是 ♨️ 風呂日",
+    "name_zh": "♨️ 風呂日",
+    "date_start": "2027-05-26",
+    "date_end": "2027-05-26",
+    "url": "",
+    "source": "today_is",
+    "category": "文化",
+    "stars": 2
+  },
+  {
+    "name": "今天是 😊 幸福日",
+    "name_zh": "😊 幸福日",
+    "date_start": "2027-05-29",
+    "date_end": "2027-05-29",
+    "url": "",
+    "source": "today_is",
+    "category": "生活",
+    "stars": 3
+  },
+  {
+    "name": "今天是 ♻️ 零垃圾日",
+    "name_zh": "♻️ 零垃圾日",
+    "date_start": "2027-05-30",
+    "date_end": "2027-05-30",
+    "url": "",
+    "source": "today_is",
+    "category": "永續",
+    "stars": 5
+  },
+  {
+    "name": "今天是 🍶 泡盛之日",
+    "name_zh": "🍶 泡盛之日",
+    "date_start": "2027-06-01",
+    "date_end": "2027-06-01",
+    "url": "",
+    "source": "today_is",
+    "category": "沖繩",
+    "stars": 5
+  },
+  {
+    "name": "今天是 🦷 蟲牙預防日",
+    "name_zh": "🦷 蟲牙預防日",
+    "date_start": "2027-06-04",
+    "date_end": "2027-06-04",
+    "url": "",
+    "source": "today_is",
+    "category": "文化",
+    "stars": 2
+  },
+  {
+    "name": "今天是 🌊 世界海洋日",
+    "name_zh": "🌊 世界海洋日",
+    "date_start": "2027-06-08",
+    "date_end": "2027-06-08",
+    "url": "",
+    "source": "today_is",
+    "category": "海洋",
+    "stars": 5
+  },
+  {
+    "name": "今天是 🎮 國際玩樂日",
+    "name_zh": "🎮 國際玩樂日",
+    "date_start": "2027-06-11",
+    "date_end": "2027-06-11",
+    "url": "",
+    "source": "today_is",
+    "category": "生活",
+    "stars": 2
+  },
+  {
+    "name": "今天是 🕊️ 沖繩戰跡紀念",
+    "name_zh": "🕊️ 沖繩戰跡紀念",
+    "date_start": "2027-06-15",
+    "date_end": "2027-06-15",
+    "url": "",
+    "source": "today_is",
+    "category": "歷史",
+    "stars": 4
+  },
+  {
+    "name": "今天是 ☀️ 夏至",
+    "name_zh": "☀️ 夏至",
+    "date_start": "2027-06-21",
+    "date_end": "2027-06-21",
+    "url": "",
+    "source": "today_is",
+    "category": "節氣",
+    "stars": 5
+  },
+  {
+    "name": "今天是 🕊️ 慰靈之日",
+    "name_zh": "🕊️ 慰靈之日",
+    "date_start": "2027-06-23",
+    "date_end": "2027-06-23",
+    "url": "",
+    "source": "today_is",
+    "category": "沖繩",
+    "stars": 5
+  },
+  {
+    "name": "今天是 ♨️ 露天風呂日",
+    "name_zh": "♨️ 露天風呂日",
+    "date_start": "2027-06-26",
+    "date_end": "2027-06-26",
+    "url": "",
+    "source": "today_is",
+    "category": "文化",
+    "stars": 2
+  },
+  {
+    "name": "今天是 ⛩️ 夏越之祓",
+    "name_zh": "⛩️ 夏越之祓",
+    "date_start": "2027-06-30",
+    "date_end": "2027-06-30",
+    "url": "",
+    "source": "today_is",
+    "category": "傳統",
+    "stars": 5
+  },
+  {
+    "name": "今天是 🏖️ 海開季",
+    "name_zh": "🏖️ 海開季",
+    "date_start": "2027-07-01",
+    "date_end": "2027-07-01",
+    "url": "",
+    "source": "today_is",
+    "category": "夏日",
+    "stars": 5
+  },
+  {
+    "name": "今天是 🎋 七夕",
+    "name_zh": "🎋 七夕",
+    "date_start": "2027-07-07",
+    "date_end": "2027-07-07",
+    "url": "",
+    "source": "today_is",
+    "category": "傳統",
+    "stars": 5
+  },
+  {
+    "name": "今天是 🫘 納豆日",
+    "name_zh": "🫘 納豆日",
+    "date_start": "2027-07-10",
+    "date_end": "2027-07-10",
+    "url": "",
+    "source": "today_is",
+    "category": "文化",
+    "stars": 2
+  },
+  {
+    "name": "今天是 🌊 海之日",
+    "name_zh": "🌊 海之日",
+    "date_start": "2027-07-15",
+    "date_end": "2027-07-15",
+    "url": "",
+    "source": "today_is",
+    "category": "傳統",
+    "stars": 5
+  },
+  {
+    "name": "今天是 🍔 漢堡日",
+    "name_zh": "🍔 漢堡日",
+    "date_start": "2027-07-20",
+    "date_end": "2027-07-20",
+    "url": "",
+    "source": "today_is",
+    "category": "文化",
+    "stars": 3
+  },
+  {
+    "name": "今天是 ☀️ 大暑",
+    "name_zh": "☀️ 大暑",
+    "date_start": "2027-07-22",
+    "date_end": "2027-07-22",
+    "url": "",
+    "source": "today_is",
+    "category": "節氣",
+    "stars": 4
+  },
+  {
+    "name": "今天是 🍧 刨冰日",
+    "name_zh": "🍧 刨冰日",
+    "date_start": "2027-07-25",
+    "date_end": "2027-07-25",
+    "url": "",
+    "source": "today_is",
+    "category": "夏日",
+    "stars": 5
   }
 ]

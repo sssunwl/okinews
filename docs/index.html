@@ -3,191 +3,248 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>沖繩活動年曆 · Okinawa</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231A7BAA'/><circle cx='16' cy='18' r='10' fill='%23F4A261'/><path d='M7 13 Q9 5 16 7 Q23 5 25 13 Q20 10 16 11 Q12 10 7 13Z' fill='%23C75A2C'/><circle cx='12.5' cy='16' r='2.2' fill='%23162838'/><circle cx='19.5' cy='16' r='2.2' fill='%23162838'/><circle cx='13.2' cy='15.3' r='.7' fill='white'/><circle cx='20.2' cy='15.3' r='.7' fill='white'/><ellipse cx='16' cy='19.5' rx='2.2' ry='1.6' fill='%23C75A2C'/><path d='M12 22.5 Q16 26 20 22.5' stroke='%238B3A0A' stroke-width='1.2' fill='none' stroke-linecap='round'/><rect x='14.6' y='22.5' width='1.2' height='2.8' rx='.5' fill='white'/><rect x='16.4' y='22.5' width='1.2' height='2.8' rx='.5' fill='white'/><path d='M6 13 L9 18 Q7 13 8 8Z' fill='%23C75A2C'/><path d='M26 13 L23 18 Q25 13 24 8Z' fill='%23C75A2C'/></svg>">
+<title>沖繩年曆 · Okinawa</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦁</text></svg>">
 <style>
 :root{
-  --bg:#EDF6FB;
-  --surface:rgba(255,255,255,0.78);
+  --bg:#EBF5FA;
+  --surface:rgba(255,255,255,0.76);
   --surface-h:rgba(255,255,255,0.96);
-  --ocean:#15699A;
+  --ocean:#14689A;
   --coral:#E0583A;
   --teal:#1A9E8F;
-  --sand:#F5EEE0;
-  --text:#162838;
-  --muted:#5E8FA8;
-  --border:rgba(21,105,154,0.13);
-  --border-h:rgba(224,88,58,0.35);
+  --gold:#C8980A;
+  --gold-bg:rgba(200,152,10,0.08);
+  --gold-border:rgba(200,152,10,0.32);
+  --text:#152636;
+  --muted:#5C8FA8;
+  --border:rgba(20,104,154,0.13);
   --blur:blur(14px);
   --r:12px;
   --hh:56px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic","Noto Sans TC",sans-serif;
-     background:var(--bg);color:var(--text);font-size:14px;line-height:1.6;min-height:100vh;overflow-x:hidden}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic","Noto Sans TC",sans-serif;
+  background:var(--bg);color:var(--text);font-size:14px;line-height:1.6;
+  min-height:100vh;overflow-x:hidden;
+}
 
 /* ── Background ── */
 body::before{
-  content:'';position:fixed;inset:0;
+  content:'';position:fixed;inset:0;z-index:-2;
   background:
-    radial-gradient(ellipse at 10% 20%,rgba(21,105,154,0.09) 0%,transparent 50%),
-    radial-gradient(ellipse at 90% 70%,rgba(26,158,143,0.07) 0%,transparent 45%),
-    radial-gradient(ellipse at 50% 100%,rgba(245,238,224,0.5) 0%,transparent 50%);
-  pointer-events:none;z-index:-1;
-  animation:bgShift 20s ease-in-out infinite alternate;
+    radial-gradient(ellipse at 8% 15%,rgba(20,104,154,0.11) 0%,transparent 50%),
+    radial-gradient(ellipse at 92% 75%,rgba(26,158,143,0.08) 0%,transparent 46%),
+    radial-gradient(ellipse at 50% 108%,rgba(245,238,224,0.55) 0%,transparent 45%);
+  animation:bgDrift 22s ease-in-out infinite alternate;
 }
-@keyframes bgShift{0%{opacity:.8}100%{opacity:1;transform:scale(1.02)}}
+/* dot-grid texture for depth */
+body::after{
+  content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background-image:
+    radial-gradient(circle,rgba(20,104,154,0.045) 1px,transparent 1px);
+  background-size:28px 28px;
+}
+@keyframes bgDrift{0%{opacity:.82}100%{opacity:1;transform:scale(1.018)}}
+
+/* ── Palm decorations ── */
+.palm-deco{
+  position:fixed;top:50px;pointer-events:none;z-index:85;
+  opacity:0.78;filter:drop-shadow(2px 5px 8px rgba(0,50,15,0.2));
+}
+.palm-l{left:-18px;transform-origin:12% 4%;animation:swayL 5.5s ease-in-out infinite}
+.palm-r{right:-18px;transform-origin:88% 4%;animation:swayR 7s ease-in-out infinite;animation-delay:-2.8s}
+@keyframes swayL{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(4deg)}}
+@keyframes swayR{0%,100%{transform:rotate(6deg)}50%{transform:rotate(-4deg)}}
+/* only show palms when there's enough margin space */
+@media(max-width:1080px){.palm-deco{display:none}}
 
 /* ── Header ── */
 header{
-  position:fixed;top:0;left:0;right:0;height:var(--hh);
-  background:rgba(237,246,251,0.88);
-  border-bottom:1px solid rgba(21,105,154,0.14);
+  position:fixed;top:0;left:0;right:0;height:var(--hh);z-index:100;
+  background:rgba(235,245,250,0.90);
+  border-bottom:1px solid rgba(20,104,154,0.15);
   backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 20px;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;padding:0 22px;
 }
-.logo{display:flex;flex-direction:column;line-height:1.2;cursor:pointer;user-select:none}
-.logo-sub{font-size:9px;color:var(--teal);letter-spacing:.22em;font-weight:500;text-transform:uppercase}
-.logo-main{font-size:17px;font-weight:800;color:var(--ocean);letter-spacing:.04em}
-.logo-icon{font-size:18px;margin-right:6px;vertical-align:middle}
+.logo{display:flex;flex-direction:column;line-height:1.2}
+.logo-sub{font-size:9px;color:var(--teal);letter-spacing:.22em;font-weight:600;text-transform:uppercase}
+.logo-main{font-size:17px;font-weight:800;color:var(--ocean);letter-spacing:.03em}
+.header-right{font-size:11px;color:var(--muted)}
 
 /* ── Sticky bar ── */
 .sticky-bar{
   position:sticky;top:var(--hh);z-index:90;
-  background:rgba(237,246,251,0.85);
+  background:rgba(235,245,250,0.90);
   border-bottom:1px solid var(--border);
   backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);
 }
-.year-nav{display:flex;gap:5px;padding:8px 16px 4px;overflow-x:auto;scrollbar-width:none}
+.year-nav{
+  display:flex;align-items:center;gap:5px;
+  padding:8px 16px 4px;overflow-x:auto;scrollbar-width:none;
+}
 .year-nav::-webkit-scrollbar{display:none}
+.nav-sep{flex:1;min-width:6px}
 .month-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:3px;padding:4px 14px 8px}
+@media(max-width:480px){.month-grid{grid-template-columns:repeat(4,1fr)}}
 
-.year-btn,.month-btn{
+.year-btn,.month-btn,.filter-btn{
   flex-shrink:0;background:rgba(255,255,255,0.5);
   border:1px solid var(--border);color:var(--muted);
-  padding:4px 13px;border-radius:20px;cursor:pointer;
-  font-size:12.5px;font-weight:600;transition:all .18s;white-space:nowrap;
+  cursor:pointer;font-weight:600;transition:all .17s;white-space:nowrap;
 }
-.year-btn{font-size:13px}
+.year-btn{padding:4px 13px;border-radius:20px;font-size:13px}
 .month-btn{padding:5px 4px;border-radius:8px;text-align:center;font-size:12px}
+.filter-btn{padding:4px 11px;border-radius:20px;font-size:11.5px;display:flex;align-items:center;gap:3px}
 .year-btn.active,.month-btn.active{background:var(--ocean);border-color:var(--ocean);color:#fff}
-.year-btn:not(.active):hover,.month-btn:not(.active):hover{
-  background:rgba(21,105,154,0.1);border-color:rgba(21,105,154,0.3);color:var(--ocean)
+.filter-btn.f-ti{background:var(--gold);border-color:var(--gold);color:#fff}
+.filter-btn.f-ac{background:var(--coral);border-color:var(--coral);color:#fff}
+.year-btn:not(.active):hover,.month-btn:not(.active):hover,
+.filter-btn:not(.f-ti):not(.f-ac):hover{
+  background:rgba(20,104,154,0.1);border-color:rgba(20,104,154,0.28);color:var(--ocean);
 }
+
+/* ── Wave divider ── */
+.wave-bar{
+  height:26px;overflow:hidden;pointer-events:none;position:relative;
+  background:transparent;
+}
+.wave-bar svg{position:absolute;bottom:0;width:200%;left:0;animation:waveScroll 10s linear infinite}
+@keyframes waveScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 /* ── Content ── */
-.content{max-width:780px;margin:0 auto;padding:20px 16px 80px}
+.content{max-width:780px;margin:0 auto;padding:16px 16px 100px}
 
 /* ── Calendar ── */
-.cal-header{
-  display:flex;align-items:center;justify-content:space-between;
-  margin-bottom:10px;
-}
+.cal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
 .cal-month-label{font-size:15px;font-weight:700;color:var(--ocean)}
-.cal-legend{display:flex;gap:10px;font-size:10px;color:var(--muted);align-items:center;flex-wrap:wrap}
+.cal-legend{display:flex;gap:9px;font-size:10px;color:var(--muted);align-items:center;flex-wrap:wrap}
 .cal-legend span{display:flex;align-items:center;gap:3px}
-.l-dot{width:6px;height:6px;border-radius:50%}
-.cal-weekdays{
-  display:grid;grid-template-columns:repeat(7,1fr);
-  margin-bottom:3px;
-}
-.cal-wd{
-  text-align:center;font-size:10px;font-weight:700;
-  color:var(--muted);padding:4px 0;
-}
+.l-dot{width:6px;height:6px;border-radius:50%;display:inline-block;flex-shrink:0}
+
+.cal-weekdays{display:grid;grid-template-columns:repeat(7,1fr);margin-bottom:3px}
+.cal-wd{text-align:center;font-size:10px;font-weight:700;color:var(--muted);padding:4px 0}
 .cal-wd:first-child{color:var(--coral)}
 .cal-wd:last-child{color:var(--ocean)}
+
 .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;margin-bottom:20px}
 .cal-day{
   aspect-ratio:1;display:flex;flex-direction:column;
   align-items:center;justify-content:center;
   border-radius:8px;cursor:pointer;font-size:12px;
-  position:relative;transition:background .15s;min-height:32px;padding:2px;
+  transition:background .14s;min-height:32px;
 }
-.cal-day:hover{background:rgba(21,105,154,0.1)}
-.cal-day.today{background:var(--ocean);color:#fff;font-weight:700;box-shadow:0 0 10px rgba(21,105,154,0.3)}
-.cal-day.other-month{color:rgba(22,40,56,0.18);cursor:default}
+.cal-day:hover{background:rgba(20,104,154,0.09)}
+.cal-day.today{background:var(--ocean);color:#fff;font-weight:700;box-shadow:0 0 10px rgba(20,104,154,0.28)}
+.cal-day.other-month{color:rgba(21,38,54,0.18);cursor:default}
 .cal-day.other-month:hover{background:none}
-.cal-day.selected{background:rgba(21,105,154,0.14);border:1.5px solid var(--ocean);color:var(--ocean);font-weight:700}
+.cal-day.selected{background:rgba(20,104,154,0.13);border:1.5px solid var(--ocean);color:var(--ocean);font-weight:700}
 .cal-day.today.selected{background:var(--ocean);border-color:var(--coral);color:#fff}
 .cal-dots{display:flex;gap:2px;justify-content:center;flex-wrap:wrap;margin-top:2px}
 .cal-dot{width:5px;height:5px;border-radius:50%}
 .dot-v{background:var(--coral)}
 .dot-j{background:var(--teal)}
+.dot-t{background:var(--gold)}
 
 /* ── Section label ── */
 .sec-label{
-  font-size:11px;font-weight:700;color:var(--ocean);
-  letter-spacing:.1em;text-transform:uppercase;
-  padding-bottom:6px;border-bottom:1.5px solid rgba(21,105,154,0.18);
-  margin-bottom:10px;
+  font-size:11px;font-weight:700;color:var(--ocean);letter-spacing:.1em;text-transform:uppercase;
+  padding-bottom:7px;border-bottom:1.5px solid rgba(20,104,154,0.18);
+  margin-bottom:10px;display:flex;align-items:center;gap:7px;flex-wrap:wrap;
 }
 .ev-count{
-  display:inline-block;background:var(--coral);color:#fff;
-  border-radius:10px;padding:1px 8px;font-size:10px;font-weight:700;
-  margin-left:8px;letter-spacing:0;text-transform:none;vertical-align:middle;
+  background:var(--coral);color:#fff;border-radius:10px;
+  padding:1px 8px;font-size:10px;font-weight:700;letter-spacing:0;text-transform:none;
+}
+.filter-hint{
+  font-size:10px;color:var(--muted);font-weight:400;letter-spacing:0;text-transform:none;
+  background:rgba(20,104,154,0.07);border-radius:8px;padding:2px 8px;
 }
 
-/* ── Event item (kujinews style adapted) ── */
+/* ── Event items ── */
 .ev-item{
   display:flex;align-items:flex-start;gap:10px;
-  padding:11px 14px;
-  background:var(--surface);
+  padding:11px 14px;background:var(--surface);
   border-radius:var(--r);border:1px solid var(--border);
   backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);
-  transition:all .22s;margin-bottom:7px;
-  animation:fadeUp .3s ease both;
+  transition:all .2s;margin-bottom:7px;animation:fadeUp .3s ease both;
 }
 .ev-item:hover{
-  background:var(--surface-h);border-color:var(--border-h);
-  box-shadow:0 4px 20px rgba(21,105,154,0.12),0 1px 4px rgba(0,0,0,0.06);
+  background:var(--surface-h);
+  box-shadow:0 4px 20px rgba(20,104,154,0.10),0 1px 4px rgba(0,0,0,0.05);
   transform:translateY(-1px);
 }
+.ev-item.today-is{border-left:3px solid var(--gold);background:rgba(255,252,235,0.80)}
+.ev-item.today-is:hover{box-shadow:0 4px 16px rgba(200,152,10,0.12)}
 .ev-item.vtype{border-left:3px solid var(--coral)}
 .ev-item.jtype{border-left:3px solid var(--teal)}
 
-.ev-date{
-  flex-shrink:0;width:54px;
-  font-size:11px;color:var(--ocean);font-weight:700;
-  text-align:center;line-height:1.4;padding-top:1px;
-}
+.ev-date{flex-shrink:0;width:54px;font-size:11px;color:var(--ocean);font-weight:700;text-align:center;line-height:1.45;padding-top:1px}
 .ev-body{flex:1;min-width:0}
-.ev-zh{
-  font-size:13.5px;font-weight:700;color:var(--text);
-  line-height:1.4;margin-bottom:3px;
-  display:block;text-decoration:none;
-}
-.ev-zh:hover{color:var(--ocean)}
-.ev-ja{font-size:11px;color:var(--muted)}
+.ev-zh{font-size:13.5px;font-weight:700;color:var(--text);line-height:1.4;margin-bottom:3px;display:block;text-decoration:none}
+a.ev-zh:hover{color:var(--ocean)}
+.ev-ja{font-size:11px;color:var(--muted);margin-top:1px}
 .ev-ja a{color:var(--muted);text-decoration:none}
 .ev-ja a:hover{color:var(--teal);text-decoration:underline}
-.ev-link{font-size:11px}
-.ev-link a{color:var(--coral);text-decoration:none;font-weight:600}
-.ev-link a:hover{text-decoration:underline}
+.ev-meta{display:flex;align-items:center;gap:6px;margin-top:5px}
+.ev-cat{font-size:10px;background:var(--gold-bg);color:var(--gold);border:1px solid var(--gold-border);border-radius:6px;padding:1px 7px;font-weight:600}
+.ev-stars{font-size:10px;color:var(--gold);letter-spacing:.5px}
 
-.empty{text-align:center;padding:36px;color:var(--muted);font-size:13px}
+.empty{text-align:center;padding:44px;color:var(--muted);font-size:13px}
 
 /* ── Footer ── */
 footer{
-  text-align:center;padding:20px;font-size:11px;color:var(--muted);
+  text-align:center;padding:22px 16px;font-size:11px;color:var(--muted);
   border-top:1px solid var(--border);
 }
 
-@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:380px){.cal-day{min-height:28px;font-size:11px}.logo-main{font-size:15px}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:380px){.cal-day{min-height:26px;font-size:10px}.logo-main{font-size:15px}}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="logo" onclick="document.querySelector('.content').scrollIntoView({behavior:'smooth'})">
-    <span class="logo-sub">Okinawa Events</span>
-    <span class="logo-main"><span class="logo-icon">🦁</span>沖繩活動年曆</span>
+  <div class="logo">
+    <span class="logo-sub">Okinawa Calendar</span>
+    <span class="logo-main">🦁 沖繩年曆</span>
   </div>
-  <span style="font-size:11px;color:var(--muted)">更新：2026-06-09 12:31</span>
+  <div class="header-right">更新 2026-06-09 17:03</div>
 </header>
+
+<!-- Palm leaf decorations (foreground, swaying) -->
+<div class="palm-deco palm-l">
+<svg xmlns="http://www.w3.org/2000/svg" width="168" height="330" viewBox="0 0 168 330">
+  <path d="M92,330 C90,275 86,210 82,152 C78,106 73,68 67,28"
+    stroke="#7A5118" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <circle cx="73" cy="52" r="9" fill="#B8820A" opacity="0.72"/>
+  <circle cx="85" cy="42" r="7" fill="#C89010" opacity="0.65"/>
+  <path d="M70,68 C44,50 8,50 -16,64 C10,46 46,46 70,62Z" fill="#2A7832" opacity="0.92"/>
+  <path d="M76,57 C102,36 136,33 160,48 C133,31 99,33 76,52Z" fill="#338C3C" opacity="0.88"/>
+  <path d="M64,90 C34,100 -4,122 -25,153 C-2,118 35,96 64,85Z" fill="#2A7832" opacity="0.84"/>
+  <path d="M78,87 C110,92 146,113 166,142 C143,110 108,90 78,82Z" fill="#338C3C" opacity="0.80"/>
+  <path d="M58,118 C26,136 -10,173 -28,215 C-7,168 28,133 58,112Z" fill="#246B2C" opacity="0.76"/>
+  <path d="M73,114 C102,128 138,163 154,204 C135,160 102,126 73,109Z" fill="#2A7832" opacity="0.70"/>
+  <path d="M50,152 C20,178 -6,220 -16,262 C-3,217 23,174 50,146Z" fill="#1E5C24" opacity="0.62"/>
+</svg>
+</div>
+<div class="palm-deco palm-r">
+<svg xmlns="http://www.w3.org/2000/svg" width="168" height="330" viewBox="0 0 168 330">
+  <path d="M76,330 C78,275 82,210 86,152 C90,106 95,68 101,28"
+    stroke="#7A5118" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <circle cx="95" cy="52" r="9" fill="#B8820A" opacity="0.72"/>
+  <circle cx="83" cy="42" r="7" fill="#C89010" opacity="0.65"/>
+  <path d="M98,68 C124,50 160,50 184,64 C158,46 122,46 98,62Z" fill="#2A7832" opacity="0.92"/>
+  <path d="M92,57 C66,36 32,33 8,48 C35,31 69,33 92,52Z" fill="#338C3C" opacity="0.88"/>
+  <path d="M104,90 C134,100 172,122 193,153 C170,118 133,96 104,85Z" fill="#2A7832" opacity="0.84"/>
+  <path d="M90,87 C58,92 22,113 2,142 C25,110 60,90 90,82Z" fill="#338C3C" opacity="0.80"/>
+  <path d="M110,118 C142,136 178,173 196,215 C175,168 140,133 110,112Z" fill="#246B2C" opacity="0.76"/>
+  <path d="M95,114 C66,128 30,163 14,204 C33,160 66,126 95,109Z" fill="#2A7832" opacity="0.70"/>
+  <path d="M118,152 C148,178 174,220 184,262 C171,217 145,174 118,146Z" fill="#1E5C24" opacity="0.62"/>
+</svg>
+</div>
 
 <!-- Year + Month selector -->
 <div class="sticky-bar">
@@ -195,12 +252,21 @@ footer{
   <div class="month-grid" id="month-grid"></div>
 </div>
 
-<div class="content">
+<!-- Wave divider -->
+<div class="wave-bar">
+<svg height="26" viewBox="0 0 2880 26" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0,13 C240,24 480,2 720,13 C960,24 1200,2 1440,13 C1680,24 1920,2 2160,13 C2400,24 2640,2 2880,13 V26 H0Z"
+    fill="rgba(20,104,154,0.06)"/>
+  <path d="M0,18 C360,8 720,24 1080,18 C1440,12 1800,24 2160,18 C2520,12 2880,22 2880,18 V26 H0Z"
+    fill="rgba(26,158,143,0.04)"/>
+</svg>
+</div>
 
-  <!-- Calendar grid -->
+<div class="content">
   <div class="cal-header">
     <span class="cal-month-label" id="cal-label"></span>
     <div class="cal-legend">
+      <span><span class="l-dot" style="background:var(--gold)"></span>今天是…</span>
       <span><span class="l-dot" style="background:var(--coral)"></span>Visit Okinawa</span>
       <span><span class="l-dot" style="background:var(--teal)"></span>おきなわ物語</span>
     </div>
@@ -211,164 +277,200 @@ footer{
   </div>
   <div class="cal-grid" id="cal-grid"></div>
 
-  <!-- Events -->
   <div class="sec-label" id="ev-label">
     本月活動<span class="ev-count" id="ev-count">0</span>
+    <span class="filter-hint" id="filter-hint" style="display:none"></span>
   </div>
   <div id="ev-list"></div>
-
 </div>
 
-<footer>共 65 個活動 · 每日 08:00 JST 自動更新</footer>
+<footer>共 137 筆資料 &nbsp;·&nbsp; 每日 08:00 JST 自動更新 &nbsp;·&nbsp; 🦁 Suniverse</footer>
 
-<!-- 資料（用 application/json 避免 < > 破壞解析） -->
-<script type="application/json" id="ev-data">[{"name": "『弥勒世果報─かなさ─』", "name_zh": "「彌勒亞的財富──迦那那──」", "date_start": "2026-06-04", "date_end": "2026-06-28", "url": "https://www.okinawastory.jp/event/600022255", "source": "okinawastory"}, {"name": "Tasar World Championships 2026 in Kunigami", "name_zh": "2026 年 Tasar 世界錦標賽在國頭舉行", "date_start": "2026-06-04", "date_end": "2026-06-13", "url": "https://www.okinawastory.jp/event/600021570", "source": "okinawastory"}, {"name": "アニマル・アート Vol.6", "name_zh": "動物藝術第6卷", "date_start": "2026-06-05", "date_end": "2026-06-15", "url": "https://www.okinawastory.jp/event/600022372", "source": "okinawastory"}, {"name": "suikara祭り　-おかげさまで４周年-", "name_zh": "suikara Festival -謝謝你，四周年-", "date_start": "2026-06-05", "date_end": "2026-06-15", "url": "https://www.okinawastory.jp/event/600022162", "source": "okinawastory"}, {"name": "Kasaneawase Pop up Store", "name_zh": "Kasaneawase 快閃店", "date_start": "2026-06-06", "date_end": "2026-06-23", "url": "https://www.okinawastory.jp/event/600022343", "source": "okinawastory"}, {"name": "【恩納村博物館】令和8年度慰霊の日特別展「うんなぬ戦争（イクサ）」開催のお知らせ", "name_zh": "[恩納村博物館]關於令和八週年紀念日特別展覽“Unnanu War（Ikusa）”的通知", "date_start": "2026-06-06", "date_end": "2026-07-12", "url": "https://www.okinawastory.jp/event/600022250", "source": "okinawastory"}, {"name": "龍球魔女マルシェ", "name_zh": "七龍珠魔女馬爾凱", "date_start": "2026-06-06", "date_end": "2026-08-11", "url": "https://www.okinawastory.jp/event/600022160", "source": "okinawastory"}, {"name": "企画展 | 外来種いつでもどこでも移動ミュージアム", "name_zh": "特別展覽|隨時隨地的入侵物種移動博物館", "date_start": "2026-06-07", "date_end": "2026-06-28", "url": "https://www.okinawastory.jp/event/600022299", "source": "okinawastory"}, {"name": "サボー・シルヴィア絵画展「空へ飛び立て」開催＠道の駅かでな", "name_zh": "Szabo Sylvia 繪畫展「Take to the Sky」@嘉手納路邊車站", "date_start": "2026-06-08", "date_end": "2026-06-14", "url": "https://www.okinawastory.jp/event/600022318", "source": "okinawastory"}, {"name": "令和８年度平和企画展 『八重瀬の戦争と復興 －収容所から帰村そして復興へ－』開催のお知らせ", "name_zh": "令與第八屆和平展「八重瀨的戰爭與重建－從集中營到重返村莊與重建」公告", "date_start": "2026-06-09", "date_end": "2026-07-12", "url": "https://www.okinawastory.jp/event/600022354", "source": "okinawastory"}, {"name": "第7回末吉社18", "name_zh": "7號 末吉社 18", "date_start": "2026-06-09", "date_end": "2026-06-14", "url": "https://www.okinawastory.jp/event/600022115", "source": "okinawastory"}, {"name": "令和8年度 平和資料展開催のお知らせ", "name_zh": "2020年和平物資展公告", "date_start": "2026-06-10", "date_end": "2026-06-30", "url": "https://www.okinawastory.jp/event/600022352", "source": "okinawastory"}, {"name": "キュリオのもののけ展", "name_zh": "庫裡奧的《幽靈》展覽", "date_start": "2026-06-10", "date_end": "2026-06-16", "url": "https://www.okinawastory.jp/event/600021883", "source": "okinawastory"}, {"name": "儀間比呂志・中山良彦『戦がやってきた－沖縄戦版画集—』版画展", "name_zh": "吉馬浩與中山義彥「戰爭已經到來－沖繩戰役版畫集」版畫展", "date_start": "2026-06-11", "date_end": "2026-06-28", "url": "https://www.okinawastory.jp/event/600022336", "source": "okinawastory"}, {"name": "6/11（木）～8/30（日）　田島征彦　おきなわ絵本原画展開催！", "name_zh": "6/11（星期四）～8/30（星期日）田島幸彥沖繩繪本原創藝術展即將舉辦！", "date_start": "2026-06-11", "date_end": "2026-08-30", "url": "https://www.okinawastory.jp/event/600022285", "source": "okinawastory"}, {"name": "楽園朝涼み～蓮・睡蓮と台湾朝食～2026", "name_zh": "天堂早晨涼爽~荷花睡蓮台灣早餐~2026", "date_start": "2026-06-13", "date_end": "2026-09-27", "url": "https://www.okinawastory.jp/event/600022215", "source": "okinawastory"}, {"name": "令和8年度与那原町民平和の日・慰霊の日企画展「戦世（いくさぬゆー ）と 今世（なまぬゆー） －与那原の戦争と平和について考える－」を開催します", "name_zh": "我們將舉辦令與第8屆與那原町人民和平日/陣亡將士紀念日特別展「生魚與那馬努－對與那原的戰爭與和平的思考」。", "date_start": "2026-06-15", "date_end": "2026-06-28", "url": "https://www.okinawastory.jp/event/600022249", "source": "okinawastory"}, {"name": "糸滿龍舟大賽", "name_zh": "糸滿龍舟大賽", "date_start": "2026-06-18", "date_end": "2026-06-18", "url": "https://visitokinawajapan.com/zh-hant/discover/events/itoman-hare/", "source": "visitokinawa"}, {"name": "初夏の早朝にだけ現れる水面の幻想的な光景「絶景サガリバナクルーズ」", "name_zh": "初夏清晨才有的夢幻般的水面景色：“薩加里巴納風景巡遊”", "date_start": "2026-06-18", "date_end": "2026-07-25", "url": "https://www.okinawastory.jp/event/600022334", "source": "okinawastory"}, {"name": "UMESHISO工房展 「おしゃべりないきものたち」", "name_zh": "UMESHISO工作坊展“會說話的和服”", "date_start": "2026-06-18", "date_end": "2026-06-29", "url": "https://www.okinawastory.jp/event/600022321", "source": "okinawastory"}, {"name": "『野ばらの月～a line～』", "name_zh": "“野薔薇月～一行～”", "date_start": "2026-06-19", "date_end": "2026-06-23", "url": "https://www.okinawastory.jp/event/600022371", "source": "okinawastory"}, {"name": "令和8年度 平和企画展「写真と証言で見る西原の戦争」開催のお知らせ", "name_zh": "2020年和平展「照片與證詞中的西原戰爭」公告", "date_start": "2026-06-19", "date_end": "2026-09-06", "url": "https://www.okinawastory.jp/event/600022344", "source": "okinawastory"}, {"name": "シーウッドホテル恒例の 「スペシャル・フレンチ・ディナー」を6月に開催！ 2人のシェフの友情が奏でる特別なディナー！", "name_zh": "海木酒店一年一度的「特色法式晚宴」將於六月舉辦！兩位廚師友誼打造的特別晚餐！", "date_start": "2026-06-19", "date_end": "2026-06-20", "url": "https://www.okinawastory.jp/event/600022123", "source": "okinawastory"}, {"name": "1日1組限定　西表島の星空を仰ぐ「ティンガーラディナークルーズ」", "name_zh": "每天限定一組的“Tingara晚餐巡遊”，仰望西表島的星空", "date_start": "2026-06-20", "date_end": "2026-09-26", "url": "https://www.okinawastory.jp/event/600022335", "source": "okinawastory"}, {"name": "6月20日・21日「グスーヨー！32軍壕へメンソーレ2026版", "name_zh": "6月20日至21日《Gusuyo！門索爾到第32軍戰壕2026年版》", "date_start": "2026-06-20", "date_end": "2026-06-21", "url": "https://www.okinawastory.jp/event/600022322", "source": "okinawastory"}, {"name": "世界キリンの日イベント", "name_zh": "世界長頸鹿日活動", "date_start": "2026-06-20", "date_end": "2026-06-21", "url": "https://www.okinawastory.jp/event/600022320", "source": "okinawastory"}, {"name": "第27回サバニ帆漕レース・第49回座間味ヨットレース 開催について", "name_zh": "關於第27屆薩巴尼帆船賽和第49屆座間味帆船賽", "date_start": "2026-06-20", "date_end": "2026-06-27", "url": "https://www.okinawastory.jp/event/600022068", "source": "okinawastory"}, {"name": "Eisa之夜", "name_zh": "Eisa之夜", "date_start": "2026-06-21", "date_end": "2026-08-09", "url": "https://visitokinawajapan.com/zh-hant/discover/events/eisa-night/", "source": "visitokinawa"}, {"name": "世界遺産の国イタリア「太陽がいっぱい」", "name_zh": "世界遺產國家義大利：充滿陽光", "date_start": "2026-06-23", "date_end": "2026-06-28", "url": "https://www.okinawastory.jp/event/600022114", "source": "okinawastory"}, {"name": "草野球沖縄一決定戦 第31回 オリオンスーパーベースボール2026", "name_zh": "草棒球沖繩決定賽第31屆獵戶座超級棒球2026", "date_start": "2026-06-27", "date_end": "2026-11-01", "url": "https://www.okinawastory.jp/event/600022185", "source": "okinawastory"}, {"name": "DRUM TAO 2026 新作舞台「THE HUMAN」", "name_zh": "DRUM TAO 2026全新舞台劇《THE HUMAN》", "date_start": "2026-06-27", "date_end": "2026-06-28", "url": "https://www.okinawastory.jp/event/600022124", "source": "okinawastory"}, {"name": "第3回 琉球ガラス市", "name_zh": "第三屆琉球玻璃城", "date_start": "2026-06-27", "date_end": "2026-06-28", "url": "https://www.okinawastory.jp/event/600021890", "source": "okinawastory"}, {"name": "O2Y -Okinawa to Yanbaru- 2026", "name_zh": "O2Y -沖繩到山原 - 2026", "date_start": "2026-06-30", "date_end": "2026-07-05", "url": "https://www.okinawastory.jp/event/600022210", "source": "okinawastory"}, {"name": "夏休みパネル展「在りし日の首里城パネル展」開催！【7/１～8/15】", "name_zh": "暑假展板展「首里城往日展板展」即將舉辦！ [7/1~8/15]", "date_start": "2026-07-01", "date_end": "2026-08-15", "url": "https://www.okinawastory.jp/event/600022366", "source": "okinawastory"}, {"name": "湧田焼　沖縄・静謐の美～神田淡平コレクション～", "name_zh": "沖繩湧田燒，寧靜之美～神田炭平收藏～", "date_start": "2026-07-03", "date_end": "2026-07-26", "url": "https://www.okinawastory.jp/event/600022353", "source": "okinawastory"}, {"name": "【歓迎～めんそーれ～】Ｊリーグ「ジュビロ磐田」夏季トレーニングキャンプ期間決定！！", "name_zh": "[歡迎～Mensore～] J聯賽「岩田喜悅」夏季集訓期已定！ ！", "date_start": "2026-07-03", "date_end": "2026-07-14", "url": "https://www.okinawastory.jp/event/600022294", "source": "okinawastory"}, {"name": "第37回日本最西端与那国島国際カジキ釣り大会　競技参加者の募集について", "name_zh": "日本最西端與那國島第 37 屆國際馬林魚釣魚比賽招募參賽者", "date_start": "2026-07-03", "date_end": "2026-07-05", "url": "https://www.okinawastory.jp/event/600022181", "source": "okinawastory"}, {"name": "久米島ハワイアンフェスティバル 2026", "name_zh": "久米島夏威夷節 2026", "date_start": "2026-07-03", "date_end": "2026-07-04", "url": "https://www.okinawastory.jp/event/600021862", "source": "okinawastory"}, {"name": "海洋博公園夏日祭典", "name_zh": "海洋博公園夏日祭典", "date_start": "2026-07-04", "date_end": "2026-07-04", "url": "https://visitokinawajapan.com/zh-hant/discover/events/ocean-expo-park-summer-festival/", "source": "visitokinawa"}, {"name": "うつろう庭園", "name_zh": "宇津郎花園", "date_start": "2026-07-04", "date_end": "2026-07-12", "url": "https://www.okinawastory.jp/event/600022238", "source": "okinawastory"}, {"name": "2026/27シーズン 夏季トレーニングキャンプ実施について　浦和レッズ", "name_zh": "關於浦和紅寶石2026/27賽季夏季訓練營實施", "date_start": "2026-07-08", "date_end": "2026-07-26", "url": "https://www.okinawastory.jp/event/600022362", "source": "okinawastory"}, {"name": "【2026年 夏の打上げ花火のご案内】25日間開催 お部屋のバルコニーから花火を愉しむ沖縄リゾートステイを", "name_zh": "[2026年夏季煙火大會資訊] 舉辦25天 在客房陽台上欣賞煙火的沖繩度假勝地", "date_start": "2026-07-09", "date_end": "2026-08-29", "url": "https://www.okinawastory.jp/event/600022208", "source": "okinawastory"}, {"name": "夏の夜空と水盤を彩る、全25回の打上げ花火開催", "name_zh": "總共將舉行25場煙火表演，為夏日的夜空和水盆增添色彩。", "date_start": "2026-07-09", "date_end": "2026-08-29", "url": "https://www.okinawastory.jp/event/600022207", "source": "okinawastory"}, {"name": "ビオスの丘 サガリバナ×星あそび｜一夜花と七夕ものがたりに出会う、特別な二夜", "name_zh": "Bios no Oka Sagaribana x Star Play｜兩個特別的夜晚，一晚的花與七夕的故事相遇", "date_start": "2026-07-11", "date_end": "2026-07-12", "url": "https://www.okinawastory.jp/event/600022049", "source": "okinawastory"}, {"name": "2026/27シーズン キャンプ会場およびスケジュールの決定について　湘南ベルマーレ", "name_zh": "關於2026/27賽季湘南Bellmare訓練營場地和日程的決定", "date_start": "2026-07-13", "date_end": "2026-07-26", "url": "https://www.okinawastory.jp/event/600022184", "source": "okinawastory"}, {"name": "夏季二次キャンプ(沖縄県うるま市)実施のお知らせ　藤枝MYFC", "name_zh": "第二屆夏令營（沖繩縣宇流麻市）藤枝MYFC的通知", "date_start": "2026-07-17", "date_end": "2026-07-26", "url": "https://www.okinawastory.jp/event/600022363", "source": "okinawastory"}, {"name": "冨田伊織 新世界『透明標本』展", "name_zh": "富田伊織新世界「透明標本」展", "date_start": "2026-07-17", "date_end": "2026-09-06", "url": "https://www.okinawastory.jp/event/600022340", "source": "okinawastory"}, {"name": "沖縄ビールとお祭り屋台で沖縄・夏の夜を愉しむ『OKINAWA SUMMER NIGHT FEST』を開催 ～５日間限定のガーデン沖縄三線ライブ・世界各地のビールを味わうWEEKイベントも～", "name_zh": "將舉辦“OKINAWA SUMMER NIGHT FEST”，用沖繩啤酒和節日攤位享受沖繩的夏夜 - 5天限定花園沖繩三線現場音樂會和可品嚐世界各地啤酒的WEEK活動 -", "date_start": "2026-07-17", "date_end": "2026-08-31", "url": "https://www.okinawastory.jp/event/600022236", "source": "okinawastory"}, {"name": "南島洞穴探險", "name_zh": "南島洞穴探險", "date_start": "2026-07-18", "date_end": "2026-09-30", "url": "https://visitokinawajapan.com/zh-hant/discover/events/cave-exploration-southern-okinawa/", "source": "visitokinawa"}, {"name": "OKINAWA FREEDIVING CUP 2026 沖縄フリーダイビングカップ2026　沖縄大会(恩納村真栄田岬)", "name_zh": "沖繩自由潛水杯 2026 沖繩自由潛水杯 2026 沖繩錦標賽（真榮田岬、恩納村）", "date_start": "2026-07-18", "date_end": "2026-07-19", "url": "https://www.okinawastory.jp/event/600022295", "source": "okinawastory"}, {"name": "佐藤健寿展 奇界／沖縄", "name_zh": "佐藤健二展奇怪的世界/沖繩", "date_start": "2026-07-18", "date_end": "2026-09-23", "url": "https://www.okinawastory.jp/event/600022221", "source": "okinawastory"}, {"name": "第38回いへやまつり", "name_zh": "第38屆伊平屋祭", "date_start": "2026-07-18", "date_end": "2026-07-19", "url": "https://www.okinawastory.jp/event/600022073", "source": "okinawastory"}, {"name": "第19回豊見城ハーリー大会", "name_zh": "第19屆豐見城哈雷錦標賽", "date_start": "2026-07-19", "date_end": "2026-07-20", "url": "https://www.okinawastory.jp/event/600022195", "source": "okinawastory"}, {"name": "MasterPeace 2026", "name_zh": "和平大師2026", "date_start": "2026-07-19", "date_end": "2026-07-20", "url": "https://www.okinawastory.jp/event/600021853", "source": "okinawastory"}, {"name": "サマーイベント2026【夏のゆいまつり】7/20～8/29毎日開催", "name_zh": "夏季活動2026【夏季結衣祭】7/20～8/29每天舉行", "date_start": "2026-07-20", "date_end": "2026-08-29", "url": "https://www.okinawastory.jp/event/600022234", "source": "okinawastory"}, {"name": "～劇場版～ KIMUTAKA × RYUJIN mix. 開催のお知らせ", "name_zh": "～電影版～ KIMUTAKA × RYUJIN mix。活動公告", "date_start": "2026-07-25", "date_end": "2026-07-26", "url": "https://www.okinawastory.jp/event/600022211", "source": "okinawastory"}, {"name": "第3回沖縄空手世界大会", "name_zh": "第三場沖繩空手道世界錦標賽", "date_start": "2026-07-30", "date_end": "2026-08-02", "url": "https://www.okinawastory.jp/event/600021645", "source": "okinawastory"}, {"name": "8.1（土）「INSPIRATION OKINAWA 2026」", "name_zh": "8.1（週六）“沖繩靈感2026”", "date_start": "2026-08-01", "date_end": "2026-08-02", "url": "https://www.okinawastory.jp/event/600022368", "source": "okinawastory"}, {"name": "與那原大拔河祭", "name_zh": "與那原大拔河祭", "date_start": "2026-08-15", "date_end": "2026-08-16", "url": "https://visitokinawajapan.com/zh-hant/discover/events/yonabaru-tug-of-war-festival/", "source": "visitokinawa"}, {"name": "【開催日程決定！】第４４回（2026）与那原大綱曳まつりの日程が決まりました", "name_zh": "【活动日程决定了！ ] 第44屆（2026年）與那原拔河節的行程已經確定。", "date_start": "2026-08-15", "date_end": "2026-08-16", "url": "https://www.okinawastory.jp/event/600021889", "source": "okinawastory"}, {"name": "沖縄県豊見城市でのプレシーズンマッチ開催のお知らせ　東京グレートベアーズ", "name_zh": "沖繩縣豐見城市舉行季前賽的通知 東京大熊隊", "date_start": "2026-08-22", "date_end": "2026-08-23", "url": "https://www.okinawastory.jp/event/600022361", "source": "okinawastory"}, {"name": "サマー・ファミリー・シアター2026～なはーとでなつやすみ～", "name_zh": "夏季家庭劇場2026～那霸暑假～", "date_start": "2026-08-22", "date_end": "2026-08-23", "url": "https://www.okinawastory.jp/event/600021902", "source": "okinawastory"}, {"name": "「第22回 ジュニアゴルフ・カヌチャカップ」開催【8/29(土)・30(日)】", "name_zh": "「第22屆青少年高爾夫卡努查杯」舉行[8/29(週六)、30(週日)]", "date_start": "2026-08-29", "date_end": "2026-08-30", "url": "https://www.okinawastory.jp/event/600022351", "source": "okinawastory"}, {"name": "「オリオンビアフェスト2026」の開催について", "name_zh": "關於舉辦“Orion啤酒節2026”", "date_start": "2026-09-05", "date_end": "2026-09-06", "url": "https://www.okinawastory.jp/event/600022355", "source": "okinawastory"}, {"name": "今年の久米島まつりは９月５日(土)６日(日)に開催！", "name_zh": "今年的久米島祭將於9月5日（週六）和6日（週日）舉行！", "date_start": "2026-09-05", "date_end": "2026-09-06", "url": "https://www.okinawastory.jp/event/600022209", "source": "okinawastory"}]</script>
-
+<script type="application/json" id="ev-data">[{"name": "今天是 🎨 國際博物館日", "name_zh": "🎨 國際博物館日", "date_start": "2025-05-18", "date_end": "2025-05-18", "url": "", "source": "today_is", "category": "文化", "stars": 3}, {"name": "今天是 🌳 森林日", "name_zh": "🌳 森林日", "date_start": "2025-05-20", "date_end": "2025-05-20", "url": "", "source": "today_is", "category": "自然", "stars": 4}, {"name": "今天是 🌾 小滿", "name_zh": "🌾 小滿", "date_start": "2025-05-21", "date_end": "2025-05-21", "url": "", "source": "today_is", "category": "節氣", "stars": 5}, {"name": "今天是 🪸 國際生物多樣性日", "name_zh": "🪸 國際生物多樣性日", "date_start": "2025-05-22", "date_end": "2025-05-22", "url": "", "source": "today_is", "category": "海洋", "stars": 5}, {"name": "今天是 ☕ 主婦休息日", "name_zh": "☕ 主婦休息日", "date_start": "2025-05-25", "date_end": "2025-05-25", "url": "", "source": "today_is", "category": "生活", "stars": 2}, {"name": "今天是 ♨️ 風呂日", "name_zh": "♨️ 風呂日", "date_start": "2025-05-26", "date_end": "2025-05-26", "url": "", "source": "today_is", "category": "文化", "stars": 2}, {"name": "今天是 😊 幸福日", "name_zh": "😊 幸福日", "date_start": "2025-05-29", "date_end": "2025-05-29", "url": "", "source": "today_is", "category": "生活", "stars": 3}, {"name": "今天是 ♻️ 零垃圾日", "name_zh": "♻️ 零垃圾日", "date_start": "2025-05-30", "date_end": "2025-05-30", "url": "", "source": "today_is", "category": "永續", "stars": 5}, {"name": "今天是 🍶 泡盛之日", "name_zh": "🍶 泡盛之日", "date_start": "2025-06-01", "date_end": "2025-06-01", "url": "", "source": "today_is", "category": "沖繩", "stars": 5}, {"name": "今天是 🦷 蟲牙預防日", "name_zh": "🦷 蟲牙預防日", "date_start": "2025-06-04", "date_end": "2025-06-04", "url": "", "source": "today_is", "category": "文化", "stars": 2}, {"name": "今天是 🌊 世界海洋日", "name_zh": "🌊 世界海洋日", "date_start": "2025-06-08", "date_end": "2025-06-08", "url": "", "source": "today_is", "category": "海洋", "stars": 5}, {"name": "今天是 🎮 國際玩樂日", "name_zh": "🎮 國際玩樂日", "date_start": "2025-06-11", "date_end": "2025-06-11", "url": "", "source": "today_is", "category": "生活", "stars": 2}, {"name": "今天是 🕊️ 沖繩戰跡紀念", "name_zh": "🕊️ 沖繩戰跡紀念", "date_start": "2025-06-15", "date_end": "2025-06-15", "url": "", "source": "today_is", "category": "歷史", "stars": 4}, {"name": "今天是 ☀️ 夏至", "name_zh": "☀️ 夏至", "date_start": "2025-06-21", "date_end": "2025-06-21", "url": "", "source": "today_is", "category": "節氣", "stars": 5}, {"name": "今天是 🕊️ 慰靈之日", "name_zh": "🕊️ 慰靈之日", "date_start": "2025-06-23", "date_end": "2025-06-23", "url": "", "source": "today_is", "category": "沖繩", "stars": 5}, {"name": "今天是 ♨️ 露天風呂日", "name_zh": "♨️ 露天風呂日", "date_start": "2025-06-26", "date_end": "2025-06-26", "url": "", "source": "today_is", "category": "文化", "stars": 2}, {"name": "今天是 ⛩️ 夏越之祓", "name_zh": "⛩️ 夏越之祓", "date_start": "2025-06-30", "date_end": "2025-06-30", "url": "", "source": "today_is", "category": "傳統", "stars": 5}, {"name": "今天是 🏖️ 海開季", "name_zh": "🏖️ 海開季", "date_start": "2025-07-01", "date_end": "2025-07-01", "url": "", "source": "today_is", "category": "夏日", "stars": 5}, {"name": "今天是 🎋 七夕", "name_zh": "🎋 七夕", "date_start": "2025-07-07", "date_end": "2025-07-07", "url": "", "source": "today_is", "category": "傳統", "stars": 5}, {"name": "今天是 🫘 納豆日", "name_zh": "🫘 納豆日", "date_start": "2025-07-10", "date_end": "2025-07-10", "url": "", "source": "today_is", "category": "文化", "stars": 2}, {"name": "今天是 🌊 海之日", "name_zh": "🌊 海之日", "date_start": "2025-07-15", "date_end": "2025-07-15", "url": "", "source": "today_is", "category": "傳統", "stars": 5}, {"name": "今天是 🍔 漢堡日", "name_zh": "🍔 漢堡日", "date_start": "2025-07-20", "date_end": "2025-07-20", "url": "", "source": "today_is", "category": "文化", "stars": 3}, {"name": "今天是 ☀️ 大暑", "name_zh": "☀️ 大暑", "date_start": "2025-07-22", "date_end": "2025-07-22", "url": "", "source": "today_is", "category": "節氣", "stars": 4}, {"name": "今天是 🍧 刨冰日", "name_zh": "🍧 刨冰日", "date_start": "2025-07-25", "date_end": "2025-07-25", "url": "", "source": "today_is", "category": "夏日", "stars": 5}, {"name": "今天是 🎨 國際博物館日", "name_zh": "🎨 國際博物館日", "date_start": "2026-05-18", "date_end": "2026-05-18", "url": "", "source": "today_is", "category": "文化", "stars": 3}, {"name": "今天是 🌳 森林日", "name_zh": "🌳 森林日", "date_start": "2026-05-20", "date_end": "2026-05-20", "url": "", "source": "today_is", "category": "自然", "stars": 4}, {"name": "今天是 🌾 小滿", "name_zh": "🌾 小滿", "date_start": "2026-05-21", "date_end": "2026-05-21", "url": "", "source": "today_is", "category": "節氣", "stars": 5}, {"name": "今天是 🪸 國際生物多樣性日", "name_zh": "🪸 國際生物多樣性日", "date_start": "2026-05-22", "date_end": "2026-05-22", "url": "", "source": "today_is", "category": "海洋", "stars": 5}, {"name": "今天是 ☕ 主婦休息日", "name_zh": "☕ 主婦休息日", "date_start": "2026-05-25", "date_end": "2026-05-25", "url": "", "source": "today_is", "category": "生活", "stars": 2}, {"name": "今天是 ♨️ 風呂日", "name_zh": "♨️ 風呂日", "date_start": "2026-05-26", "date_end": "2026-05-26", "url": "", "source": "today_is", "category": "文化", "stars": 2}, {"name": "今天是 😊 幸福日", "name_zh": "😊 幸福日", "date_start": "2026-05-29", "date_end": "2026-05-29", "url": "", "source": "today_is", "category": "生活", "stars": 3}, {"name": "今天是 ♻️ 零垃圾日", "name_zh": "♻️ 零垃圾日", "date_start": "2026-05-30", "date_end": "2026-05-30", "url": "", "source": "today_is", "category": "永續", "stars": 5}, {"name": "今天是 🍶 泡盛之日", "name_zh": "🍶 泡盛之日", "date_start": "2026-06-01", "date_end": "2026-06-01", "url": "", "source": "today_is", "category": "沖繩", "stars": 5}, {"name": "今天是 🦷 蟲牙預防日", "name_zh": "🦷 蟲牙預防日", "date_start": "2026-06-04", "date_end": "2026-06-04", "url": "", "source": "today_is", "category": "文化", "stars": 2}, {"name": "『弥勒世果報─かなさ─』", "name_zh": "「彌勒亞的財富──迦那那──」", "date_start": "2026-06-04", "date_end": "2026-06-28", "url": "https://www.okinawastory.jp/event/600022255", "source": "okinawastory", "category": "", "stars": 0}, {"name": "Tasar World Championships 2026 in Kunigami", "name_zh": "2026 年 Tasar 世界錦標賽在國頭舉行", "date_start": "2026-06-04", "date_end": "2026-06-13", "url": "https://www.okinawastory.jp/event/600021570", "source": "okinawastory", "category": "", "stars": 0}, {"name": "アニマル・アート Vol.6", "name_zh": "動物藝術第6卷", "date_start": "2026-06-05", "date_end": "2026-06-15", "url": "https://www.okinawastory.jp/event/600022372", "source": "okinawastory", "category": "", "stars": 0}, {"name": "suikara祭り　-おかげさまで４周年-", "name_zh": "suikara Festival -謝謝你，四周年-", "date_start": "2026-06-05", "date_end": "2026-06-15", "url": "https://www.okinawastory.jp/event/600022162", "source": "okinawastory", "category": "", "stars": 0}, {"name": "Kasaneawase Pop up Store", "name_zh": "Kasaneawase 快閃店", "date_start": "2026-06-06", "date_end": "2026-06-23", "url": "https://www.okinawastory.jp/event/600022343", "source": "okinawastory", "category": "", "stars": 0}, {"name": "【恩納村博物館】令和8年度慰霊の日特別展「うんなぬ戦争（イクサ）」開催のお知らせ", "name_zh": "[恩納村博物館]關於令和八週年紀念日特別展覽“Unnanu War（Ikusa）”的通知", "date_start": "2026-06-06", "date_end": "2026-07-12", "url": "https://www.okinawastory.jp/event/600022250", "source": "okinawastory", "category": "", "stars": 0}, {"name": "龍球魔女マルシェ", "name_zh": "七龍珠魔女馬爾凱", "date_start": "2026-06-06", "date_end": "2026-08-11", "url": "https://www.okinawastory.jp/event/600022160", "source": "okinawastory", "category": "", "stars": 0}, {"name": "企画展 | 外来種いつでもどこでも移動ミュージアム", "name_zh": "特別展覽|隨時隨地的入侵物種移動博物館", "date_start": "2026-06-07", "date_end": "2026-06-28", "url": "https://www.okinawastory.jp/event/600022299", "source": "okinawastory", "category": "", "stars": 0}, {"name": "今天是 🌊 世界海洋日", "name_zh": "🌊 世界海洋日", "date_start": "2026-06-08", "date_end": "2026-06-08", "url": "", "source": "today_is", "category": "海洋", "stars": 5}, {"name": "サボー・シルヴィア絵画展「空へ飛び立て」開催＠道の駅かでな", "name_zh": "Szabo Sylvia 繪畫展「Take to the Sky」@嘉手納路邊車站", "date_start": "2026-06-08", "date_end": "2026-06-14", "url": "https://www.okinawastory.jp/event/600022318", "source": "okinawastory", "category": "", "stars": 0}, {"name": "令和８年度平和企画展 『八重瀬の戦争と復興 －収容所から帰村そして復興へ－』開催のお知らせ", "name_zh": "令與第八屆和平展「八重瀨的戰爭與重建－從集中營到重返村莊與重建」公告", "date_start": "2026-06-09", "date_end": "2026-07-12", "url": "https://www.okinawastory.jp/event/600022354", "source": "okinawastory", "category": "", "stars": 0}, {"name": "第7回末吉社18", "name_zh": "7號 末吉社 18", "date_start": "2026-06-09", "date_end": "2026-06-14", "url": "https://www.okinawastory.jp/event/600022115", "source": "okinawastory", "category": "", "stars": 0}, {"name": "令和8年度 平和資料展開催のお知らせ", "name_zh": "2020年和平物資展公告", "date_start": "2026-06-10", "date_end": "2026-06-30", "url": "https://www.okinawastory.jp/event/600022352", "source": "okinawastory", "category": "", "stars": 0}, {"name": "キュリオのもののけ展", "name_zh": "庫裡奧的《幽靈》展覽", "date_start": "2026-06-10", "date_end": "2026-06-16", "url": "https://www.okinawastory.jp/event/600021883", "source": "okinawastory", "category": "", "stars": 0}, {"name": "今天是 🎮 國際玩樂日", "name_zh": "🎮 國際玩樂日", "date_start": "2026-06-11", "date_end": "2026-06-11", "url": "", "source": "today_is", "category": "生活", "stars": 2}, {"name": "儀間比呂志・中山良彦『戦がやってきた－沖縄戦版画集—』版画展", "name_zh": "吉馬浩與中山義彥「戰爭已經到來－沖繩戰役版畫集」版畫展", "date_start": "2026-06-11", "date_end": "2026-06-28", "url": "https://www.okinawastory.jp/event/600022336", "source": "okinawastory", "category": "", "stars": 0}, {"name": "6/11（木）～8/30（日）　田島征彦　おきなわ絵本原画展開催！", "name_zh": "6/11（星期四）～8/30（星期日）田島幸彥沖繩繪本原創藝術展即將舉辦！", "date_start": "2026-06-11", "date_end": "2026-08-30", "url": "https://www.okinawastory.jp/event/600022285", "source": "okinawastory", "category": "", "stars": 0}, {"name": "楽園朝涼み～蓮・睡蓮と台湾朝食～2026", "name_zh": "天堂早晨涼爽~荷花睡蓮台灣早餐~2026", "date_start": "2026-06-13", "date_end": "2026-09-27", "url": "https://www.okinawastory.jp/event/600022215", "source": "okinawastory", "category": "", "stars": 0}, {"name": "今天是 🕊️ 沖繩戰跡紀念", "name_zh": "🕊️ 沖繩戰跡紀念", "date_start": "2026-06-15", "date_end": "2026-06-15", "url": "", "source": "today_is", "category": "歷史", "stars": 4}, {"name": "令和8年度与那原町民平和の日・慰霊の日企画展「戦世（いくさぬゆー ）と 今世（なまぬゆー） －与那原の戦争と平和について考える－」を開催します", "name_zh": "我們將舉辦令與第8屆與那原町人民和平日/陣亡將士紀念日特別展「生魚與那馬努－對與那原的戰爭與和平的思考」。", "date_start": "2026-06-15", "date_end": "2026-06-28", "url": "https://www.okinawastory.jp/event/600022249", "source": "okinawastory", "category": "", "stars": 0}, {"name": "糸滿龍舟大賽", "name_zh": "糸滿龍舟大賽", "date_start": "2026-06-18", "date_end": "2026-06-18", "url": "https://visitokinawajapan.com/zh-hant/discover/events/itoman-hare/", "source": "visitokinawa", "category": "", "stars": 0}, {"name": "初夏の早朝にだけ現れる水面の幻想的な光景「絶景サガリバナクルーズ」", "name_zh": "初夏清晨才有的夢幻般的水面景色：“薩加里巴納風景巡遊”", "date_start": "2026-06-18", "date_end": "2026-07-25", "url": "https://www.okinawastory.jp/event/600022334", "source": "okinawastory", "category": "", "stars": 0}, {"name": "UMESHISO工房展 「おしゃべりないきものたち」", "name_zh": "UMESHISO工作坊展“會說話的和服”", "date_start": "2026-06-18", "date_end": "2026-06-29", "url": "https://www.okinawastory.jp/event/600022321", "source": "okinawastory", "category": "", "stars": 0}, {"name": "『野ばらの月～a line～』", "name_zh": "“野薔薇月～一行～”", "date_start": "2026-06-19", "date_end": "2026-06-23", "url": "https://www.okinawastory.jp/event/600022371", "source": "okinawastory", "category": "", "stars": 0}, {"name": "令和8年度 平和企画展「写真と証言で見る西原の戦争」開催のお知らせ", "name_zh": "2020年和平展「照片與證詞中的西原戰爭」公告", "date_start": "2026-06-19", "date_end": "2026-09-06", "url": "https://www.okinawastory.jp/event/600022344", "source": "okinawastory", "category": "", "stars": 0}, {"name": "シーウッドホテル恒例の 「スペシャル・フレンチ・ディナー」を6月に開催！ 2人のシェフの友情が奏でる特別なディナー！", "name_zh": "海木酒店一年一度的「特色法式晚宴」將於六月舉辦！兩位廚師友誼打造的特別晚餐！", "date_start": "2026-06-19", "date_end": "2026-06-20", "url": "https://www.okinawastory.jp/event/600022123", "source": "okinawastory", "category": "", "stars": 0}, {"name": "1日1組限定　西表島の星空を仰ぐ「ティンガーラディナークルーズ」", "name_zh": "每天限定一組的“Tingara晚餐巡遊”，仰望西表島的星空", "date_start": "2026-06-20", "date_end": "2026-09-26", "url": "https://www.okinawastory.jp/event/600022335", "source": "okinawastory", "category": "", "stars": 0}, {"name": "6月20日・21日「グスーヨー！32軍壕へメンソーレ2026版", "name_zh": "6月20日至21日《Gusuyo！門索爾到第32軍戰壕2026年版》", "date_start": "2026-06-20", "date_end": "2026-06-21", "url": "https://www.okinawastory.jp/event/600022322", "source": "okinawastory", "category": "", "stars": 0}, {"name": "世界キリンの日イベント", "name_zh": "世界長頸鹿日活動", "date_start": "2026-06-20", "date_end": "2026-06-21", "url": "https://www.okinawastory.jp/event/600022320", "source": "okinawastory", "category": "", "stars": 0}, {"name": "第27回サバニ帆漕レース・第49回座間味ヨットレース 開催について", "name_zh": "關於第27屆薩巴尼帆船賽和第49屆座間味帆船賽", "date_start": "2026-06-20", "date_end": "2026-06-27", "url": "https://www.okinawastory.jp/event/600022068", "source": "okinawastory", "category": "", "stars": 0}, {"name": "今天是 ☀️ 夏至", "name_zh": "☀️ 夏至", "date_start": "2026-06-21", "date_end": "2026-06-21", "url": "", "source": "today_is", "category": "節氣", "stars": 5}, {"name": "Eisa之夜", "name_zh": "Eisa之夜", "date_start": "2026-06-21", "date_end": "2026-08-09", "url": "https://visitokinawajapan.com/zh-hant/discover/events/eisa-night/", "source": "visitokinawa", "category": "", "stars": 0}, {"name": "今天是 🕊️ 慰靈之日", "name_zh": "🕊️ 慰靈之日", "date_start": "2026-06-23", "date_end": "2026-06-23", "url": "", "source": "today_is", "category": "沖繩", "stars": 5}, {"name": "世界遺産の国イタリア「太陽がいっぱい」", "name_zh": "世界遺產國家義大利：充滿陽光", "date_start": "2026-06-23", "date_end": "2026-06-28", "url": "https://www.okinawastory.jp/event/600022114", "source": "okinawastory", "category": "", "stars": 0}, {"name": "今天是 ♨️ 露天風呂日", "name_zh": "♨️ 露天風呂日", "date_start": "2026-06-26", "date_end": "2026-06-26", "url": "", "source": "today_is", "category": "文化", "stars": 2}, {"name": "草野球沖縄一決定戦 第31回 オリオンスーパーベースボール2026", "name_zh": "草棒球沖繩決定賽第31屆獵戶座超級棒球2026", "date_start": "2026-06-27", "date_end": "2026-11-01", "url": "https://www.okinawastory.jp/event/600022185", "source": "okinawastory", "category": "", "stars": 0}, {"name": "DRUM TAO 2026 新作舞台「THE HUMAN」", "name_zh": "DRUM TAO 2026全新舞台劇《THE HUMAN》", "date_start": "2026-06-27", "date_end": "2026-06-28", "url": "https://www.okinawastory.jp/event/600022124", "source": "okinawastory", "category": "", "stars": 0}, {"name": "第3回 琉球ガラス市", "name_zh": "第三屆琉球玻璃城", "date_start": "2026-06-27", "date_end": "2026-06-28", "url": "https://www.okinawastory.jp/event/600021890", "source": "okinawastory", "category": "", "stars": 0}, {"name": "今天是 ⛩️ 夏越之祓", "name_zh": "⛩️ 夏越之祓", "date_start": "2026-06-30", "date_end": "2026-06-30", "url": "", "source": "today_is", "category": "傳統", "stars": 5}, {"name": "O2Y -Okinawa to Yanbaru- 2026", "name_zh": "O2Y -沖繩到山原 - 2026", "date_start": "2026-06-30", "date_end": "2026-07-05", "url": "https://www.okinawastory.jp/event/600022210", "source": "okinawastory", "category": "", "stars": 0}, {"name": "今天是 🏖️ 海開季", "name_zh": "🏖️ 海開季", "date_start": "2026-07-01", "date_end": "2026-07-01", "url": "", "source": "today_is", "category": "夏日", "stars": 5}, {"name": "夏休みパネル展「在りし日の首里城パネル展」開催！【7/１～8/15】", "name_zh": "暑假展板展「首里城往日展板展」即將舉辦！ [7/1~8/15]", "date_start": "2026-07-01", "date_end": "2026-08-15", "url": "https://www.okinawastory.jp/event/600022366", "source": "okinawastory", "category": "", "stars": 0}, {"name": "湧田焼　沖縄・静謐の美～神田淡平コレクション～", "name_zh": "沖繩湧田燒，寧靜之美～神田炭平收藏～", "date_start": "2026-07-03", "date_end": "2026-07-26", "url": "https://www.okinawastory.jp/event/600022353", "source": "okinawastory", "category": "", "stars": 0}, {"name": "【歓迎～めんそーれ～】Ｊリーグ「ジュビロ磐田」夏季トレーニングキャンプ期間決定！！", "name_zh": "[歡迎～Mensore～] J聯賽「岩田喜悅」夏季集訓期已定！ ！", "date_start": "2026-07-03", "date_end": "2026-07-14", "url": "https://www.okinawastory.jp/event/600022294", "source": "okinawastory", "category": "", "stars": 0}, {"name": "第37回日本最西端与那国島国際カジキ釣り大会　競技参加者の募集について", "name_zh": "日本最西端與那國島第 37 屆國際馬林魚釣魚比賽招募參賽者", "date_start": "2026-07-03", "date_end": "2026-07-05", "url": "https://www.okinawastory.jp/event/600022181", "source": "okinawastory", "category": "", "stars": 0}, {"name": "久米島ハワイアンフェスティバル 2026", "name_zh": "久米島夏威夷節 2026", "date_start": "2026-07-03", "date_end": "2026-07-04", "url": "https://www.okinawastory.jp/event/600021862", "source": "okinawastory", "category": "", "stars": 0}, {"name": "海洋博公園夏日祭典", "name_zh": "海洋博公園夏日祭典", "date_start": "2026-07-04", "date_end": "2026-07-04", "url": "https://visitokinawajapan.com/zh-hant/discover/events/ocean-expo-park-summer-festival/", "source": "visitokinawa", "category": "", "stars": 0}, {"name": "うつろう庭園", "name_zh": "宇津郎花園", "date_start": "2026-07-04", "date_end": "2026-07-12", "url": "https://www.okinawastory.jp/event/600022238", "source": "okinawastory", "category": "", "stars": 0}, {"name": "今天是 🎋 七夕", "name_zh": "🎋 七夕", "date_start": "2026-07-07", "date_end": "2026-07-07", "url": "", "source": "today_is", "category": "傳統", "stars": 5}, {"name": "2026/27シーズン 夏季トレーニングキャンプ実施について　浦和レッズ", "name_zh": "關於浦和紅寶石2026/27賽季夏季訓練營實施", "date_start": "2026-07-08", "date_end": "2026-07-26", "url": "https://www.okinawastory.jp/event/600022362", "source": "okinawastory", "category": "", "stars": 0}, {"name": "【2026年 夏の打上げ花火のご案内】25日間開催 お部屋のバルコニーから花火を愉しむ沖縄リゾートステイを", "name_zh": "[2026年夏季煙火大會資訊] 舉辦25天 在客房陽台上欣賞煙火的沖繩度假勝地", "date_start": "2026-07-09", "date_end": "2026-08-29", "url": "https://www.okinawastory.jp/event/600022208", "source": "okinawastory", "category": "", "stars": 0}, {"name": "夏の夜空と水盤を彩る、全25回の打上げ花火開催", "name_zh": "總共將舉行25場煙火表演，為夏日的夜空和水盆增添色彩。", "date_start": "2026-07-09", "date_end": "2026-08-29", "url": "https://www.okinawastory.jp/event/600022207", "source": "okinawastory", "category": "", "stars": 0}, {"name": "今天是 🫘 納豆日", "name_zh": "🫘 納豆日", "date_start": "2026-07-10", "date_end": "2026-07-10", "url": "", "source": "today_is", "category": "文化", "stars": 2}, {"name": "ビオスの丘 サガリバナ×星あそび｜一夜花と七夕ものがたりに出会う、特別な二夜", "name_zh": "Bios no Oka Sagaribana x Star Play｜兩個特別的夜晚，一晚的花與七夕的故事相遇", "date_start": "2026-07-11", "date_end": "2026-07-12", "url": "https://www.okinawastory.jp/event/600022049", "source": "okinawastory", "category": "", "stars": 0}, {"name": "2026/27シーズン キャンプ会場およびスケジュールの決定について　湘南ベルマーレ", "name_zh": "關於2026/27賽季湘南Bellmare訓練營場地和日程的決定", "date_start": "2026-07-13", "date_end": "2026-07-26", "url": "https://www.okinawastory.jp/event/600022184", "source": "okinawastory", "category": "", "stars": 0}, {"name": "今天是 🌊 海之日", "name_zh": "🌊 海之日", "date_start": "2026-07-15", "date_end": "2026-07-15", "url": "", "source": "today_is", "category": "傳統", "stars": 5}, {"name": "夏季二次キャンプ(沖縄県うるま市)実施のお知らせ　藤枝MYFC", "name_zh": "第二屆夏令營（沖繩縣宇流麻市）藤枝MYFC的通知", "date_start": "2026-07-17", "date_end": "2026-07-26", "url": "https://www.okinawastory.jp/event/600022363", "source": "okinawastory", "category": "", "stars": 0}, {"name": "冨田伊織 新世界『透明標本』展", "name_zh": "富田伊織新世界「透明標本」展", "date_start": "2026-07-17", "date_end": "2026-09-06", "url": "https://www.okinawastory.jp/event/600022340", "source": "okinawastory", "category": "", "stars": 0}, {"name": "沖縄ビールとお祭り屋台で沖縄・夏の夜を愉しむ『OKINAWA SUMMER NIGHT FEST』を開催 ～５日間限定のガーデン沖縄三線ライブ・世界各地のビールを味わうWEEKイベントも～", "name_zh": "將舉辦“OKINAWA SUMMER NIGHT FEST”，用沖繩啤酒和節日攤位享受沖繩的夏夜 - 5天限定花園沖繩三線現場音樂會和可品嚐世界各地啤酒的WEEK活動 -", "date_start": "2026-07-17", "date_end": "2026-08-31", "url": "https://www.okinawastory.jp/event/600022236", "source": "okinawastory", "category": "", "stars": 0}, {"name": "南島洞穴探險", "name_zh": "南島洞穴探險", "date_start": "2026-07-18", "date_end": "2026-09-30", "url": "https://visitokinawajapan.com/zh-hant/discover/events/cave-exploration-southern-okinawa/", "source": "visitokinawa", "category": "", "stars": 0}, {"name": "OKINAWA FREEDIVING CUP 2026 沖縄フリーダイビングカップ2026　沖縄大会(恩納村真栄田岬)", "name_zh": "沖繩自由潛水杯 2026 沖繩自由潛水杯 2026 沖繩錦標賽（真榮田岬、恩納村）", "date_start": "2026-07-18", "date_end": "2026-07-19", "url": "https://www.okinawastory.jp/event/600022295", "source": "okinawastory", "category": "", "stars": 0}, {"name": "佐藤健寿展 奇界／沖縄", "name_zh": "佐藤健二展奇怪的世界/沖繩", "date_start": "2026-07-18", "date_end": "2026-09-23", "url": "https://www.okinawastory.jp/event/600022221", "source": "okinawastory", "category": "", "stars": 0}, {"name": "第38回いへやまつり", "name_zh": "第38屆伊平屋祭", "date_start": "2026-07-18", "date_end": "2026-07-19", "url": "https://www.okinawastory.jp/event/600022073", "source": "okinawastory", "category": "", "stars": 0}, {"name": "第19回豊見城ハーリー大会", "name_zh": "第19屆豐見城哈雷錦標賽", "date_start": "2026-07-19", "date_end": "2026-07-20", "url": "https://www.okinawastory.jp/event/600022195", "source": "okinawastory", "category": "", "stars": 0}, {"name": "MasterPeace 2026", "name_zh": "和平大師2026", "date_start": "2026-07-19", "date_end": "2026-07-20", "url": "https://www.okinawastory.jp/event/600021853", "source": "okinawastory", "category": "", "stars": 0}, {"name": "今天是 🍔 漢堡日", "name_zh": "🍔 漢堡日", "date_start": "2026-07-20", "date_end": "2026-07-20", "url": "", "source": "today_is", "category": "文化", "stars": 3}, {"name": "サマーイベント2026【夏のゆいまつり】7/20～8/29毎日開催", "name_zh": "夏季活動2026【夏季結衣祭】7/20～8/29每天舉行", "date_start": "2026-07-20", "date_end": "2026-08-29", "url": "https://www.okinawastory.jp/event/600022234", "source": "okinawastory", "category": "", "stars": 0}, {"name": "今天是 ☀️ 大暑", "name_zh": "☀️ 大暑", "date_start": "2026-07-22", "date_end": "2026-07-22", "url": "", "source": "today_is", "category": "節氣", "stars": 4}, {"name": "今天是 🍧 刨冰日", "name_zh": "🍧 刨冰日", "date_start": "2026-07-25", "date_end": "2026-07-25", "url": "", "source": "today_is", "category": "夏日", "stars": 5}, {"name": "～劇場版～ KIMUTAKA × RYUJIN mix. 開催のお知らせ", "name_zh": "～電影版～ KIMUTAKA × RYUJIN mix。活動公告", "date_start": "2026-07-25", "date_end": "2026-07-26", "url": "https://www.okinawastory.jp/event/600022211", "source": "okinawastory", "category": "", "stars": 0}, {"name": "第3回沖縄空手世界大会", "name_zh": "第三場沖繩空手道世界錦標賽", "date_start": "2026-07-30", "date_end": "2026-08-02", "url": "https://www.okinawastory.jp/event/600021645", "source": "okinawastory", "category": "", "stars": 0}, {"name": "8.1（土）「INSPIRATION OKINAWA 2026」", "name_zh": "8.1（週六）“沖繩靈感2026”", "date_start": "2026-08-01", "date_end": "2026-08-02", "url": "https://www.okinawastory.jp/event/600022368", "source": "okinawastory", "category": "", "stars": 0}, {"name": "與那原大拔河祭", "name_zh": "與那原大拔河祭", "date_start": "2026-08-15", "date_end": "2026-08-16", "url": "https://visitokinawajapan.com/zh-hant/discover/events/yonabaru-tug-of-war-festival/", "source": "visitokinawa", "category": "", "stars": 0}, {"name": "【開催日程決定！】第４４回（2026）与那原大綱曳まつりの日程が決まりました", "name_zh": "【活动日程决定了！ ] 第44屆（2026年）與那原拔河節的行程已經確定。", "date_start": "2026-08-15", "date_end": "2026-08-16", "url": "https://www.okinawastory.jp/event/600021889", "source": "okinawastory", "category": "", "stars": 0}, {"name": "沖縄県豊見城市でのプレシーズンマッチ開催のお知らせ　東京グレートベアーズ", "name_zh": "沖繩縣豐見城市舉行季前賽的通知 東京大熊隊", "date_start": "2026-08-22", "date_end": "2026-08-23", "url": "https://www.okinawastory.jp/event/600022361", "source": "okinawastory", "category": "", "stars": 0}, {"name": "サマー・ファミリー・シアター2026～なはーとでなつやすみ～", "name_zh": "夏季家庭劇場2026～那霸暑假～", "date_start": "2026-08-22", "date_end": "2026-08-23", "url": "https://www.okinawastory.jp/event/600021902", "source": "okinawastory", "category": "", "stars": 0}, {"name": "「第22回 ジュニアゴルフ・カヌチャカップ」開催【8/29(土)・30(日)】", "name_zh": "「第22屆青少年高爾夫卡努查杯」舉行[8/29(週六)、30(週日)]", "date_start": "2026-08-29", "date_end": "2026-08-30", "url": "https://www.okinawastory.jp/event/600022351", "source": "okinawastory", "category": "", "stars": 0}, {"name": "「オリオンビアフェスト2026」の開催について", "name_zh": "關於舉辦“Orion啤酒節2026”", "date_start": "2026-09-05", "date_end": "2026-09-06", "url": "https://www.okinawastory.jp/event/600022355", "source": "okinawastory", "category": "", "stars": 0}, {"name": "今年の久米島まつりは９月５日(土)６日(日)に開催！", "name_zh": "今年的久米島祭將於9月5日（週六）和6日（週日）舉行！", "date_start": "2026-09-05", "date_end": "2026-09-06", "url": "https://www.okinawastory.jp/event/600022209", "source": "okinawastory", "category": "", "stars": 0}, {"name": "今天是 🎨 國際博物館日", "name_zh": "🎨 國際博物館日", "date_start": "2027-05-18", "date_end": "2027-05-18", "url": "", "source": "today_is", "category": "文化", "stars": 3}, {"name": "今天是 🌳 森林日", "name_zh": "🌳 森林日", "date_start": "2027-05-20", "date_end": "2027-05-20", "url": "", "source": "today_is", "category": "自然", "stars": 4}, {"name": "今天是 🌾 小滿", "name_zh": "🌾 小滿", "date_start": "2027-05-21", "date_end": "2027-05-21", "url": "", "source": "today_is", "category": "節氣", "stars": 5}, {"name": "今天是 🪸 國際生物多樣性日", "name_zh": "🪸 國際生物多樣性日", "date_start": "2027-05-22", "date_end": "2027-05-22", "url": "", "source": "today_is", "category": "海洋", "stars": 5}, {"name": "今天是 ☕ 主婦休息日", "name_zh": "☕ 主婦休息日", "date_start": "2027-05-25", "date_end": "2027-05-25", "url": "", "source": "today_is", "category": "生活", "stars": 2}, {"name": "今天是 ♨️ 風呂日", "name_zh": "♨️ 風呂日", "date_start": "2027-05-26", "date_end": "2027-05-26", "url": "", "source": "today_is", "category": "文化", "stars": 2}, {"name": "今天是 😊 幸福日", "name_zh": "😊 幸福日", "date_start": "2027-05-29", "date_end": "2027-05-29", "url": "", "source": "today_is", "category": "生活", "stars": 3}, {"name": "今天是 ♻️ 零垃圾日", "name_zh": "♻️ 零垃圾日", "date_start": "2027-05-30", "date_end": "2027-05-30", "url": "", "source": "today_is", "category": "永續", "stars": 5}, {"name": "今天是 🍶 泡盛之日", "name_zh": "🍶 泡盛之日", "date_start": "2027-06-01", "date_end": "2027-06-01", "url": "", "source": "today_is", "category": "沖繩", "stars": 5}, {"name": "今天是 🦷 蟲牙預防日", "name_zh": "🦷 蟲牙預防日", "date_start": "2027-06-04", "date_end": "2027-06-04", "url": "", "source": "today_is", "category": "文化", "stars": 2}, {"name": "今天是 🌊 世界海洋日", "name_zh": "🌊 世界海洋日", "date_start": "2027-06-08", "date_end": "2027-06-08", "url": "", "source": "today_is", "category": "海洋", "stars": 5}, {"name": "今天是 🎮 國際玩樂日", "name_zh": "🎮 國際玩樂日", "date_start": "2027-06-11", "date_end": "2027-06-11", "url": "", "source": "today_is", "category": "生活", "stars": 2}, {"name": "今天是 🕊️ 沖繩戰跡紀念", "name_zh": "🕊️ 沖繩戰跡紀念", "date_start": "2027-06-15", "date_end": "2027-06-15", "url": "", "source": "today_is", "category": "歷史", "stars": 4}, {"name": "今天是 ☀️ 夏至", "name_zh": "☀️ 夏至", "date_start": "2027-06-21", "date_end": "2027-06-21", "url": "", "source": "today_is", "category": "節氣", "stars": 5}, {"name": "今天是 🕊️ 慰靈之日", "name_zh": "🕊️ 慰靈之日", "date_start": "2027-06-23", "date_end": "2027-06-23", "url": "", "source": "today_is", "category": "沖繩", "stars": 5}, {"name": "今天是 ♨️ 露天風呂日", "name_zh": "♨️ 露天風呂日", "date_start": "2027-06-26", "date_end": "2027-06-26", "url": "", "source": "today_is", "category": "文化", "stars": 2}, {"name": "今天是 ⛩️ 夏越之祓", "name_zh": "⛩️ 夏越之祓", "date_start": "2027-06-30", "date_end": "2027-06-30", "url": "", "source": "today_is", "category": "傳統", "stars": 5}, {"name": "今天是 🏖️ 海開季", "name_zh": "🏖️ 海開季", "date_start": "2027-07-01", "date_end": "2027-07-01", "url": "", "source": "today_is", "category": "夏日", "stars": 5}, {"name": "今天是 🎋 七夕", "name_zh": "🎋 七夕", "date_start": "2027-07-07", "date_end": "2027-07-07", "url": "", "source": "today_is", "category": "傳統", "stars": 5}, {"name": "今天是 🫘 納豆日", "name_zh": "🫘 納豆日", "date_start": "2027-07-10", "date_end": "2027-07-10", "url": "", "source": "today_is", "category": "文化", "stars": 2}, {"name": "今天是 🌊 海之日", "name_zh": "🌊 海之日", "date_start": "2027-07-15", "date_end": "2027-07-15", "url": "", "source": "today_is", "category": "傳統", "stars": 5}, {"name": "今天是 🍔 漢堡日", "name_zh": "🍔 漢堡日", "date_start": "2027-07-20", "date_end": "2027-07-20", "url": "", "source": "today_is", "category": "文化", "stars": 3}, {"name": "今天是 ☀️ 大暑", "name_zh": "☀️ 大暑", "date_start": "2027-07-22", "date_end": "2027-07-22", "url": "", "source": "today_is", "category": "節氣", "stars": 4}, {"name": "今天是 🍧 刨冰日", "name_zh": "🍧 刨冰日", "date_start": "2027-07-25", "date_end": "2027-07-25", "url": "", "source": "today_is", "category": "夏日", "stars": 5}]</script>
 <script>
 const EVENTS = JSON.parse(document.getElementById('ev-data').textContent);
-
-// index by date
 const byDate = {};
 EVENTS.forEach(e => {
   if (!byDate[e.date_start]) byDate[e.date_start] = [];
   byDate[e.date_start].push(e);
 });
 
-const WD = ['日','一','二','三','四','五','六'];
-const MN = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+const WD  = ['日','一','二','三','四','五','六'];
+const MN  = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
 
-// collect all (year,month) with events
-const months = [...new Set(EVENTS.map(e => e.date_start.slice(0,7)))].sort();
-const years  = [...new Set(months.map(m => m.slice(0,4)))];
+// months that have real (non-today_is) events
+const actMonths = [...new Set(
+  EVENTS.filter(e => e.source !== 'today_is').map(e => e.date_start.slice(0,7))
+)].sort();
+const allMonths = [...new Set(EVENTS.map(e => e.date_start.slice(0,7)))].sort();
+const years     = [...new Set(allMonths.map(m => m.slice(0,4)))];
 
-let cy, cm, selDate = null;
+let cy, cm, selDate = null, viewMode = null; // null | 'today_is' | 'activity'
 
-// ── Init year/month nav ──────────────────────────────────────────────
-function buildNav() {
+function pad(n){ return String(n).padStart(2,'0'); }
+
+// ── Nav ──────────────────────────────────────────────────────────────
+function buildNav(){
   const yn = document.getElementById('year-nav');
   const mg = document.getElementById('month-grid');
-  yn.innerHTML = years.map(y =>
-    `<button class="year-btn${y==cy?' active':''}" onclick="setYear('${y}')">${y}</button>`
-  ).join('');
 
-  // months for current year
-  const myMonths = months.filter(m => m.startsWith(cy));
-  const allM = Array.from({length:12},(_,i)=>i+1);
-  mg.innerHTML = allM.map(m => {
-    const key = cy+'-'+String(m).padStart(2,'0');
-    const has = myMonths.includes(key);
-    const active = m-1 == cm;
-    return `<button class="month-btn${active?' active':''}${has?'':''}"
-      onclick="${has?`setMonth(${m-1})`:'void(0)'}"
-      style="${has?'':'opacity:.35;cursor:default'}">${m}月</button>`;
+  yn.innerHTML =
+    years.map(y =>
+      `<button class="year-btn${parseInt(y)===cy&&!viewMode?' active':''}"
+         onclick="setYear('${y}')">${y}</button>`
+    ).join('') +
+    `<div class="nav-sep"></div>
+     <button class="filter-btn${viewMode==='today_is'?' f-ti':''}"
+       onclick="toggleFilter('today_is')">🌟 今天是…</button>
+     <button class="filter-btn${viewMode==='activity'?' f-ac':''}"
+       onclick="toggleFilter('activity')">🌺 沖繩活動</button>`;
+
+  const myActMonths = actMonths.filter(m => m.startsWith(cy));
+  mg.innerHTML = Array.from({length:12}, (_, i) => {
+    const m = i + 1;
+    const key = cy + '-' + pad(m);
+    const has = myActMonths.includes(key);
+    const act = !viewMode && m-1 === cm;
+    return `<button class="month-btn${act?' active':''}"
+      onclick="${has ? `setMonth(${i})` : 'void(0)'}"
+      style="${has ? '' : 'opacity:.28;cursor:default'}">${m}月</button>`;
   }).join('');
 }
 
-function setYear(y) {
-  cy = parseInt(y);
-  // pick first available month in this year
-  const first = months.find(m => m.startsWith(cy));
-  cm = first ? parseInt(first.slice(5,7))-1 : 0;
-  selDate = null;
+function setYear(y){
+  cy = parseInt(y); viewMode = null;
+  const first = actMonths.find(m => m.startsWith(cy));
+  cm = first ? parseInt(first.slice(5,7)) - 1 : 0;
+  selDate = null; buildNav(); renderCal(); renderEvents();
+}
+function setMonth(m){
+  cm = m; selDate = null; viewMode = null;
   buildNav(); renderCal(); renderEvents();
 }
-
-function setMonth(m) {
-  cm = m; selDate = null;
-  buildNav(); renderCal(); renderEvents();
+function toggleFilter(type){
+  viewMode = viewMode === type ? null : type;
+  selDate = null; buildNav(); renderCal(); renderEvents();
 }
 
 // ── Calendar ─────────────────────────────────────────────────────────
-function renderCal() {
-  const lbl = document.getElementById('cal-label');
-  lbl.textContent = cy + '年' + MN[cm];
-
+function renderCal(){
+  document.getElementById('cal-label').textContent = cy + '年' + MN[cm];
   const first = new Date(cy, cm, 1);
   const last  = new Date(cy, cm+1, 0);
   const now   = new Date();
   const dow   = first.getDay();
-
   let html = '';
 
-  // prev month filler
   const prevLast = new Date(cy, cm, 0).getDate();
-  for (let i = dow-1; i >= 0; i--)
-    html += '<div class="cal-day other-month"><span>'+(prevLast-i)+'</span></div>';
+  for(let i = dow-1; i >= 0; i--)
+    html += `<div class="cal-day other-month"><span>${prevLast - i}</span></div>`;
 
-  // current month
-  for (let d = 1; d <= last.getDate(); d++) {
-    const ds = cy+'-'+pad(cm+1)+'-'+pad(d);
-    const isToday = d==now.getDate() && cm==now.getMonth() && cy==now.getFullYear();
+  for(let d = 1; d <= last.getDate(); d++){
+    const ds = cy + '-' + pad(cm+1) + '-' + pad(d);
+    const isToday = d === now.getDate() && cm === now.getMonth() && cy === now.getFullYear();
     const isSel   = ds === selDate;
     const evs     = byDate[ds] || [];
-    let cls = 'cal-day'+(isToday?' today':'')+(isSel?' selected':'');
-    let dots = evs.slice(0,4).map(e =>
-      '<div class="cal-dot '+(e.source==='okinawastory'?'dot-j':'dot-v')+'"></div>'
-    ).join('');
-    html += `<div class="${cls}" onclick="pickDay('${ds}')">
-      <span>${d}</span>
-      <div class="cal-dots">${dots}</div>
-    </div>`;
+    const dots    = evs.slice(0,5).map(e => {
+      const c = e.source === 'today_is' ? 'dot-t'
+              : e.source === 'okinawastory' ? 'dot-j' : 'dot-v';
+      return `<div class="cal-dot ${c}"></div>`;
+    }).join('');
+    html += `<div class="cal-day${isToday?' today':''}${isSel?' selected':''}" onclick="pickDay('${ds}')">
+      <span>${d}</span><div class="cal-dots">${dots}</div></div>`;
   }
 
-  // next month filler
   const fill = 42 - dow - last.getDate();
-  for (let d = 1; d <= fill; d++)
-    html += '<div class="cal-day other-month"><span>'+d+'</span></div>';
+  for(let d = 1; d <= fill; d++)
+    html += `<div class="cal-day other-month"><span>${d}</span></div>`;
 
   document.getElementById('cal-grid').innerHTML = html;
 }
 
-function pickDay(ds) {
+function pickDay(ds){
   selDate = selDate === ds ? null : ds;
-  renderCal(); renderEvents();
-  document.getElementById('ev-label').scrollIntoView({behavior:'smooth',block:'start'});
+  viewMode = null; buildNav(); renderCal(); renderEvents();
+  document.getElementById('ev-label').scrollIntoView({behavior:'smooth', block:'start'});
 }
 
 // ── Events ────────────────────────────────────────────────────────────
-function pad(n) { return String(n).padStart(2,'0'); }
-
-function fmtDate(s) {
-  if (!s) return '';
-  const d = new Date(s+'T00:00:00');
-  return (d.getMonth()+1)+'/'+d.getDate()+'('+WD[d.getDay()]+')';
+function fmtDate(s){
+  if(!s) return '';
+  const d = new Date(s + 'T00:00:00');
+  return (d.getMonth()+1) + '/' + d.getDate() + '(' + WD[d.getDay()] + ')';
 }
 
-function renderEvents() {
+function renderEvents(){
   const list  = document.getElementById('ev-list');
-  const lbl   = document.getElementById('ev-label');
-  const cnt   = document.getElementById('ev-count');
-  const prefix = cy+'-'+pad(cm+1);
+  const hint  = document.getElementById('filter-hint');
+  let evs, labelText, hintText = '';
 
-  const evs = selDate
-    ? (byDate[selDate] || [])
-    : EVENTS.filter(e => e.date_start && e.date_start.startsWith(prefix));
+  if(viewMode === 'today_is'){
+    evs = EVENTS.filter(e => e.source === 'today_is')
+                .sort((a,b) => a.date_start.localeCompare(b.date_start));
+    labelText = '🌟 今天是… 全系列';
+    hintText  = '顯示全年度';
+  } else if(viewMode === 'activity'){
+    evs = EVENTS.filter(e => e.source !== 'today_is')
+                .sort((a,b) => a.date_start.localeCompare(b.date_start));
+    labelText = '🌺 沖繩活動 全覽';
+    hintText  = '顯示全時段';
+  } else if(selDate){
+    const all = byDate[selDate] || [];
+    evs = [
+      ...all.filter(e => e.source === 'today_is'),
+      ...all.filter(e => e.source !== 'today_is'),
+    ];
+    labelText = fmtDate(selDate);
+  } else {
+    const prefix = cy + '-' + pad(cm+1);
+    const all = EVENTS.filter(e => e.date_start && e.date_start.startsWith(prefix));
+    evs = [
+      ...all.filter(e => e.source === 'today_is').sort((a,b) => a.date_start.localeCompare(b.date_start)),
+      ...all.filter(e => e.source !== 'today_is').sort((a,b) => a.date_start.localeCompare(b.date_start)),
+    ];
+    labelText = cy + '年' + MN[cm] + '活動';
+  }
 
-  lbl.childNodes[0].textContent = selDate ? fmtDate(selDate) : cy+'年'+MN[cm]+'活動';
-  cnt.textContent = evs.length;
+  const lbl = document.getElementById('ev-label');
+  lbl.childNodes[0].textContent = labelText;
+  document.getElementById('ev-count').textContent = evs.length;
+  hint.textContent = hintText;
+  hint.style.display = hintText ? 'inline-block' : 'none';
 
-  if (!evs.length) {
-    list.innerHTML = '<div class="empty">🌊 這天沒有活動</div>';
+  if(!evs.length){
+    list.innerHTML = '<div class="empty">🌊 這裡還沒有資料</div>';
     return;
   }
 
   list.innerHTML = evs.map((e, i) => {
-    const zh  = e.name_zh || e.name;
-    const ja  = e.name;
-    const isJ = e.source === 'okinawastory';
-    const end = (e.date_end && e.date_end !== e.date_start)
-      ? '～'+ (()=>{const d=new Date(e.date_end+'T00:00:00');return (d.getMonth()+1)+'/'+d.getDate()})()
+    if(e.source === 'today_is'){
+      const filled = e.stars || 0;
+      const stars  = '★'.repeat(filled) + '☆'.repeat(5 - filled);
+      return `<div class="ev-item today-is" style="animation-delay:${i*0.03}s">
+        <div class="ev-date">${fmtDate(e.date_start)}</div>
+        <div class="ev-body">
+          <span class="ev-zh">${e.name_zh || e.name}</span>
+          <div class="ev-meta">
+            <span class="ev-cat">${e.category || ''}</span>
+            <span class="ev-stars">${stars}</span>
+          </div>
+        </div>
+      </div>`;
+    }
+    const isJ  = e.source === 'okinawastory';
+    const zh   = e.name_zh || e.name;
+    const end  = (e.date_end && e.date_end !== e.date_start)
+      ? '～' + (()=>{ const d=new Date(e.date_end+'T00:00:00'); return (d.getMonth()+1)+'/'+d.getDate(); })()
       : '';
     const dtag = fmtDate(e.date_start) + end;
-
-    const bodyLink = isJ && zh !== ja
-      ? `<a class="ev-zh" href="${e.url}" target="_blank">${zh}</a>
-         <div class="ev-ja"><a href="${e.url}" target="_blank">${ja}</a></div>`
-      : `<a class="ev-zh" href="${e.url}" target="_blank">${zh}</a>`;
-
-    return `<div class="ev-item ${isJ?'jtype':'vtype'}" style="animation-delay:${i*0.035}s">
+    const zhEl = e.url
+      ? `<a class="ev-zh" href="${e.url}" target="_blank" rel="noopener">${zh}</a>`
+      : `<span class="ev-zh">${zh}</span>`;
+    const jaEl = (isJ && e.name !== zh)
+      ? `<div class="ev-ja"><a href="${e.url}" target="_blank" rel="noopener">${e.name}</a></div>` : '';
+    return `<div class="ev-item ${isJ?'jtype':'vtype'}" style="animation-delay:${i*0.03}s">
       <div class="ev-date">${dtag}</div>
-      <div class="ev-body">${bodyLink}</div>
+      <div class="ev-body">${zhEl}${jaEl}</div>
     </div>`;
   }).join('');
 }
@@ -376,13 +478,14 @@ function renderEvents() {
 // ── Init ──────────────────────────────────────────────────────────────
 (function(){
   const now = new Date();
-  cy = now.getFullYear(); cm = now.getMonth();
-  // if current month has no events, jump to first month with events
-  const prefix = cy+'-'+pad(cm+1);
-  if (!EVENTS.some(e => e.date_start && e.date_start.startsWith(prefix)) && EVENTS.length) {
-    const first = EVENTS[0].date_start;
-    cy = parseInt(first.slice(0,4));
-    cm = parseInt(first.slice(5,7))-1;
+  cy = now.getFullYear();
+  cm = now.getMonth();
+  // if current month has no activity events, jump to first available month
+  const prefix = cy + '-' + pad(cm+1);
+  if(!EVENTS.some(e => e.source !== 'today_is' && e.date_start && e.date_start.startsWith(prefix))
+     && actMonths.length){
+    cy = parseInt(actMonths[0].slice(0,4));
+    cm = parseInt(actMonths[0].slice(5,7)) - 1;
   }
   buildNav(); renderCal(); renderEvents();
 })();
