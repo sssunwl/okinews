@@ -61,6 +61,7 @@ def get_visitokinawa_events():
     events = []
     now = datetime.now()
     upper = now + timedelta(days=90)
+    seen_urls = set()
 
     try:
         res = requests.get(url, headers=HEADERS, timeout=15)
@@ -77,11 +78,15 @@ def get_visitokinawa_events():
         if not dt_tag or not date_div:
             continue
 
-        name = dt_tag.get_text(strip=True)
+        name = dt_tag.get_text(strip=True).strip(")")
         date_text = date_div.get_text(strip=True)
         link = a["href"]
         if link.startswith("/"):
             link = "https://visitokinawajapan.com" + link
+
+        if link in seen_urls:
+            continue
+        seen_urls.add(link)
 
         parts = date_text.split("-")
         if len(parts) < 2:
@@ -104,60 +109,59 @@ def get_visitokinawa_events():
 
 
 def get_okinawastory_events():
-    """okinawastory.jp — 日文來源，共 200+ 筆活動"""
+    """okinawastory.jp — 日文來源，爬全部 8 頁（~216 筆活動）"""
     base = "https://www.okinawastory.jp"
-    url = f"{base}/event/?month=all"
     events = []
     now = datetime.now()
     seen_hrefs = set()
 
-    try:
-        res = requests.get(url, headers=HEADERS, timeout=15)
-        res.raise_for_status()
-    except Exception as e:
-        print(f"⚠️ okinawastory 連線失敗：{e}")
-        return events
+    for page in range(1, 9):
+        url = f"{base}/event/?month=all&page={page}"
+        try:
+            res = requests.get(url, headers=HEADERS, timeout=15)
+            res.raise_for_status()
+        except Exception as e:
+            print(f"⚠️ okinawastory page {page} 失敗：{e}")
+            break
 
-    soup = BeautifulSoup(res.text, "lxml")
+        soup = BeautifulSoup(res.text, "lxml")
+        found_on_page = 0
 
-    for a in soup.find_all("a", href=True):
-        href = a["href"]
-        if not re.match(r'^/event/\d+', href):
-            continue
-        if href in seen_hrefs:
-            continue
-        seen_hrefs.add(href)
+        for a in soup.find_all("a", href=True):
+            href = a["href"]
+            if not re.match(r'^/event/\d+', href):
+                continue
+            if href in seen_hrefs:
+                continue
+            seen_hrefs.add(href)
 
-        # Title
-        name_tag = a.find(["h3", "h2", "h4", "dt", "strong"])
-        name_ja = name_tag.get_text(strip=True) if name_tag else ""
-        if not name_ja:
-            texts = [t.strip() for t in a.stripped_strings]
-            name_ja = texts[0] if texts else ""
-        if not name_ja:
-            continue
-
-        # Date
-        date_text = ""
-        for string in a.stripped_strings:
-            if re.search(r'\d{4}年\d{1,2}月\d{1,2}日', string):
-                date_text = string
-                break
-
-        # Filter out past events
-        if date_text and "〜" in date_text:
-            end_part = date_text.split("〜")[-1].strip()
-            end_dt = parse_date_jp(end_part)
-            if end_dt and end_dt < now:
+            name_tag = a.find("h3", class_="event-title")
+            name_ja = name_tag.get_text(strip=True) if name_tag else ""
+            if not name_ja:
                 continue
 
-        events.append({
-            "name": name_ja,
-            "name_zh": "",  # filled in add_translations()
-            "date": date_text,
-            "url": base + href,
-            "source": "okinawastory"
-        })
+            date_tag = a.find("p", class_="event-date")
+            date_text = date_tag.get_text(strip=True) if date_tag else ""
+
+            # 過濾已結束活動
+            if date_text and "〜" in date_text:
+                end_part = date_text.split("〜")[-1].strip()
+                end_dt = parse_date_jp(end_part)
+                if end_dt and end_dt < now:
+                    continue
+
+            events.append({
+                "name": name_ja,
+                "name_zh": "",
+                "date": date_text,
+                "url": base + href,
+                "source": "okinawastory"
+            })
+            found_on_page += 1
+
+        # 若該頁沒有活動，代表已到末頁
+        if found_on_page == 0:
+            break
 
     print(f"✅ okinawastory: {len(events)} 筆（翻譯前）")
     return events
@@ -193,9 +197,7 @@ def format_event(e):
     else:
         title = e["name"]
         flag = "🌏"
-
-    date = f"\n📆 {e['date']}" if e.get("date") else ""
-    return f"{flag} [{title}]({e['url']}){date}\n\n"
+    return f"{flag} [{title}]({e['url']})\n"
 
 
 def send_telegram(text):
