@@ -2,315 +2,233 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>沖繩活動年曆</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>🏝️ 沖繩活動年曆</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <style>
+:root{--ocean:#0A4E6B;--coral:#F06543;--sand:#FFF8EE;--yellow:#FFD166;--sky:#5BB8D4;--dark:#2C1810;--white:#fff}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f0f4f8;color:#222}
-header{background:#0d5c8a;color:#fff;padding:18px 20px}
-header h1{font-size:1.4rem}
-header p{font-size:.8rem;opacity:.75;margin-top:4px}
-nav{display:flex;gap:6px;padding:12px 16px;overflow-x:auto;background:#fff;border-bottom:1px solid #ddd;position:sticky;top:0;z-index:10}
-.tab{padding:5px 12px;border-radius:16px;background:#eee;text-decoration:none;color:#555;font-size:.85rem;white-space:nowrap}
-.tab:hover{background:#0d5c8a;color:#fff}
-section{margin:14px;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.08)}
-section h2{background:#0d5c8a;color:#fff;padding:10px 16px;font-size:.95rem;font-weight:600}
-section h2 small{font-weight:400;opacity:.8}
-.list{padding:0 4px}
-.ev{display:flex;align-items:flex-start;gap:8px;padding:10px 12px;border-bottom:1px solid #f0f0f0}
-.ev:last-child{border-bottom:none}
-.dt{min-width:110px;font-size:.78rem;color:#666;padding-top:2px;flex-shrink:0}
-.fl{font-size:.9rem;flex-shrink:0}
-.ev a{color:#0d5c8a;text-decoration:none;font-size:.88rem;line-height:1.4}
-.ev a:hover{text-decoration:underline}
-.ja{color:#999;font-size:.78rem}
-footer{text-align:center;padding:20px;color:#aaa;font-size:.78rem}
-@media(max-width:400px){.dt{min-width:80px}}
+body{font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC",sans-serif;background:var(--sand);color:var(--dark);min-height:100vh}
+
+/* ── Header ── */
+header{background:linear-gradient(150deg,#0A3D5C 0%,#0A6E9A 55%,#2AA0C8 100%);padding:36px 20px 0;position:relative;overflow:hidden}
+.sun{position:absolute;top:18px;right:24px;width:64px;height:64px;background:radial-gradient(circle,#FFEC6E 40%,#FFD166 70%,rgba(255,209,102,0) 100%);border-radius:50%;animation:sunPulse 4s ease-in-out infinite;z-index:1}
+.sun::before{content:'';position:absolute;inset:-12px;background:radial-gradient(circle,rgba(255,209,102,0.35) 40%,transparent 70%);border-radius:50%;animation:sunPulse 4s ease-in-out infinite reverse}
+.header-inner{text-align:center;position:relative;z-index:2;padding-bottom:24px}
+.header-inner h1{font-family:'Pacifico',cursive;font-size:2rem;color:var(--yellow);text-shadow:2px 3px 10px rgba(0,0,0,0.4);animation:float 4s ease-in-out infinite;letter-spacing:1px}
+.header-inner p{color:rgba(255,255,255,0.8);font-size:.78rem;margin-top:6px}
+.wave-wrap{height:52px;position:relative;overflow:hidden}
+.wave-wrap svg{position:absolute;bottom:0;width:220%;animation:waveFlow 10s linear infinite}
+.wave-wrap svg:nth-child(2){animation:waveFlow 16s linear infinite reverse;opacity:.45}
+
+/* ── Calendar ── */
+.cal-card{background:var(--white);margin:18px 14px 10px;border-radius:22px;overflow:hidden;box-shadow:0 6px 24px rgba(10,78,107,0.14)}
+.cal-nav{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:var(--ocean)}
+.cal-nav h2{color:var(--yellow);font-family:'Pacifico',cursive;font-size:1.1rem;letter-spacing:.5px}
+.cal-nav button{background:rgba(255,255,255,0.18);border:none;color:var(--white);width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:1rem;transition:all .2s;display:flex;align-items:center;justify-content:center}
+.cal-nav button:hover{background:var(--coral);transform:scale(1.1)}
+.wdays{display:grid;grid-template-columns:repeat(7,1fr);background:#EEF6FA;border-bottom:1px solid #D8EDF5}
+.wday{text-align:center;padding:8px 0;font-size:.72rem;font-weight:700;color:#666}
+.wday:first-child{color:var(--coral)}
+.wday:last-child{color:var(--sky)}
+#cal-grid{display:grid;grid-template-columns:repeat(7,1fr);padding:8px 6px 12px;gap:2px}
+.day{min-height:50px;padding:5px 3px;text-align:center;border-radius:10px;cursor:pointer;transition:all .2s;position:relative}
+.day:hover{background:#F0F7FA;transform:scale(1.06)}
+.day.other{opacity:.28;cursor:default}
+.day.other:hover{transform:none;background:none}
+.day.has .num{color:var(--ocean);font-weight:800}
+.day.sel{background:var(--ocean) !important}
+.day.sel .num{color:var(--white) !important}
+.day.today .num{background:var(--coral);color:var(--white);border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;margin:0 auto}
+.num{font-size:.82rem;line-height:1.9}
+.dots{display:flex;justify-content:center;gap:2px;margin-top:1px}
+.dot{width:5px;height:5px;border-radius:50%;background:var(--coral)}
+.dot.jp{background:var(--sky)}
+
+/* ── Events ── */
+.ev-section{padding:0 14px 30px}
+.ev-header{display:flex;align-items:center;gap:8px;padding:14px 2px 10px}
+.ev-header strong{color:var(--ocean);font-size:1rem}
+.ev-count{background:var(--coral);color:var(--white);border-radius:12px;padding:2px 10px;font-size:.75rem;font-weight:700}
+.ev-card{background:var(--white);border-radius:14px;padding:14px 16px 12px;margin-bottom:10px;border-left:4px solid var(--coral);box-shadow:0 2px 10px rgba(0,0,0,0.06);transition:transform .22s,box-shadow .22s;animation:slideUp .35s ease both}
+.ev-card.jp{border-left-color:var(--sky)}
+.ev-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,0.11)}
+.ev-dtag{display:inline-block;background:linear-gradient(90deg,var(--ocean),var(--sky));color:var(--white);font-size:.7rem;padding:3px 10px;border-radius:10px;margin-bottom:8px;font-weight:600}
+.ev-zh{font-size:1rem;font-weight:700;color:var(--dark);line-height:1.45;margin-bottom:5px}
+.ev-ja{font-size:.76rem;color:#aaa}
+.ev-ja a{color:var(--sky);text-decoration:none}
+.ev-ja a:hover{text-decoration:underline;color:var(--ocean)}
+.ev-link{font-size:.75rem}
+.ev-link a{color:var(--coral);text-decoration:none;font-weight:600}
+.ev-link a:hover{text-decoration:underline}
+.empty{text-align:center;padding:36px 20px;color:#bbb;font-size:.9rem}
+
+footer{text-align:center;padding:20px;font-size:.75rem;color:#bbb;border-top:1px solid #eee}
+
+/* ── Animations ── */
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes sunPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+@keyframes waveFlow{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes slideUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+
+@media(max-width:400px){.header-inner h1{font-size:1.5rem}.day{min-height:42px}}
 </style>
 </head>
 <body>
+
 <header>
-  <h1>🏝️ 沖繩活動年曆</h1>
-  <p>來源：Visit Okinawa Japan ＋ おきなわ物語 ｜ 更新：2026-06-09 07:13 ｜ 共 65 個活動</p>
+  <div class="sun"></div>
+  <div class="header-inner">
+    <h1>Okinawa 活動年曆</h1>
+    <p>🌊 Visit Okinawa Japan ＋ おきなわ物語 ｜ 更新：2026-06-09 12:16</p>
+  </div>
+  <div class="wave-wrap">
+    <svg viewBox="0 0 1440 52" preserveAspectRatio="none">
+      <path d="M0,26 C200,52 400,0 600,26 C800,52 1000,0 1200,26 C1320,40 1380,16 1440,26 L1440,52 L0,52 Z" fill="#FFF8EE"/>
+    </svg>
+    <svg viewBox="0 0 1440 52" preserveAspectRatio="none">
+      <path d="M0,26 C240,0 480,52 720,26 C960,0 1200,52 1440,26 L1440,52 L0,52 Z" fill="rgba(255,248,238,0.5)"/>
+    </svg>
+  </div>
 </header>
-<nav><a href="#m202606" class="tab">2026/6</a>
-<a href="#m202607" class="tab">2026/7</a>
-<a href="#m202608" class="tab">2026/8</a>
-<a href="#m202609" class="tab">2026/9</a>
-</nav>
-<section id="m202606">
-          <h2>2026年6月 <small>（33 個活動）</small></h2>
-          <div class="list"><div class="ev">
-              <span class="dt">6/4(週四)～6/28</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022255" target="_blank">「彌勒亞的財富──迦那那──」<span class="ja">（『弥勒世果報─かなさ─』）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/4(週四)～6/13</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600021570" target="_blank">2026 年 Tasar 世界錦標賽在國頭舉行<span class="ja">（Tasar World Championships 2026 in Kunigami）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/5(週五)～6/15</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022372" target="_blank">動物藝術第6卷<span class="ja">（アニマル・アート Vol.6）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/5(週五)～6/15</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022162" target="_blank">suikara Festival -謝謝你，四周年-<span class="ja">（suikara祭り　-おかげさまで４周年-）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/6(週六)～6/23</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022343" target="_blank">Kasaneawase 快閃店<span class="ja">（Kasaneawase Pop up Store）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/6(週六)～7/12</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022250" target="_blank">[恩納村博物館]關於令和八週年紀念日特別展覽“Unnanu War（Ikusa）”的通知<span class="ja">（【恩納村博物館】令和8年度慰霊の日特別展「うんなぬ戦争（イクサ）」開催のお知らせ）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/6(週六)～8/11</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022160" target="_blank">龍球魔女マルシェ</a>
-            </div><div class="ev">
-              <span class="dt">6/7(週日)～6/28</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022299" target="_blank">特別展覽|隨時隨地的入侵物種移動博物館<span class="ja">（企画展 | 外来種いつでもどこでも移動ミュージアム）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/8(週一)～6/14</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022318" target="_blank">Szabo Sylvia 繪畫展「Take to the Sky」@嘉手納路邊車站<span class="ja">（サボー・シルヴィア絵画展「空へ飛び立て」開催＠道の駅かでな）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/9(週二)～7/12</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022354" target="_blank">令與第八屆和平展「八重瀨的戰爭與重建－從集中營到重返村莊與重建」公告<span class="ja">（令和８年度平和企画展 『八重瀬の戦争と復興 －収容所から帰村そして復興へ－』開催のお知らせ）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/9(週二)～6/14</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022115" target="_blank">7號 末吉社 18<span class="ja">（第7回末吉社18）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/10(週三)～6/30</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022352" target="_blank">令和8年度 平和資料展開催のお知らせ</a>
-            </div><div class="ev">
-              <span class="dt">6/10(週三)～6/16</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600021883" target="_blank">庫裡奧的《幽靈》展覽<span class="ja">（キュリオのもののけ展）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/11(週四)～6/28</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022336" target="_blank">吉馬浩與中山義彥「戰爭已經到來－沖繩戰役版畫集」版畫展<span class="ja">（儀間比呂志・中山良彦『戦がやってきた－沖縄戦版画集—』版画展）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/11(週四)～8/30</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022285" target="_blank">6/11（星期四）～8/30（星期日）田島幸彥沖繩繪本原創藝術展即將舉辦！<span class="ja">（6/11（木）～8/30（日）　田島征彦　おきなわ絵本原画展開催！）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/13(週六)～9/27</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022215" target="_blank">天堂早晨涼爽~荷花睡蓮台灣早餐~2026<span class="ja">（楽園朝涼み～蓮・睡蓮と台湾朝食～2026）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/15(週一)～6/28</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022249" target="_blank">我們將舉辦令與第8屆與那原町人民和平日/陣亡將士紀念日特別展「生魚與那馬努－對與那原的戰爭與和平的思考」。<span class="ja">（令和8年度与那原町民平和の日・慰霊の日企画展「戦世（いくさぬゆー ）と 今世（なまぬゆー） －与那原の戦争と平和について考える－」を開催します）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/18(週四)</span>
-              <span class="fl">🌏</span>
-              <a href="https://visitokinawajapan.com/zh-hant/discover/events/itoman-hare/" target="_blank">糸滿龍舟大賽</a>
-            </div><div class="ev">
-              <span class="dt">6/18(週四)～7/25</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022334" target="_blank">初夏清晨才有的夢幻般的水面景色：“薩加里巴納風景巡遊”<span class="ja">（初夏の早朝にだけ現れる水面の幻想的な光景「絶景サガリバナクルーズ」）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/18(週四)～6/29</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022321" target="_blank">UMESHISO工房展 「おしゃべりないきものたち」</a>
-            </div><div class="ev">
-              <span class="dt">6/19(週五)～6/23</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022371" target="_blank">『野ばらの月～a line～』</a>
-            </div><div class="ev">
-              <span class="dt">6/19(週五)～9/6</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022344" target="_blank">2020年和平展「照片與證詞中的西原戰爭」公告<span class="ja">（令和8年度 平和企画展「写真と証言で見る西原の戦争」開催のお知らせ）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/19(週五)～6/20</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022123" target="_blank">海木酒店一年一度的「特色法式晚宴」將於六月舉辦！兩位廚師友誼打造的特別晚餐！<span class="ja">（シーウッドホテル恒例の 「スペシャル・フレンチ・ディナー」を6月に開催！ 2人のシェフの友情が奏でる特別なディナー！）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/20(週六)～9/26</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022335" target="_blank">每天限定一組的“Tingara晚餐巡遊”，仰望西表島的星空<span class="ja">（1日1組限定　西表島の星空を仰ぐ「ティンガーラディナークルーズ」）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/20(週六)～6/21</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022322" target="_blank">6月20日至21日《Gusuyo！門索爾到第32軍戰壕2026年版》<span class="ja">（6月20日・21日「グスーヨー！32軍壕へメンソーレ2026版）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/20(週六)～6/21</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022320" target="_blank">世界長頸鹿日活動<span class="ja">（世界キリンの日イベント）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/20(週六)～6/27</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022068" target="_blank">關於第27屆薩巴尼帆船賽和第49屆座間味帆船賽<span class="ja">（第27回サバニ帆漕レース・第49回座間味ヨットレース 開催について）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/21(週日)～8/9</span>
-              <span class="fl">🌏</span>
-              <a href="https://visitokinawajapan.com/zh-hant/discover/events/eisa-night/" target="_blank">Eisa之夜</a>
-            </div><div class="ev">
-              <span class="dt">6/23(週二)～6/28</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022114" target="_blank">世界遺產國家義大利：充滿陽光<span class="ja">（世界遺産の国イタリア「太陽がいっぱい」）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/27(週六)～11/1</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022185" target="_blank">草野球沖縄一決定戦 第31回 オリオンスーパーベースボール2026</a>
-            </div><div class="ev">
-              <span class="dt">6/27(週六)～6/28</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022124" target="_blank">DRUM TAO 2026全新舞台劇《THE HUMAN》<span class="ja">（DRUM TAO 2026 新作舞台「THE HUMAN」）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/27(週六)～6/28</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600021890" target="_blank">第三屆琉球玻璃城<span class="ja">（第3回 琉球ガラス市）</span></a>
-            </div><div class="ev">
-              <span class="dt">6/30(週二)～7/5</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022210" target="_blank">O2Y -沖繩到山原 - 2026<span class="ja">（O2Y -Okinawa to Yanbaru- 2026）</span></a>
-            </div></div>
-        </section><section id="m202607">
-          <h2>2026年7月 <small>（24 個活動）</small></h2>
-          <div class="list"><div class="ev">
-              <span class="dt">7/1(週三)～8/15</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022366" target="_blank">夏休みパネル展「在りし日の首里城パネル展」開催！【7/１～8/15】</a>
-            </div><div class="ev">
-              <span class="dt">7/3(週五)～7/26</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022353" target="_blank">沖繩湧田燒，寧靜之美～神田炭平收藏～<span class="ja">（湧田焼　沖縄・静謐の美～神田淡平コレクション～）</span></a>
-            </div><div class="ev">
-              <span class="dt">7/3(週五)～7/14</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022294" target="_blank">[歡迎～Mensore～] J聯賽「岩田喜悅」夏季集訓期已定！ ！<span class="ja">（【歓迎～めんそーれ～】Ｊリーグ「ジュビロ磐田」夏季トレーニングキャンプ期間決定！！）</span></a>
-            </div><div class="ev">
-              <span class="dt">7/3(週五)～7/5</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022181" target="_blank">日本最西端與那國島第 37 屆國際馬林魚釣魚比賽招募參賽者<span class="ja">（第37回日本最西端与那国島国際カジキ釣り大会　競技参加者の募集について）</span></a>
-            </div><div class="ev">
-              <span class="dt">7/3(週五)～7/4</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600021862" target="_blank">久米島夏威夷節 2026<span class="ja">（久米島ハワイアンフェスティバル 2026）</span></a>
-            </div><div class="ev">
-              <span class="dt">7/4(週六)</span>
-              <span class="fl">🌏</span>
-              <a href="https://visitokinawajapan.com/zh-hant/discover/events/ocean-expo-park-summer-festival/" target="_blank">海洋博公園夏日祭典</a>
-            </div><div class="ev">
-              <span class="dt">7/4(週六)～7/12</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022238" target="_blank">宇津郎花園<span class="ja">（うつろう庭園）</span></a>
-            </div><div class="ev">
-              <span class="dt">7/8(週三)～7/26</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022362" target="_blank">關於浦和紅寶石2026/27賽季夏季訓練營實施<span class="ja">（2026/27シーズン 夏季トレーニングキャンプ実施について　浦和レッズ）</span></a>
-            </div><div class="ev">
-              <span class="dt">7/9(週四)～8/29</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022208" target="_blank">[2026年夏季煙火大會資訊] 舉辦25天 在客房陽台上欣賞煙火的沖繩度假勝地<span class="ja">（【2026年 夏の打上げ花火のご案内】25日間開催 お部屋のバルコニーから花火を愉しむ沖縄リゾートステイを）</span></a>
-            </div><div class="ev">
-              <span class="dt">7/9(週四)～8/29</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022207" target="_blank">總共將舉行25場煙火表演，為夏日的夜空和水盆增添色彩。<span class="ja">（夏の夜空と水盤を彩る、全25回の打上げ花火開催）</span></a>
-            </div><div class="ev">
-              <span class="dt">7/11(週六)～7/12</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022049" target="_blank">ビオスの丘 サガリバナ×星あそび｜一夜花と七夕ものがたりに出会う、特別な二夜</a>
-            </div><div class="ev">
-              <span class="dt">7/13(週一)～7/26</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022184" target="_blank">2026/27シーズン キャンプ会場およびスケジュールの決定について　湘南ベルマーレ</a>
-            </div><div class="ev">
-              <span class="dt">7/17(週五)～7/26</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022363" target="_blank">第二屆夏令營（沖繩縣宇流麻市）藤枝MYFC的通知<span class="ja">（夏季二次キャンプ(沖縄県うるま市)実施のお知らせ　藤枝MYFC）</span></a>
-            </div><div class="ev">
-              <span class="dt">7/17(週五)～9/6</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022340" target="_blank">富田伊織新世界「透明標本」展<span class="ja">（冨田伊織 新世界『透明標本』展）</span></a>
-            </div><div class="ev">
-              <span class="dt">7/17(週五)～8/31</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022236" target="_blank">將舉辦“OKINAWA SUMMER NIGHT FEST”，用沖繩啤酒和節日攤位享受沖繩的夏夜 - 5天限定花園沖繩三線現場音樂會和可品嚐世界各地啤酒的WEEK活動 -<span class="ja">（沖縄ビールとお祭り屋台で沖縄・夏の夜を愉しむ『OKINAWA SUMMER NIGHT FEST』を開催 ～５日間限定のガーデン沖縄三線ライブ・世界各地のビールを味わうWEEKイベントも～）</span></a>
-            </div><div class="ev">
-              <span class="dt">7/18(週六)～9/30</span>
-              <span class="fl">🌏</span>
-              <a href="https://visitokinawajapan.com/zh-hant/discover/events/cave-exploration-southern-okinawa/" target="_blank">南島洞穴探險</a>
-            </div><div class="ev">
-              <span class="dt">7/18(週六)～7/19</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022295" target="_blank">沖繩自由潛水杯 2026 沖繩自由潛水杯 2026 沖繩錦標賽（真榮田岬、恩納村）<span class="ja">（OKINAWA FREEDIVING CUP 2026 沖縄フリーダイビングカップ2026　沖縄大会(恩納村真栄田岬)）</span></a>
-            </div><div class="ev">
-              <span class="dt">7/18(週六)～9/23</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022221" target="_blank">佐藤健二展奇怪的世界/沖繩<span class="ja">（佐藤健寿展 奇界／沖縄）</span></a>
-            </div><div class="ev">
-              <span class="dt">7/18(週六)～7/19</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022073" target="_blank">第38屆伊平屋祭<span class="ja">（第38回いへやまつり）</span></a>
-            </div><div class="ev">
-              <span class="dt">7/19(週日)～7/20</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022195" target="_blank">第19屆豐見城哈雷錦標賽<span class="ja">（第19回豊見城ハーリー大会）</span></a>
-            </div><div class="ev">
-              <span class="dt">7/19(週日)～7/20</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600021853" target="_blank">和平大師2026<span class="ja">（MasterPeace 2026）</span></a>
-            </div><div class="ev">
-              <span class="dt">7/20(週一)～8/29</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022234" target="_blank">夏季活動2026【夏季結衣祭】7/20～8/29每天舉行<span class="ja">（サマーイベント2026【夏のゆいまつり】7/20～8/29毎日開催）</span></a>
-            </div><div class="ev">
-              <span class="dt">7/25(週六)～7/26</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022211" target="_blank">～電影版～ KIMUTAKA × RYUJIN mix。活動公告<span class="ja">（～劇場版～ KIMUTAKA × RYUJIN mix. 開催のお知らせ）</span></a>
-            </div><div class="ev">
-              <span class="dt">7/30(週四)～8/2</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600021645" target="_blank">第三場沖繩空手道世界錦標賽<span class="ja">（第3回沖縄空手世界大会）</span></a>
-            </div></div>
-        </section><section id="m202608">
-          <h2>2026年8月 <small>（6 個活動）</small></h2>
-          <div class="list"><div class="ev">
-              <span class="dt">8/1(週六)～8/2</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022368" target="_blank">8.1（週六）“沖繩靈感2026”<span class="ja">（8.1（土）「INSPIRATION OKINAWA 2026」）</span></a>
-            </div><div class="ev">
-              <span class="dt">8/15(週六)～8/16</span>
-              <span class="fl">🌏</span>
-              <a href="https://visitokinawajapan.com/zh-hant/discover/events/yonabaru-tug-of-war-festival/" target="_blank">與那原大拔河祭</a>
-            </div><div class="ev">
-              <span class="dt">8/15(週六)～8/16</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600021889" target="_blank">【活动日程决定了！ ] 第44屆（2026年）與那原拔河節的行程已經確定。<span class="ja">（【開催日程決定！】第４４回（2026）与那原大綱曳まつりの日程が決まりました）</span></a>
-            </div><div class="ev">
-              <span class="dt">8/22(週六)～8/23</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022361" target="_blank">沖繩縣豐見城市舉行季前賽的通知 東京大熊隊<span class="ja">（沖縄県豊見城市でのプレシーズンマッチ開催のお知らせ　東京グレートベアーズ）</span></a>
-            </div><div class="ev">
-              <span class="dt">8/22(週六)～8/23</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600021902" target="_blank">夏季家庭劇場2026～那霸暑假～<span class="ja">（サマー・ファミリー・シアター2026～なはーとでなつやすみ～）</span></a>
-            </div><div class="ev">
-              <span class="dt">8/29(週六)～8/30</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022351" target="_blank">「第22屆青少年高爾夫卡努查杯」舉行[8/29(週六)、30(週日)]<span class="ja">（「第22回 ジュニアゴルフ・カヌチャカップ」開催【8/29(土)・30(日)】）</span></a>
-            </div></div>
-        </section><section id="m202609">
-          <h2>2026年9月 <small>（2 個活動）</small></h2>
-          <div class="list"><div class="ev">
-              <span class="dt">9/5(週六)～9/6</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022355" target="_blank">關於舉辦“Orion啤酒節2026”<span class="ja">（「オリオンビアフェスト2026」の開催について）</span></a>
-            </div><div class="ev">
-              <span class="dt">9/5(週六)～9/6</span>
-              <span class="fl">🇯🇵</span>
-              <a href="https://www.okinawastory.jp/event/600022209" target="_blank">今年的久米島祭將於9月5日（週六）和6日（週日）舉行！<span class="ja">（今年の久米島まつりは９月５日(土)６日(日)に開催！）</span></a>
-            </div></div>
-        </section>
-<footer>每日自動更新</footer>
+
+<div class="cal-card">
+  <div class="cal-nav">
+    <button id="prev">&#9664;</button>
+    <h2 id="month-title"></h2>
+    <button id="next">&#9654;</button>
+  </div>
+  <div class="wdays">
+    <div class="wday">日</div><div class="wday">一</div><div class="wday">二</div>
+    <div class="wday">三</div><div class="wday">四</div><div class="wday">五</div><div class="wday">六</div>
+  </div>
+  <div id="cal-grid"></div>
+</div>
+
+<div class="ev-section">
+  <div class="ev-header">
+    <strong id="ev-title">本月活動</strong>
+    <span class="ev-count" id="ev-count">0 個</span>
+  </div>
+  <div id="ev-list"></div>
+</div>
+
+<footer>每日自動更新 · 共 65 個活動 · 2026-06-09 12:16</footer>
+
+<script>
+const EVENTS = [{"name": "『弥勒世果報─かなさ─』", "name_zh": "「彌勒亞的財富──迦那那──」", "date_start": "2026-06-04", "date_end": "2026-06-28", "url": "https://www.okinawastory.jp/event/600022255", "source": "okinawastory"}, {"name": "Tasar World Championships 2026 in Kunigami", "name_zh": "2026 年 Tasar 世界錦標賽在國頭舉行", "date_start": "2026-06-04", "date_end": "2026-06-13", "url": "https://www.okinawastory.jp/event/600021570", "source": "okinawastory"}, {"name": "アニマル・アート Vol.6", "name_zh": "動物藝術第6卷", "date_start": "2026-06-05", "date_end": "2026-06-15", "url": "https://www.okinawastory.jp/event/600022372", "source": "okinawastory"}, {"name": "suikara祭り　-おかげさまで４周年-", "name_zh": "suikara Festival -謝謝你，四周年-", "date_start": "2026-06-05", "date_end": "2026-06-15", "url": "https://www.okinawastory.jp/event/600022162", "source": "okinawastory"}, {"name": "Kasaneawase Pop up Store", "name_zh": "Kasaneawase 快閃店", "date_start": "2026-06-06", "date_end": "2026-06-23", "url": "https://www.okinawastory.jp/event/600022343", "source": "okinawastory"}, {"name": "【恩納村博物館】令和8年度慰霊の日特別展「うんなぬ戦争（イクサ）」開催のお知らせ", "name_zh": "[恩納村博物館]關於令和八週年紀念日特別展覽“Unnanu War（Ikusa）”的通知", "date_start": "2026-06-06", "date_end": "2026-07-12", "url": "https://www.okinawastory.jp/event/600022250", "source": "okinawastory"}, {"name": "龍球魔女マルシェ", "name_zh": "七龍珠魔女馬爾凱", "date_start": "2026-06-06", "date_end": "2026-08-11", "url": "https://www.okinawastory.jp/event/600022160", "source": "okinawastory"}, {"name": "企画展 | 外来種いつでもどこでも移動ミュージアム", "name_zh": "特別展覽|隨時隨地的入侵物種移動博物館", "date_start": "2026-06-07", "date_end": "2026-06-28", "url": "https://www.okinawastory.jp/event/600022299", "source": "okinawastory"}, {"name": "サボー・シルヴィア絵画展「空へ飛び立て」開催＠道の駅かでな", "name_zh": "Szabo Sylvia 繪畫展「Take to the Sky」@嘉手納路邊車站", "date_start": "2026-06-08", "date_end": "2026-06-14", "url": "https://www.okinawastory.jp/event/600022318", "source": "okinawastory"}, {"name": "令和８年度平和企画展 『八重瀬の戦争と復興 －収容所から帰村そして復興へ－』開催のお知らせ", "name_zh": "令與第八屆和平展「八重瀨的戰爭與重建－從集中營到重返村莊與重建」公告", "date_start": "2026-06-09", "date_end": "2026-07-12", "url": "https://www.okinawastory.jp/event/600022354", "source": "okinawastory"}, {"name": "第7回末吉社18", "name_zh": "7號 末吉社 18", "date_start": "2026-06-09", "date_end": "2026-06-14", "url": "https://www.okinawastory.jp/event/600022115", "source": "okinawastory"}, {"name": "令和8年度 平和資料展開催のお知らせ", "name_zh": "2020年和平物資展公告", "date_start": "2026-06-10", "date_end": "2026-06-30", "url": "https://www.okinawastory.jp/event/600022352", "source": "okinawastory"}, {"name": "キュリオのもののけ展", "name_zh": "庫裡奧的《幽靈》展覽", "date_start": "2026-06-10", "date_end": "2026-06-16", "url": "https://www.okinawastory.jp/event/600021883", "source": "okinawastory"}, {"name": "儀間比呂志・中山良彦『戦がやってきた－沖縄戦版画集—』版画展", "name_zh": "吉馬浩與中山義彥「戰爭已經到來－沖繩戰役版畫集」版畫展", "date_start": "2026-06-11", "date_end": "2026-06-28", "url": "https://www.okinawastory.jp/event/600022336", "source": "okinawastory"}, {"name": "6/11（木）～8/30（日）　田島征彦　おきなわ絵本原画展開催！", "name_zh": "6/11（星期四）～8/30（星期日）田島幸彥沖繩繪本原創藝術展即將舉辦！", "date_start": "2026-06-11", "date_end": "2026-08-30", "url": "https://www.okinawastory.jp/event/600022285", "source": "okinawastory"}, {"name": "楽園朝涼み～蓮・睡蓮と台湾朝食～2026", "name_zh": "天堂早晨涼爽~荷花睡蓮台灣早餐~2026", "date_start": "2026-06-13", "date_end": "2026-09-27", "url": "https://www.okinawastory.jp/event/600022215", "source": "okinawastory"}, {"name": "令和8年度与那原町民平和の日・慰霊の日企画展「戦世（いくさぬゆー ）と 今世（なまぬゆー） －与那原の戦争と平和について考える－」を開催します", "name_zh": "我們將舉辦令與第8屆與那原町人民和平日/陣亡將士紀念日特別展「生魚與那馬努－對與那原的戰爭與和平的思考」。", "date_start": "2026-06-15", "date_end": "2026-06-28", "url": "https://www.okinawastory.jp/event/600022249", "source": "okinawastory"}, {"name": "糸滿龍舟大賽", "name_zh": "糸滿龍舟大賽", "date_start": "2026-06-18", "date_end": "2026-06-18", "url": "https://visitokinawajapan.com/zh-hant/discover/events/itoman-hare/", "source": "visitokinawa"}, {"name": "初夏の早朝にだけ現れる水面の幻想的な光景「絶景サガリバナクルーズ」", "name_zh": "初夏清晨才有的夢幻般的水面景色：“薩加里巴納風景巡遊”", "date_start": "2026-06-18", "date_end": "2026-07-25", "url": "https://www.okinawastory.jp/event/600022334", "source": "okinawastory"}, {"name": "UMESHISO工房展 「おしゃべりないきものたち」", "name_zh": "UMESHISO工作坊展“會說話的和服”", "date_start": "2026-06-18", "date_end": "2026-06-29", "url": "https://www.okinawastory.jp/event/600022321", "source": "okinawastory"}, {"name": "『野ばらの月～a line～』", "name_zh": "“野薔薇月～一行～”", "date_start": "2026-06-19", "date_end": "2026-06-23", "url": "https://www.okinawastory.jp/event/600022371", "source": "okinawastory"}, {"name": "令和8年度 平和企画展「写真と証言で見る西原の戦争」開催のお知らせ", "name_zh": "2020年和平展「照片與證詞中的西原戰爭」公告", "date_start": "2026-06-19", "date_end": "2026-09-06", "url": "https://www.okinawastory.jp/event/600022344", "source": "okinawastory"}, {"name": "シーウッドホテル恒例の 「スペシャル・フレンチ・ディナー」を6月に開催！ 2人のシェフの友情が奏でる特別なディナー！", "name_zh": "海木酒店一年一度的「特色法式晚宴」將於六月舉辦！兩位廚師友誼打造的特別晚餐！", "date_start": "2026-06-19", "date_end": "2026-06-20", "url": "https://www.okinawastory.jp/event/600022123", "source": "okinawastory"}, {"name": "1日1組限定　西表島の星空を仰ぐ「ティンガーラディナークルーズ」", "name_zh": "每天限定一組的“Tingara晚餐巡遊”，仰望西表島的星空", "date_start": "2026-06-20", "date_end": "2026-09-26", "url": "https://www.okinawastory.jp/event/600022335", "source": "okinawastory"}, {"name": "6月20日・21日「グスーヨー！32軍壕へメンソーレ2026版", "name_zh": "6月20日至21日《Gusuyo！門索爾到第32軍戰壕2026年版》", "date_start": "2026-06-20", "date_end": "2026-06-21", "url": "https://www.okinawastory.jp/event/600022322", "source": "okinawastory"}, {"name": "世界キリンの日イベント", "name_zh": "世界長頸鹿日活動", "date_start": "2026-06-20", "date_end": "2026-06-21", "url": "https://www.okinawastory.jp/event/600022320", "source": "okinawastory"}, {"name": "第27回サバニ帆漕レース・第49回座間味ヨットレース 開催について", "name_zh": "關於第27屆薩巴尼帆船賽和第49屆座間味帆船賽", "date_start": "2026-06-20", "date_end": "2026-06-27", "url": "https://www.okinawastory.jp/event/600022068", "source": "okinawastory"}, {"name": "Eisa之夜", "name_zh": "Eisa之夜", "date_start": "2026-06-21", "date_end": "2026-08-09", "url": "https://visitokinawajapan.com/zh-hant/discover/events/eisa-night/", "source": "visitokinawa"}, {"name": "世界遺産の国イタリア「太陽がいっぱい」", "name_zh": "世界遺產國家義大利：充滿陽光", "date_start": "2026-06-23", "date_end": "2026-06-28", "url": "https://www.okinawastory.jp/event/600022114", "source": "okinawastory"}, {"name": "草野球沖縄一決定戦 第31回 オリオンスーパーベースボール2026", "name_zh": "草棒球沖繩決定賽第31屆獵戶座超級棒球2026", "date_start": "2026-06-27", "date_end": "2026-11-01", "url": "https://www.okinawastory.jp/event/600022185", "source": "okinawastory"}, {"name": "DRUM TAO 2026 新作舞台「THE HUMAN」", "name_zh": "DRUM TAO 2026全新舞台劇《THE HUMAN》", "date_start": "2026-06-27", "date_end": "2026-06-28", "url": "https://www.okinawastory.jp/event/600022124", "source": "okinawastory"}, {"name": "第3回 琉球ガラス市", "name_zh": "第三屆琉球玻璃城", "date_start": "2026-06-27", "date_end": "2026-06-28", "url": "https://www.okinawastory.jp/event/600021890", "source": "okinawastory"}, {"name": "O2Y -Okinawa to Yanbaru- 2026", "name_zh": "O2Y -沖繩到山原 - 2026", "date_start": "2026-06-30", "date_end": "2026-07-05", "url": "https://www.okinawastory.jp/event/600022210", "source": "okinawastory"}, {"name": "夏休みパネル展「在りし日の首里城パネル展」開催！【7/１～8/15】", "name_zh": "暑假展板展「首里城往日展板展」即將舉辦！ [7/1~8/15]", "date_start": "2026-07-01", "date_end": "2026-08-15", "url": "https://www.okinawastory.jp/event/600022366", "source": "okinawastory"}, {"name": "湧田焼　沖縄・静謐の美～神田淡平コレクション～", "name_zh": "沖繩湧田燒，寧靜之美～神田炭平收藏～", "date_start": "2026-07-03", "date_end": "2026-07-26", "url": "https://www.okinawastory.jp/event/600022353", "source": "okinawastory"}, {"name": "【歓迎～めんそーれ～】Ｊリーグ「ジュビロ磐田」夏季トレーニングキャンプ期間決定！！", "name_zh": "[歡迎～Mensore～] J聯賽「岩田喜悅」夏季集訓期已定！ ！", "date_start": "2026-07-03", "date_end": "2026-07-14", "url": "https://www.okinawastory.jp/event/600022294", "source": "okinawastory"}, {"name": "第37回日本最西端与那国島国際カジキ釣り大会　競技参加者の募集について", "name_zh": "日本最西端與那國島第 37 屆國際馬林魚釣魚比賽招募參賽者", "date_start": "2026-07-03", "date_end": "2026-07-05", "url": "https://www.okinawastory.jp/event/600022181", "source": "okinawastory"}, {"name": "久米島ハワイアンフェスティバル 2026", "name_zh": "久米島夏威夷節 2026", "date_start": "2026-07-03", "date_end": "2026-07-04", "url": "https://www.okinawastory.jp/event/600021862", "source": "okinawastory"}, {"name": "海洋博公園夏日祭典", "name_zh": "海洋博公園夏日祭典", "date_start": "2026-07-04", "date_end": "2026-07-04", "url": "https://visitokinawajapan.com/zh-hant/discover/events/ocean-expo-park-summer-festival/", "source": "visitokinawa"}, {"name": "うつろう庭園", "name_zh": "宇津郎花園", "date_start": "2026-07-04", "date_end": "2026-07-12", "url": "https://www.okinawastory.jp/event/600022238", "source": "okinawastory"}, {"name": "2026/27シーズン 夏季トレーニングキャンプ実施について　浦和レッズ", "name_zh": "關於浦和紅寶石2026/27賽季夏季訓練營實施", "date_start": "2026-07-08", "date_end": "2026-07-26", "url": "https://www.okinawastory.jp/event/600022362", "source": "okinawastory"}, {"name": "【2026年 夏の打上げ花火のご案内】25日間開催 お部屋のバルコニーから花火を愉しむ沖縄リゾートステイを", "name_zh": "[2026年夏季煙火大會資訊] 舉辦25天 在客房陽台上欣賞煙火的沖繩度假勝地", "date_start": "2026-07-09", "date_end": "2026-08-29", "url": "https://www.okinawastory.jp/event/600022208", "source": "okinawastory"}, {"name": "夏の夜空と水盤を彩る、全25回の打上げ花火開催", "name_zh": "總共將舉行25場煙火表演，為夏日的夜空和水盆增添色彩。", "date_start": "2026-07-09", "date_end": "2026-08-29", "url": "https://www.okinawastory.jp/event/600022207", "source": "okinawastory"}, {"name": "ビオスの丘 サガリバナ×星あそび｜一夜花と七夕ものがたりに出会う、特別な二夜", "name_zh": "Bios no Oka Sagaribana x Star Play｜兩個特別的夜晚，一晚的花與七夕的故事相遇", "date_start": "2026-07-11", "date_end": "2026-07-12", "url": "https://www.okinawastory.jp/event/600022049", "source": "okinawastory"}, {"name": "2026/27シーズン キャンプ会場およびスケジュールの決定について　湘南ベルマーレ", "name_zh": "關於2026/27賽季湘南Bellmare訓練營場地和日程的決定", "date_start": "2026-07-13", "date_end": "2026-07-26", "url": "https://www.okinawastory.jp/event/600022184", "source": "okinawastory"}, {"name": "夏季二次キャンプ(沖縄県うるま市)実施のお知らせ　藤枝MYFC", "name_zh": "第二屆夏令營（沖繩縣宇流麻市）藤枝MYFC的通知", "date_start": "2026-07-17", "date_end": "2026-07-26", "url": "https://www.okinawastory.jp/event/600022363", "source": "okinawastory"}, {"name": "冨田伊織 新世界『透明標本』展", "name_zh": "富田伊織新世界「透明標本」展", "date_start": "2026-07-17", "date_end": "2026-09-06", "url": "https://www.okinawastory.jp/event/600022340", "source": "okinawastory"}, {"name": "沖縄ビールとお祭り屋台で沖縄・夏の夜を愉しむ『OKINAWA SUMMER NIGHT FEST』を開催 ～５日間限定のガーデン沖縄三線ライブ・世界各地のビールを味わうWEEKイベントも～", "name_zh": "將舉辦“OKINAWA SUMMER NIGHT FEST”，用沖繩啤酒和節日攤位享受沖繩的夏夜 - 5天限定花園沖繩三線現場音樂會和可品嚐世界各地啤酒的WEEK活動 -", "date_start": "2026-07-17", "date_end": "2026-08-31", "url": "https://www.okinawastory.jp/event/600022236", "source": "okinawastory"}, {"name": "南島洞穴探險", "name_zh": "南島洞穴探險", "date_start": "2026-07-18", "date_end": "2026-09-30", "url": "https://visitokinawajapan.com/zh-hant/discover/events/cave-exploration-southern-okinawa/", "source": "visitokinawa"}, {"name": "OKINAWA FREEDIVING CUP 2026 沖縄フリーダイビングカップ2026　沖縄大会(恩納村真栄田岬)", "name_zh": "沖繩自由潛水杯 2026 沖繩自由潛水杯 2026 沖繩錦標賽（真榮田岬、恩納村）", "date_start": "2026-07-18", "date_end": "2026-07-19", "url": "https://www.okinawastory.jp/event/600022295", "source": "okinawastory"}, {"name": "佐藤健寿展 奇界／沖縄", "name_zh": "佐藤健二展奇怪的世界/沖繩", "date_start": "2026-07-18", "date_end": "2026-09-23", "url": "https://www.okinawastory.jp/event/600022221", "source": "okinawastory"}, {"name": "第38回いへやまつり", "name_zh": "第38屆伊平屋祭", "date_start": "2026-07-18", "date_end": "2026-07-19", "url": "https://www.okinawastory.jp/event/600022073", "source": "okinawastory"}, {"name": "第19回豊見城ハーリー大会", "name_zh": "第19屆豐見城哈雷錦標賽", "date_start": "2026-07-19", "date_end": "2026-07-20", "url": "https://www.okinawastory.jp/event/600022195", "source": "okinawastory"}, {"name": "MasterPeace 2026", "name_zh": "和平大師2026", "date_start": "2026-07-19", "date_end": "2026-07-20", "url": "https://www.okinawastory.jp/event/600021853", "source": "okinawastory"}, {"name": "サマーイベント2026【夏のゆいまつり】7/20～8/29毎日開催", "name_zh": "夏季活動2026【夏季結衣祭】7/20～8/29每天舉行", "date_start": "2026-07-20", "date_end": "2026-08-29", "url": "https://www.okinawastory.jp/event/600022234", "source": "okinawastory"}, {"name": "～劇場版～ KIMUTAKA × RYUJIN mix. 開催のお知らせ", "name_zh": "～電影版～ KIMUTAKA × RYUJIN mix。活動公告", "date_start": "2026-07-25", "date_end": "2026-07-26", "url": "https://www.okinawastory.jp/event/600022211", "source": "okinawastory"}, {"name": "第3回沖縄空手世界大会", "name_zh": "第三場沖繩空手道世界錦標賽", "date_start": "2026-07-30", "date_end": "2026-08-02", "url": "https://www.okinawastory.jp/event/600021645", "source": "okinawastory"}, {"name": "8.1（土）「INSPIRATION OKINAWA 2026」", "name_zh": "8.1（週六）“沖繩靈感2026”", "date_start": "2026-08-01", "date_end": "2026-08-02", "url": "https://www.okinawastory.jp/event/600022368", "source": "okinawastory"}, {"name": "與那原大拔河祭", "name_zh": "與那原大拔河祭", "date_start": "2026-08-15", "date_end": "2026-08-16", "url": "https://visitokinawajapan.com/zh-hant/discover/events/yonabaru-tug-of-war-festival/", "source": "visitokinawa"}, {"name": "【開催日程決定！】第４４回（2026）与那原大綱曳まつりの日程が決まりました", "name_zh": "【活动日程决定了！ ] 第44屆（2026年）與那原拔河節的行程已經確定。", "date_start": "2026-08-15", "date_end": "2026-08-16", "url": "https://www.okinawastory.jp/event/600021889", "source": "okinawastory"}, {"name": "沖縄県豊見城市でのプレシーズンマッチ開催のお知らせ　東京グレートベアーズ", "name_zh": "沖繩縣豐見城市舉行季前賽的通知 東京大熊隊", "date_start": "2026-08-22", "date_end": "2026-08-23", "url": "https://www.okinawastory.jp/event/600022361", "source": "okinawastory"}, {"name": "サマー・ファミリー・シアター2026～なはーとでなつやすみ～", "name_zh": "夏季家庭劇場2026～那霸暑假～", "date_start": "2026-08-22", "date_end": "2026-08-23", "url": "https://www.okinawastory.jp/event/600021902", "source": "okinawastory"}, {"name": "「第22回 ジュニアゴルフ・カヌチャカップ」開催【8/29(土)・30(日)】", "name_zh": "「第22屆青少年高爾夫卡努查杯」舉行[8/29(週六)、30(週日)]", "date_start": "2026-08-29", "date_end": "2026-08-30", "url": "https://www.okinawastory.jp/event/600022351", "source": "okinawastory"}, {"name": "「オリオンビアフェスト2026」の開催について", "name_zh": "關於舉辦“Orion啤酒節2026”", "date_start": "2026-09-05", "date_end": "2026-09-06", "url": "https://www.okinawastory.jp/event/600022355", "source": "okinawastory"}, {"name": "今年の久米島まつりは９月５日(土)６日(日)に開催！", "name_zh": "今年的久米島祭將於9月5日（週六）和6日（週日）舉行！", "date_start": "2026-09-05", "date_end": "2026-09-06", "url": "https://www.okinawastory.jp/event/600022209", "source": "okinawastory"}];
+const byDate = {};
+EVENTS.forEach(e => {
+  if (!byDate[e.date_start]) byDate[e.date_start] = [];
+  byDate[e.date_start].push(e);
+});
+
+const WD = ['週日','週一','週二','週三','週四','週五','週六'];
+const MN = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+
+let cy, cm, sel = null;
+
+function fmtDate(s) {
+  if (!s) return '';
+  const d = new Date(s + 'T00:00:00');
+  return (d.getMonth()+1) + '/' + d.getDate() + '(' + WD[d.getDay()] + ')';
+}
+
+function renderCal() {
+  document.getElementById('month-title').textContent = cy + '年' + MN[cm];
+  const first = new Date(cy, cm, 1);
+  const last = new Date(cy, cm+1, 0);
+  const now = new Date();
+  const dow = first.getDay();
+  let html = '';
+
+  // prev month padding
+  const prevLast = new Date(cy, cm, 0).getDate();
+  for (let i = dow-1; i >= 0; i--)
+    html += '<div class="day other"><div class="num">' + (prevLast-i) + '</div></div>';
+
+  // current month
+  for (let d = 1; d <= last.getDate(); d++) {
+    const ds = cy + '-' + String(cm+1).padStart(2,'0') + '-' + String(d).padStart(2,'0');
+    const has = !!byDate[ds];
+    const isToday = d===now.getDate() && cm===now.getMonth() && cy===now.getFullYear();
+    const isSel = ds === sel;
+    let cls = 'day' + (has?' has':'') + (isToday?' today':'') + (isSel?' sel':'');
+    let dots = '';
+    if (has) {
+      byDate[ds].slice(0,3).forEach(e => {
+        dots += '<div class="dot' + (e.source==='okinawastory'?' jp':'') + '"></div>';
+      });
+    }
+    html += '<div class="' + cls + '" onclick="pick('' + ds + '')">'
+          + '<div class="num">' + d + '</div>'
+          + '<div class="dots">' + dots + '</div></div>';
+  }
+
+  // next month padding
+  const total = Math.ceil((dow + last.getDate()) / 7) * 7;
+  for (let d = 1; d <= total - dow - last.getDate(); d++)
+    html += '<div class="day other"><div class="num">' + d + '</div></div>';
+
+  document.getElementById('cal-grid').innerHTML = html;
+}
+
+function renderEvents() {
+  const list = document.getElementById('ev-list');
+  const prefix = cy + '-' + String(cm+1).padStart(2,'0');
+  const events = sel
+    ? (byDate[sel] || [])
+    : EVENTS.filter(e => e.date_start && e.date_start.startsWith(prefix));
+
+  document.getElementById('ev-title').textContent = sel ? fmtDate(sel) : cy + '年' + MN[cm];
+  document.getElementById('ev-count').textContent = events.length + ' 個活動';
+
+  if (!events.length) {
+    list.innerHTML = '<div class="empty">🌊 這天沒有活動</div>';
+    return;
+  }
+
+  list.innerHTML = events.map((e, i) => {
+    const zh = e.name_zh || e.name;
+    const ja = e.name;
+    const isJp = e.source === 'okinawastory';
+    const end = e.date_end && e.date_end !== e.date_start ? '～' + fmtDate(e.date_end) : '';
+    const dtag = fmtDate(e.date_start) + end;
+    const jaLine = (isJp && zh !== ja)
+      ? '<div class="ev-ja"><a href="' + e.url + '" target="_blank">' + ja + '</a></div>'
+      : '<div class="ev-link"><a href="' + e.url + '" target="_blank">🔗 活動詳情</a></div>';
+    return '<div class="ev-card' + (isJp?' jp':'') + '" style="animation-delay:' + (i*0.04) + 's">'
+      + '<div class="ev-dtag">' + dtag + '</div>'
+      + '<div class="ev-zh">' + zh + '</div>'
+      + jaLine + '</div>';
+  }).join('');
+}
+
+function pick(ds) {
+  sel = sel === ds ? null : ds;
+  renderCal();
+  renderEvents();
+  document.querySelector('.ev-section').scrollIntoView({behavior:'smooth'});
+}
+
+document.getElementById('prev').onclick = () => {
+  cm--; if (cm<0){cm=11;cy--;} sel=null; renderCal(); renderEvents();
+};
+document.getElementById('next').onclick = () => {
+  cm++; if (cm>11){cm=0;cy++;} sel=null; renderCal(); renderEvents();
+};
+
+// Init: jump to first month with events
+(function(){
+  const now = new Date();
+  cy = now.getFullYear(); cm = now.getMonth();
+  const prefix = cy + '-' + String(cm+1).padStart(2,'0');
+  if (!EVENTS.some(e => e.date_start && e.date_start.startsWith(prefix)) && EVENTS.length) {
+    const d = new Date(EVENTS[0].date_start + 'T00:00:00');
+    cy = d.getFullYear(); cm = d.getMonth();
+  }
+  renderCal(); renderEvents();
+})();
+</script>
 </body>
 </html>
