@@ -152,14 +152,22 @@ def get_okinawastory_events():
             date_tag = container.find("p", class_="os-c-list-cmn__lead") if container else None
             date_text = date_tag.get_text(strip=True) if date_tag else ""
 
-            # 過濾已結束活動 + 只保留 90 天內開始的活動
-            if date_text and "〜" in date_text:
+            # 過濾條件：只保留近期或即將開始的活動（最多往前 7 天，往後 90 天）
+            if not date_text:
+                continue
+            if "〜" in date_text:
                 parts = date_text.split("〜")
                 start_dt = parse_date_jp(parts[0].strip())
                 end_dt = parse_date_jp(parts[-1].strip())
                 if end_dt and end_dt < now:
                     continue
+                if start_dt and start_dt < now - timedelta(days=7):
+                    continue
                 if start_dt and start_dt > now + timedelta(days=90):
+                    continue
+            else:
+                single_dt = parse_date_jp(date_text)
+                if single_dt and (single_dt < now - timedelta(days=1) or single_dt > now + timedelta(days=90)):
                     continue
 
             events.append({
@@ -214,15 +222,17 @@ def send_telegram(text):
 
     api_url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
 
-    # Split at event boundaries to avoid cutting Markdown links
-    lines = text.split("\n\n")
+    # 逐行切割，確保每條訊息不超過 4096 字元且不截斷 Markdown 連結
+    lines = text.split("\n")
     chunk = ""
     for line in lines:
-        if len(chunk) + len(line) + 2 > 4096:
-            _post_telegram(api_url, chunk.strip())
-            chunk = line + "\n\n"
+        candidate = chunk + line + "\n"
+        if len(candidate) > 4096:
+            if chunk.strip():
+                _post_telegram(api_url, chunk.strip())
+            chunk = line + "\n"
         else:
-            chunk += line + "\n\n"
+            chunk = candidate
     if chunk.strip():
         _post_telegram(api_url, chunk.strip())
 
