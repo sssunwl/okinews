@@ -891,22 +891,11 @@
     "description": "6-4諧音「虫歯」，日本的牙齒保健意識極高，記得回國前去看一次牙醫"
   },
   {
-    "name": "『弥勒世果報─かなさ─』",
-    "name_zh": "「彌勒亞的財富──迦那那──」",
-    "date_start": "2026-06-04",
-    "date_end": "2026-06-28",
-    "url": "https://www.okinawastory.jp/event/600022255",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
-    "name": "Tasar World Championships 2026 in Kunigami",
-    "name_zh": "2026 年 Tasar 世界錦標賽在國頭舉行",
-    "date_start": "2026-06-04",
-    "date_end": "2026-06-13",
-    "url": "https://www.okinawastory.jp/event/600021570",
+    "name": "感謝を伝える日にも、自分へのご褒美にも。",
+    "name_zh": "非常適合表達感激之情或獎勵自己的一天。",
+    "date_start": "2026-06-05",
+    "date_end": "2026-06-30",
+    "url": "https://www.okinawastory.jp/event/600022400",
     "source": "okinawastory",
     "category": "",
     "stars": 0,
@@ -929,6 +918,17 @@
     "date_start": "2026-06-05",
     "date_end": "2026-06-15",
     "url": "https://www.okinawastory.jp/event/600022162",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
+    "name": "井口真吾 POP UP STORE",
+    "name_zh": "井口真吾快閃店",
+    "date_start": "2026-06-06",
+    "date_end": "2026-06-23",
+    "url": "https://www.okinawastory.jp/event/600022396",
     "source": "okinawastory",
     "category": "",
     "stars": 0,
@@ -995,6 +995,17 @@
     "date_start": "2026-06-08",
     "date_end": "2026-06-14",
     "url": "https://www.okinawastory.jp/event/600022318",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
+    "name": "コザ工芸館 ふんどぅ展",
+    "name_zh": "古座工藝博物館豐杜展覽",
+    "date_start": "2026-06-09",
+    "date_end": "2026-06-15",
+    "url": "https://www.okinawastory.jp/event/600022395",
     "source": "okinawastory",
     "category": "",
     "stars": 0,
@@ -1078,6 +1089,39 @@
     "description": ""
   },
   {
+    "name": "阪田清子 LANDING PLAN",
+    "name_zh": "坂田清子 登陸計劃",
+    "date_start": "2026-06-12",
+    "date_end": "2026-06-21",
+    "url": "https://www.okinawastory.jp/event/600022421",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
+    "name": "おきみゅーナイトミュージアム",
+    "name_zh": "御神夜間美術館",
+    "date_start": "2026-06-12",
+    "date_end": "2026-12-25",
+    "url": "https://www.okinawastory.jp/event/600022388",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
+    "name": "✨🏐【大会開催決定！】🏐✨ 第38回 ビーチバレーOKINAWA 2026",
+    "name_zh": "✨🏐【比賽即將舉行！ 】🏐✨ 第38屆沙灘排球沖繩2026",
+    "date_start": "2026-06-13",
+    "date_end": "2026-06-14",
+    "url": "https://www.okinawastory.jp/event/600022405",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
     "name": "楽園朝涼み～蓮・睡蓮と台湾朝食～2026",
     "name_zh": "天堂早晨涼爽~荷花睡蓮台灣早餐~2026",
     "date_start": "2026-06-13",
@@ -1098,6 +1142,17 @@
     "category": "歷史",
     "stars": 4,
     "description": "參觀糸滿的平和祈念公園，二戰沖繩戰役留下的傷痕是最深刻的和平教育"
+  },
+  {
+    "name": "ちゅらククル石垣島10周年記念企画フォトコンテスト「あなたの石垣島」入選作品展開催",
+    "name_zh": "",
+    "date_start": "2026-06-15",
+    "date_end": "2026-07-15",
+    "url": "https://www.okinawastory.jp/event/600022407",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
   },
   {
     "name": "令和8年度与那原町民平和の日・慰霊の日企画展「戦世（いくさぬゆー ）と 今世（なまぬゆー） －与那原の戦争と平和について考える－」を開催します",
@@ -1254,6 +1309,17 @@
     "description": "沖繩縣特有的法定假日，紀念1945年沖繩戰役結束，全島為和平祈禱默哀"
   },
   {
+    "name": "虹雲・インディゴ絵画教室展",
+    "name_zh": "虹雲/靛藍繪畫班展",
+    "date_start": "2026-06-23",
+    "date_end": "2026-06-28",
+    "url": "https://www.okinawastory.jp/event/600022419",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
     "name": "世界遺産の国イタリア「太陽がいっぱい」",
     "name_zh": "世界遺產國家義大利：充滿陽光",
     "date_start": "2026-06-23",
@@ -1408,6 +1474,17 @@
     "description": ""
   },
   {
+    "name": "MIYAKOJIMA CURRY FESTIVAL開催！7月4日(土)、5日(日)HOTEL LOCAL BASE宮古島",
+    "name_zh": "宮古島咖哩節舉行！ 7月4日（週六）、5日（週日）HOTEL LOCAL BASE Miyakojima",
+    "date_start": "2026-07-04",
+    "date_end": "2026-07-05",
+    "url": "https://www.okinawastory.jp/event/600022391",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
     "name": "うつろう庭園",
     "name_zh": "宇津郎花園",
     "date_start": "2026-07-04",
@@ -1472,6 +1549,17 @@
     "category": "文化",
     "stars": 2,
     "description": "7-10音似「なっとう」，沖繩人對這黏黏食物評價兩極，你是哪一邊？"
+  },
+  {
+    "name": "KOZAROCKS 2026",
+    "name_zh": "科扎洛克 2026",
+    "date_start": "2026-07-10",
+    "date_end": "2026-07-11",
+    "url": "https://www.okinawastory.jp/event/600022418",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
   },
   {
     "name": "ビオスの丘 サガリバナ×星あそび｜一夜花と七夕ものがたりに出会う、特別な二夜",
@@ -1546,6 +1634,17 @@
     "date_end": "2026-09-30",
     "url": "https://visitokinawajapan.com/zh-hant/discover/events/cave-exploration-southern-okinawa/",
     "source": "visitokinawa",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
+    "name": "第53回本部海洋まつり開催のお知らせ～夏だ！まつりだっ！みんなで行こう！～",
+    "name_zh": "第53屆總部海洋節公告－夏天來了！這是一個節日！我們都走吧！ ～",
+    "date_start": "2026-07-18",
+    "date_end": "2026-07-19",
+    "url": "https://www.okinawastory.jp/event/600022398",
+    "source": "okinawastory",
     "category": "",
     "stars": 0,
     "description": ""
@@ -1650,6 +1749,17 @@
     "description": "7-25諧音「こおり」，沖繩ぜんざい冰品是在地必吃，紅豆刨冰清甜無比"
   },
   {
+    "name": "夏休み！こどもフェスタ2026",
+    "name_zh": "暑假！ 2026 年兒童節",
+    "date_start": "2026-07-25",
+    "date_end": "2026-08-15",
+    "url": "https://www.okinawastory.jp/event/600022394",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
     "name": "～劇場版～ KIMUTAKA × RYUJIN mix. 開催のお知らせ",
     "name_zh": "～電影版～ KIMUTAKA × RYUJIN mix。活動公告",
     "date_start": "2026-07-25",
@@ -1666,6 +1776,17 @@
     "date_start": "2026-07-30",
     "date_end": "2026-08-02",
     "url": "https://www.okinawastory.jp/event/600021645",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
+    "name": "夏休み体験教室「一般向けバルーンワークショップ」",
+    "name_zh": "暑假體驗課程“大眾氣球工作坊”",
+    "date_start": "2026-07-31",
+    "date_end": "2026-08-02",
+    "url": "https://www.okinawastory.jp/event/600022385",
     "source": "okinawastory",
     "category": "",
     "stars": 0,
