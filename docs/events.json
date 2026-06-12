@@ -891,50 +891,6 @@
     "description": "6-4諧音「虫歯」，日本的牙齒保健意識極高，記得回國前去看一次牙醫"
   },
   {
-    "name": "感謝を伝える日にも、自分へのご褒美にも。",
-    "name_zh": "非常適合表達感激之情或獎勵自己的一天。",
-    "date_start": "2026-06-05",
-    "date_end": "2026-06-30",
-    "url": "https://www.okinawastory.jp/event/600022400",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
-    "name": "アニマル・アート Vol.6",
-    "name_zh": "動物藝術第6卷",
-    "date_start": "2026-06-05",
-    "date_end": "2026-06-15",
-    "url": "https://www.okinawastory.jp/event/600022372",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
-    "name": "suikara祭り　-おかげさまで４周年-",
-    "name_zh": "suikara Festival -謝謝你，四周年-",
-    "date_start": "2026-06-05",
-    "date_end": "2026-06-15",
-    "url": "https://www.okinawastory.jp/event/600022162",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
-    "name": "井口真吾 POP UP STORE",
-    "name_zh": "井口真吾快閃店",
-    "date_start": "2026-06-06",
-    "date_end": "2026-06-23",
-    "url": "https://www.okinawastory.jp/event/600022396",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
     "name": "Kasaneawase Pop up Store",
     "name_zh": "Kasaneawase 快閃店",
     "date_start": "2026-06-06",
@@ -1145,7 +1101,7 @@
   },
   {
     "name": "ちゅらククル石垣島10周年記念企画フォトコンテスト「あなたの石垣島」入選作品展開催",
-    "name_zh": "",
+    "name_zh": "Chura Kukuru石垣島十週年紀念計畫攝影比賽「你的石垣島」作品展舉辦",
     "date_start": "2026-06-15",
     "date_end": "2026-07-15",
     "url": "https://www.okinawastory.jp/event/600022407",
