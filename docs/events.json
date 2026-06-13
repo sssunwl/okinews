@@ -891,39 +891,6 @@
     "description": "6-4諧音「虫歯」，日本的牙齒保健意識極高，記得回國前去看一次牙醫"
   },
   {
-    "name": "Kasaneawase Pop up Store",
-    "name_zh": "Kasaneawase 快閃店",
-    "date_start": "2026-06-06",
-    "date_end": "2026-06-23",
-    "url": "https://www.okinawastory.jp/event/600022343",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
-    "name": "【恩納村博物館】令和8年度慰霊の日特別展「うんなぬ戦争（イクサ）」開催のお知らせ",
-    "name_zh": "[恩納村博物館]關於令和八週年紀念日特別展覽“Unnanu War（Ikusa）”的通知",
-    "date_start": "2026-06-06",
-    "date_end": "2026-07-12",
-    "url": "https://www.okinawastory.jp/event/600022250",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
-    "name": "龍球魔女マルシェ",
-    "name_zh": "七龍珠魔女馬爾凱",
-    "date_start": "2026-06-06",
-    "date_end": "2026-08-11",
-    "url": "https://www.okinawastory.jp/event/600022160",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
     "name": "企画展 | 外来種いつでもどこでも移動ミュージアム",
     "name_zh": "特別展覽|隨時隨地的入侵物種移動博物館",
     "date_start": "2026-06-07",
@@ -990,6 +957,17 @@
     "description": ""
   },
   {
+    "name": "「二館展」開催のお知らせ",
+    "name_zh": "關於「第二館展覽」的通知",
+    "date_start": "2026-06-10",
+    "date_end": "2026-07-11",
+    "url": "https://www.okinawastory.jp/event/600022425",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
     "name": "令和8年度 平和資料展開催のお知らせ",
     "name_zh": "2020年和平物資展公告",
     "date_start": "2026-06-10",
@@ -1028,17 +1006,6 @@
     "date_start": "2026-06-11",
     "date_end": "2026-06-28",
     "url": "https://www.okinawastory.jp/event/600022336",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
-    "name": "6/11（木）～8/30（日）　田島征彦　おきなわ絵本原画展開催！",
-    "name_zh": "6/11（星期四）～8/30（星期日）田島幸彥沖繩繪本原創藝術展即將舉辦！",
-    "date_start": "2026-06-11",
-    "date_end": "2026-08-30",
-    "url": "https://www.okinawastory.jp/event/600022285",
     "source": "okinawastory",
     "category": "",
     "stars": 0,
@@ -1859,6 +1826,17 @@
     "description": ""
   },
   {
+    "name": "奧利恩啤酒節",
+    "name_zh": "奧利恩啤酒節",
+    "date_start": "2026-09-05",
+    "date_end": "2026-09-06",
+    "url": "https://visitokinawajapan.com/zh-hant/discover/events/orion-beerfest-koza/",
+    "source": "visitokinawa",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
     "name": "「オリオンビアフェスト2026」の開催について",
     "name_zh": "關於舉辦“Orion啤酒節2026”",
     "date_start": "2026-09-05",
@@ -1890,6 +1868,17 @@
     "category": "傳統",
     "stars": 4,
     "description": "菊花節，古人以菊花酒延年益壽，沖繩的泡盛正傳承著這份長壽哲學"
+  },
+  {
+    "name": "沖縄フリーダイビングカップ2026 石垣大会（9/11-12）",
+    "name_zh": "沖繩自由潛水盃2026石垣島錦標賽（9/11-12）",
+    "date_start": "2026-09-11",
+    "date_end": "2026-09-12",
+    "url": "https://www.okinawastory.jp/event/600022296",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
   },
   {
     "name": "今天是 👴 敬老の日",
