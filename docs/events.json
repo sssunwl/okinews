@@ -913,17 +913,6 @@
     "description": "浮潛、SUP、藍染手工藝，沖繩的「玩法」完全不需要電子設備"
   },
   {
-    "name": "儀間比呂志・中山良彦『戦がやってきた－沖縄戦版画集—』版画展",
-    "name_zh": "吉馬浩與中山義彥「戰爭已經到來－沖繩戰役版畫集」版畫展",
-    "date_start": "2026-06-11",
-    "date_end": "2026-06-28",
-    "url": "https://www.okinawastory.jp/event/600022336",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
     "name": "阪田清子 LANDING PLAN",
     "name_zh": "坂田清子 登陸計劃",
     "date_start": "2026-06-12",
@@ -968,6 +957,17 @@
     "description": "參觀糸滿的平和祈念公園，二戰沖繩戰役留下的傷痕是最深刻的和平教育"
   },
   {
+    "name": "浦添市歴史にふれる館「うらそえの遺跡と発掘調査展」を開催します！",
+    "name_zh": "浦添市歷史博物館將舉辦「浦添遺址與發掘展」！",
+    "date_start": "2026-06-15",
+    "date_end": "2026-08-28",
+    "url": "https://www.okinawastory.jp/event/600022442",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
     "name": "ちゅらククル石垣島10周年記念企画フォトコンテスト「あなたの石垣島」入選作品展開催",
     "name_zh": "Chura Kukuru石垣島十週年紀念計畫攝影比賽「你的石垣島」作品展舉辦",
     "date_start": "2026-06-15",
@@ -990,17 +990,6 @@
     "description": ""
   },
   {
-    "name": "糸滿龍舟大賽",
-    "name_zh": "糸滿龍舟大賽",
-    "date_start": "2026-06-18",
-    "date_end": "2026-06-18",
-    "url": "https://visitokinawajapan.com/zh-hant/discover/events/itoman-hare/",
-    "source": "visitokinawa",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
     "name": "初夏の早朝にだけ現れる水面の幻想的な光景「絶景サガリバナクルーズ」",
     "name_zh": "初夏清晨才有的夢幻般的水面景色：“薩加里巴納風景巡遊”",
     "date_start": "2026-06-18",
@@ -1017,6 +1006,17 @@
     "date_start": "2026-06-18",
     "date_end": "2026-06-29",
     "url": "https://www.okinawastory.jp/event/600022321",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
+    "name": "【26.6.19.Fri-8.13.Thu】土地のかたち",
+    "name_zh": "[26.6.19.Fri-8.13.Thu] 土地形狀",
+    "date_start": "2026-06-19",
+    "date_end": "2026-08-13",
+    "url": "https://www.okinawastory.jp/event/600022473",
     "source": "okinawastory",
     "category": "",
     "stars": 0,
@@ -1122,6 +1122,17 @@
     "description": ""
   },
   {
+    "name": "令和8年度市内ハーリー大会の日程について",
+    "name_zh": "關於2020年城市哈里錦標賽賽程",
+    "date_start": "2026-06-21",
+    "date_end": "2026-07-19",
+    "url": "https://www.okinawastory.jp/event/600022450",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
     "name": "今天是 🕊️ 慰靈之日",
     "name_zh": "🕊️ 慰靈之日",
     "date_start": "2026-06-23",
@@ -1164,6 +1175,17 @@
     "category": "文化",
     "stars": 2,
     "description": "露天溫泉與沖繩夜景的絕妙組合，在大自然懷抱中完全放鬆"
+  },
+  {
+    "name": "SAVE the SEA ― 海の環境問題を身近に感じて考えよう",
+    "name_zh": "SAVE the SEA - 近距離思考海洋環境議題",
+    "date_start": "2026-06-27",
+    "date_end": "2026-06-28",
+    "url": "https://www.okinawastory.jp/event/600022447",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
   },
   {
     "name": "草野球沖縄一決定戦 第31回 オリオンスーパーベースボール2026",
@@ -1232,11 +1254,33 @@
     "description": "沖繩各海水浴場正式開放，一整個夏天的藍色冒險從這天拉開序幕"
   },
   {
+    "name": "南国の太陽と自然が育んだ色彩のDINNER BUFFET アグー豚しゃぶしゃぶとシュラスコを食べ放題！鉄板と鍋と島の香り。～沖縄県産マグロの鉄板ステーキや夏の島野菜、三線ライブを五感で愉しむ～",
+    "name_zh": "自助晚餐的色彩受到熱帶陽光和自然的滋養。阿古豬肉涮鍋和巴西烤肉自助餐！鐵板、火鍋、島嶼的香氣。 ～用五種感官享受沖繩鮪魚鐵板牛排、夏季島蔬菜、三線現場音樂～",
+    "date_start": "2026-07-01",
+    "date_end": "2026-10-31",
+    "url": "https://www.okinawastory.jp/event/600022440",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
     "name": "夏休みパネル展「在りし日の首里城パネル展」開催！【7/１～8/15】",
     "name_zh": "暑假展板展「首里城往日展板展」即將舉辦！ [7/1~8/15]",
     "date_start": "2026-07-01",
     "date_end": "2026-08-15",
     "url": "https://www.okinawastory.jp/event/600022366",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
+    "name": "今夏大注目のイベント！サウナ＆ナイトプールイベント開催！「OKINAWA SAUNA ＆ SPA NIGHT PARTY」沖縄・宜野湾市",
+    "name_zh": "今年夏天最火紅的活動！桑拿和夜間泳池活動舉行！ 「沖繩桑拿＆SPA之夜派對」沖繩縣宜野灣市",
+    "date_start": "2026-07-03",
+    "date_end": "2026-07-04",
+    "url": "https://www.okinawastory.jp/event/600022452",
     "source": "okinawastory",
     "category": "",
     "stars": 0,
@@ -1331,6 +1375,17 @@
     "description": "牛郎織女一年一度相會，在沖繩海邊許願，無光害的星空特別璀璨"
   },
   {
+    "name": "2026/27シーズン 夏季キャンプ地決定のお知らせ　アルビレックス新潟",
+    "name_zh": "",
+    "date_start": "2026-07-07",
+    "date_end": "2026-07-17",
+    "url": "https://www.okinawastory.jp/event/600022457",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
     "name": "2026/27シーズン 夏季トレーニングキャンプ実施について　浦和レッズ",
     "name_zh": "關於浦和紅寶石2026/27賽季夏季訓練營實施",
     "date_start": "2026-07-08",
@@ -1373,6 +1428,17 @@
     "category": "文化",
     "stars": 2,
     "description": "7-10音似「なっとう」，沖繩人對這黏黏食物評價兩極，你是哪一邊？"
+  },
+  {
+    "name": "パルミラ夜市",
+    "name_zh": "巴爾米拉夜市",
+    "date_start": "2026-07-10",
+    "date_end": "2026-07-11",
+    "url": "https://www.okinawastory.jp/event/600022470",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
   },
   {
     "name": "KOZAROCKS 2026",
@@ -1463,6 +1529,28 @@
     "description": ""
   },
   {
+    "name": "JIM BEAM SUMMER FES 2026 in OKINAWA",
+    "name_zh": "JIM BEAM 夏季 FES 2026 在沖繩舉行",
+    "date_start": "2026-07-18",
+    "date_end": "2026-07-19",
+    "url": "https://www.okinawastory.jp/event/600022449",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
+    "name": "ダンボール迷路～おばけスペシャル～",
+    "name_zh": "紙板迷宮～幽靈特輯～",
+    "date_start": "2026-07-18",
+    "date_end": "2026-08-23",
+    "url": "https://www.okinawastory.jp/event/600022446",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
     "name": "第53回本部海洋まつり開催のお知らせ～夏だ！まつりだっ！みんなで行こう！～",
     "name_zh": "第53屆總部海洋節公告－夏天來了！這是一個節日！我們都走吧！ ～",
     "date_start": "2026-07-18",
@@ -1538,6 +1626,17 @@
     "category": "文化",
     "stars": 3,
     "description": "美軍基地帶來的飲食文化，沖繩美式漢堡店是全日本最道地的牛肉堡"
+  },
+  {
+    "name": "2026/27シーズンのトップチーム始動日と開幕前クラブイベントスケジュールについて　【沖縄キャンプ】　V・ファーレン長崎",
+    "name_zh": "關於2026/27賽季頂級球隊開賽日期和開賽前俱樂部賽事日程【沖繩營】V. Faren Nagasaki",
+    "date_start": "2026-07-20",
+    "date_end": "2026-07-26",
+    "url": "https://www.okinawastory.jp/event/600022458",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
   },
   {
     "name": "サマーイベント2026【夏のゆいまつり】7/20～8/29毎日開催",
@@ -1628,11 +1727,44 @@
     "description": "沖繩珊瑚礁是天然的水質守護者，關注海洋就是關注地球的用水未來"
   },
   {
+    "name": "【BAR告知】期間限定「桃フェア」開催！（2026年8月~9月）",
+    "name_zh": "",
+    "date_start": "2026-08-01",
+    "date_end": "2026-09-30",
+    "url": "https://www.okinawastory.jp/event/600022427",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
     "name": "8.1（土）「INSPIRATION OKINAWA 2026」",
     "name_zh": "8.1（週六）“沖繩靈感2026”",
     "date_start": "2026-08-01",
     "date_end": "2026-08-02",
     "url": "https://www.okinawastory.jp/event/600022368",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
+    "name": "首里城公園「夏休み体験イベント2026」開催！ | 首里城 ‐ 琉球王国の栄華を物語る 世界遺産 首里城",
+    "name_zh": "首里城公園「暑假體驗活動2026」即將舉辦！ |首里城－世界遺產，訴說著琉球王國的繁榮故事",
+    "date_start": "2026-08-08",
+    "date_end": "2026-08-11",
+    "url": "https://www.okinawastory.jp/event/600022464",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
+    "name": "藍染体験",
+    "name_zh": "靛藍染色體驗",
+    "date_start": "2026-08-08",
+    "date_end": "2026-08-11",
+    "url": "https://www.okinawastory.jp/event/600022445",
     "source": "okinawastory",
     "category": "",
     "stars": 0,
