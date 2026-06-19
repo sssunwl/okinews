@@ -913,28 +913,6 @@
     "description": "浮潛、SUP、藍染手工藝，沖繩的「玩法」完全不需要電子設備"
   },
   {
-    "name": "阪田清子 LANDING PLAN",
-    "name_zh": "坂田清子 登陸計劃",
-    "date_start": "2026-06-12",
-    "date_end": "2026-06-21",
-    "url": "https://www.okinawastory.jp/event/600022421",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
-    "name": "おきみゅーナイトミュージアム",
-    "name_zh": "御神夜間美術館",
-    "date_start": "2026-06-12",
-    "date_end": "2026-12-25",
-    "url": "https://www.okinawastory.jp/event/600022388",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
     "name": "楽園朝涼み～蓮・睡蓮と台湾朝食～2026",
     "name_zh": "天堂早晨涼爽~荷花睡蓮台灣早餐~2026",
     "date_start": "2026-06-13",
@@ -1376,7 +1354,7 @@
   },
   {
     "name": "2026/27シーズン 夏季キャンプ地決定のお知らせ　アルビレックス新潟",
-    "name_zh": "",
+    "name_zh": "關於2026/27賽季新潟天鵝夏令營點決定的通知",
     "date_start": "2026-07-07",
     "date_end": "2026-07-17",
     "url": "https://www.okinawastory.jp/event/600022457",
@@ -1728,7 +1706,7 @@
   },
   {
     "name": "【BAR告知】期間限定「桃フェア」開催！（2026年8月~9月）",
-    "name_zh": "",
+    "name_zh": "【BAR公告】「桃花會」限時舉辦！ （2026 年 8 月至 9 月）",
     "date_start": "2026-08-01",
     "date_end": "2026-09-30",
     "url": "https://www.okinawastory.jp/event/600022427",
