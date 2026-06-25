@@ -924,28 +924,6 @@
     "description": "參觀糸滿的平和祈念公園，二戰沖繩戰役留下的傷痕是最深刻的和平教育"
   },
   {
-    "name": "初夏の早朝にだけ現れる水面の幻想的な光景「絶景サガリバナクルーズ」",
-    "name_zh": "初夏清晨才有的夢幻般的水面景色：“薩加里巴納風景巡遊”",
-    "date_start": "2026-06-18",
-    "date_end": "2026-07-25",
-    "url": "https://www.okinawastory.jp/event/600022334",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
-    "name": "UMESHISO工房展 「おしゃべりないきものたち」",
-    "name_zh": "UMESHISO工作坊展“會說話的和服”",
-    "date_start": "2026-06-18",
-    "date_end": "2026-06-29",
-    "url": "https://www.okinawastory.jp/event/600022321",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
     "name": "【26.6.19.Fri-8.13.Thu】土地のかたち",
     "name_zh": "[26.6.19.Fri-8.13.Thu] 土地形狀",
     "date_start": "2026-06-19",
@@ -1056,6 +1034,17 @@
     "description": ""
   },
   {
+    "name": "令和8年度 速報展「発掘調査速報2026」開催のお知らせ",
+    "name_zh": "2020財年突發新聞展「挖掘報告2026」公告",
+    "date_start": "2026-06-25",
+    "date_end": "2026-08-23",
+    "url": "https://www.okinawastory.jp/event/600022513",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
     "name": "今天是 ♨️ 露天風呂日",
     "name_zh": "♨️ 露天風呂日",
     "date_start": "2026-06-26",
@@ -1065,6 +1054,28 @@
     "category": "文化",
     "stars": 2,
     "description": "露天溫泉與沖繩夜景的絕妙組合，在大自然懷抱中完全放鬆"
+  },
+  {
+    "name": "やすらぎの沖縄 写真展",
+    "name_zh": "和平的沖繩攝影展",
+    "date_start": "2026-06-26",
+    "date_end": "2026-07-06",
+    "url": "https://www.okinawastory.jp/event/600022490",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
+    "name": "七夕イベント開催のお知らせ",
+    "name_zh": "七夕活動通知",
+    "date_start": "2026-06-27",
+    "date_end": "2026-07-07",
+    "url": "https://www.okinawastory.jp/event/600022495",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
   },
   {
     "name": "SAVE the SEA ― 海の環境問題を身近に感じて考えよう",
@@ -1144,6 +1155,28 @@
     "description": "沖繩各海水浴場正式開放，一整個夏天的藍色冒險從這天拉開序幕"
   },
   {
+    "name": "【7月・8月】THE DINING 暖琉満菜ランチメニューのお知らせ",
+    "name_zh": "[7月/8月]THE DINING 團龍萬齋午餐菜單公告",
+    "date_start": "2026-07-01",
+    "date_end": "2026-08-31",
+    "url": "https://www.okinawastory.jp/event/600022520",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
+    "name": "埼玉西武ライオンズ応援ウィーク開催",
+    "name_zh": "舉辦埼玉西武獅支援週",
+    "date_start": "2026-07-01",
+    "date_end": "2026-07-09",
+    "url": "https://www.okinawastory.jp/event/600022502",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
     "name": "南国の太陽と自然が育んだ色彩のDINNER BUFFET アグー豚しゃぶしゃぶとシュラスコを食べ放題！鉄板と鍋と島の香り。～沖縄県産マグロの鉄板ステーキや夏の島野菜、三線ライブを五感で愉しむ～",
     "name_zh": "自助晚餐的色彩受到熱帶陽光和自然的滋養。阿古豬肉涮鍋和巴西烤肉自助餐！鐵板、火鍋、島嶼的香氣。 ～用五種感官享受沖繩鮪魚鐵板牛排、夏季島蔬菜、三線現場音樂～",
     "date_start": "2026-07-01",
@@ -1160,6 +1193,17 @@
     "date_start": "2026-07-01",
     "date_end": "2026-08-15",
     "url": "https://www.okinawastory.jp/event/600022366",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
+    "name": "夏の冷却大作戦2026 うんこ恐竜VS巨大生物",
+    "name_zh": "夏季降溫行動2026 便便恐龍VS巨型生物",
+    "date_start": "2026-07-02",
+    "date_end": "2026-09-14",
+    "url": "https://www.okinawastory.jp/event/600022485",
     "source": "okinawastory",
     "category": "",
     "stars": 0,
@@ -1227,6 +1271,17 @@
     "date_end": "2026-07-04",
     "url": "https://visitokinawajapan.com/zh-hant/discover/events/ocean-expo-park-summer-festival/",
     "source": "visitokinawa",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
+    "name": "【夏季限定】Taste of America (テイスト・オブ・アメリカ)",
+    "name_zh": "【夏季限定】美國味道",
+    "date_start": "2026-07-04",
+    "date_end": "2026-09-30",
+    "url": "https://www.okinawastory.jp/event/600022489",
+    "source": "okinawastory",
     "category": "",
     "stars": 0,
     "description": ""
@@ -1364,6 +1419,17 @@
     "description": ""
   },
   {
+    "name": "第54回イーゼル会展",
+    "name_zh": "第54屆架上展覽",
+    "date_start": "2026-07-14",
+    "date_end": "2026-07-19",
+    "url": "https://www.okinawastory.jp/event/600022503",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
     "name": "今天是 🌊 海之日",
     "name_zh": "🌊 海之日",
     "date_start": "2026-07-15",
@@ -1373,6 +1439,28 @@
     "category": "傳統",
     "stars": 5,
     "description": "日本國定假日，沖繩以海洋文化節慶感謝大海的慷慨饋贈"
+  },
+  {
+    "name": "【博物館】第46回企画展「ワラザンとサン―宮古の結縄文化―」を開催します。",
+    "name_zh": "[博物館]我們將舉辦第46屆特別展覽「草山與三宮古的結繩文化」。",
+    "date_start": "2026-07-17",
+    "date_end": "2026-09-13",
+    "url": "https://www.okinawastory.jp/event/600022516",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
+    "name": "【7/17～9/26 毎週 金・土曜日】ビアガーデン開催のご案内",
+    "name_zh": "[7/17至9/26每週五、週六]啤酒花園訊息",
+    "date_start": "2026-07-17",
+    "date_end": "2026-09-26",
+    "url": "https://www.okinawastory.jp/event/600022481",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
   },
   {
     "name": "夏季二次キャンプ(沖縄県うるま市)実施のお知らせ　藤枝MYFC",
@@ -1414,6 +1502,17 @@
     "date_end": "2026-09-30",
     "url": "https://visitokinawajapan.com/zh-hant/discover/events/cave-exploration-southern-okinawa/",
     "source": "visitokinawa",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
+    "name": "【2026年7月18日～7月20日】 4周年記念 Lunch Buffet開催のお知らせ",
+    "name_zh": "【2026年7月18日至7月20日】四週年自助午餐公告",
+    "date_start": "2026-07-18",
+    "date_end": "2026-07-20",
+    "url": "https://www.okinawastory.jp/event/600022501",
+    "source": "okinawastory",
     "category": "",
     "stars": 0,
     "description": ""
@@ -1540,6 +1639,17 @@
     "description": ""
   },
   {
+    "name": "【2026年7月21日～8月30日】 Summer Lunch Buffet開催のお知らせ",
+    "name_zh": "【2026年7月21日至8月30日】夏季自助午餐公告",
+    "date_start": "2026-07-21",
+    "date_end": "2026-08-30",
+    "url": "https://www.okinawastory.jp/event/600022500",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
     "name": "今天是 ☀️ 大暑",
     "name_zh": "☀️ 大暑",
     "date_start": "2026-07-22",
@@ -1551,6 +1661,17 @@
     "description": "一年最熱的節氣，沖繩海水溫度達到頂峰，是夏季珊瑚礁最豐盛的時期"
   },
   {
+    "name": "SEAPORT CHATAN CARNIVAL",
+    "name_zh": "北谷港嘉年華",
+    "date_start": "2026-07-24",
+    "date_end": "2026-09-26",
+    "url": "https://www.okinawastory.jp/event/600022483",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
     "name": "今天是 🍧 刨冰日",
     "name_zh": "🍧 刨冰日",
     "date_start": "2026-07-25",
@@ -1560,6 +1681,17 @@
     "category": "夏日",
     "stars": 5,
     "description": "7-25諧音「こおり」，沖繩ぜんざい冰品是在地必吃，紅豆刨冰清甜無比"
+  },
+  {
+    "name": "名護夏日祭",
+    "name_zh": "名護夏日祭",
+    "date_start": "2026-07-25",
+    "date_end": "2026-07-26",
+    "url": "https://visitokinawajapan.com/zh-hant/discover/events/nago-summer-festival/",
+    "source": "visitokinawa",
+    "category": "",
+    "stars": 0,
+    "description": ""
   },
   {
     "name": "夏休み！こどもフェスタ2026",
@@ -1615,6 +1747,17 @@
     "category": "自然",
     "stars": 3,
     "description": "沖繩珊瑚礁是天然的水質守護者，關注海洋就是關注地球的用水未來"
+  },
+  {
+    "name": "まわって完成！海洋博公園・沖縄美ら海水族館 重ね捺しスタンプラリー",
+    "name_zh": "轉動並完成！海洋博公園/沖繩美麗水族館重疊集章活動",
+    "date_start": "2026-08-01",
+    "date_end": "2026-08-31",
+    "url": "https://www.okinawastory.jp/event/600022512",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
   },
   {
     "name": "【BAR告知】期間限定「桃フェア」開催！（2026年8月~9月）",
@@ -1744,6 +1887,17 @@
     "date_end": "2026-08-30",
     "url": "https://www.okinawastory.jp/event/600022351",
     "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
+    "name": "沖繩全島Eisa太鼓舞祭",
+    "name_zh": "沖繩全島Eisa太鼓舞祭",
+    "date_start": "2026-09-04",
+    "date_end": "2026-09-06",
+    "url": "https://visitokinawajapan.com/zh-hant/discover/events/okinawa-zento-eisa-matsuri/",
+    "source": "visitokinawa",
     "category": "",
     "stars": 0,
     "description": ""
