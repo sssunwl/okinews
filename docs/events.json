@@ -924,44 +924,11 @@
     "description": "參觀糸滿的平和祈念公園，二戰沖繩戰役留下的傷痕是最深刻的和平教育"
   },
   {
-    "name": "【26.6.19.Fri-8.13.Thu】土地のかたち",
-    "name_zh": "[26.6.19.Fri-8.13.Thu] 土地形狀",
-    "date_start": "2026-06-19",
-    "date_end": "2026-08-13",
-    "url": "https://www.okinawastory.jp/event/600022473",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
-    "name": "令和8年度 平和企画展「写真と証言で見る西原の戦争」開催のお知らせ",
-    "name_zh": "2020年和平展「照片與證詞中的西原戰爭」公告",
-    "date_start": "2026-06-19",
-    "date_end": "2026-09-06",
-    "url": "https://www.okinawastory.jp/event/600022344",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
     "name": "1日1組限定　西表島の星空を仰ぐ「ティンガーラディナークルーズ」",
     "name_zh": "每天限定一組的“Tingara晚餐巡遊”，仰望西表島的星空",
     "date_start": "2026-06-20",
     "date_end": "2026-09-26",
     "url": "https://www.okinawastory.jp/event/600022335",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
-    "name": "第27回サバニ帆漕レース・第49回座間味ヨットレース 開催について",
-    "name_zh": "關於第27屆薩巴尼帆船賽和第49屆座間味帆船賽",
-    "date_start": "2026-06-20",
-    "date_end": "2026-06-27",
-    "url": "https://www.okinawastory.jp/event/600022068",
     "source": "okinawastory",
     "category": "",
     "stars": 0,
@@ -1034,7 +1001,7 @@
     "description": ""
   },
   {
-    "name": "令和8年度 速報展「発掘調査速報2026」開催のお知らせ",
+    "name": "令和8年度 速報展「発掘調査速報2026」",
     "name_zh": "2020財年突發新聞展「挖掘報告2026」公告",
     "date_start": "2026-06-25",
     "date_end": "2026-08-23",
@@ -1153,6 +1120,28 @@
     "category": "夏日",
     "stars": 5,
     "description": "沖繩各海水浴場正式開放，一整個夏天的藍色冒險從這天拉開序幕"
+  },
+  {
+    "name": "ビオス探検隊｜夏休み限定の親子自然探検",
+    "name_zh": "Bios探險隊|親子自然探索僅限暑假",
+    "date_start": "2026-07-01",
+    "date_end": "2026-09-30",
+    "url": "https://www.okinawastory.jp/event/600022524",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
+    "name": "親子で挑戦！湖のキーワード探し｜夏休みカヌー体験",
+    "name_zh": "對家長和孩子來說都是一個挑戰！搜尋湖泊關鍵字|暑假劃獨木舟體驗",
+    "date_start": "2026-07-01",
+    "date_end": "2026-09-30",
+    "url": "https://www.okinawastory.jp/event/600022523",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
   },
   {
     "name": "【7月・8月】THE DINING 暖琉満菜ランチメニューのお知らせ",
@@ -1413,6 +1402,17 @@
     "date_start": "2026-07-13",
     "date_end": "2026-07-26",
     "url": "https://www.okinawastory.jp/event/600022184",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
+    "name": "町田ゼルビア 夏キャンプ開催について",
+    "name_zh": "關於町田Zelvia夏令營舉辦",
+    "date_start": "2026-07-14",
+    "date_end": "2026-07-24",
+    "url": "https://www.okinawastory.jp/event/600022522",
     "source": "okinawastory",
     "category": "",
     "stars": 0,
