@@ -968,17 +968,6 @@
     "description": "露天溫泉與沖繩夜景的絕妙組合，在大自然懷抱中完全放鬆"
   },
   {
-    "name": "やすらぎの沖縄 写真展",
-    "name_zh": "和平的沖繩攝影展",
-    "date_start": "2026-06-26",
-    "date_end": "2026-07-06",
-    "url": "https://www.okinawastory.jp/event/600022490",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
     "name": "七夕イベント開催のお知らせ",
     "name_zh": "七夕活動通知",
     "date_start": "2026-06-27",
@@ -1144,7 +1133,7 @@
     "description": ""
   },
   {
-    "name": "がじゅまるファミリー原画展 7月3日（金）～11日（土） 琉球新報社2階ギャラリー",
+    "name": "がじゅまるファミリー原画展",
     "name_zh": "雅壽丸家族原創藝術展7月3日（星期五）至7月11日（星期六）琉球新浦社2樓畫廊",
     "date_start": "2026-07-03",
     "date_end": "2026-07-11",
@@ -1155,7 +1144,7 @@
     "description": ""
   },
   {
-    "name": "本格中華ディナーオーダーバイキング 涼風感じる夏の飲茶×冷麺フェア のご案内",
+    "name": "本格中華ディナーオーダーバイキング 涼風感じる夏の飲茶×冷麺フェア",
     "name_zh": "正宗中式晚餐自助餐資訊 夏日點心x冷面展 清風徐徐",
     "date_start": "2026-07-03",
     "date_end": "2026-09-27",
@@ -1166,7 +1155,7 @@
     "description": ""
   },
   {
-    "name": "今夏大注目のイベント！サウナ＆ナイトプールイベント開催！「OKINAWA SAUNA ＆ SPA NIGHT PARTY」沖縄・宜野湾市",
+    "name": "今夏大注目のイベント！サウナ＆ナイトプールイベント開催！「OKINAWA SAUNA ＆ SPA NIGHT PARTY」",
     "name_zh": "今年夏天最火紅的活動！桑拿和夜間泳池活動舉行！ 「沖繩桑拿＆SPA之夜派對」沖繩縣宜野灣市",
     "date_start": "2026-07-03",
     "date_end": "2026-07-04",
@@ -1243,7 +1232,7 @@
     "description": ""
   },
   {
-    "name": "～ 第4回もとぶの食と文化フェスタ開催のご案内 ～",
+    "name": "～ 第4回もとぶの食と文化フェスタ～",
     "name_zh": "～第4屆本部美食文化節資訊～",
     "date_start": "2026-07-04",
     "date_end": "2026-07-05",
@@ -1265,7 +1254,7 @@
     "description": ""
   },
   {
-    "name": "MIYAKOJIMA CURRY FESTIVAL開催！7月4日(土)、5日(日)HOTEL LOCAL BASE宮古島",
+    "name": "MIYAKOJIMA CURRY FESTIVAL",
     "name_zh": "宮古島咖哩節舉行！ 7月4日（週六）、5日（週日）HOTEL LOCAL BASE Miyakojima",
     "date_start": "2026-07-04",
     "date_end": "2026-07-05",
@@ -1513,6 +1502,17 @@
     "date_end": "2026-09-30",
     "url": "https://visitokinawajapan.com/zh-hant/discover/events/cave-exploration-southern-okinawa/",
     "source": "visitokinawa",
+    "category": "",
+    "stars": 0,
+    "description": ""
+  },
+  {
+    "name": "垂見健吾写真展「島島の時間」開催",
+    "name_zh": "垂海健吾攝影展「Island Island Time」舉辦",
+    "date_start": "2026-07-18",
+    "date_end": "2026-08-02",
+    "url": "https://www.okinawastory.jp/event/600022566",
+    "source": "okinawastory",
     "category": "",
     "stars": 0,
     "description": ""
