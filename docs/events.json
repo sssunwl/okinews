@@ -990,50 +990,6 @@
     "description": "沖繩各海水浴場正式開放，一整個夏天的藍色冒險從這天拉開序幕"
   },
   {
-    "name": "がじゅまるファミリー原画展",
-    "name_zh": "雅壽丸家族原創藝術展7月3日（星期五）至7月11日（星期六）琉球新浦社2樓畫廊",
-    "date_start": "2026-07-03",
-    "date_end": "2026-07-11",
-    "url": "https://www.okinawastory.jp/event/600022533",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
-    "name": "本格中華ディナーオーダーバイキング 涼風感じる夏の飲茶×冷麺フェア",
-    "name_zh": "正宗中式晚餐自助餐資訊 夏日點心x冷面展 清風徐徐",
-    "date_start": "2026-07-03",
-    "date_end": "2026-09-27",
-    "url": "https://www.okinawastory.jp/event/600022526",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
-    "name": "湧田焼　沖縄・静謐の美～神田淡平コレクション～",
-    "name_zh": "沖繩湧田燒，寧靜之美～神田炭平收藏～",
-    "date_start": "2026-07-03",
-    "date_end": "2026-07-26",
-    "url": "https://www.okinawastory.jp/event/600022353",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
-    "name": "【歓迎～めんそーれ～】Ｊリーグ「ジュビロ磐田」夏季トレーニングキャンプ期間決定！！",
-    "name_zh": "[歡迎～Mensore～] J聯賽「岩田喜悅」夏季集訓期已定！ ！",
-    "date_start": "2026-07-03",
-    "date_end": "2026-07-14",
-    "url": "https://www.okinawastory.jp/event/600022294",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
     "name": "ポリネシアン・ダンスショー2026開催のお知らせ",
     "name_zh": "2026年波利尼西亞舞蹈表演公告",
     "date_start": "2026-07-04",
@@ -1837,7 +1793,7 @@
     "description": ""
   },
   {
-    "name": "首里城公園「夏休み体験イベント2026」開催！ | 首里城 ‐ 琉球王国の栄華を物語る 世界遺産 首里城",
+    "name": "首里城公園「夏休み体験イベント2026」",
     "name_zh": "首里城公園「暑假體驗活動2026」即將舉辦！ |首里城－世界遺產，訴說著琉球王國的繁榮故事",
     "date_start": "2026-08-08",
     "date_end": "2026-08-11",
