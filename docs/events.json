@@ -990,39 +990,6 @@
     "description": "沖繩各海水浴場正式開放，一整個夏天的藍色冒險從這天拉開序幕"
   },
   {
-    "name": "ポリネシアン・ダンスショー2026開催のお知らせ",
-    "name_zh": "2026年波利尼西亞舞蹈表演公告",
-    "date_start": "2026-07-04",
-    "date_end": "2026-09-26",
-    "url": "https://www.okinawastory.jp/event/600022591",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
-    "name": "【夏季限定】Taste of America (テイスト・オブ・アメリカ)",
-    "name_zh": "【夏季限定】美國味道",
-    "date_start": "2026-07-04",
-    "date_end": "2026-09-30",
-    "url": "https://www.okinawastory.jp/event/600022489",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
-    "name": "うつろう庭園",
-    "name_zh": "宇津郎花園",
-    "date_start": "2026-07-04",
-    "date_end": "2026-07-12",
-    "url": "https://www.okinawastory.jp/event/600022238",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
     "name": "Morning Coffee Club",
     "name_zh": "早晨咖啡俱樂部",
     "date_start": "2026-07-05",
@@ -1131,28 +1098,6 @@
     "category": "文化",
     "stars": 2,
     "description": "7-10音似「なっとう」，沖繩人對這黏黏食物評價兩極，你是哪一邊？"
-  },
-  {
-    "name": "パルミラ夜市",
-    "name_zh": "巴爾米拉夜市",
-    "date_start": "2026-07-10",
-    "date_end": "2026-07-11",
-    "url": "https://www.okinawastory.jp/event/600022470",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
-    "name": "KOZAROCKS 2026",
-    "name_zh": "科扎洛克 2026",
-    "date_start": "2026-07-10",
-    "date_end": "2026-07-11",
-    "url": "https://www.okinawastory.jp/event/600022418",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
   },
   {
     "name": "写真展｜堀井大輝 写真展「西表島のいきもの図鑑展」",
