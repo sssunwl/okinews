@@ -990,17 +990,6 @@
     "description": "沖繩各海水浴場正式開放，一整個夏天的藍色冒險從這天拉開序幕"
   },
   {
-    "name": "Morning Coffee Club",
-    "name_zh": "早晨咖啡俱樂部",
-    "date_start": "2026-07-05",
-    "date_end": "2026-08-30",
-    "url": "https://www.okinawastory.jp/event/600022528",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
     "name": "今天是 🎋 七夕",
     "name_zh": "🎋 七夕",
     "date_start": "2026-07-07",
@@ -1116,28 +1105,6 @@
     "date_start": "2026-07-11",
     "date_end": "2026-07-26",
     "url": "https://www.okinawastory.jp/event/600022595",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
-    "name": "マツダサマーフェスタ2026 in 沖縄コンベンションセンター",
-    "name_zh": "馬自達夏季節 2026 在沖繩會議中心舉行",
-    "date_start": "2026-07-11",
-    "date_end": "2026-07-12",
-    "url": "https://www.okinawastory.jp/event/600022572",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
-    "name": "ビオスの丘 サガリバナ×星あそび｜一夜花と七夕ものがたりに出会う、特別な二夜",
-    "name_zh": "Bios no Oka Sagaribana x Star Play｜兩個特別的夜晚，一晚的花與七夕的故事相遇",
-    "date_start": "2026-07-11",
-    "date_end": "2026-07-12",
-    "url": "https://www.okinawastory.jp/event/600022049",
     "source": "okinawastory",
     "category": "",
     "stars": 0,
