@@ -827,6 +827,11 @@ def fmt_tg(e):
 
 
 def send_telegram(text):
+    try:  # 同時鏡射到 Discord #n-okinews(失敗不影響 TG)
+        from _discord import notify_discord
+        notify_discord(text)
+    except Exception:
+        pass
     if not TELEGRAM_TOKEN or not CHAT_ID:
         print("⚠️ 未設定 TELEGRAM_TOKEN 或 CHAT_ID")
         return
