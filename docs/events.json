@@ -1034,7 +1034,7 @@
     "description": ""
   },
   {
-    "name": "2026/27シーズン キャンプ会場およびスケジュールの決定について　湘南ベルマーレ",
+    "name": "2026/27シーズン キャンプ会場・スケジュール決定（湘南ベルマーレ）",
     "name_zh": "關於2026/27賽季湘南Bellmare訓練營場地和日程的決定",
     "date_start": "2026-07-13",
     "date_end": "2026-07-26",
@@ -1056,7 +1056,7 @@
     "description": ""
   },
   {
-    "name": "町田ゼルビア 夏キャンプ開催について",
+    "name": "FC町田ゼルビア 夏キャンプ開催",
     "name_zh": "關於町田Zelvia夏令營舉辦",
     "date_start": "2026-07-14",
     "date_end": "2026-07-24",
@@ -1133,7 +1133,7 @@
     "description": ""
   },
   {
-    "name": "夏季二次キャンプ(沖縄県うるま市)実施のお知らせ　藤枝MYFC",
+    "name": "夏季二次キャンプ実施（藤枝MYFC）",
     "name_zh": "第二屆夏令營（沖繩縣宇流麻市）藤枝MYFC的通知",
     "date_start": "2026-07-17",
     "date_end": "2026-07-26",
@@ -1155,7 +1155,7 @@
     "description": ""
   },
   {
-    "name": "沖縄ビールとお祭り屋台で沖縄・夏の夜を愉しむ『OKINAWA SUMMER NIGHT FEST』を開催 ～５日間限定のガーデン沖縄三線ライブ・世界各地のビールを味わうWEEKイベントも～",
+    "name": "沖縄ビールとお祭り屋台で沖縄・夏の夜を愉しむ『OKINAWA SUMMER NIGHT FEST』",
     "name_zh": "將舉辦“OKINAWA SUMMER NIGHT FEST”，用沖繩啤酒和節日攤位享受沖繩的夏夜 - 5天限定花園沖繩三線現場音樂會和可品嚐世界各地啤酒的WEEK活動 -",
     "date_start": "2026-07-17",
     "date_end": "2026-08-31",
@@ -1244,7 +1244,7 @@
   },
   {
     "name": "夜の動物園inネオパークオキナワ2026",
-    "name_zh": "",
+    "name_zh": "沖繩 Neo Park 夜間動物園 2026",
     "date_start": "2026-07-18",
     "date_end": "2026-09-30",
     "url": "https://www.okinawastory.jp/event/600022633",
@@ -1266,7 +1266,7 @@
   },
   {
     "name": "南国ECOライツSUMMER",
-    "name_zh": "",
+    "name_zh": "夏季熱帶生態燈",
     "date_start": "2026-07-18",
     "date_end": "2026-09-27",
     "url": "https://www.okinawastory.jp/event/600022627",
@@ -1386,7 +1386,7 @@
     "description": ""
   },
   {
-    "name": "OKINAWA FREEDIVING CUP 2026 沖縄フリーダイビングカップ2026　沖縄大会(恩納村真栄田岬)",
+    "name": "沖縄フリーダイビングカップ2026",
     "name_zh": "沖繩自由潛水杯 2026 沖繩自由潛水杯 2026 沖繩錦標賽（真榮田岬、恩納村）",
     "date_start": "2026-07-18",
     "date_end": "2026-07-19",
@@ -1446,17 +1446,6 @@
     "date_start": "2026-07-19",
     "date_end": "2026-07-20",
     "url": "https://www.okinawastory.jp/event/600022195",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": ""
-  },
-  {
-    "name": "MasterPeace 2026",
-    "name_zh": "和平大師2026",
-    "date_start": "2026-07-19",
-    "date_end": "2026-07-20",
-    "url": "https://www.okinawastory.jp/event/600021853",
     "source": "okinawastory",
     "category": "",
     "stars": 0,
