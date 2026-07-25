@@ -123,6 +123,7 @@ img,svg{display:block;max-width:100%}
 .feature-date{font-size:.78rem;color:var(--lagoon);font-weight:900}
 .feature-card h2{font-size:clamp(2rem,3.7vw,3.1rem);line-height:1.05;letter-spacing:-.04em;margin:44px 0 16px;max-width:390px;position:relative}
 .feature-card p{position:relative;color:#cbe9ed;margin:0;max-width:380px}
+.feature-loc{font-size:.78rem;color:var(--sun)!important;font-weight:800;margin-top:10px!important}
 .feature-action{position:absolute;left:32px;bottom:28px;display:inline-flex;align-items:center;gap:9px;color:#fff;text-decoration:none;font-weight:900}
 .feature-action::after{content:"↗";width:32px;height:32px;border-radius:50%;background:var(--coral);display:grid;place-items:center;transition:.2s}
 .feature-action:hover::after{transform:rotate(45deg)}
@@ -152,8 +153,13 @@ img,svg{display:block;max-width:100%}
 .pick-icon{font-size:2.1rem;margin:25px 0 auto}
 .pick-card h3{font-size:1.35rem;line-height:1.2;margin:0 0 10px;letter-spacing:-.02em}
 .pick-card p{font-size:.82rem;margin:0;opacity:.76}
-.pick-arrow{position:absolute;right:18px;top:16px;width:34px;height:34px;border:1px solid currentColor;border-radius:50%;display:grid;place-items:center;transition:.2s}
+.pick-arrow{position:absolute;right:18px;top:16px;width:34px;height:34px;border:1px solid currentColor;border-radius:50%;display:grid;place-items:center;transition:.2s;z-index:1}
 .pick-card:hover .pick-arrow{transform:rotate(45deg);background:var(--navy);color:#fff}
+.pick-card.has-image{background-size:cover;background-position:center;color:#fff;border-color:var(--navy)}
+.pick-card.has-image::before{content:"";position:absolute;inset:0;background:linear-gradient(190deg,rgba(6,42,58,.12) 10%,rgba(6,42,58,.92) 88%);z-index:0}
+.pick-card.has-image>*{position:relative;z-index:1}
+.pick-card.has-image p{opacity:.9}
+.pick-loc{font-size:.74rem;margin:6px 0 0;opacity:.75;display:flex;align-items:center;gap:4px}
 
 /* Calendar explorer */
 .explorer{padding:95px 0 110px;background:var(--paper);border-radius:60px 60px 0 0;position:relative}
@@ -202,7 +208,9 @@ img,svg{display:block;max-width:100%}
 .event-body h4 a{text-decoration:none}
 .event-body h4 a:hover{color:var(--blue)}
 .event-ja{font-size:.7rem;color:#87979b;margin-bottom:6px}
-.event-desc{font-size:.8rem;color:var(--muted);margin:0}
+.event-desc{font-size:.8rem;color:var(--muted);margin:0 0 4px}
+.event-location{font-size:.72rem;color:var(--blue);margin:0;display:flex;align-items:center;gap:4px}
+.event-price{font-size:.7rem;color:var(--coral);font-weight:800;margin-left:8px}
 .event-actions{display:flex;gap:7px}
 .save-btn,.source-btn{width:38px;height:38px;border:1px solid var(--line);background:var(--paper);border-radius:50%;display:grid;place-items:center;cursor:pointer;text-decoration:none;transition:.2s}
 .save-btn:hover,.source-btn:hover{background:var(--sun);transform:translateY(-2px)}
@@ -444,6 +452,7 @@ body::before{
           <div class="feature-meta"><span class="pill">NEXT PLAY</span><span class="feature-date" id="featureDate">近期活動</span></div>
           <h2 id="featureTitle">正在整理下一個玩法</h2>
           <p id="featureDesc">打開活動年曆，看看旅程裡剛好遇上什麼。</p>
+          <p id="featureLoc" class="feature-loc" hidden></p>
           <a class="feature-action" id="featureLink" href="#calendar">查看活動</a>
         </article>
         <div class="ticket">
@@ -638,6 +647,9 @@ function initHero(){
   document.getElementById('featureDate').textContent=fmtDate(feature.date_start,true);
   document.getElementById('featureTitle').textContent=displayName(feature);
   document.getElementById('featureDesc').textContent=feature.description||'剛好在旅程附近的話，把它排進今天的路線。';
+  const locEl=document.getElementById('featureLoc');
+  if(feature.location){locEl.textContent=`📍 ${feature.location}${feature.price?`・${feature.price}`:''}`;locEl.hidden=false}
+  else{locEl.hidden=true}
   const link=document.getElementById('featureLink');
   const url=safeURL(feature.url);
   if(url){link.href=url;link.target='_blank';link.rel='noopener';link.textContent='查看原始資訊'}
@@ -648,11 +660,15 @@ function renderPicks(){
   const icons=['☀️','🥁','🌊','🌙'];
   document.getElementById('pickGrid').innerHTML=picks.map((event,index)=>{
     const url=safeURL(event.url);
-    return `<article class="pick-card" data-pick-index="${event._index}" tabindex="0">
+    const img=safeURL(event.image);
+    const style=img?` style="background-image:url('${escapeHTML(img)}')"`:'';
+    const loc=event.location?`<p class="pick-loc">📍 ${escapeHTML(event.location)}</p>`:'';
+    return `<article class="pick-card${img?' has-image':''}" data-pick-index="${event._index}" tabindex="0"${style}>
       <span class="pick-no">0${index+1}・${escapeHTML(fmtDate(event.date_start))}</span>
-      <span class="pick-arrow">↗</span><span class="pick-icon">${icons[index]}</span>
+      <span class="pick-arrow">↗</span>${img?'':`<span class="pick-icon">${icons[index]}</span>`}
       <h3>${escapeHTML(displayName(event))}</h3>
       <p>${escapeHTML(event.description||sourceName(event))}${url?'・有官方來源':''}</p>
+      ${loc}
     </article>`;
   }).join('')||'<div class="empty-state"><strong>近期活動整理中</strong>晚點再回來看看。</div>';
 }
@@ -715,9 +731,10 @@ function eventCard(event,index){
   const saved=plan.includes(eventId(event));
   const title=url?`<a href="${escapeHTML(url)}" target="_blank" rel="noopener">${escapeHTML(displayName(event))}</a>`:escapeHTML(displayName(event));
   const ja=event.name&&event.name!==displayName(event)?`<div class="event-ja">${escapeHTML(event.name)}</div>`:'';
+  const loc=event.location?`<p class="event-location">📍 ${escapeHTML(event.location)}${event.price?`<span class="event-price">${escapeHTML(event.price)}</span>`:''}</p>`:'';
   return `<article class="event-card${culture?' culture':''}" style="animation-delay:${Math.min(index,10)*.025}s">
     <div class="event-date">${escapeHTML(fmtDate(event.date_start))}<small>${escapeHTML(end||event.category||'活動')}</small></div>
-    <div class="event-body"><span class="event-source">${escapeHTML(sourceName(event))}</span><h4>${title}</h4>${ja}${event.description?`<p class="event-desc">${escapeHTML(event.description)}</p>`:''}</div>
+    <div class="event-body"><span class="event-source">${escapeHTML(sourceName(event))}</span><h4>${title}</h4>${ja}${event.description?`<p class="event-desc">${escapeHTML(event.description)}</p>`:''}${loc}</div>
     <div class="event-actions">
       <button class="save-btn${saved?' saved':''}" type="button" data-save-index="${event._index}" aria-label="${saved?'從行程移除':'加入我的行程'}">${saved?'♥':'♡'}</button>
       ${url?`<a class="source-btn" href="${escapeHTML(url)}" target="_blank" rel="noopener" aria-label="查看原始來源">↗</a>`:''}

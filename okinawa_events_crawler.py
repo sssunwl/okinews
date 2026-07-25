@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 import os
 import json
 import re
+import time
 from pathlib import Path
 
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
@@ -675,9 +676,101 @@ def get_today_is_events():
     return events
 
 
+# ── 詳情頁補充：地點／費用／圖片／介紹 ──────────────────────────────
+
+ENRICH_FIELDS = ("image", "location", "price", "description")
+
+
+def enrich_visitokinawa(url):
+    """從 visitokinawajapan.com 活動詳情頁擷取地點、費用、圖片與介紹。"""
+    out = {"image": "", "location": "", "price": "", "description": ""}
+    try:
+        res = requests.get(url, headers=HEADERS, timeout=15)
+        res.raise_for_status()
+    except Exception as e:
+        print(f"⚠️ 詳情頁失敗 {url}：{e}")
+        return out
+
+    soup = BeautifulSoup(res.text, "lxml")
+
+    og_image = soup.find("meta", property="og:image")
+    if og_image and og_image.get("content"):
+        out["image"] = og_image["content"]
+
+    og_desc = soup.find("meta", property="og:description")
+    if og_desc and og_desc.get("content"):
+        out["description"] = og_desc["content"].strip()
+
+    place = soup.find(class_="e-place")
+    if place:
+        content = place.find(class_="e-content")
+        out["location"] = (content or place).get_text(" ", strip=True)
+
+    price = soup.find(class_="e-price")
+    if price:
+        content = price.find(class_="e-content")
+        out["price"] = (content or price).get_text(" ", strip=True)
+
+    return out
+
+
+def enrich_okinawastory(url):
+    """從 okinawastory.jp 活動詳情頁擷取地點、費用、圖片與介紹（日文轉繁中）。"""
+    out = {"image": "", "location": "", "price": "", "description": ""}
+    try:
+        res = requests.get(url, headers=HEADERS, timeout=15)
+        res.raise_for_status()
+    except Exception as e:
+        print(f"⚠️ 詳情頁失敗 {url}：{e}")
+        return out
+
+    soup = BeautifulSoup(res.text, "lxml")
+
+    gallery_img = soup.find(class_="p-detail-gallery__unit-img")
+    if gallery_img:
+        src = gallery_img.get("data-src") or gallery_img.get("src") or ""
+        if src.startswith("http"):
+            out["image"] = src
+
+    facility = {}
+    fac_block = soup.find(class_="p-detail-facility")
+    if fac_block:
+        for li in fac_block.select(".p-detail-facility__list-unit"):
+            label = li.find(class_="p-detail-facility__list-title")
+            value = li.find(class_="p-detail-facility__list-inner")
+            if not (label and value):
+                continue
+            # address rows carry a sibling "MAP" button inside the same block;
+            # only the first text-bearing span/p is the actual address.
+            pre = value.find(class_="p-detail-pre") or value
+            facility[label.get_text(strip=True)] = pre.get_text(" ", strip=True)
+
+    venue = facility.get("開催場所", "")
+    address = facility.get("住所", "")
+    area = facility.get("エリア", "")
+    out["location"] = " ・ ".join(p for p in (venue or area, address) if p)
+    price_ja = facility.get("料金", "")
+    out["price"] = "免費" if price_ja in ("無料", "無料。") else price_ja
+
+    desc_block = soup.find(class_="p-detail-discription")
+    desc_ja = desc_block.get_text(" ", strip=True) if desc_block else ""
+    # okinawastory falls back to this generic caption when an organizer
+    # hasn't written a real description — treat it as "no description".
+    if desc_ja and "施設ルート" not in desc_ja:
+        out["description"] = translate_ja_zh(desc_ja[:150])
+
+    return out
+
+
+def needs_enrichment(existing_event):
+    if not existing_event:
+        return True
+    return not existing_event.get("image") and not existing_event.get("location")
+
+
 # ── 爬蟲 ─────────────────────────────────────────────────────────────
 
-def get_visitokinawa_events():
+def get_visitokinawa_events(existing_by_url=None):
     url = "https://visitokinawajapan.com/zh-hant/discover/events/"
     events = []
     now = datetime.now()
@@ -716,18 +809,27 @@ def get_visitokinawa_events():
             continue
         if end_dt < now or start_dt > upper:
             continue
-        events.append({
+        event = {
             "name": name, "name_zh": name,
             "date_start": to_iso(start_dt), "date_end": to_iso(end_dt),
             "url": link, "source": "visitokinawa",
-            "category": "", "stars": 0, "description": "",
-        })
+            "category": "", "stars": 0,
+            "description": "", "image": "", "location": "", "price": "",
+        }
+        prior = (existing_by_url or {}).get(link)
+        if not needs_enrichment(prior):
+            for field in ENRICH_FIELDS:
+                event[field] = prior.get(field, "")
+        else:
+            event.update(enrich_visitokinawa(link))
+            time.sleep(0.3)
+        events.append(event)
 
     print(f"✅ visitokinawa: {len(events)} 筆")
     return events
 
 
-def get_okinawastory_events():
+def get_okinawastory_events(existing_by_url=None, translate_cache=None):
     base = "https://www.okinawastory.jp"
     events = []
     now = datetime.now()
@@ -771,12 +873,22 @@ def get_okinawastory_events():
                 continue
             if start_dt > now + timedelta(days=90):
                 continue
-            events.append({
+            link = base + href
+            event = {
                 "name": name_ja, "name_zh": "",
                 "date_start": to_iso(start_dt), "date_end": to_iso(end_dt),
-                "url": base + href, "source": "okinawastory",
-                "category": "", "stars": 0, "description": "",
-            })
+                "url": link, "source": "okinawastory",
+                "category": "", "stars": 0,
+                "description": "", "image": "", "location": "", "price": "",
+            }
+            prior = (existing_by_url or {}).get(link)
+            if not needs_enrichment(prior):
+                for field in ENRICH_FIELDS:
+                    event[field] = prior.get(field, "")
+            else:
+                event.update(enrich_okinawastory(link))
+                time.sleep(0.3)
+            events.append(event)
 
     print(f"✅ okinawastory: {len(events)} 筆")
     return events
@@ -901,8 +1013,16 @@ def main():
         print(f"📄 預覽網頁更新完成（{len(events)} 筆）")
         return
 
+    existing_by_url = {}
+    if os.path.exists(EVENTS_FILE):
+        with open(EVENTS_FILE, "r", encoding="utf-8") as f:
+            existing_by_url = {e["url"]: e for e in json.load(f) if e.get("url")}
+
     today_is   = get_today_is_events()
-    scraped    = merge([get_visitokinawa_events(), get_okinawastory_events()])
+    scraped    = merge([
+        get_visitokinawa_events(existing_by_url),
+        get_okinawastory_events(existing_by_url),
+    ])
     all_events = merge([today_is, scraped])
     print(f"📦 合計：{len(all_events)} 筆（今天是… {len(today_is)} 筆）")
 
