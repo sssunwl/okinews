@@ -141,8 +141,22 @@ img,svg{display:block;max-width:100%}
 .snapshot-item small{display:block;color:var(--lagoon);font-size:.68rem;font-weight:900;letter-spacing:.12em}
 .snapshot-item strong{display:block;margin-top:4px;font-size:1.05rem}
 
+/* Weather */
+.weather{padding:80px 0 10px}
+.weather-strip{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
+.wx-card{border:1px solid var(--line);background:var(--paper);border-radius:18px;padding:16px 10px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px;transition:.2s}
+.wx-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm)}
+.wx-card.today{border-color:var(--blue);background:var(--lagoon-soft)}
+.wx-date{font-size:.72rem;font-weight:900;color:var(--muted)}
+.wx-date.weekend{color:var(--coral)}
+.wx-icon{font-size:1.7rem}
+.wx-temp strong{font-size:1.15rem;color:var(--ink)}
+.wx-temp small{color:var(--muted);margin-left:4px}
+.wx-rain{font-size:.72rem;color:var(--blue);font-weight:800}
+.wx-uv{font-size:.64rem;color:var(--muted)}
+
 /* Picks */
-.picks{padding:108px 0 90px}
+.picks{padding:70px 0 90px}
 .pick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .pick-card{min-height:295px;border:2px solid var(--navy);border-radius:var(--radius-lg);padding:23px;background:var(--paper);position:relative;overflow:hidden;display:flex;flex-direction:column;transition:.25s;cursor:pointer}
 .pick-card:nth-child(2){background:var(--lagoon-soft)}
@@ -289,6 +303,7 @@ footer{background:var(--navy);color:#fff;padding:52px 0 100px}
   .pick-grid{grid-template-columns:repeat(2,1fr)}.calendar-layout{grid-template-columns:320px 1fr}
   .region-grid{grid-template-columns:repeat(3,1fr)}.region-card{min-height:240px}
   .community-card{grid-template-columns:1fr}.community-action{justify-content:flex-start}
+  .weather-strip{grid-template-columns:repeat(4,1fr)}
 }
 @media(max-width:720px){
   .shell{width:min(100% - 28px,var(--max))}.nav{height:68px}.brand-copy small{display:none}
@@ -297,7 +312,8 @@ footer{background:var(--navy);color:#fff;padding:52px 0 100px}
   .hero-visual{min-height:410px}.feature-card{inset:12px 9px auto 5px;min-height:325px;padding:25px;box-shadow:12px 14px 0 var(--lagoon)}
   .feature-card h2{margin-top:36px}.feature-action{left:25px;bottom:24px}.ticket{width:158px;right:-5px;bottom:7px}
   .snapshot-grid{grid-template-columns:repeat(2,1fr);gap:20px}.snapshot-item:nth-child(3){border-left:0;padding-left:0}
-  .picks,.regions{padding:78px 0}.section-head,.note-top{align-items:start;flex-direction:column}.pick-grid{grid-template-columns:1fr 1fr}.pick-card{min-height:250px}
+  .picks,.regions,.weather{padding:56px 0}.section-head,.note-top{align-items:start;flex-direction:column}.pick-grid{grid-template-columns:1fr 1fr}.pick-card{min-height:250px}
+  .weather-strip{display:flex;overflow:auto;padding:3px 3px 10px;scroll-snap-type:x mandatory}.wx-card{min-width:88px;scroll-snap-align:start}
   .explorer{padding:75px 0 90px;border-radius:38px 38px 0 0}.calendar-layout{grid-template-columns:1fr}.calendar-panel{position:relative;top:auto}
   .event-card{grid-template-columns:62px 1fr}.event-actions{grid-column:2;justify-content:flex-start}
   .region-grid{display:flex;overflow:auto;padding:3px 3px 18px;scroll-snap-type:x mandatory}.region-card{min-width:190px;scroll-snap-align:start}
@@ -473,6 +489,16 @@ body::before{
     </div>
   </section>
 
+  <section class="weather" id="weather" aria-label="沖繩一週天氣">
+    <div class="shell">
+      <div class="section-head">
+        <div><div class="eyebrow">This Week's Weather</div><h2>出發前，<br>先看這週天氣。</h2></div>
+        <p>資料來自 Open-Meteo 沖繩市預報，每日更新。海況與颱風請另以業者與氣象廳公告為準。</p>
+      </div>
+      <div class="weather-strip" id="weatherStrip"></div>
+    </div>
+  </section>
+
   <section class="picks" id="now">
     <div class="shell">
       <div class="section-head">
@@ -598,8 +624,10 @@ body::before{
 </nav>
 
 <script type="application/json" id="eventData"><<<EVENTS_JSON>>></script>
+<script type="application/json" id="weatherData"><<<WEATHER_JSON>>></script>
 <script>
 const EVENTS = JSON.parse(document.getElementById('eventData').textContent).map((event,index)=>({...event,_index:index}));
+const WEATHER = JSON.parse(document.getElementById('weatherData').textContent);
 const PLAN_KEY = 'okiplayground-plan-v1';
 const MONTHS = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
 const WEEKDAYS = ['日','一','二','三','四','五','六'];
@@ -671,6 +699,23 @@ function renderPicks(){
       ${loc}
     </article>`;
   }).join('')||'<div class="empty-state"><strong>近期活動整理中</strong>晚點再回來看看。</div>';
+}
+
+function renderWeather(){
+  const el=document.getElementById('weatherStrip');
+  if(!WEATHER.length){el.innerHTML='<div class="empty-state"><strong>天氣資料整理中</strong>晚點再回來看看。</div>';return}
+  const today=tokyoToday();
+  el.innerHTML=WEATHER.map(day=>{
+    const dt=new Date(`${day.date}T00:00:00`);
+    const weekend=dt.getDay()===0||dt.getDay()===6;
+    return `<article class="wx-card${day.date===today?' today':''}">
+      <span class="wx-date${weekend?' weekend':''}">${dt.getMonth()+1}/${dt.getDate()}（${escapeHTML(day.weekday)}）</span>
+      <span class="wx-icon">${day.icon}</span>
+      <span class="wx-temp"><strong>${day.temp_max}°</strong><small>${day.temp_min}°</small></span>
+      <span class="wx-rain">💧 ${day.rain_chance}%</span>
+      <span class="wx-uv">UV ${day.uv}・${escapeHTML(day.uv_label)}</span>
+    </article>`;
+  }).join('');
 }
 
 function initDate(){
@@ -820,7 +865,7 @@ document.getElementById('drawerList').addEventListener('click',event=>{
 document.addEventListener('keydown',event=>{if(event.key==='Escape')setDrawer(false)});
 window.addEventListener('scroll',()=>document.getElementById('siteHeader').classList.toggle('scrolled',window.scrollY>12),{passive:true});
 
-initHero();renderPicks();initDate();renderAll();updatePlanUI();renderDrawer();
+initHero();renderPicks();renderWeather();initDate();renderAll();updatePlanUI();renderDrawer();
 </script>
 </body>
 </html>
