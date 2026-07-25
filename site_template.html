@@ -248,6 +248,19 @@ img,svg{display:block;max-width:100%}
 .region-card:hover::after{transform:rotate(42deg) scale(1.08);background:rgba(255,255,255,.35)}
 .region-card strong{font-size:1.1rem;position:relative}
 .region-card span{font-size:.74rem;color:var(--muted);margin-top:5px;position:relative}
+.region-card.active{background:var(--navy)!important}
+.region-card.active strong,.region-card.active span{color:#fff}
+.region-card.active::after{border-color:rgba(255,255,255,.4)}
+.region-detail{margin-top:18px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px;animation:rise .3s ease}
+.region-pick-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.region-pick{border:1px solid var(--line);border-radius:16px;padding:16px}
+.region-pick h4{margin:0 0 6px;font-size:.98rem}
+.region-pick p{margin:0;font-size:.8rem;color:var(--muted);line-height:1.55}
+.region-pick-foot{display:flex;align-items:center;justify-content:space-between;margin-top:10px;gap:8px}
+.region-tag{font-size:.64rem;font-weight:900;color:var(--blue);background:var(--lagoon-soft);border-radius:999px;padding:3px 8px}
+.region-pick-foot a{font-size:.75rem;font-weight:800;color:var(--coral);text-decoration:none;white-space:nowrap}
+.region-more{margin-top:16px;border:2px solid var(--navy);background:var(--sun);border-radius:999px;padding:11px 20px;font-weight:900;font-size:.82rem;cursor:pointer;transition:.2s}
+.region-more:hover{background:var(--navy);color:#fff}
 .notes{padding:0 0 110px}
 .note-wrap{background:var(--navy);color:#fff;border-radius:var(--radius-xl);padding:45px;position:relative;overflow:hidden}
 .note-wrap::after{content:"";position:absolute;width:270px;height:270px;border:46px solid rgba(255,212,71,.16);border-radius:50%;right:-100px;top:-120px}
@@ -329,6 +342,7 @@ footer{background:var(--navy);color:#fff;padding:52px 0 100px}
   .pick-grid{grid-template-columns:1fr}.pick-card{min-height:225px}.snapshot-item{padding-left:13px}.snapshot-item strong{font-size:.9rem}
   .event-card{padding:14px;gap:12px}.event-date{font-size:.74rem}.filter-tabs{flex-wrap:nowrap;overflow:auto;width:100%;padding-bottom:4px}
   .community-action a{width:100%;min-width:0}.footer-grid{grid-template-columns:1fr}
+  .region-pick-grid{grid-template-columns:1fr}.region-detail{padding:18px}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}
@@ -554,7 +568,7 @@ body::before{
     <div class="shell">
       <div class="section-head">
         <div><div class="eyebrow">Choose Your Area</div><h2>今天想往<br>哪一邊走？</h2></div>
-        <p>先選活動區域，能少花不少來回開車的時間。點一下會直接搜尋相關活動。</p>
+        <p>先選活動區域，能少花不少來回開車的時間。點一下看在地精選玩法，也可以直接搜尋這區的近期活動。</p>
       </div>
       <div class="region-grid">
         <button class="region-card" type="button" data-region="那霸" data-kanji="那霸"><strong>那霸 NAHA</strong><span>市場・城市・文化</span></button>
@@ -563,6 +577,7 @@ body::before{
         <button class="region-card" type="button" data-region="名護" data-kanji="北部"><strong>北部 NORTH</strong><span>山原・自然・公路</span></button>
         <button class="region-card" type="button" data-region="糸滿" data-kanji="南部"><strong>南部 SOUTH</strong><span>戰跡・工藝・慢遊</span></button>
       </div>
+      <div class="region-detail" id="regionDetail" hidden></div>
     </div>
   </section>
 
@@ -629,6 +644,38 @@ body::before{
 const EVENTS = JSON.parse(document.getElementById('eventData').textContent).map((event,index)=>({...event,_index:index}));
 const WEATHER = JSON.parse(document.getElementById('weatherData').textContent);
 const PLAN_KEY = 'okiplayground-plan-v1';
+const REGION_DATA = {
+  '那霸': [
+    {name:'牧志公設市場',note:'一樓買海鮮直接請二樓熟食店家代烹，不用另外找餐廳。週一公休記得避開。',tags:['美食']},
+    {name:'壺屋やちむん通り',note:'石板老街兩側全是陶器工作室，買個用得到的杯碗比伴手禮店裡的紀念品實在。',tags:[]},
+    {name:'波上宮海灘',note:'那霸市區唯一沙灘，泳裝出發只要10分鐘車程，傍晚來看夕陽比白天悠閒。',tags:[]},
+    {name:'國際通屋台村',note:'多間小吃攤集合營業到深夜，一個人也能輕鬆吃遍沖繩家常菜。',tags:['夜','美食']},
+  ],
+  '北谷': [
+    {name:'美濱美國村',note:'摩天輪加海邊商場，傍晚後餐廳酒吧接力營業，是本島夜生活密度最高的一區。',tags:['夜']},
+    {name:'北谷公園海岸',note:'長條海岸步道，黃昏最多人來散步慢跑，退潮時能走到礁石區看小魚。',tags:[]},
+    {name:'宮城海岸',note:'比美國村安靜的沙灘，帶小孩玩水、停車都方便，適合待一整個下午。',tags:['親子']},
+    {name:'北谷港嘉年華花火',note:'遇到不定期的花火場次，提前2小時到美濱才有好位置，詳細日期看年曆。',tags:['祭','夜']},
+  ],
+  '恩納': [
+    {name:'萬座毛',note:'象鼻造型的珊瑚礁斷崖，日落時分逆光效果最好，大草坪可以直接坐著野餐。',tags:[]},
+    {name:'真榮田岬・青の洞窟',note:'潛水浮潛熱門點，建議上午出發人少水也清；不下水也能沿步道看海景。',tags:[]},
+    {name:'恩納村公共海灘',note:'多間度假村沙灘可付費供非房客使用，是恩納最方便的一日海灘選擇。',tags:['親子']},
+    {name:'琉球村',note:'古民家聚落改建的文化園區，有三線表演跟手作體驗，下雨天也能安排。',tags:['室內','親子']},
+  ],
+  '名護': [
+    {name:'沖繩美麗海水族館',note:'開館第一批進場，黑潮之海大水槽人潮最少，平日效果更明顯。',tags:['親子','室內']},
+    {name:'古宇利島',note:'跨海大橋開車就能到，heart岩退潮才看得完整，出發前先查潮汐時間。',tags:[]},
+    {name:'大石林山',note:'山原地區石灰岩地形健行步道，分不同難度路線，適合不趕時間慢慢走。',tags:[]},
+    {name:'邊戸岬',note:'沖繩本島最北端，天氣好能遠眺離島方向，建議自駕前往、留意山路。',tags:[]},
+  ],
+  '糸滿': [
+    {name:'沖繩世界文化王國',note:'玉泉洞鐘乳石洞加傳統工藝村，洞窟全程約30分鐘，夏天洞內涼爽消暑。',tags:['室內','親子']},
+    {name:'平和祈念公園',note:'沖繩戰終戰之地，資料館建議預留1小時，園區面海適合安靜走走。',tags:[]},
+    {name:'舊海軍司令部壕',note:'地下坑道保存戰時遺跡，現場有中文解說，適合對歷史有興趣的旅客。',tags:[]},
+    {name:'瀨長島 Umikaji Terrace',note:'白色地中海風商店街，離那霸機場車程15分鐘，起降班機是免費的風景。',tags:['美食','夜']},
+  ],
+};
 const MONTHS = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
 const WEEKDAYS = ['日','一','二','三','四','五','六'];
 const state = {year:0,month:0,selectedDate:null,filter:'all',search:'',limit:10};
@@ -814,6 +861,28 @@ function runSearch(query){
   document.getElementById('calendar').scrollIntoView({behavior:'smooth'});
   renderEvents();
 }
+function showRegion(regionKey,cardEl){
+  const picks=REGION_DATA[regionKey]||[];
+  const panel=document.getElementById('regionDetail');
+  const already=cardEl.classList.contains('active');
+  document.querySelectorAll('.region-card').forEach(card=>card.classList.remove('active'));
+  if(already){panel.hidden=true;panel.innerHTML='';return}
+  cardEl.classList.add('active');
+  panel.hidden=false;
+  panel.innerHTML=`<div class="region-pick-grid">${picks.map(pick=>{
+    const mapURL=`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(pick.name+' 沖縄')}`;
+    const tags=pick.tags.map(tag=>`<span class="region-tag">${escapeHTML(tag)}</span>`).join('');
+    return `<article class="region-pick">
+      <h4>${escapeHTML(pick.name)}</h4>
+      <p>${escapeHTML(pick.note)}</p>
+      <div class="region-pick-foot">${tags}<a href="${mapURL}" target="_blank" rel="noopener">地圖 ↗</a></div>
+    </article>`;
+  }).join('')}</div>
+  <button class="region-more" type="button" data-search-region="${escapeHTML(regionKey)}">看這區近期活動 →</button>`;
+  panel.querySelector('[data-search-region]').addEventListener('click',()=>runSearch(regionKey));
+  panel.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
 function togglePlan(event){
   const id=eventId(event);
   plan=plan.includes(id)?plan.filter(item=>item!==id):[...plan,id];
@@ -834,7 +903,7 @@ function setDrawer(open){
 document.getElementById('heroSearch').addEventListener('submit',event=>{event.preventDefault();runSearch(document.getElementById('heroSearchInput').value)});
 document.getElementById('eventSearch').addEventListener('input',event=>{state.search=event.target.value;state.selectedDate=null;state.limit=10;renderEvents()});
 document.querySelectorAll('[data-intent]').forEach(button=>button.addEventListener('click',()=>runSearch(button.dataset.intent)));
-document.querySelectorAll('[data-region]').forEach(button=>button.addEventListener('click',()=>runSearch(button.dataset.region)));
+document.querySelectorAll('[data-region]').forEach(button=>button.addEventListener('click',()=>showRegion(button.dataset.region,button)));
 document.querySelectorAll('.filter-tab').forEach(button=>button.addEventListener('click',()=>{
   state.filter=button.dataset.filter;state.search='';state.selectedDate=null;state.limit=10;document.getElementById('eventSearch').value='';
   document.querySelectorAll('.filter-tab').forEach(tab=>tab.classList.toggle('active',tab===button));renderEvents()
