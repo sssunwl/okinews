@@ -21,7 +21,7 @@
     "date": "2026-07-26",
     "source": "氣象庁警報",
     "title": "沖繩本島地區氣象警報・注意報",
-    "summary": "沖繩本島地區請注意到29日中午前可能出現突發強降雨與雷擊。請留意天氣變化並提高警覺。",
+    "summary": "沖繩本島地區在29日中午前，需注意突如其來的強降雨與雷擊。",
     "category": "天氣警報",
     "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=471000&lang=ja",
     "alert": true
@@ -29,7 +29,7 @@
   {
     "date": "2026-07-26",
     "source": "氣象庁警報",
-    "title": "大東島地區氣象警報與注意報",
+    "title": "大東島地區發布氣象警報注意",
     "summary": "大東島地區請注意突如其來的強降雨與雷擊。",
     "category": "天氣警報",
     "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=472000&lang=ja",
@@ -235,6 +235,15 @@
   },
   {
     "date": "2026-07-26",
+    "source": "沖縄タイムス",
+    "title": "美軍空軍一等兵疑酒駕在沖繩市被逮捕",
+    "summary": "沖繩署26日以道路交通法違反（酒氣帶駕駛）現行犯逮捕一名隸屬嘉手納基地的美軍空軍一等兵，年約20歲。警方指出，嫌疑人被指在沖繩市國道330號酒後駕車，對指控表示否認。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1888583",
+    "alert": false
+  },
+  {
+    "date": "2026-07-26",
     "source": "氣象庁警報",
     "title": "宮古島地區氣象警報・注意報解除",
     "summary": "宮古島地區的注意報已解除。",
@@ -245,8 +254,8 @@
   {
     "date": "2026-07-26",
     "source": "氣象庁警報",
-    "title": "八重山地區氣象注意報解除",
-    "summary": "八重山地區的氣象注意報已解除。",
+    "title": "八重山地區氣象警報・注意報",
+    "summary": "解除注意報。",
     "category": "天氣警報",
     "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=474000&lang=ja",
     "alert": false
