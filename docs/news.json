@@ -21,7 +21,7 @@
     "date": "2026-07-26",
     "source": "氣象庁警報",
     "title": "沖繩本島地區氣象警報・注意報",
-    "summary": "沖繩本島地區到29日中午前，需注意突發強降雨與雷擊。",
+    "summary": "沖繩本島地區請注意到29日中午前可能出現突發強降雨與雷擊。請留意天氣變化並提高警覺。",
     "category": "天氣警報",
     "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=471000&lang=ja",
     "alert": true
@@ -29,8 +29,8 @@
   {
     "date": "2026-07-26",
     "source": "氣象庁警報",
-    "title": "大東島地區發布氣象警報・注意報",
-    "summary": "大東島地區需注意突發強降雨與雷擊。",
+    "title": "大東島地區氣象警報與注意報",
+    "summary": "大東島地區請注意突如其來的強降雨與雷擊。",
     "category": "天氣警報",
     "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=472000&lang=ja",
     "alert": true
@@ -236,8 +236,8 @@
   {
     "date": "2026-07-26",
     "source": "氣象庁警報",
-    "title": "宮古島地方氣象警報・注意報解除",
-    "summary": "宮古島地方的氣象注意報已解除。此為解除通知，表示相關警報／注意報不再生效。",
+    "title": "宮古島地區氣象警報・注意報解除",
+    "summary": "宮古島地區的注意報已解除。",
     "category": "天氣警報",
     "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=473000&lang=ja",
     "alert": false
@@ -246,7 +246,7 @@
     "date": "2026-07-26",
     "source": "氣象庁警報",
     "title": "八重山地區氣象注意報解除",
-    "summary": "八重山地區的氣象注意報已解除。這是一則恢復正常的通知。",
+    "summary": "八重山地區的氣象注意報已解除。",
     "category": "天氣警報",
     "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=474000&lang=ja",
     "alert": false
