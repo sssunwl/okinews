@@ -16,6 +16,10 @@
   var today = OKIP.tokyoToday();
 
   function displayName(event) { return event.name_zh || event.name || '未命名活動'; }
+  function truncate(text, max) {
+    text = String(text || '');
+    return text.length > max ? text.slice(0, max).trim() + '…' : text;
+  }
   function eventId(event) {
     return [event.source, event.date_start, event.url || event.name_zh || event.name].join('|');
   }
@@ -113,7 +117,7 @@
         '<span class="pick-no">0' + (index + 1) + '・' + escapeHTML(fmtDate(event.date_start)) + '</span>' +
         '<span class="pick-arrow">↗</span>' + (img ? '' : '<span class="pick-icon">' + icons[index] + '</span>') +
         '<h3>' + escapeHTML(displayName(event)) + '</h3>' +
-        '<p>' + escapeHTML(event.description || '點開看活動詳情與官方資訊。') + '</p>' + loc +
+        '<p>' + escapeHTML(truncate(event.description, 46) || '點開看活動詳情與官方資訊。') + '</p>' + loc +
         '</article>';
     }).join('') : '<div class="empty-state"><strong>近期活動整理中</strong>晚點再回來看看。</div>';
 
@@ -130,6 +134,22 @@
         event.preventDefault();
         openPick(event.target.closest('[data-pick-id]'));
       }
+    });
+  }
+
+  /* ── 1-12 月預覽列：滑過／focus 換文字，觸控裝置直接點進去看當月詳細 ── */
+  var monthRow = document.getElementById('monthRow');
+  var monthPreview = document.getElementById('monthPreview');
+  if (monthRow && monthPreview) {
+    var showPreview = function (tile) {
+      if (!tile) return;
+      monthPreview.textContent = tile.dataset.blurb || '';
+    };
+    monthRow.addEventListener('mouseover', function (event) {
+      showPreview(event.target.closest('.month-tile'));
+    });
+    monthRow.addEventListener('focusin', function (event) {
+      showPreview(event.target.closest('.month-tile'));
     });
   }
 })();

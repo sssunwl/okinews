@@ -43,8 +43,8 @@ img,svg{display:block;max-width:100%}
 .pill{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border-radius:999px;background:var(--paper);border:1px solid var(--line);font-size:.78rem;font-weight:900}
 
 /* Navigation */
-.site-header{position:sticky;top:0;z-index:100;background:rgba(255,247,232,.88);border-bottom:1px solid transparent;backdrop-filter:blur(18px);transition:.25s}
-.site-header.scrolled{border-color:var(--line);box-shadow:0 8px 30px rgba(6,42,58,.06)}
+.site-header{position:sticky;top:0;z-index:100;background:rgba(255,247,232,.42);border-bottom:1px solid transparent;backdrop-filter:blur(14px);transition:background .25s,box-shadow .25s,border-color .25s}
+.site-header.scrolled{background:rgba(255,247,232,.9);border-color:var(--line);box-shadow:0 8px 30px rgba(6,42,58,.06)}
 .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0}
 .brand-mark{width:42px;height:42px;border-radius:50%;display:block;flex-shrink:0;transition:transform .25s}
@@ -131,6 +131,23 @@ img,svg{display:block;max-width:100%}
 .wx-temp small{font-size:.7rem;color:var(--muted);margin-left:3px}
 .wx-rain{font-size:.6rem;color:var(--blue);font-weight:800}
 .wx-uv{font-size:.55rem;color:var(--muted)}
+
+/* Month strip */
+.month-strip{padding:8px 0 28px}
+.month-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:12px;flex-wrap:wrap}
+.month-note{font-size:.68rem;color:var(--muted)}
+.month-row{display:grid;grid-template-columns:repeat(12,1fr);gap:6px}
+.month-tile{border:1px solid var(--line);background:var(--paper);border-radius:12px;padding:10px 4px;text-align:center;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;align-items:center;gap:2px;transition:.2s}
+.month-tile:hover,.month-tile:focus-visible{transform:translateY(-3px);box-shadow:var(--shadow-sm);border-color:var(--blue);background:var(--lagoon-soft)}
+.month-tile strong{font-size:.8rem;letter-spacing:-.01em}
+.month-tile span{font-size:.6rem;color:var(--muted)}
+.month-preview{margin:12px 0 0;padding:12px 16px;background:var(--sand);border-radius:var(--radius);font-size:.8rem;color:var(--muted);min-height:1.6em}
+@media(max-width:720px){
+  .month-row{grid-template-columns:repeat(6,1fr);row-gap:8px}
+}
+@media(max-width:460px){
+  .month-row{grid-template-columns:repeat(4,1fr)}
+}
 
 /* Picks */
 .picks{padding:70px 0 90px}
@@ -326,87 +343,6 @@ footer{background:var(--navy);color:#fff;padding:52px 0 100px}
   *,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}
 }
 
-/* Editorial glass refinement — less component-library, more island field guide */
-body{
-  background:
-    radial-gradient(circle at 13% 8%,rgba(121,217,230,.42),transparent 28rem),
-    radial-gradient(circle at 92% 24%,rgba(255,102,90,.14),transparent 24rem),
-    linear-gradient(115deg,#fff9ed 0%,#f8f3e7 52%,#eaf7f6 100%);
-  background-attachment:fixed;
-}
-body::before{
-  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.24;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E");
-}
-.site-header{background:rgba(255,249,237,.62);border-bottom-color:rgba(6,42,58,.08)}
-.section-head h2,.note-top h2{font-family:"Songti TC","Noto Serif TC","Yu Mincho",serif;font-weight:700;letter-spacing:-.035em}
-.quick-search{background:rgba(255,254,251,.58);backdrop-filter:blur(18px) saturate(135%)}
-.hero-kicker,.mood-chip{background:rgba(255,254,251,.48);backdrop-filter:blur(14px)}
-.feature-card{
-  background:linear-gradient(145deg,rgba(6,42,58,.88),rgba(11,64,82,.68));
-  border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(22px) saturate(130%);
-  border-radius:7px 42px 42px 42px;box-shadow:16px 18px 0 rgba(121,217,230,.68);
-}
-.ticket{background:rgba(255,254,251,.68);backdrop-filter:blur(18px);border-radius:4px 20px 20px 20px}
-.snapshot{background:transparent;color:var(--ink);padding:0;position:relative;z-index:4}
-.snapshot-grid{
-  margin-top:-20px;padding:21px 24px;background:rgba(255,254,251,.56);
-  border:1px solid rgba(255,255,255,.74);border-radius:4px 26px 26px 26px;
-  backdrop-filter:blur(22px) saturate(140%);box-shadow:0 18px 50px rgba(6,42,58,.08);
-}
-.snapshot-item{border-color:rgba(6,42,58,.13)}.snapshot-item small{color:var(--blue)}
-.pick-grid{grid-template-columns:1.18fr .82fr 1fr;grid-template-rows:1fr 1fr;gap:14px}
-.pick-card{
-  min-height:220px;background:rgba(255,254,251,.48);border:1px solid rgba(6,42,58,.22);
-  border-radius:4px 26px 26px 26px;backdrop-filter:blur(18px) saturate(125%);
-}
-.pick-card:nth-child(1){grid-row:1/3;min-height:454px;background:rgba(255,254,251,.58)}
-.pick-card:nth-child(2){grid-column:2;background:rgba(223,247,248,.56)}
-.pick-card:nth-child(3){grid-column:3;background:rgba(255,212,71,.42)}
-.pick-card:nth-child(4){grid-column:2/4;background:rgba(255,102,90,.26);color:var(--navy)}
-.pick-card:hover{box-shadow:8px 10px 0 rgba(6,42,58,.88)}
-.explorer{
-  background:rgba(255,254,251,.66);border:1px solid rgba(255,255,255,.72);
-  backdrop-filter:blur(24px) saturate(130%);border-radius:8px 54px 0 0;
-}
-.explorer-search,.filter-tab{background:rgba(255,255,255,.48);backdrop-filter:blur(12px)}
-.calendar-panel{
-  background:rgba(255,247,232,.52);border:1px solid rgba(6,42,58,.42);
-  border-radius:4px 28px 28px 28px;backdrop-filter:blur(20px);box-shadow:8px 9px 0 rgba(121,217,230,.62);
-}
-.event-card{
-  background:rgba(255,255,255,.52);border-color:rgba(6,42,58,.13);
-  border-radius:3px 18px 18px 18px;backdrop-filter:blur(14px);
-}
-.event-card.culture{background:rgba(255,253,241,.55)}
-.region-card{
-  min-height:225px;align-items:flex-start;text-align:left;border:1px solid rgba(6,42,58,.18);
-  border-radius:3px 24px 24px 24px;background:rgba(223,247,248,.48);backdrop-filter:blur(18px);
-}
-.region-card:nth-child(2){background:rgba(255,230,220,.48)}.region-card:nth-child(3){background:rgba(255,240,170,.48)}
-.region-card:nth-child(4){background:rgba(216,238,225,.48)}.region-card:nth-child(5){background:rgba(230,226,255,.48)}
-.region-card::before{font-size:3.3rem;right:14px;left:auto;top:16px}.region-card::after{top:42px;left:20px;width:68px;height:68px}
-.note-wrap{
-  background:linear-gradient(135deg,rgba(6,42,58,.89),rgba(8,127,156,.62));
-  border:1px solid rgba(255,255,255,.22);border-radius:5px 36px 36px 36px;backdrop-filter:blur(24px);
-}
-.note-card{background:rgba(255,255,255,.07);border-radius:3px 18px 18px 18px}
-.community-card{
-  background:rgba(255,102,90,.72);border:1px solid rgba(6,42,58,.65);
-  border-radius:5px 38px 38px 38px;backdrop-filter:blur(20px);box-shadow:10px 11px 0 rgba(6,42,58,.92);
-}
-.drawer{background:rgba(255,254,251,.82);backdrop-filter:blur(28px) saturate(125%)}
-
-@media(max-width:980px){
-  .pick-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
-  .pick-card:nth-child(n){grid-column:auto;grid-row:auto;min-height:250px}
-}
-@media(max-width:720px){
-  .pick-grid{grid-template-columns:1fr}
-  .pick-card:nth-child(n){min-height:230px}
-  .snapshot-grid{margin-top:-10px}
-  .region-card{min-width:205px}
-}
 
 /* ══════════════════════════════════════════════════════════════════
    v2 多頁架構：今日看板／內容區塊／文章／新聞／小抄
@@ -453,7 +389,8 @@ body::before{
 .page-head{padding:52px 0 34px}
 .page-head h1{font-size:clamp(2.3rem,5.5vw,3.8rem);line-height:1.02;letter-spacing:-.055em;margin:10px 0 14px}
 .page-head p{max-width:620px;margin:0;color:var(--muted)}
-.section-more{display:inline-flex;margin-top:28px;font-weight:900;text-decoration:none;color:var(--blue)}
+.section-more{display:inline-flex;align-items:center;gap:6px;margin-top:24px;font-weight:900;text-decoration:none;color:#fff;background:var(--navy);border-radius:999px;padding:13px 24px;transition:.2s}
+.section-more:hover{background:var(--blue);transform:translateY(-2px);box-shadow:var(--shadow-sm)}
 .section-more:hover{text-decoration:underline}
 
 /* 內容卡片 */
@@ -486,6 +423,19 @@ body::before{
 .cond-official{margin:0 0 10px;font-size:.72rem;color:var(--blue);line-height:1.6}
 .cond-link{font-size:.78rem;font-weight:900;color:var(--blue);text-decoration:none}
 @media(max-width:460px){.cond-grid{grid-template-columns:1fr 1fr 1fr;gap:6px}.cond-grid div{padding:7px 4px}}
+
+/* 好物：獨立單品卡片格 */
+.goods-items{padding:8px 0 20px}
+.item-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin-top:18px}
+.item-card{display:flex;gap:14px;border:1px solid var(--line);background:var(--paper);border-radius:var(--radius-lg);padding:16px;box-shadow:var(--shadow-sm)}
+.item-emoji{flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--sand);display:grid;place-items:center;font-size:1.7rem}
+.item-body h3{margin:0 0 6px;font-size:.98rem;letter-spacing:-.01em;line-height:1.35}
+.item-body p{margin:0 0 10px;font-size:.78rem;color:var(--muted);line-height:1.55}
+.item-meta{display:flex;flex-direction:column;gap:3px;margin-bottom:8px}
+.item-meta span{font-size:.72rem;color:var(--ink)}
+.item-tags{display:flex;flex-wrap:wrap;gap:5px}
+.item-tags span{font-size:.62rem;font-weight:800;letter-spacing:.03em;background:var(--lagoon-soft);color:var(--blue);border-radius:999px;padding:2px 8px}
+.cards-heading{font-size:1.3rem;letter-spacing:-.02em;margin:0 0 18px}
 
 .post-section{padding:8px 0 80px}
 .post-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
@@ -665,3 +615,24 @@ body::before{
   .toolkit-links{grid-template-columns:1fr}
   .news-columns{grid-template-columns:1fr;gap:22px}
 }
+
+/* 沖繩海景視覺：沒有可用版權的實拍照片，改用手工海浪 SVG + 加深的青藍漸層，
+   讓「旅遊平台」的視覺感更強，同時完全不依賴外部圖片、不會有版權或連結失效風險。 */
+body{
+  background:
+    radial-gradient(ellipse 900px 500px at 8% 0%,rgba(121,217,230,.4),transparent 60%),
+    radial-gradient(ellipse 700px 500px at 100% 12%,rgba(8,127,156,.16),transparent 55%),
+    linear-gradient(180deg,#fffaf0 0%,#f7f2e6 38%,#eaf7f6 100%);
+  background-attachment:fixed;
+}
+.ocean-waves{position:fixed;left:0;right:0;bottom:0;height:120px;z-index:-1;pointer-events:none;opacity:.9}
+.ocean-waves svg{width:100%;height:100%}
+@media(prefers-reduced-motion:no-preference){
+  .ocean-wave-back{animation:wave-drift 22s linear infinite}
+  .ocean-wave-front{animation:wave-drift 15s linear infinite reverse}
+}
+@keyframes wave-drift{
+  from{transform:translateX(0)}
+  to{transform:translateX(-8.3334%)}
+}
+@media(max-width:720px){.ocean-waves{height:72px}}

@@ -75,6 +75,13 @@ SECTIONS = {
     },
 }
 
+# 個別好物卡片用的兩軸分類：店舖類型（去哪買）與好物類型（是什麼）。這不是一個
+# 會產生獨立頁面的 SECTIONS 條目，只是 /goods/ 頁中間那格「好物卡片」的篩選軸。
+GOODS_ITEM_AXES = [
+    ("店舖類型", ["超市", "便利店", "藥妝", "100円", "300円"]),
+    ("好物類型", ["藥品", "美妝", "護膚", "食品", "手信", "工藝品", "酒類"]),
+]
+
 REPORT = {"generated": "", "pages": 0, "skipped": [], "warnings": []}
 
 
@@ -203,6 +210,8 @@ def parse_scalar(value):
         return value[1:-1]
     if value.lower() in ("true", "false"):
         return value.lower() == "true"
+    if re.match(r"^-?\d+$", value):
+        return int(value)
     return value
 
 
@@ -293,6 +302,74 @@ def load_content():
             posts[section].append(meta)
         posts[section].sort(key=lambda item: str(item.get("updated", "")), reverse=True)
     return posts
+
+
+def load_goods_items():
+    """讀 content/goods-items/*.md：沒有內文的輕量卡片（圖示＋名稱＋簡介＋去哪買＋價位）。"""
+    folder = CONTENT / "goods-items"
+    if not folder.exists():
+        return []
+    items = []
+    for path in sorted(folder.glob("*.md")):
+        raw = path.read_text(encoding="utf-8")
+        if not raw.startswith("---"):
+            skip(str(path.relative_to(ROOT)), "缺少 front matter")
+            continue
+        _, _, rest = raw.partition("---")
+        front, _, _ = rest.partition("\n---")
+        meta = parse_front_matter(front)
+        problems = validate_goods_item(meta)
+        if problems:
+            skip(str(path.relative_to(ROOT)), "；".join(problems))
+            continue
+        items.append(meta)
+    return items
+
+
+def load_months():
+    """讀 content/months/*.md：12 篇月份速覽，回傳依月份排序的 list。"""
+    folder = CONTENT / "months"
+    if not folder.exists():
+        return []
+    months = []
+    for path in sorted(folder.glob("*.md")):
+        raw = path.read_text(encoding="utf-8")
+        if not raw.startswith("---"):
+            skip(str(path.relative_to(ROOT)), "缺少 front matter")
+            continue
+        _, _, rest = raw.partition("---")
+        front, _, body = rest.partition("\n---")
+        meta = parse_front_matter(front)
+        meta["body"] = body.strip()
+        problems = validate_month(meta)
+        if problems:
+            skip(str(path.relative_to(ROOT)), "；".join(problems))
+            continue
+        months.append(meta)
+    months.sort(key=lambda item: item.get("month", 0))
+    return months
+
+
+def validate_month(meta):
+    problems = []
+    month = meta.get("month")
+    if not isinstance(month, int) or not (1 <= month <= 12):
+        problems.append("month 要是 1-12 的整數")
+    for field in ("title", "blurb", "weather", "body"):
+        if not meta.get(field):
+            problems.append("缺 {}".format(field))
+    return problems
+
+
+def validate_goods_item(meta):
+    problems = []
+    for field in ("name", "blurb", "where", "price"):
+        if not meta.get(field):
+            problems.append("缺 {}".format(field))
+    tags = meta.get("tags") or []
+    if not isinstance(tags, list) or not tags:
+        problems.append("tags 至少要有一個")
+    return problems
 
 
 def validate_post(meta):
@@ -405,7 +482,7 @@ def row_cards(posts, prefix="", limit=3):
         "".join(post_card(post, prefix) for post in posts[:limit]))
 
 
-def build_home(posts, events, weather, news):
+def build_home(posts, events, weather, news, months):
     today = datetime.now(JST).strftime("%Y-%m-%d")
     horizon = (datetime.now(JST) + timedelta(days=90)).strftime("%Y-%m-%d")
     home_events = [
@@ -442,6 +519,7 @@ def build_home(posts, events, weather, news):
         )
 
     main = fill(template("home.html"), {
+        "MONTH_STRIP": month_strip_html(months),
         "GUIDE_PICKS": row_cards(posts.get("guide"), limit=4),
         "OKINAWA_BANNER": banner,
         "OCEAN_ROW": row_cards(posts.get("ocean")),
@@ -566,6 +644,77 @@ def build_events(events, updated_count):
     )
 
 
+def goods_item_card(item):
+    tags = item.get("tags") or []
+    tag_chips = "".join('<span>{}</span>'.format(html.escape(str(tag))) for tag in tags)
+    return (
+        '<article class="item-card" data-tags="{tags_attr}">'
+        '<div class="item-emoji">{emoji}</div>'
+        '<div class="item-body">'
+        '<h3>{name}</h3><p>{blurb}</p>'
+        '<div class="item-meta"><span>📍 {where}</span><span>💰 {price}</span></div>'
+        '<div class="item-tags">{tag_chips}</div>'
+        '</div></article>'
+    ).format(
+        tags_attr=html.escape("|".join(str(tag) for tag in tags), quote=True),
+        emoji=html.escape(str(item.get("emoji", "🛍️"))),
+        name=html.escape(str(item.get("name", ""))),
+        blurb=html.escape(str(item.get("blurb", ""))),
+        where=html.escape(str(item.get("where", ""))),
+        price=html.escape(str(item.get("price", ""))),
+        tag_chips=tag_chips,
+    )
+
+
+def goods_items_html(items):
+    if not items:
+        return ""
+
+    used_tags = set()
+    for item in items:
+        for tag in (item.get("tags") or []):
+            used_tags.add(str(tag))
+
+    rows = []
+    for axis_name, values in GOODS_ITEM_AXES:
+        chips = [tag for tag in values if tag in used_tags]
+        if not chips:
+            continue
+        buttons = "".join(
+            '<button class="tag-chip" type="button" data-tag="{0}">{0}</button>'.format(html.escape(tag))
+            for tag in chips
+        )
+        rows.append('        <div class="filter-row"><span class="filter-label">{}</span>'
+                    '<div class="filter-chips">{}</div></div>'.format(html.escape(axis_name), buttons))
+
+    filters = ""
+    if rows:
+        filters = (
+            '      <div class="filter-block" id="itemFilters" data-target="itemGrid">\n'
+            '        <div class="filter-row"><span class="filter-label">全部</span>'
+            '<div class="filter-chips"><button class="tag-chip active" type="button" data-tag="">看全部</button></div></div>\n'
+            + "\n".join(rows) + "\n      </div>"
+        )
+
+    cards = "\n".join("        " + goods_item_card(item) for item in items)
+
+    return (
+        '  <section class="goods-items">\n'
+        '    <div class="shell">\n'
+        '      <div class="section-head">\n'
+        '        <div><div class="eyebrow">Pick a Good</div><h2>先看單品，<br>再決定去哪買。</h2></div>\n'
+        '        <p>每一件都標好在哪買、大概多少錢，篩一下類型比較快找到你要的。</p>\n'
+        '      </div>\n'
+        '{filters}\n'
+        '      <div class="item-grid" id="itemGrid">\n'
+        '{cards}\n'
+        '      </div>\n'
+        '      <div class="empty-state" id="itemEmpty" hidden><strong>這個組合暫時沒有東西</strong>換個條件再看看。</div>\n'
+        '    </div>\n'
+        '  </section>\n'
+    ).format(filters=filters, cards=cards)
+
+
 TIDE_ARROWS = {"上漲": "↑", "下降": "↓"}
 
 
@@ -639,7 +788,7 @@ def ocean_conditions_html(conditions):
     ).format(updated=html.escape(str(conditions.get("updated", ""))), cards="".join(cards))
 
 
-def build_section(key, posts, extra_block=""):
+def build_section(key, posts, extra_block="", show_filters=True, cards_heading=""):
     meta = SECTIONS[key]
     used_tags = set()
     for post in posts:
@@ -647,22 +796,27 @@ def build_section(key, posts, extra_block=""):
             used_tags.add(str(tag))
 
     rows = []
-    for axis_name, values in meta["axes"]:
-        chips = [tag for tag in values if tag in used_tags]
-        if not chips:
-            continue
-        buttons = "".join(
-            '<button class="tag-chip" type="button" data-tag="{0}">{0}</button>'.format(html.escape(tag))
-            for tag in chips
-        )
-        rows.append('        <div class="filter-row"><span class="filter-label">{}</span>'
-                    '<div class="filter-chips">{}</div></div>'.format(html.escape(axis_name), buttons))
+    if show_filters:
+        for axis_name, values in meta["axes"]:
+            chips = [tag for tag in values if tag in used_tags]
+            if not chips:
+                continue
+            buttons = "".join(
+                '<button class="tag-chip" type="button" data-tag="{0}">{0}</button>'.format(html.escape(tag))
+                for tag in chips
+            )
+            rows.append('        <div class="filter-row"><span class="filter-label">{}</span>'
+                        '<div class="filter-chips">{}</div></div>'.format(html.escape(axis_name), buttons))
     filters = ""
     if rows:
-        filters = ('      <div class="filter-block" id="postFilters">\n'
+        filters = ('      <div class="filter-block" id="postFilters" data-target="postGrid">\n'
                    '        <div class="filter-row"><span class="filter-label">全部</span>'
                    '<div class="filter-chips"><button class="tag-chip active" type="button" data-tag="">看全部</button></div></div>\n'
                    + "\n".join(rows) + "\n      </div>")
+
+    heading = ""
+    if cards_heading:
+        heading = '      <h2 class="cards-heading">{}</h2>\n'.format(html.escape(cards_heading))
 
     cards = "\n".join("        " + post_card(post, "../") for post in posts) or \
         '        <div class="empty-state"><strong>內容整理中</strong>這一區的文章正在寫，很快會放上來。</div>'
@@ -672,6 +826,7 @@ def build_section(key, posts, extra_block=""):
         "SECTION_EYEBROW": meta["eyebrow"],
         "SECTION_LEAD": html.escape(meta["lead"]),
         "EXTRA_BLOCK": extra_block,
+        "CARDS_HEADING": heading,
         "FILTERS": filters,
         "CARDS": cards,
     })
@@ -680,7 +835,7 @@ def build_section(key, posts, extra_block=""):
         "{}｜OKIPLAYGROUND".format(meta["title"]),
         meta["lead"],
         active=key,
-        page_script='<script src="../assets/section.js"></script>' if filters else "",
+        page_script='<script src="../assets/section.js"></script>' if (filters or extra_block) else "",
     )
 
 
@@ -834,6 +989,72 @@ def build_news(news):
                 active="news")
 
 
+MONTH_NAMES = ["", "1月", "2月", "3月", "4月", "5月", "6月", "7月",
+               "8月", "9月", "10月", "11月", "12月"]
+
+
+def build_month_pages(months):
+    """月份速覽頁：/guide/month-<n>/。回傳產生的完整網址清單。"""
+    urls = []
+    for month in months:
+        n = month["month"]
+        body_src = month["body"]
+        if month.get("full_guide_slug"):
+            body_src = body_src.replace("{{FULL_GUIDE_URL}}", "../{}/".format(month["full_guide_slug"]))
+
+        meta_bits = ['<span>{}</span>'.format(html.escape(str(month.get("weather", ""))))]
+        if month.get("highlight"):
+            meta_bits.append('<span class="tag">{}</span>'.format(html.escape(str(month["highlight"]))))
+
+        main = fill(template("article.html"), {
+            "BREADCRUMB": '<a href="../../">首頁</a><span>/</span><a href="../../guide/">沖繩旅遊攻略</a>',
+            "ARTICLE_TITLE": html.escape(str(month.get("title", ""))),
+            "ARTICLE_SUMMARY": html.escape(str(month.get("blurb", ""))),
+            "ARTICLE_META": "".join(meta_bits),
+            "COVER": "",
+            "BODY": markdown(body_src),
+            "IG_SLOT": "",
+            "RELATED": "",
+        })
+        canonical = render_page(
+            "guide/month-{}".format(n), main,
+            "{}｜OKIPLAYGROUND".format(month.get("title", "")),
+            str(month.get("blurb", "")),
+            active="guide",
+        )
+        urls.append(canonical)
+    return urls
+
+
+def month_strip_html(months):
+    if not months:
+        return ""
+    tiles = []
+    for month in months:
+        n = month["month"]
+        tiles.append((
+            '<a class="month-tile" href="guide/month-{n}/" data-blurb="{blurb}">'
+            '<strong>{label}</strong><span>{season}</span></a>'
+        ).format(
+            n=n,
+            label=MONTH_NAMES[n],
+            season=html.escape(str(month.get("season_name", ""))),
+            blurb=html.escape(str(month.get("blurb", "")), quote=True),
+        ))
+    return (
+        '  <section class="month-strip" id="months" aria-label="按月份看沖繩">\n'
+        '    <div class="shell-narrow">\n'
+        '      <div class="month-head">\n'
+        '        <span class="eyebrow">Month by Month</span>\n'
+        '        <span class="month-note">滑過或點一下，看那個月的沖繩該怎麼玩</span>\n'
+        '      </div>\n'
+        '      <div class="month-row" id="monthRow">{tiles}</div>\n'
+        '      <p class="month-preview" id="monthPreview">選一個月份看看預覽。</p>\n'
+        '    </div>\n'
+        '  </section>\n'
+    ).format(tiles="".join(tiles))
+
+
 def build_toolkit():
     main = template("toolkit.html")
     rates = read_json("rates.json", {})
@@ -909,19 +1130,31 @@ def build_site(events=None, weather=None, updated=None):
     ocean_conditions = read_json("ocean-conditions.json", {})
 
     posts = load_content()
+    goods_items = load_goods_items()
+    months = load_months()
     copy_assets()
 
     urls = [SITE_URL]
     event_urls = build_event_pages(events)  # 要先跑，才能讓 home/events 拿到 _detail_slug
-    build_home(posts, events, weather, news)
+    month_urls = build_month_pages(months)  # 要先跑，才能讓首頁的月份磚連得到頁面
+    build_home(posts, events, weather, news, months)
     build_events(events, len(events))
     build_news(news)
     build_toolkit()
-    urls += [SITE_URL + "events/", SITE_URL + "news/", SITE_URL + "toolkit/"] + event_urls
+    urls += [SITE_URL + "events/", SITE_URL + "news/", SITE_URL + "toolkit/"] + event_urls + month_urls
 
     for key in SECTIONS:
-        extra_block = ocean_conditions_html(ocean_conditions) if key == "ocean" else ""
-        build_section(key, posts.get(key) or [], extra_block=extra_block)
+        extra_block = ""
+        show_filters = True
+        cards_heading = ""
+        if key == "ocean":
+            extra_block = ocean_conditions_html(ocean_conditions)
+        if key == "goods":
+            extra_block = goods_items_html(goods_items)
+            show_filters = False
+            cards_heading = "深度好物指南"
+        build_section(key, posts.get(key) or [], extra_block=extra_block,
+                       show_filters=show_filters, cards_heading=cards_heading)
         urls.append(SITE_URL + key + "/")
         for post in posts.get(key) or []:
             urls.append(build_article(post, posts.get(key) or []))

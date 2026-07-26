@@ -81,6 +81,22 @@ python3 -m http.server 8000 --directory docs
 > 待辦：`SonaSNS-Platform/IGcarousell` 目前只有一套偏文字的卡片視覺，還沒有「旅遊向、圖片多」
 > 的版型。那是另一個專案裡的獨立設計任務，不在這支 build.py 的範圍內，需要另外排時間做。
 
+## 好物頁的兩種內容
+
+`/goods/` 中間是獨立單品卡片（`content/goods-items/*.md`：`name`/`emoji`/`blurb`/`where`/
+`price`/`tags`，不需要內文），用「店舖類型」（超市/便利店/藥妝/100円/300円）與「好物類型」
+（藥品/美妝/護膚/食品/手信/工藝品/酒類）兩軸篩選；下面才是完整文章（`content/goods/*.md`），
+標題「深度好物指南」，不再重複篩選 UI。篩選邏輯在 `assets/section.js`，一個頁面可以有多組
+互不干擾的篩選器＋格子，靠 `data-target` 對應。
+
+## 首頁月份速覽
+
+`content/months/01.md` ~ `12.md`：每月一篇速覽（`month`/`title`/`blurb`/`weather`/
+`highlight`/內文），產生 `/guide/month-<n>/` 頁面，首頁天氣下方有 1-12 月橫排小卡，
+滑過換預覽文字、點下去進當月詳細。7 月那篇會連到 `content/guide/july-okinawa.md`
+那篇更完整的深度攻略（front matter 裡 `full_guide_slug` + 內文 `{{FULL_GUIDE_URL}}`
+佔位字串會被換成正確連結）。
+
 ## 寫一篇新文章
 
 在 `content/<section>/` 放一個 `.md`，front matter 規格：
