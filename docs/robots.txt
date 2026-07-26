@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sssunwl.github.io/okinews/sitemap.xml
