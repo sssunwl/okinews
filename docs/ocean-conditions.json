@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-26 18:28",
+  "updated": "2026-07-26 22:36",
   "spots": [
     {
       "slug": "sunabe",
@@ -9,23 +9,23 @@
       "exposure": "面向西側開闊海域，東風或微風最穩，西／西北強風會直接推浪上岸壁。",
       "official_note": "",
       "reference_url": "https://windy.app/forecast2/spot/4013465/Sunabe+II",
-      "wind_speed_kn": 4.3,
-      "wind_gust_kn": 12.6,
-      "wind_deg": 30,
-      "wind_dir_label": "北北東",
-      "wave_height_m": 0.62,
-      "swell_height_m": 0.52,
-      "swell_period_s": 5.7,
-      "tide_m": 1.53,
+      "wind_speed_kn": 3.2,
+      "wind_gust_kn": 7.0,
+      "wind_deg": 90,
+      "wind_dir_label": "東",
+      "wave_height_m": 0.58,
+      "swell_height_m": 0.5,
+      "swell_period_s": 5.8,
+      "tide_m": 1.03,
       "tide_trend": "下降",
       "tide_turn": {
-        "kind": "滿潮",
-        "time": "18:00",
-        "hours_away": 0
+        "kind": "干潮",
+        "time": "23:00",
+        "hours_away": 1
       },
-      "verdict": "caution",
-      "verdict_label": "需留意",
-      "verdict_reason": "浪高 0.6 公尺，比平常大"
+      "verdict": "good",
+      "verdict_label": "看起來平穩",
+      "verdict_reason": "風速浪高都在平穩範圍；風向對這個點是背風側，理論上更穩"
     },
     {
       "slug": "cape-maeda",
@@ -35,23 +35,23 @@
       "exposure": "岬角地形、沿階梯下水，強西／西北風浪會使入水口變得危險，現場有官方旗幟與即時影像可查。",
       "official_note": "真栄田岬official網站有即時影像與旗幟燈號（藍=可下水／黃=僅隨教練／紅=禁止），以現場公告為準。",
       "reference_url": "https://windy.app/forecast2/spot/8519891/Cape+Maeda+Blue+Cave",
-      "wind_speed_kn": 2.0,
-      "wind_gust_kn": 8.6,
-      "wind_deg": 327,
-      "wind_dir_label": "北北西",
-      "wave_height_m": 0.34,
-      "swell_height_m": 0.24,
-      "swell_period_s": 5.2,
-      "tide_m": 1.52,
+      "wind_speed_kn": 2.7,
+      "wind_gust_kn": 5.2,
+      "wind_deg": 90,
+      "wind_dir_label": "東",
+      "wave_height_m": 0.32,
+      "swell_height_m": 0.22,
+      "swell_period_s": 5.0,
+      "tide_m": 1.04,
       "tide_trend": "下降",
       "tide_turn": {
-        "kind": "滿潮",
-        "time": "18:00",
-        "hours_away": 0
+        "kind": "干潮",
+        "time": "23:00",
+        "hours_away": 1
       },
-      "verdict": "caution",
-      "verdict_label": "需留意",
-      "verdict_reason": "目前風向對這個點是受風側"
+      "verdict": "good",
+      "verdict_label": "看起來平穩",
+      "verdict_reason": "風速浪高都在平穩範圍；風向對這個點是背風側，理論上更穩"
     },
     {
       "slug": "gorilla-chop",
@@ -61,23 +61,23 @@
       "exposure": "本部半島南岸，北側有山擋風，是全島少數北風越強越穩的岸潛點；5-10月南風季吹南風時反而最容易停潛。",
       "official_note": "",
       "reference_url": "https://windy.app/forecast2/spot/5967071/Gorilla+Chop",
-      "wind_speed_kn": 2.0,
-      "wind_gust_kn": 7.8,
-      "wind_deg": 35,
-      "wind_dir_label": "東北",
-      "wave_height_m": 0.3,
+      "wind_speed_kn": 1.8,
+      "wind_gust_kn": 4.5,
+      "wind_deg": 108,
+      "wind_dir_label": "東南東",
+      "wave_height_m": 0.26,
       "swell_height_m": 0.2,
-      "swell_period_s": 6.6,
-      "tide_m": 1.51,
+      "swell_period_s": 6.2,
+      "tide_m": 1.04,
       "tide_trend": "下降",
       "tide_turn": {
-        "kind": "滿潮",
-        "time": "18:00",
-        "hours_away": 0
+        "kind": "干潮",
+        "time": "23:00",
+        "hours_away": 1
       },
       "verdict": "good",
       "verdict_label": "看起來平穩",
-      "verdict_reason": "風速浪高都在平穩範圍；風向對這個點是背風側，理論上更穩"
+      "verdict_reason": "風速浪高都在平穩範圍"
     }
   ]
 }
