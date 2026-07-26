@@ -117,18 +117,20 @@ img,svg{display:block;max-width:100%}
 .snapshot-item strong{display:block;margin-top:4px;font-size:1.05rem}
 
 /* Weather */
-.weather{padding:80px 0 10px}
-.weather-strip{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
-.wx-card{border:1px solid var(--line);background:var(--paper);border-radius:18px;padding:16px 10px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px;transition:.2s}
-.wx-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm)}
+.weather-mini{padding:28px 0 8px}
+.weather-mini-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:12px;flex-wrap:wrap}
+.weather-mini-note{font-size:.68rem;color:var(--muted)}
+.weather-strip{display:grid;grid-template-columns:repeat(7,1fr);gap:7px}
+.wx-card{border:1px solid var(--line);background:var(--paper);border-radius:14px;padding:10px 6px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:3px;transition:.2s}
+.wx-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm)}
 .wx-card.today{border-color:var(--blue);background:var(--lagoon-soft)}
-.wx-date{font-size:.72rem;font-weight:900;color:var(--muted)}
+.wx-date{font-size:.62rem;font-weight:900;color:var(--muted)}
 .wx-date.weekend{color:var(--coral)}
-.wx-icon{font-size:1.7rem}
-.wx-temp strong{font-size:1.15rem;color:var(--ink)}
-.wx-temp small{color:var(--muted);margin-left:4px}
-.wx-rain{font-size:.72rem;color:var(--blue);font-weight:800}
-.wx-uv{font-size:.64rem;color:var(--muted)}
+.wx-icon{font-size:1.2rem}
+.wx-temp strong{font-size:.88rem;color:var(--ink)}
+.wx-temp small{font-size:.7rem;color:var(--muted);margin-left:3px}
+.wx-rain{font-size:.6rem;color:var(--blue);font-weight:800}
+.wx-uv{font-size:.55rem;color:var(--muted)}
 
 /* Picks */
 .picks{padding:70px 0 90px}
@@ -301,7 +303,7 @@ footer{background:var(--navy);color:#fff;padding:52px 0 100px}
   .hero-visual{min-height:410px}.feature-card{inset:12px 9px auto 5px;min-height:325px;padding:25px;box-shadow:12px 14px 0 var(--lagoon)}
   .feature-card h2{margin-top:36px}.feature-action{left:25px;bottom:24px}.ticket{width:158px;right:-5px;bottom:7px}
   .snapshot-grid{grid-template-columns:repeat(2,1fr);gap:20px}.snapshot-item:nth-child(3){border-left:0;padding-left:0}
-  .picks,.regions,.weather{padding:56px 0}.section-head,.note-top{align-items:start;flex-direction:column}.pick-grid{grid-template-columns:1fr 1fr}.pick-card{min-height:250px}
+  .picks,.regions{padding:56px 0}.section-head,.note-top{align-items:start;flex-direction:column}.pick-grid{grid-template-columns:1fr 1fr}.pick-card{min-height:250px}
   .weather-strip{display:flex;overflow:auto;padding:3px 3px 10px;scroll-snap-type:x mandatory}.wx-card{min-width:88px;scroll-snap-align:start}
   .explorer{padding:75px 0 90px;border-radius:38px 38px 0 0}.calendar-layout{grid-template-columns:1fr}.calendar-panel{position:relative;top:auto}
   .event-card{grid-template-columns:62px 1fr}.event-actions{grid-column:2;justify-content:flex-start}
@@ -457,6 +459,34 @@ body::before{
 /* 內容卡片 */
 .home-section{padding:64px 0}
 .home-section.alt{background:var(--paper)}
+/* 玩水・即時海況 */
+.ocean-conditions{padding:8px 0 24px}
+.cond-head-row{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;margin-bottom:20px}
+.cond-head-row h2{font-size:clamp(1.5rem,2.8vw,2.1rem);letter-spacing:-.03em;margin:8px 0 0}
+.cond-updated{max-width:340px;margin:0;font-size:.72rem;color:var(--muted);line-height:1.6}
+.cond-grid-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
+.cond-card{border:1px solid var(--line);border-radius:var(--radius-lg);padding:20px;background:var(--paper);border-top:4px solid var(--line)}
+.cond-card.cond-good{border-top-color:#3fb897}
+.cond-card.cond-caution{border-top-color:var(--sun)}
+.cond-card.cond-avoid{border-top-color:var(--coral)}
+.cond-head{display:flex;align-items:start;justify-content:space-between;gap:10px}
+.cond-head h3{margin:0;font-size:1.05rem;letter-spacing:-.02em;line-height:1.35}
+.cond-badge{flex-shrink:0;font-size:.68rem;font-weight:900;padding:4px 10px;border-radius:999px;background:var(--sand);white-space:nowrap}
+.cond-good .cond-badge{background:rgba(63,184,151,.15);color:#2a8a6d}
+.cond-caution .cond-badge{background:var(--gold-bg,#fff3d6);color:#9a6b00}
+.cond-avoid .cond-badge{background:rgba(255,102,90,.15);color:var(--coral)}
+.cond-region{margin:6px 0 14px;font-size:.75rem;color:var(--muted)}
+.cond-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+.cond-grid div{background:var(--sand);border-radius:10px;padding:9px 8px;text-align:center}
+.cond-grid span{display:block;font-size:.62rem;color:var(--muted);font-weight:800;letter-spacing:.05em}
+.cond-grid strong{display:block;font-size:.92rem;letter-spacing:-.01em;margin-top:2px}
+.cond-grid small{display:block;font-size:.6rem;color:var(--muted);margin-top:2px}
+.cond-reason{margin:0 0 8px;font-size:.8rem;line-height:1.6}
+.cond-exposure{margin:0 0 10px;font-size:.75rem;color:var(--muted);line-height:1.6}
+.cond-official{margin:0 0 10px;font-size:.72rem;color:var(--blue);line-height:1.6}
+.cond-link{font-size:.78rem;font-weight:900;color:var(--blue);text-decoration:none}
+@media(max-width:460px){.cond-grid{grid-template-columns:1fr 1fr 1fr;gap:6px}.cond-grid div{padding:7px 4px}}
+
 .post-section{padding:8px 0 80px}
 .post-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
 .post-card{position:relative;display:block;min-height:230px;border-radius:var(--radius-lg);border:1px solid var(--line);background:var(--paper);text-decoration:none;overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .22s,box-shadow .22s}
@@ -565,6 +595,9 @@ body::before{
 .news-alerts li{margin-bottom:6px;font-weight:700}
 .news-day{margin-bottom:44px}
 .news-day h2{font-size:1.1rem;letter-spacing:.06em;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:10px;margin:0 0 20px}
+.news-columns{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.news-col-title{font-size:.8rem;font-weight:900;letter-spacing:.04em;color:var(--blue);margin:0 0 14px}
+.news-col-empty{color:var(--muted);font-size:.82rem;background:var(--paper);border:1px dashed var(--line);border-radius:var(--radius);padding:16px;margin:0}
 .news-list{display:grid;gap:16px}
 .news-item{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px 24px}
 .news-meta{display:flex;gap:10px;align-items:center;font-size:.72rem;color:var(--muted);margin-bottom:8px}
@@ -630,4 +663,5 @@ body::before{
   .post-grid{grid-template-columns:1fr}
   .wx-now-meta{gap:18px}
   .toolkit-links{grid-template-columns:1fr}
+  .news-columns{grid-template-columns:1fr;gap:22px}
 }

@@ -11,6 +11,7 @@ build.py                     站台產生器（templates + content + docs/*.json
 okinawa_events_crawler.py    抓活動與天氣，寫進 docs/events.json、docs/weather.json，最後呼叫 build_site()
 news_crawler.py              抓沖繩新聞/日本大事 + 氣象警報，用 OpenAI 整理成繁中摘要，寫進 docs/news.json
 rates_crawler.py             每日抓一次日圓匯率參考值，寫進 docs/rates.json
+ocean_crawler.py             每 3 小時抓三個岸潛點的風/浪/潮汐，寫進 docs/ocean-conditions.json
 templates/                   base.html + 各頁版型
 assets/                      site.css / site.js / home.js / events.js / section.js / toolkit.js / ig-carousel.js
 content/<section>/*.md       文章內容（front matter + Markdown）
@@ -55,6 +56,19 @@ python3 -m http.server 8000 --directory docs
 日圓對台幣／港幣／美金／人民幣／韓元的參考匯率，寫進 `docs/rates.json`。
 前端（`/toolkit/#rate`）純讀這份靜態 json 做即時換算，沒有任何 API key 暴露在前端。
 抓取失敗會保留上一版，不會讓小工具消失或壞掉。
+
+## 玩水海況（`ocean_crawler.py`）
+
+三個熱門岸潛點（砂邊2號點、青の洞窟、大猩猩）的即時風向風力（`api.open-meteo.com`）
+與浪高、湧浪、潮位（`marine-api.open-meteo.com`），全部免金鑰，每 3 小時由
+`.github/workflows/ocean.yml` 更新一次，寫進 `docs/ocean-conditions.json`。
+
+判斷邏輯是通用的岸潛安全經驗法則（風速／浪高門檻）疊加每個點自己的地形特性
+（面對哪個方向、被什麼擋住，寫在 `ocean_crawler.py` 的 `SPOTS` 常數裡），
+在 `/ocean/` 頁面上方render成三張卡片，並清楚標示「僅供參考，實際請以現場、
+教練與官方公告為準」——尤其真栄田岬本身就有官方旗幟／即時影像系統，那才是
+最終依據。搭配教學文章 `content/ocean/how-to-judge-conditions.md` 講風向、
+風力、浪高、潮汐怎麼看，並用這三個點做對比案例。
 
 ## IG 產線
 

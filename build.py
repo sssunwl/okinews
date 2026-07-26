@@ -566,7 +566,80 @@ def build_events(events, updated_count):
     )
 
 
-def build_section(key, posts):
+TIDE_ARROWS = {"上漲": "↑", "下降": "↓"}
+
+
+def ocean_conditions_html(conditions):
+    spots = (conditions or {}).get("spots") or []
+    if not spots:
+        return ""
+
+    cards = []
+    for spot in spots:
+        turn = spot.get("tide_turn") or {}
+        turn_text = ""
+        if turn.get("time"):
+            hours = turn.get("hours_away", 0)
+            if hours == 0:
+                turn_text = "現在接近{}（{}）".format(turn["kind"], turn["time"])
+            elif hours > 0:
+                turn_text = "約 {} 小時後{}（{}）".format(hours, turn["kind"], turn["time"])
+            else:
+                turn_text = "約 {} 小時前{}（{}）".format(abs(hours), turn["kind"], turn["time"])
+
+        official = ""
+        if spot.get("official_note"):
+            official = '<p class="cond-official">📍 {}</p>'.format(html.escape(str(spot["official_note"])))
+
+        cards.append((
+            '<article class="cond-card cond-{level}">'
+            '<div class="cond-head"><h3>{name}</h3><span class="cond-badge">{label}</span></div>'
+            '<p class="cond-region">{region}・{kind}</p>'
+            '<div class="cond-grid">'
+            '<div><span>風</span><strong>{wind_dir} {wind_speed} 節</strong><small>陣風 {gust} 節</small></div>'
+            '<div><span>浪高</span><strong>{wave} m</strong><small>湧浪 {swell}m・{period}s</small></div>'
+            '<div><span>潮位</span><strong>{tide} m {arrow}</strong><small>{turn_text}</small></div>'
+            '</div>'
+            '<p class="cond-reason">{reason}</p>'
+            '<p class="cond-exposure">{exposure}</p>'
+            '{official}'
+            '<a class="cond-link" href="{ref_url}" target="_blank" rel="noopener">看完整逐時預報 ↗</a>'
+            '</article>'
+        ).format(
+            level=html.escape(str(spot.get("verdict", "caution"))),
+            name=html.escape(str(spot.get("name", ""))),
+            label=html.escape(str(spot.get("verdict_label", ""))),
+            region=html.escape(str(spot.get("region", ""))),
+            kind=html.escape(str(spot.get("kind", ""))),
+            wind_dir=html.escape(str(spot.get("wind_dir_label", ""))),
+            wind_speed=html.escape(str(spot.get("wind_speed_kn", ""))),
+            gust=html.escape(str(spot.get("wind_gust_kn", ""))),
+            wave=html.escape(str(spot.get("wave_height_m", ""))),
+            swell=html.escape(str(spot.get("swell_height_m", ""))),
+            period=html.escape(str(spot.get("swell_period_s", ""))),
+            tide=html.escape(str(spot.get("tide_m", ""))),
+            arrow=TIDE_ARROWS.get(spot.get("tide_trend", ""), ""),
+            turn_text=html.escape(turn_text),
+            reason=html.escape(str(spot.get("verdict_reason", ""))),
+            exposure=html.escape(str(spot.get("exposure", ""))),
+            official=official,
+            ref_url=html.escape(str(spot.get("reference_url", "")), quote=True),
+        ))
+
+    return (
+        '  <section class="ocean-conditions" id="live-conditions">\n'
+        '    <div class="shell">\n'
+        '      <div class="cond-head-row">\n'
+        '        <div><div class="eyebrow">Live Conditions</div><h2>三個熱門岸潛點，即時海況。</h2></div>\n'
+        '        <p class="cond-updated">更新於 {updated} JST・資料來自 Open-Meteo，僅供參考，實際請以現場、教練與官方公告為準</p>\n'
+        '      </div>\n'
+        '      <div class="cond-grid-wrap">{cards}</div>\n'
+        '    </div>\n'
+        '  </section>\n'
+    ).format(updated=html.escape(str(conditions.get("updated", ""))), cards="".join(cards))
+
+
+def build_section(key, posts, extra_block=""):
     meta = SECTIONS[key]
     used_tags = set()
     for post in posts:
@@ -598,6 +671,7 @@ def build_section(key, posts):
         "SECTION_TITLE": html.escape(meta["title"]),
         "SECTION_EYEBROW": meta["eyebrow"],
         "SECTION_LEAD": html.escape(meta["lead"]),
+        "EXTRA_BLOCK": extra_block,
         "FILTERS": filters,
         "CARDS": cards,
     })
@@ -688,6 +762,32 @@ def build_article(post, siblings):
     )
 
 
+NEWS_OKINAWA_SOURCES = ("沖縄タイムス", "氣象庁警報")
+
+
+def news_entry_html(item):
+    return (
+        '<article class="news-item">'
+        '<div class="news-meta"><span class="news-cat">{cat}</span><span>{source}</span></div>'
+        '<h3>{title}</h3><p>{summary}</p>'
+        '<a href="{url}" target="_blank" rel="noopener">看原文 ↗</a>'
+        '</article>'
+    ).format(
+        cat=html.escape(str(item.get("category", "沖繩"))),
+        source=html.escape(str(item.get("source", ""))),
+        title=html.escape(str(item.get("title", ""))),
+        summary=html.escape(str(item.get("summary", ""))),
+        url=html.escape(str(item.get("url", "")), quote=True),
+    )
+
+
+def news_column_html(title, items):
+    body = "".join(news_entry_html(item) for item in items) if items else (
+        '<p class="news-col-empty">這天沒有這類消息。</p>')
+    return ('<div class="news-col"><h3 class="news-col-title">{}</h3>'
+            '<div class="news-list">{}</div></div>').format(html.escape(title), body)
+
+
 def build_news(news):
     if news:
         alerts = [item for item in news if item.get("alert")]
@@ -700,22 +800,15 @@ def build_news(news):
             groups.setdefault(str(item.get("date", "")), []).append(item)
         blocks = []
         for date in sorted(groups, reverse=True):
-            entries = "".join(
-                '<article class="news-item">'
-                '<div class="news-meta"><span class="news-cat">{cat}</span><span>{source}</span></div>'
-                '<h3>{title}</h3><p>{summary}</p>'
-                '<a href="{url}" target="_blank" rel="noopener">看原文 ↗</a>'
-                '</article>'.format(
-                    cat=html.escape(str(item.get("category", "沖繩"))),
-                    source=html.escape(str(item.get("source", ""))),
-                    title=html.escape(str(item.get("title", ""))),
-                    summary=html.escape(str(item.get("summary", ""))),
-                    url=html.escape(str(item.get("url", "")), quote=True),
-                )
-                for item in groups[date]
+            oki_items = [item for item in groups[date] if item.get("source") in NEWS_OKINAWA_SOURCES]
+            japan_items = [item for item in groups[date] if item.get("source") not in NEWS_OKINAWA_SOURCES]
+            columns = (
+                news_column_html("🏝️ 沖繩新聞", oki_items) +
+                news_column_html("🗾 日本大事", japan_items)
             )
-            blocks.append('      <section class="news-day"><h2>{}</h2><div class="news-list">{}</div></section>'
-                          .format(html.escape(date), entries))
+            blocks.append(
+                '      <section class="news-day"><h2>{}</h2><div class="news-columns">{}</div></section>'
+                .format(html.escape(date), columns))
         body = alert_html + "\n" + "\n".join(blocks)
     else:
         body = ('      <div class="empty-state"><strong>新聞整理中</strong>'
@@ -813,6 +906,7 @@ def build_site(events=None, weather=None, updated=None):
     events = events if events is not None else read_json("events.json", [])
     weather = weather if weather is not None else read_json("weather.json", [])
     news = read_json("news.json", [])
+    ocean_conditions = read_json("ocean-conditions.json", {})
 
     posts = load_content()
     copy_assets()
@@ -826,7 +920,8 @@ def build_site(events=None, weather=None, updated=None):
     urls += [SITE_URL + "events/", SITE_URL + "news/", SITE_URL + "toolkit/"] + event_urls
 
     for key in SECTIONS:
-        build_section(key, posts.get(key) or [])
+        extra_block = ocean_conditions_html(ocean_conditions) if key == "ocean" else ""
+        build_section(key, posts.get(key) or [], extra_block=extra_block)
         urls.append(SITE_URL + key + "/")
         for post in posts.get(key) or []:
             urls.append(build_article(post, posts.get(key) or []))
