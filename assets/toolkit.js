@@ -45,3 +45,51 @@
     window.speechSynthesis.speak(utterance);
   });
 })();
+
+/* 旅行小抄：匯率換算（純前端讀 rates.json 產生的靜態資料，沒有 API key） */
+(function () {
+  'use strict';
+
+  var input = document.getElementById('rateJpyInput');
+  var results = document.getElementById('rateResults');
+  var updatedEl = document.getElementById('rateUpdated');
+  if (!input || !results) return;
+
+  var dataNode = document.getElementById('ratesData');
+  var data = {};
+  try { data = dataNode ? JSON.parse(dataNode.textContent) : {}; } catch (err) { data = {}; }
+  var rates = data.rates || {};
+
+  var CURRENCIES = [
+    { code: 'TWD', label: '新台幣', flag: '🇹🇼' },
+    { code: 'HKD', label: '港幣', flag: '🇭🇰' },
+    { code: 'USD', label: '美金', flag: '🇺🇸' },
+    { code: 'CNY', label: '人民幣', flag: '🇨🇳' },
+    { code: 'KRW', label: '韓元', flag: '🇰🇷' }
+  ].filter(function (c) { return typeof rates[c.code] === 'number'; });
+
+  if (!CURRENCIES.length) {
+    results.innerHTML = '<div class="empty-state"><strong>匯率資料整理中</strong>晚點再回來看看。</div>';
+    return;
+  }
+
+  function render() {
+    var jpy = Number(input.value);
+    if (!isFinite(jpy) || jpy < 0) jpy = 0;
+    results.innerHTML = CURRENCIES.map(function (c) {
+      var value = jpy * rates[c.code];
+      var formatted = value.toLocaleString('zh-Hant', {
+        maximumFractionDigits: value >= 100 ? 0 : 2
+      });
+      return '<div class="rate-result-row"><span>' + c.flag + ' ' + c.label + '</span><strong>' +
+        formatted + '</strong></div>';
+    }).join('');
+  }
+
+  input.addEventListener('input', render);
+  render();
+
+  if (data.updated) {
+    updatedEl.textContent = '匯率更新於 ' + data.updated + ' JST・資料來源 open.er-api.com';
+  }
+})();

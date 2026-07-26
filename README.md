@@ -10,8 +10,9 @@
 build.py                     站台產生器（templates + content + docs/*.json → docs/）
 okinawa_events_crawler.py    抓活動與天氣，寫進 docs/events.json、docs/weather.json，最後呼叫 build_site()
 news_crawler.py              抓沖繩新聞/日本大事 + 氣象警報，用 OpenAI 整理成繁中摘要，寫進 docs/news.json
+rates_crawler.py             每日抓一次日圓匯率參考值，寫進 docs/rates.json
 templates/                   base.html + 各頁版型
-assets/                      site.css / site.js / home.js / events.js / section.js / toolkit.js
+assets/                      site.css / site.js / home.js / events.js / section.js / toolkit.js / ig-carousel.js
 content/<section>/*.md       文章內容（front matter + Markdown）
 content/covers/              文章封面圖（build 時複製到 docs/assets/covers/）
 docs/                        GitHub Pages 產物，不要手改
@@ -47,6 +48,24 @@ python3 -m http.server 8000 --directory docs
 
 **琉球新報目前沒有公開 RSS**（`/feed/` 會 301 導回首頁），暫時沒收進來源；
 如果之後找到可用端點，加進 `news_crawler.py` 的 `fetch_rss` 呼叫即可。
+
+## 匯率換算（`rates_crawler.py`）
+
+免金鑰的 `open.er-api.com`，每日 07:00 JST 由 `.github/workflows/rates.yml` 抓一次
+日圓對台幣／港幣／美金／人民幣／韓元的參考匯率，寫進 `docs/rates.json`。
+前端（`/toolkit/#rate`）純讀這份靜態 json 做即時換算，沒有任何 API key 暴露在前端。
+抓取失敗會保留上一版，不會讓小工具消失或壞掉。
+
+## IG 產線
+
+每篇文章的 front matter 只要有 `ig.slides`，就會在頁面產生一段橫向的「IG 輪播位」
+（`assets/ig-carousel.js`）：捲動時卡片會即時做景深縮放與旋轉，下方有浮標可以直接點著跳頁，
+尊重 `prefers-reduced-motion`（會退化成單純橫捲，不做 3D 變形）。
+同一份資料也會彙整進 `docs/ig-queue.json`，是給 `SonaSNS-Platform/IGcarousell` 那支
+輪播圖產生工具讀的待產清單（封面、逐頁文案、貼文文案、hashtag 都在裡面）。
+
+> 待辦：`SonaSNS-Platform/IGcarousell` 目前只有一套偏文字的卡片視覺，還沒有「旅遊向、圖片多」
+> 的版型。那是另一個專案裡的獨立設計任務，不在這支 build.py 的範圍內，需要另外排時間做。
 
 ## 寫一篇新文章
 

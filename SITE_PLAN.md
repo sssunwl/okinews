@@ -169,7 +169,7 @@ Builder 讀 `content/**` → 產出網頁 + `docs/ig-queue.json`（給 IGcarouse
 | ~~**P1 活動**~~ ✅ 2026-07-26 | 爬蟲補抓官方網址（`official_url`，實測 55/56 命中）、`/events/<slug>/` 活動介紹頁、年曆卡片改連自家頁面、非官方來源降級成小字「資料來源」 | 活動不再外連旅遊平台，唯一外連是主辦官網 |
 | ~~**P2 新聞**~~ ✅ 2026-07-26 | 沖縄タイムス／NHK RSS + 気象庁警報 JSON → OpenAI 整理繁中 → `docs/news.json`、`/news/`、颱風/交通置頂邏輯（`alert`） | `news_crawler.py` + `.github/workflows/news.yml`，每日 07:30 JST |
 | **P3 內容** | 攻略／認識沖繩／好物／玩水 各先 3–5 篇 + 篩選器 | 站有肉 |
-| **P4 工具與產線** | 小抄工具（匯率/日語/緊急）、IG slot + carousel 模板 + `ig-queue.json` | 內容→IG 產線打通 |
+| ~~**P4 工具與產線**~~ ✅ 2026-07-26 | 匯率換算（`rates_crawler.py` 每日 07:00 JST）、IG 輪播位加浮標＋捲動景深效果（`ig-carousel.js`）、`ig-queue.json` | 小抄四工具全部做完；IG 站內產出打通，**旅遊向 IGcarousell 視覺版型待辦**（另一專案的獨立設計任務） |
 
 ---
 

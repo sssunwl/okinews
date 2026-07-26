@@ -43,6 +43,15 @@
   <section class="tool-section alt" id="rate">
     <div class="shell shell-narrow">
       <h2>💱 匯率換算</h2>
-      <div class="empty-state"><strong>工具建置中</strong>會改成每日自動更新的參考匯率，離線也能換算。</div>
+      <p class="tool-lead">參考匯率，每日自動更新一次。實際結匯以銀行、機場櫃檯或信用卡公司當下牌告為準。</p>
+      <div class="rate-box">
+        <div class="rate-input-row">
+          <span class="rate-flag">🇯🇵</span>
+          <input id="rateJpyInput" type="number" inputmode="decimal" min="0" step="1" value="1000" aria-label="日圓金額">
+          <span class="rate-unit">日圓</span>
+        </div>
+        <div class="rate-results" id="rateResults"></div>
+        <p class="rate-updated" id="rateUpdated"></p>
+      </div>
     </div>
   </section>

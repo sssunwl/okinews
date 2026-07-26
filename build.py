@@ -684,6 +684,7 @@ def build_article(post, siblings):
         str(post.get("summary", "")),
         active=post["section"],
         og_type="article",
+        page_script='<script src="../../assets/ig-carousel.js"></script>' if ig_slot else "",
     )
 
 
@@ -742,8 +743,10 @@ def build_news(news):
 
 def build_toolkit():
     main = template("toolkit.html")
+    rates = read_json("rates.json", {})
     render_page("toolkit", main, "旅行小抄｜OKIPLAYGROUND",
                 "沖繩旅行實用資訊：緊急電話、機場與自駕重點、匯率換算與旅遊日語。",
+                page_data=json_block("ratesData", rates),
                 page_script='<script src="../assets/toolkit.js"></script>')
 
 
