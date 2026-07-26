@@ -716,15 +716,89 @@ def goods_items_html(items):
 
 
 TIDE_ARROWS = {"上漲": "↑", "下降": "↓"}
+CN_DIGITS = "零一二三四五六七八九十"
 
 
-def ocean_conditions_html(conditions):
+def cn_num(n):
+    return CN_DIGITS[n] if 0 <= n < len(CN_DIGITS) else str(n)
+
+
+def cond_point_payload(wind_dir, wind_speed, wave, tide, verdict, label, reason):
+    return json.dumps({
+        "wind": "{} {} 節".format(html.escape(str(wind_dir)), html.escape(str(wind_speed))),
+        "wave": "{} m".format(html.escape(str(wave))),
+        "tide": "{} m".format(html.escape(str(tide))),
+        "verdict": html.escape(str(verdict)),
+        "label": html.escape(str(label)),
+        "reason": html.escape(str(reason)),
+    }, ensure_ascii=False).replace("'", "&#39;")
+
+
+def ocean_timeline_html(spot):
+    points = spot.get("timeline") or []
+    if not points:
+        return ""
+
+    now_payload = cond_point_payload(
+        spot.get("wind_dir_label", ""), spot.get("wind_speed_kn", ""),
+        spot.get("wave_height_m", ""), spot.get("tide_m", ""),
+        spot.get("verdict", "caution"), spot.get("verdict_label", ""),
+        spot.get("verdict_reason", ""),
+    )
+    now_button = (
+        '<button type="button" class="cond-hour cond-hour-now active" data-hour="now" '
+        'data-point=\'{payload}\'>現在</button>'
+    ).format(payload=now_payload)
+
+    buttons = [now_button]
+    for point in points:
+        hour = str(point.get("hour", ""))
+        payload = cond_point_payload(
+            point.get("wind_dir_label", ""), point.get("wind_speed_kn", ""),
+            point.get("wave_height_m", ""), point.get("tide_m", ""),
+            point.get("verdict", "caution"), point.get("verdict_label", ""),
+            point.get("verdict_reason", ""),
+        )
+        buttons.append(
+            '<button type="button" class="cond-hour cond-{level}" '
+            'data-hour="{hour}" data-point=\'{payload}\'>{hour}</button>'.format(
+                level=html.escape(str(point.get("verdict", "caution"))),
+                hour=html.escape(hour),
+                payload=payload,
+            )
+        )
+
+    return (
+        '<div class="cond-timeline" data-cond-timeline>'
+        '<div class="cond-timeline-head"><span>逐時海況</span></div>'
+        '<div class="cond-hour-row">{buttons}</div>'
+        '<div class="cond-scrollbar"><div class="cond-scrollbar-thumb"></div></div>'
+        '</div>'
+    ).format(buttons="".join(buttons))
+
+
+def condition_tabs_html(spots):
+    if len(spots) < 2:
+        return ""
+    tabs = "".join(
+        '<button type="button" class="cond-tab{active}" data-cond-tab="{index}">{name}</button>'.format(
+            active=" active" if index == 0 else "",
+            index=index,
+            name=html.escape(str(spot.get("name", ""))),
+        )
+        for index, spot in enumerate(spots)
+    )
+    return '<div class="cond-tabs" data-cond-tabs>{}</div>'.format(tabs)
+
+
+def ocean_conditions_html(conditions, note_label="地形要注意", heading="", eyebrow="Live Conditions",
+                           section_id="live-conditions", section_class="ocean-conditions"):
     spots = (conditions or {}).get("spots") or []
     if not spots:
         return ""
 
     cards = []
-    for spot in spots:
+    for index, spot in enumerate(spots):
         turn = spot.get("tide_turn") or {}
         turn_text = ""
         if turn.get("time"):
@@ -740,21 +814,33 @@ def ocean_conditions_html(conditions):
         if spot.get("official_note"):
             official = '<p class="cond-official">📍 {}</p>'.format(html.escape(str(spot["official_note"])))
 
+        official_link = ""
+        if spot.get("official_url"):
+            official_link = '<a class="cond-link cond-link-official" href="{url}" target="_blank" rel="noopener">{label}</a>'.format(
+                url=html.escape(str(spot["official_url"]), quote=True),
+                label=html.escape(str(spot.get("official_label") or "官方即時資訊 ↗")),
+            )
+
         cards.append((
-            '<article class="cond-card cond-{level}">'
-            '<div class="cond-head"><h3>{name}</h3><span class="cond-badge">{label}</span></div>'
+            '<article class="cond-card cond-{level}" data-cond-card="{index}">'
+            '<div class="cond-head"><h3>{name}</h3><span class="cond-badge" data-cond-badge>{label}</span></div>'
             '<p class="cond-region">{region}・{kind}</p>'
-            '<div class="cond-grid">'
-            '<div><span>風</span><strong>{wind_dir} {wind_speed} 節</strong><small>陣風 {gust} 節</small></div>'
-            '<div><span>浪高</span><strong>{wave} m</strong><small>湧浪 {swell}m・{period}s</small></div>'
-            '<div><span>潮位</span><strong>{tide} m {arrow}</strong><small>{turn_text}</small></div>'
+            '<div class="cond-grid" data-cond-grid>'
+            '<div><span>風</span><strong data-cond-wind>{wind_dir} {wind_speed} 節</strong><small>陣風 {gust} 節</small></div>'
+            '<div><span>浪高</span><strong data-cond-wave>{wave} m</strong><small>湧浪 {swell}m・{period}s</small></div>'
+            '<div><span>潮位</span><strong data-cond-tide>{tide} m {arrow}</strong><small>{turn_text}</small></div>'
             '</div>'
-            '<p class="cond-reason">{reason}</p>'
-            '<p class="cond-exposure">{exposure}</p>'
+            '<p class="cond-reason" data-cond-reason>{reason}</p>'
+            '{timeline}'
+            '<p class="cond-exposure"><strong>{note_label}：</strong>{exposure}</p>'
             '{official}'
+            '<div class="cond-links">'
             '<a class="cond-link" href="{ref_url}" target="_blank" rel="noopener">看完整逐時預報 ↗</a>'
+            '{official_link}'
+            '</div>'
             '</article>'
         ).format(
+            index=index,
             level=html.escape(str(spot.get("verdict", "caution"))),
             name=html.escape(str(spot.get("name", ""))),
             label=html.escape(str(spot.get("verdict_label", ""))),
@@ -770,22 +856,42 @@ def ocean_conditions_html(conditions):
             arrow=TIDE_ARROWS.get(spot.get("tide_trend", ""), ""),
             turn_text=html.escape(turn_text),
             reason=html.escape(str(spot.get("verdict_reason", ""))),
+            timeline=ocean_timeline_html(spot),
+            note_label=html.escape(note_label),
             exposure=html.escape(str(spot.get("exposure", ""))),
             official=official,
+            official_link=official_link,
             ref_url=html.escape(str(spot.get("reference_url", "")), quote=True),
         ))
 
+    caution = ""
+    if conditions.get("general_caution"):
+        caution = '<p class="cond-caution-note">⚠️ {}</p>'.format(
+            html.escape(str(conditions["general_caution"]))
+        )
+
     return (
-        '  <section class="ocean-conditions" id="live-conditions">\n'
+        '  <section class="{section_class}" id="{section_id}">\n'
         '    <div class="shell">\n'
         '      <div class="cond-head-row">\n'
-        '        <div><div class="eyebrow">Live Conditions</div><h2>三個熱門岸潛點，即時海況。</h2></div>\n'
+        '        <div><div class="eyebrow">{eyebrow}</div><h2>{heading}</h2></div>\n'
         '        <p class="cond-updated">更新於 {updated} JST・資料來自 Open-Meteo，僅供參考，實際請以現場、教練與官方公告為準</p>\n'
         '      </div>\n'
-        '      <div class="cond-grid-wrap">{cards}</div>\n'
+        '      {caution}\n'
+        '      {tabs}\n'
+        '      <div class="cond-grid-wrap" data-cond-group>{cards}</div>\n'
         '    </div>\n'
         '  </section>\n'
-    ).format(updated=html.escape(str(conditions.get("updated", ""))), cards="".join(cards))
+    ).format(
+        section_class=section_class,
+        section_id=section_id,
+        eyebrow=html.escape(eyebrow),
+        heading=html.escape(heading),
+        updated=html.escape(str(conditions.get("updated", ""))),
+        caution=caution,
+        tabs=condition_tabs_html(spots),
+        cards="".join(cards),
+    )
 
 
 def build_section(key, posts, extra_block="", show_filters=True, cards_heading=""):
@@ -1128,6 +1234,7 @@ def build_site(events=None, weather=None, updated=None):
     weather = weather if weather is not None else read_json("weather.json", [])
     news = read_json("news.json", [])
     ocean_conditions = read_json("ocean-conditions.json", {})
+    surf_conditions = read_json("surf-conditions.json", {})
 
     posts = load_content()
     goods_items = load_goods_items()
@@ -1148,7 +1255,23 @@ def build_site(events=None, weather=None, updated=None):
         show_filters = True
         cards_heading = ""
         if key == "ocean":
-            extra_block = ocean_conditions_html(ocean_conditions)
+            dive_spots = (ocean_conditions or {}).get("spots") or []
+            surf_spots = (surf_conditions or {}).get("spots") or []
+            extra_block = ocean_conditions_html(
+                ocean_conditions,
+                note_label="潛水要注意",
+                heading="{}個熱門岸潛點，即時海況。".format(cn_num(len(dive_spots))),
+                eyebrow="Live Conditions",
+                section_id="live-conditions",
+                section_class="ocean-conditions",
+            ) + ocean_conditions_html(
+                surf_conditions,
+                note_label="滑浪要注意",
+                heading="{}個滑浪點，即時浪況。".format(cn_num(len(surf_spots))),
+                eyebrow="Live Surf Conditions",
+                section_id="live-surf-conditions",
+                section_class="ocean-conditions surf-conditions",
+            )
         if key == "goods":
             extra_block = goods_items_html(goods_items)
             show_filters = False

@@ -1,13 +1,10 @@
 #!/usr/bin/env python3
-"""三個沖繩潛點的即時風向風力、浪高、潮汐，寫進 docs/ocean-conditions.json。
+"""三個沖繩衝浪點的即時風向風力、湧浪高度／週期、潮位，寫進 docs/surf-conditions.json。
 
-資料來源全部免金鑰：
-- 風（風速／風向／陣風）：api.open-meteo.com 一般天氣預報
-- 浪高／湧浪／潮位：marine-api.open-meteo.com 海洋預報
-
-判斷規則是通用的潛水安全經驗法則（風速、浪高門檻）加上每個點自己的地形特性
-（面向哪個方向、被什麼擋住），細節寫在 SPOTS 裡並附來源；這不是「可以下水」的
-權威判斷，網站上會清楚標示只是參考，實際永遠以現場、教練與官方公告為準。
+跟 ocean_crawler.py（岸潛版）用同一組免金鑰資料源（open-meteo），但判斷邏輯完全不同：
+潛水要的是「風平浪靜」，衝浪要的是「有湧浪、風要離岸（offshore）讓浪面乾淨」。
+一樣不是「能不能下水」的權威判斷，網站上會清楚標示只是參考，實際永遠以現場、
+教練與官方公告為準。
 """
 
 import json
@@ -17,67 +14,68 @@ from pathlib import Path
 import requests
 
 ROOT = Path(__file__).parent
-OUTPUT_FILE = ROOT / "docs" / "ocean-conditions.json"
+OUTPUT_FILE = ROOT / "docs" / "surf-conditions.json"
 JST = timezone(timedelta(hours=9))
 HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"}
 
-# 風向角度（氣象學定義：風從哪個方向吹來）分類門檻。
-WIND_SPEED_CALM = 7      # 節，以下：平穩
-WIND_SPEED_MODERATE = 15  # 節，以下：需留意；以上：風浪較大
-WAVE_CALM = 0.6           # 公尺，以下：平穩
-WAVE_MODERATE = 1.0       # 公尺，以下：需留意；以上：不建議岸潛
-
-# 逐時時間軸要顯示的鐘點（當天 06 點到隔天 00 點，共 10 個點）。
 TIMELINE_HOURS = ["06", "08", "10", "12", "14", "16", "18", "20", "22", "00"]
 
 GENERAL_CAUTION = (
-    "不管哪個點，只要陣風超過 20 節、浪高超過 1.2 公尺，或當地已發布暴風警報／高浪警報，"
-    "就直接放棄下水；能見度變差、突然起風湧、或現場出現離岸流跡象時也一樣，先上岸再說。"
+    "沖繩多數浪點是礁盤 reef break，干潮時礁石會外露，浪大時更容易割傷擦傷；"
+    "離岸流、突然變大的湧浪、閃電雷雨一律先上岸。新手不建議在浪超過腰高或有經驗者"
+    "都收板的時段還硬下水。"
 )
+
+# 湧浪高度門檻（公尺）：以下太平、以上偏大只適合有經驗的人。
+SWELL_FLAT = 0.4
+SWELL_BIG = 2.0
+# 湧浪週期（秒）：越長代表浪越乾淨有力，短週期通常是風浪、雜亂。
+PERIOD_WEAK = 8
+# 潮位（公尺）：低於這個高度，多數礁盤浪點會開始外露見底。
+TIDE_REEF_LOW = 0.5
 
 SPOTS = [
     {
-        "slug": "sunabe",
-        "name": "砂邊2號點 Sunabe II",
+        "slug": "sunabe-surf",
+        "name": "砂邊 Sunabe Surf Point",
         "region": "中部・北谷",
         "lat": 26.3179,
         "lon": 127.7552,
-        "kind": "岸潛・夜潛熱門點",
-        # 面西的岸潛點，開闊面對東海；東風／微風時最平穩，西到西北強風會直接揚湧上壁。
-        "good_wind": [(45, 135)],
-        "bad_wind": [(255, 345)],
-        "exposure": "面向西側開闊海域，東風或微風最穩，西／西北強風會直接推浪上岸壁。",
-        "reference_url": "https://windy.app/forecast2/spot/4013465/Sunabe+II",
+        "kind": "礁盤浪點・沙灘旁，多個 peak",
+        # 面西開闊礁盤，東到東南風時浪面最乾淨；西到西北風會把浪面吹亂，
+        # 而且這片海域跟岸潛/夜潛的人共用，浪大時尤其要留意水中其他人。
+        "offshore_wind": [(45, 135)],
+        "onshore_wind": [(255, 345)],
+        "note": "面西開闊礁盤，多個 peak，跟砂邊岸潛區域共用海域；浪大時留意水裡有沒有潛水的人。",
+        "reference_url": "https://www.windy.com/?waves,26.3179,127.7552,11",
     },
     {
-        "slug": "cape-maeda",
-        "name": "青の洞窟 Cape Maeda",
+        "slug": "maeda-surf",
+        "name": "真栄田 Cape Maeda Surf Point",
         "region": "中部・恩納村",
         "lat": 26.5057,
         "lon": 127.8783,
-        "kind": "岬角浮潛・沿階梯下水",
-        # 同樣是西側岬角地形，強西／西北風浪會讓階梯下水口變危險，官方會直接封閉。
-        "good_wind": [(45, 135)],
-        "bad_wind": [(255, 345)],
-        "exposure": "岬角地形、沿階梯下水，強西／西北風浪會使入水口變得危險，現場有官方旗幟與即時影像可查。",
-        "reference_url": "https://windy.app/forecast2/spot/8519891/Cape+Maeda+Blue+Cave",
-        "official_note": "真栄田岬official網站有即時影像與旗幟燈號（藍=可下水／黃=僅隨教練／紅=禁止），以現場公告為準。",
-        "official_url": "https://maedamisaki.jp/sea-status",
-        "official_label": "真栄田岬official 即時海況 ↗",
+        "kind": "礁盤浪點・岬角地形，浪大偏進階",
+        # 跟青の洞窟同一個岬角，東南到南風是離岸；跟浮潛旺季重疊，
+        # 浪起來時容易跟浮潛船、潛水員的活動範圍打架，要互相留意。
+        "offshore_wind": [(120, 200)],
+        "onshore_wind": [(280, 340)],
+        "note": "跟青の洞窟浮潛區同一個岬角，浪起來時請跟浮潛船、潛水員保持距離。",
+        "reference_url": "https://www.windy.com/?waves,26.5057,127.8783,11",
     },
     {
-        "slug": "gorilla-chop",
-        "name": "大猩猩 Gorilla Chop",
-        "region": "北部・本部",
-        "lat": 26.6975,
-        "lon": 127.8672,
-        "kind": "岸潛・浮潛，適合初學",
-        # 本部半島南岸，北側有山地擋風，是全島少數「北風越強越穩」的岸潛點；
-        # 換季後（5-10月南風季）南風一大反而是這裡最容易出局的時候。
-        "good_wind": [(315, 360), (0, 45)],
-        "bad_wind": [(135, 225)],
-        "exposure": "本部半島南岸，北側有山擋風，是全島少數北風越強越穩的岸潛點；5-10月南風季吹南風時反而最容易停潛。",
-        "reference_url": "https://windy.app/forecast2/spot/5967071/Gorilla+Chop",
+        "slug": "zanpa-surf",
+        "name": "殘波岬 Cape Zanpa Surf Point",
+        "region": "中部・讀谷",
+        "lat": 26.4332,
+        "lon": 127.7108,
+        "kind": "礁盤浪點・岬角地形，離岸流常見，偏進階",
+        # 讀谷最西側的岬角，同樣面西開闊；地形上岬角兩側容易形成離岸流，
+        # 加上礁盤範圍大、干潮外露面積也大，新手不建議。
+        "offshore_wind": [(45, 135)],
+        "onshore_wind": [(255, 345)],
+        "note": "岬角地形離岸流常見，礁盤範圍大、干潮外露面積也大，新手不建議、務必結伴。",
+        "reference_url": "https://www.windy.com/?waves,26.4332,127.7108,11",
     },
 ]
 
@@ -96,10 +94,10 @@ def in_range(deg, ranges):
 
 
 def wind_exposure(spot, deg):
-    if in_range(deg, spot["good_wind"]):
-        return "favorable"
-    if in_range(deg, spot["bad_wind"]):
-        return "unfavorable"
+    if in_range(deg, spot["offshore_wind"]):
+        return "offshore"
+    if in_range(deg, spot["onshore_wind"]):
+        return "onshore"
     return "neutral"
 
 
@@ -130,7 +128,6 @@ def nearest_index(times, now):
     now_str = now.strftime("%Y-%m-%dT%H:00")
     if now_str in times:
         return times.index(now_str)
-    # 沒有精確吻合就找最接近的
     target = now.replace(minute=0, second=0, microsecond=0)
     best_i, best_diff = 0, None
     for i, t in enumerate(times):
@@ -145,7 +142,6 @@ def nearest_index(times, now):
 
 
 def find_tide_turn(sea_levels, times, index):
-    """找離現在最近的滿潮／干潮時間點（簡單抓局部極值）。"""
     turns = []
     for i in range(1, len(sea_levels) - 1):
         prev, cur, nxt = sea_levels[i - 1], sea_levels[i], sea_levels[i + 1]
@@ -165,8 +161,42 @@ def find_tide_turn(sea_levels, times, index):
     return {"kind": kind, "time": time_label, "hours_away": hours_away}
 
 
+def build_verdict(spot, wind_speed, wind_deg, swell_height, swell_period, tide):
+    exposure = wind_exposure(spot, wind_deg)
+    reasons = []
+
+    reef_low = tide < TIDE_REEF_LOW
+    too_onshore_and_big = exposure == "onshore" and swell_height > SWELL_BIG
+
+    if swell_height < SWELL_FLAT:
+        level = "avoid"
+        reasons.append("湧浪只有 {:.1f} 公尺，太平沒什麼浪".format(swell_height))
+    elif too_onshore_and_big:
+        level = "avoid"
+        reasons.append("湧浪 {:.1f} 公尺偏大，風又是頂頭浪（onshore），浪況會很亂".format(swell_height))
+    elif swell_height > SWELL_BIG:
+        level = "caution"
+        reasons.append("湧浪 {:.1f} 公尺偏大，只適合有經驗的人".format(swell_height))
+    elif exposure == "onshore":
+        level = "caution"
+        reasons.append("目前風向對這個點是頂頭浪，浪面會比較亂")
+    elif swell_period < PERIOD_WEAK:
+        level = "caution"
+        reasons.append("週期只有 {:.0f} 秒，比較像風浪，浪型不會太乾淨".format(swell_period))
+    else:
+        level = "good"
+        reasons.append("湧浪 {:.1f} 公尺、週期 {:.0f} 秒，浪況算不錯".format(swell_height, swell_period))
+        if exposure == "offshore":
+            reasons.append("風向對這個點是離岸風，浪面會比較乾淨")
+
+    if reef_low:
+        reasons.append("目前潮位偏低，礁盤可能外露，下水／走位要注意腳下")
+
+    labels = {"good": "適合衝浪", "caution": "需留意", "avoid": "不建議下水"}
+    return level, labels[level], "；".join(reasons)
+
+
 def hour_datetime(now, hour_label):
-    """把「06」「00」這種鐘點標籤換成當天（00 算隔天）的 JST 時間點。"""
     hh = int(hour_label)
     day = now.date() if hour_label != "00" else now.date() + timedelta(days=1)
     return datetime(day.year, day.month, day.day, hh, 0, tzinfo=JST)
@@ -188,50 +218,23 @@ def build_timeline(spot, wind, marine, now):
 
         wind_speed = wind["wind_speed_10m"][wi]
         wind_deg = wind["wind_direction_10m"][wi]
-        wave_height = marine["wave_height"][mi]
+        swell_height = marine["swell_wave_height"][mi]
+        swell_period = marine["swell_wave_period"][mi]
         sea_level = marine["sea_level_height_msl"][mi]
 
-        level, label, reason = build_verdict(spot, wind_speed, wind_deg, wave_height)
+        level, label, reason = build_verdict(spot, wind_speed, wind_deg, swell_height, swell_period, sea_level)
 
         points.append({
             "hour": hour_label,
             "wind_speed_kn": round(wind_speed, 1),
             "wind_dir_label": wind_dir_label(wind_deg),
-            "wave_height_m": round(wave_height, 2),
+            "wave_height_m": round(swell_height, 2),
             "tide_m": round(sea_level, 2),
             "verdict": level,
             "verdict_label": label,
             "verdict_reason": reason,
         })
     return points
-
-
-def build_verdict(spot, wind_speed, wind_deg, wave_height):
-    exposure = wind_exposure(spot, wind_deg)
-    reasons = []
-
-    if wind_speed > WIND_SPEED_MODERATE or wave_height > WAVE_MODERATE:
-        level = "avoid"
-        if wind_speed > WIND_SPEED_MODERATE:
-            reasons.append("風速 {:.0f} 節偏強".format(wind_speed))
-        if wave_height > WAVE_MODERATE:
-            reasons.append("浪高 {:.1f} 公尺偏大".format(wave_height))
-    elif wind_speed > WIND_SPEED_CALM or wave_height > WAVE_CALM or exposure == "unfavorable":
-        level = "caution"
-        if wind_speed > WIND_SPEED_CALM:
-            reasons.append("風速 {:.0f} 節，有點感覺".format(wind_speed))
-        if wave_height > WAVE_CALM:
-            reasons.append("浪高 {:.1f} 公尺，比平常大".format(wave_height))
-        if exposure == "unfavorable":
-            reasons.append("目前風向對這個點是受風側")
-    else:
-        level = "good"
-        reasons.append("風速浪高都在平穩範圍")
-        if exposure == "favorable":
-            reasons.append("風向對這個點是背風側，理論上更穩")
-
-    labels = {"good": "看起來平穩", "caution": "需留意", "avoid": "不建議岸潛"}
-    return level, labels[level], "；".join(reasons)
 
 
 def build_spot(spot, now):
@@ -244,15 +247,15 @@ def build_spot(spot, now):
     wind_speed = wind["wind_speed_10m"][wi]
     wind_deg = wind["wind_direction_10m"][wi]
     wind_gust = wind["wind_gusts_10m"][wi]
-    wave_height = marine["wave_height"][mi]
     swell_height = marine["swell_wave_height"][mi]
     swell_period = marine["swell_wave_period"][mi]
+    wave_height = marine["wave_height"][mi]
     sea_level = marine["sea_level_height_msl"][mi]
 
     trend = "上漲" if marine["sea_level_height_msl"][mi + 1] > sea_level else "下降"
     turn = find_tide_turn(marine["sea_level_height_msl"], marine["time"], mi)
 
-    level, label, reason = build_verdict(spot, wind_speed, wind_deg, wave_height)
+    level, label, reason = build_verdict(spot, wind_speed, wind_deg, swell_height, swell_period, sea_level)
     timeline = build_timeline(spot, wind, marine, now)
 
     return {
@@ -260,10 +263,7 @@ def build_spot(spot, now):
         "name": spot["name"],
         "region": spot["region"],
         "kind": spot["kind"],
-        "exposure": spot["exposure"],
-        "official_note": spot.get("official_note", ""),
-        "official_url": spot.get("official_url", ""),
-        "official_label": spot.get("official_label", ""),
+        "exposure": spot["note"],
         "reference_url": spot["reference_url"],
         "timeline": timeline,
         "closest_timeline_hour": closest_timeline_hour(now),
@@ -271,9 +271,10 @@ def build_spot(spot, now):
         "wind_gust_kn": round(wind_gust, 1),
         "wind_deg": round(wind_deg),
         "wind_dir_label": wind_dir_label(wind_deg),
-        "wave_height_m": round(wave_height, 2),
+        "wave_height_m": round(swell_height, 2),
         "swell_height_m": round(swell_height, 2),
         "swell_period_s": round(swell_period, 1),
+        "sea_wave_height_m": round(wave_height, 2),
         "tide_m": round(sea_level, 2),
         "tide_trend": trend,
         "tide_turn": turn,
@@ -303,7 +304,7 @@ def main():
     }
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_FILE.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
-    print("🌊 海況更新完成：{} 個點".format(len(spots_out)))
+    print("🏄 浪況更新完成：{} 個點".format(len(spots_out)))
 
 
 if __name__ == "__main__":

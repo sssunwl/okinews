@@ -27,6 +27,9 @@ jobs:
       - name: Fetch ocean conditions
         run: python ocean_crawler.py
 
+      - name: Fetch surf conditions
+        run: python surf_crawler.py
+
       - name: Rebuild site
         run: python build.py
 
