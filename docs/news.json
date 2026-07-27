@@ -1,29 +1,245 @@
 [
   {
+    "date": "2026-07-28",
+    "source": "NHK",
+    "title": "東北至九州局地大雨 西日本恐現危險高溫",
+    "summary": "受低氣壓等影響，28日東北至九州廣範圍大氣狀態不穩定，局地可能出現非常強烈降雨並引發大雨。氣象廳呼籲注意土石流與低窪地淹水，西日本則預計出現危險高溫，須徹底防範中暑。",
+    "category": "天氣警報",
+    "url": "http://www3.nhk.or.jp/news/html/20260728/k10015187561000.html",
+    "alert": true
+  },
+  {
+    "date": "2026-07-28",
+    "source": "氣象庁警報",
+    "title": "沖繩本島地區發布氣象警報・注意報",
+    "summary": "沖繩本島地區在29日中午前需注意突發強降雨與雷擊。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=471000&lang=ja",
+    "alert": true
+  },
+  {
+    "date": "2026-07-28",
+    "source": "氣象庁警報",
+    "title": "大東島地區氣象警報與注意報",
+    "summary": "大東島地區請注意突如其來的強降雨與雷擊。請留意天氣變化，並做好安全防範。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=472000&lang=ja",
+    "alert": true
+  },
+  {
+    "date": "2026-07-28",
+    "source": "沖縄タイムス",
+    "title": "因山原秧雞踏上獸醫路　20年治療146羽",
+    "summary": "「動物們的醫院沖繩」理事長長嶺隆因山原秧雞而成為獸醫。約20年間，他治療了146羽山原秧雞，並調查了超過1000羽的死因。他表示，守護自然並傳承給下一代是責任。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1889534",
+    "alert": false
+  },
+  {
+    "date": "2026-07-28",
+    "source": "沖縄タイムス",
+    "title": "邊野古翻船事故 死者家屬控告11人",
+    "summary": "名護市邊野古海域的翻船事故中，身亡女學生的遺族已向中城海上保安部提出告訴。對象包括同志社國際高中的校長等4人，以及運航團體「ヘリ基地反対協議会」的共同代表等7人，共11人。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1889535",
+    "alert": false
+  },
+  {
+    "date": "2026-07-28",
+    "source": "沖縄タイムス",
+    "title": "玉城知事認同立憲社大推薦知念覺",
+    "summary": "玉城知事對立憲民主黨與社大黨決定在10月那霸市長選推薦現任知念覺表示理解。他在縣廳受訪時說，這是在確認市長意向後作出的、經過慎重程序的判斷。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1889466",
+    "alert": false
+  },
+  {
+    "date": "2026-07-28",
+    "source": "沖縄タイムス",
+    "title": "沖繩本島等地28日至29日多晴偶有驟雨雷雨",
+    "summary": "沖繩本島地方目前受高氣壓影響，大致晴朗，但有些地方出現驟雨。28日至29日仍以晴天為主，部分地區可能有驟雨或雷雨。",
+    "category": "天氣警報",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1889604",
+    "alert": false
+  },
+  {
+    "date": "2026-07-28",
+    "source": "沖縄タイムス",
+    "title": "名護連兩年確認到沖繩秧雞",
+    "summary": "沖繩縣表示，4月在名護市源河由設置的攝影機拍到沖繩秧雞。這是該地連續第2年確認到蹤跡，縣府認為與過去的貓鼬防除等對策成效有關。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1889560",
+    "alert": false
+  },
+  {
+    "date": "2026-07-28",
+    "source": "沖縄タイムス",
+    "title": "經營陷危機　JUNGLIA開業滿1年來客未達標",
+    "summary": "JUNGLIA沖繩開業滿1年，但來場者遠低於當初預期。報導指出，出資企業對目前的經營狀況感到不安，認為若不大幅改革，經營恐難持續。",
+    "category": "觀光",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1889558",
+    "alert": false
+  },
+  {
+    "date": "2026-07-28",
+    "source": "沖縄タイムス",
+    "title": "玉城縣政任內難阻止邊野古新基地",
+    "summary": "玉城知事在任期最後的縣議會定例會上，再次強調邊野古新基地建設違背縣民民意，無法容許。報導指出，他自2018年以來主打的「阻止新基地建設」目標，在兩期8年後已變得難以達成。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1889465",
+    "alert": false
+  },
+  {
+    "date": "2026-07-28",
+    "source": "沖縄タイムス",
+    "title": "社論：組成「宜野灣隊」　要求示明普天間返還期限",
+    "summary": "針對已過30年的美軍普天間飛行場全面返還承諾，地方成立「チーム宜野湾」，訴求早日關閉並返還。報導呼籲政府正面回應當地要求，明確提出返還期日。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1889484",
+    "alert": false
+  },
+  {
+    "date": "2026-07-28",
+    "source": "沖縄タイムス",
+    "title": "俳優壽大聰拍攝《滿天的星》傳達對馬丸悲劇",
+    "summary": "戰時遭美軍潛艦擊沉的疏開船「對馬丸」悲劇，透過紀錄片電影《滿天的星》向全國傳達。作品已於戰後80年的去年在日本各地上映，之後也提供影音串流。",
+    "category": "觀光",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1889528",
+    "alert": false
+  },
+  {
+    "date": "2026-07-28",
+    "source": "沖縄タイムス",
+    "title": "沖繩大城魁之輔將出戰10月國際摩托越野賽",
+    "summary": "日本摩托車運動協會宣布，將由沖繩出身的大城魁之輔出戰10月2日至4日在法國舉行的國別對抗賽「Motocross of Nations」。文中未提及其他旅遊相關影響。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1889505",
+    "alert": false
+  },
+  {
+    "date": "2026-07-28",
+    "source": "沖縄タイムス",
+    "title": "名嘉眞、砂川、永吉獲最佳海報獎",
+    "summary": "第39回口腔健康圖畫・海報比賽的頒獎典禮於21日在那霸市縣廳1樓縣民大廳舉行。主辦單位為縣牙科醫師會，並向上位得獎者頒發獎狀。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1889455",
+    "alert": false
+  },
+  {
+    "date": "2026-07-28",
+    "source": "沖縄タイムス",
+    "title": "與那原大綱曳起源以紙芝居演出",
+    "summary": "與那原町的劇團「おばあQ」6日到與那原東幼稚園，透過紙芝居講述與那原大綱曳的由來。現場也表演綱曳前女性舞蹈「前舞」並敲響樂器助興。",
+    "category": "觀光",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1889438",
+    "alert": false
+  },
+  {
+    "date": "2026-07-28",
+    "source": "沖縄タイムス",
+    "title": "本部中學巨型獅像守望校園",
+    "summary": "本部町立本部中學校舍後方的「同窗之森」山腰，有一座大型獅像。這座作品由第11屆校友、已故陶藝家島武己於1992年贈送。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1889426",
+    "alert": false
+  },
+  {
+    "date": "2026-07-28",
+    "source": "沖縄タイムス",
+    "title": "「りっかりっかフェスタ」那霸登場至30日",
+    "summary": "國際兒童・青少年演劇節沖繩2026「りっかりっかフェスタ」正在那霸市舉行，活動至30日。以「劇場是良藥」為主題，將在多個會場上演來自6國的10部作品。",
+    "category": "觀光",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1889413",
+    "alert": false
+  },
+  {
+    "date": "2026-07-28",
+    "source": "沖縄タイムス",
+    "title": "世界自然遺產登錄5年：觀光熱潮未惠及西表島",
+    "summary": "西表島登錄世界自然遺產5年後，當地人士指出觀光雖活絡，但收益未充分回到島內。島外業者與大型旅行社以石垣島為起點，擴大日歸遊商品。",
+    "category": "觀光",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1889564",
+    "alert": false
+  },
+  {
+    "date": "2026-07-28",
+    "source": "NHK",
+    "title": "消費稅減稅案未定　自民提1%方案",
+    "summary": "針對食料品消費稅減稅，跨黨派「國民會議」工作會議提出修正案，但未能形成一致，方向仍未定。自民黨內也有人主張採用明年4月起為期2年、稅率降至1%的方案，首相將於近期決定方針。",
+    "category": "全國",
+    "url": "http://www3.nhk.or.jp/news/html/20260728/k10015187501000.html",
+    "alert": false
+  },
+  {
+    "date": "2026-07-28",
+    "source": "NHK",
+    "title": "川普稱與伊朗協議有達成可能",
+    "summary": "美國總統川普表示，與伊朗的協議有可能達成，但若協議沒有進展，仍可能再次採取軍事行動。伊朗方面則表明不會妥協，雙方立場仍有落差。",
+    "category": "全國",
+    "url": "http://www3.nhk.or.jp/news/html/20260728/k10015187571000.html",
+    "alert": false
+  },
+  {
+    "date": "2026-07-28",
+    "source": "NHK",
+    "title": "EDION會長：與Yamada HD整併須堅持對等",
+    "summary": "EDION會長久保允譽接受NHK專訪，談到與Yamada Holdings的經營整併協議。他強調「對等的精神不能退讓」，並表示希望解決重疊店舖整併等課題，目標在2027年10月實現統合。",
+    "category": "全國",
+    "url": "http://www3.nhk.or.jp/news/html/20260728/k10015187521000.html",
+    "alert": false
+  },
+  {
+    "date": "2026-07-28",
+    "source": "NHK",
+    "title": "英首相強調全力支持烏克蘭",
+    "summary": "英國首相巴納姆就任後首次與烏克蘭總統澤倫斯基面對面會談，表示「100％與烏克蘭站在一起」。他並透露，將提供可妨礙無人機追蹤的最新技術。",
+    "category": "全國",
+    "url": "http://www3.nhk.or.jp/news/html/20260728/k10015187661000.html",
+    "alert": false
+  },
+  {
+    "date": "2026-07-28",
+    "source": "NHK",
+    "title": "查德宣布退出國際刑事法院",
+    "summary": "非洲中部的查德宣布退出國際刑事法院（ICC）。在發表前，查德表示曾接到美國要求重新考慮是否加入的請求。",
+    "category": "全國",
+    "url": "http://www3.nhk.or.jp/news/html/20260728/k10015187681000.html",
+    "alert": false
+  },
+  {
+    "date": "2026-07-28",
+    "source": "NHK",
+    "title": "作家東野圭吾因大腸癌去世",
+    "summary": "以《嫌疑犯X的獻身》等多部暢銷小說聞名的作家東野圭吾，於本月23日因大腸癌去世，享壽68歲。消息傳出後，讀者與相關人士紛紛表達哀悼。",
+    "category": "全國",
+    "url": "http://www3.nhk.or.jp/news/html/20260728/k10015187551000.html",
+    "alert": false
+  },
+  {
+    "date": "2026-07-28",
+    "source": "氣象庁警報",
+    "title": "宮古島地區氣象警報・注意報",
+    "summary": "宮古島地區的注意報已解除。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=473000&lang=ja",
+    "alert": false
+  },
+  {
+    "date": "2026-07-28",
+    "source": "氣象庁警報",
+    "title": "八重山地方氣象警報・注意報",
+    "summary": "解除注意報。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=474000&lang=ja",
+    "alert": false
+  },
+  {
     "date": "2026-07-27",
     "source": "NHK",
     "title": "北陸等地嚴防土砂災害 西日本持續酷暑",
     "summary": "受濕潤空氣影響，北陸等地局部雨勢增強，氣象廳呼籲嚴防土砂災害與低窪地淹水。27日東北到九州仍將有大範圍大氣不穩定，西日本則持續危險高溫，需注意防中暑。",
     "category": "天氣警報",
     "url": "http://www3.nhk.or.jp/news/html/20260727/k10015186851000.html",
-    "alert": true
-  },
-  {
-    "date": "2026-07-27",
-    "source": "氣象庁警報",
-    "title": "沖繩本島地區氣象警報・注意報",
-    "summary": "沖繩本島地區在29日中午前需注意突如其來的強降雨與雷擊。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=471000&lang=ja",
-    "alert": true
-  },
-  {
-    "date": "2026-07-27",
-    "source": "氣象庁警報",
-    "title": "大東島地區氣象警報注意事項",
-    "summary": "大東島地區請注意突如其來的強降雨與雷擊。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=472000&lang=ja",
     "alert": true
   },
   {
@@ -213,24 +429,6 @@
     "summary": "針對福岡縣議會正副議長職位金錢往來疑雲，吉松源昭議員送驗其錄下的音聲資料。鑑定結果顯示，該聲音與中尾正幸前副議長的聲音相同可能性很高。",
     "category": "全國",
     "url": "http://www3.nhk.or.jp/news/html/20260727/k10015186871000.html",
-    "alert": false
-  },
-  {
-    "date": "2026-07-27",
-    "source": "氣象庁警報",
-    "title": "宮古島地區氣象警報・注意報解除",
-    "summary": "宮古島地區的注意報已解除。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=473000&lang=ja",
-    "alert": false
-  },
-  {
-    "date": "2026-07-27",
-    "source": "氣象庁警報",
-    "title": "八重山地區氣象警報・注意報",
-    "summary": "八重山地區的注意報已解除。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=474000&lang=ja",
     "alert": false
   },
   {
