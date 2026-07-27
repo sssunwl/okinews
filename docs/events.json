@@ -1053,36 +1053,6 @@
     "description": "美軍基地文化影響了沖繩飲食，島上有不少美式漢堡店值得比較"
   },
   {
-    "name": "縁日催事「金魚祭」",
-    "name_zh": "祭典活動“金魚節”",
-    "date_start": "2026-07-20",
-    "date_end": "2026-09-10",
-    "url": "https://www.okinawastory.jp/event/600022701",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": "何不一邊欣賞遊來游去的夢幻金魚的撫慰，一邊享受懷舊的市集感覺呢？ ✨非常適合與您的孩子一起創造夏日回憶，或在涼爽的房間裡進行夏日約會！",
-    "image": "https://dorigin-www.ashibinaa.com/uploads/202607/ee8406d58ce81c634b1cf1d587a60e98.jpg",
-    "location": "沖縄アウトレットモール あしびなー　沖縄金魚ミュージアム ・ 沖縄県豊見城市豊崎１−１８８",
-    "price": "",
-    "official_url": "https://dorigin-www.ashibinaa.com/news_detail.html?code=1549"
-  },
-  {
-    "name": "サマーイベント2026【夏のゆいまつり】7/20～8/29毎日開催",
-    "name_zh": "夏季活動2026【夏季結衣祭】7/20～8/29每天舉行",
-    "date_start": "2026-07-20",
-    "date_end": "2026-08-29",
-    "url": "https://www.okinawastory.jp/event/600022234",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": "",
-    "image": "",
-    "location": "Grand Mercure Okinawa Cape Zanpa Resort ・ 沖縄県中頭郡読谷村宇座1575",
-    "price": "",
-    "official_url": "https://grand-mercure-okinawacapezanpa-resort.jp/plan/summer-event-2026/"
-  },
-  {
     "name": "GODACクエスト",
     "name_zh": "GODAC任務",
     "date_start": "2026-07-21",
@@ -1197,21 +1167,6 @@
     "location": "サンエー浦添西海岸パルコシティ 2階センタープラザ ・ 沖縄県浦添市西洲3-1-1",
     "price": "",
     "official_url": "https://www.parcocity.jp/event/detail/?cd=001405"
-  },
-  {
-    "name": "ミニ企画展 「キュリオの海展vol.6」",
-    "name_zh": "迷你展覽“古董海展vol.6”",
-    "date_start": "2026-07-24",
-    "date_end": "2026-07-27",
-    "url": "https://www.okinawastory.jp/event/600022585",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": "",
-    "image": "https://s3.ap-northeast-1.amazonaws.com/jp.nnear.upload/1783408483999_海展6のコピー.jpg",
-    "location": "CURIOSITIES OKINAWA shop&gallery ・ 沖縄県那覇市牧志１丁目１−２２ 仲宗根ビル ２Ｆ",
-    "price": "免費",
-    "official_url": "http://curiositiesokinawa.weebly.com/"
   },
   {
     "name": "SEAPORT CHATAN CARNIVAL",
