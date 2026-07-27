@@ -39,6 +39,11 @@ NAV = [
 ]
 
 # 內容區塊定義：篩選軸決定該區 index 頁出現哪幾排 chip
+# 地區標籤共用同一套：先分沖繩本島／沖繩外島，本島再細分南部／中部／北部，
+# 最後才是實際地名（那霸等）。文章可以同時掛好幾層（例如 [沖繩本島, 南部, 那霸]），
+# 篩選時每一層都能單獨點。
+REGION_AXIS = ("地區", ["沖繩本島", "沖繩外島", "南部", "中部", "北部", "那霸"])
+
 SECTIONS = {
     "guide": {
         "title": "沖繩旅遊攻略",
@@ -47,7 +52,7 @@ SECTIONS = {
         "axes": [
             ("主題", ["食", "玩", "住", "買", "拍"]),
             ("旅行方式", ["一天遊", "自駕", "不自駕", "親子", "情侶", "一人", "三代同行", "長住"]),
-            ("地區", ["那霸", "南部", "中部", "北部", "離島"]),
+            REGION_AXIS,
             ("月份", ["1月", "2月", "3月", "4月", "5月", "6月",
                      "7月", "8月", "9月", "10月", "11月", "12月"]),
         ],
@@ -56,13 +61,13 @@ SECTIONS = {
         "title": "認識沖繩",
         "eyebrow": "Know Okinawa",
         "lead": "琉球王國、傳統祭典、信仰與禮儀。知道背景之後，同樣的風景會看得比較久。",
-        "axes": [("主題", ["歷史", "傳統", "信仰", "language", "禮儀"])],
+        "axes": [("主題", ["歷史", "傳統", "信仰", "language", "禮儀"]), REGION_AXIS],
     },
     "goods": {
-        "title": "沖繩特色好物",
+        "title": "沖繩好物",
         "eyebrow": "Okinawa Goods",
         "lead": "工藝、超市便利店、100・300 円店與藥妝伴手禮。買得到、帶得回去、回家還會用的那些。",
-        "axes": [("類型", ["工藝", "超市", "便利店", "100円", "藥妝", "食品"])],
+        "axes": [("類型", ["工藝", "超市", "便利店", "100円", "藥妝", "食品"]), REGION_AXIS],
     },
     "ocean": {
         "title": "玩水・潛水",
@@ -70,7 +75,7 @@ SECTIONS = {
         "lead": "浮潛點、潛水店、季節與安全提醒。下水前先看一次，比到現場再問快。",
         "axes": [
             ("方式", ["浮潛", "潛水", "海灘", "SUP", "獨木舟"]),
-            ("地區", ["那霸", "南部", "中部", "北部", "離島"]),
+            REGION_AXIS,
         ],
     },
 }
@@ -666,6 +671,94 @@ def goods_item_card(item):
     )
 
 
+REGIONS_MAIN = [
+    {
+        "slug": "nanbu",
+        "title": "南部",
+        "subtitle": "那霸・糸滿・南城",
+        "blurb": "機場最近、行程頭尾都方便。首里城、國際通、平和祈念公園、玉泉洞鐘乳石洞都在這一段，第一天落地、最後一天要走都排這裡最順。",
+    },
+    {
+        "slug": "chubu",
+        "title": "中部",
+        "subtitle": "北谷・嘉手納・沖繩市・恩納村・讀谷",
+        "blurb": "全島潛水、衝浪、夜生活最密集的一段：美國村、真栄田岬青の洞窟、砂邊、萬座毛、殘波岬都在這裡，很多人整趟只待中部不移動。",
+    },
+    {
+        "slug": "hokubu",
+        "title": "北部",
+        "subtitle": "名護・本部・今歸仁",
+        "blurb": "步調最慢、離島感最重的本島段。美麗海水族館、古宇利島、山原國家公園都在這，適合排在行程後段慢慢晃。",
+    },
+]
+
+REGIONS_OUTER = [
+    {
+        "slug": "ishigaki",
+        "title": "石垣島",
+        "subtitle": "八重山群島門戶",
+        "blurb": "有機場可直飛，是八重山群島的轉運中心。川平灣、與那國/竹富島的船班都從這裡出發，潛水看海鰻、鬼蝠魟是強項。",
+    },
+    {
+        "slug": "miyako",
+        "title": "宮古島",
+        "subtitle": "全日本數一數二的藍",
+        "blurb": "島上沒有山，地形平坦，海水清澈度是全日本前段班。來間大橋、伊良部大橋開車就能到，適合喜歡海景勝過市區的人。",
+    },
+    {
+        "slug": "kumejima",
+        "title": "久米島",
+        "subtitle": "那霸飛 40 分鐘",
+        "blurb": "はての浜沙洲、鳥島海龜保護區，遊客比石垣、宮古少很多，適合想避開人潮、單純看海發呆的行程。",
+    },
+    {
+        "slug": "kerama",
+        "title": "慶良間諸島",
+        "subtitle": "渡嘉敷・座間味",
+        "blurb": "那霸出發船程約 1 小時，能見度是全日本數一數二，賞鯨季（冬春）跟浮潛旺季（夏）都值得專程跑一趟。",
+    },
+    {
+        "slug": "iejima",
+        "title": "伊江島",
+        "subtitle": "本部渡輪 30 分鐘",
+        "blurb": "從本部半島搭渡輪半小時就到，適合當天來回。城山（伊江島タッチュー）登頂看海，四月百合花季是最熱門的時候。",
+    },
+]
+
+
+def region_row_html(eyebrow, heading, regions):
+    cards = "".join(
+        '<button type="button" class="okiregion-card" data-okiregion-card aria-expanded="false">'
+        '<span class="okiregion-title">{title}<small>{subtitle}</small></span>'
+        '<span class="okiregion-blurb">{blurb}</span>'
+        '</button>'.format(
+            title=html.escape(str(region.get("title", ""))),
+            subtitle=html.escape(str(region.get("subtitle", ""))),
+            blurb=html.escape(str(region.get("blurb", ""))),
+        )
+        for region in regions
+    )
+    return (
+        '<div class="okiregion-row-head"><span class="eyebrow">{eyebrow}</span><h3>{heading}</h3></div>'
+        '<div class="okiregion-grid">{cards}</div>'
+    ).format(eyebrow=html.escape(eyebrow), heading=html.escape(heading), cards=cards)
+
+
+def region_intro_html():
+    return (
+        '  <section class="okiregion-intro" id="okiregion-intro">\n'
+        '    <div class="shell">\n'
+        '      <p class="okiregion-intro-note">滑過或點一下卡片看介紹——沖繩本島先分三段，外島是另一趟行程。</p>\n'
+        '      {main_row}\n'
+        '      {outer_row}\n'
+        '    </div>\n'
+        '  </section>\n'
+    ).format(
+        main_row=region_row_html("Okinawa Main Island", "沖繩本島，先分三段。", REGIONS_MAIN),
+        outer_row=region_row_html("Outer Islands", "沖繩外島，還可以走更遠。", REGIONS_OUTER),
+    )
+
+
 def goods_items_html(items):
     if not items:
         return ""
@@ -750,7 +843,7 @@ def ocean_timeline_html(spot):
         'data-point=\'{payload}\'>現在</button>'
     ).format(payload=now_payload)
 
-    buttons = [now_button]
+    buttons = []
     for point in points:
         hour = str(point.get("hour", ""))
         payload = cond_point_payload(
@@ -759,22 +852,31 @@ def ocean_timeline_html(spot):
             point.get("verdict", "caution"), point.get("verdict_label", ""),
             point.get("verdict_reason", ""),
         )
+        tomorrow = point.get("is_tomorrow")
         buttons.append(
-            '<button type="button" class="cond-hour cond-{level}" '
-            'data-hour="{hour}" data-point=\'{payload}\'>{hour}</button>'.format(
+            '<button type="button" class="cond-hour cond-{level}{tmr_class}" '
+            'data-hour="{hour}" data-point=\'{payload}\'{title}>{hour}{tmr_tag}</button>'.format(
                 level=html.escape(str(point.get("verdict", "caution"))),
+                tmr_class=" cond-hour-tomorrow" if tomorrow else "",
                 hour=html.escape(hour),
                 payload=payload,
+                title=' title="明天 {}:00"'.format(html.escape(hour)) if tomorrow else "",
+                tmr_tag='<small>明</small>' if tomorrow else "",
             )
         )
 
     return (
         '<div class="cond-timeline" data-cond-timeline>'
         '<div class="cond-timeline-head"><span>逐時海況</span></div>'
+        '<div class="cond-hour-track">'
+        '{now_button}'
+        '<div class="cond-hour-scroll">'
         '<div class="cond-hour-row">{buttons}</div>'
         '<div class="cond-scrollbar"><div class="cond-scrollbar-thumb"></div></div>'
         '</div>'
-    ).format(buttons="".join(buttons))
+        '</div>'
+        '</div>'
+    ).format(now_button=now_button, buttons="".join(buttons))
 
 
 def condition_tabs_html(spots):
@@ -1099,6 +1201,112 @@ MONTH_NAMES = ["", "1月", "2月", "3月", "4月", "5月", "6月", "7月",
                "8月", "9月", "10月", "11月", "12月"]
 
 
+def _month_minutes(hhmm):
+    try:
+        h, m = str(hhmm).split(":")
+        return int(h) * 60 + int(m)
+    except (ValueError, AttributeError):
+        return None
+
+
+def month_dashboard_html(month):
+    """月份頁最上面的氣候小儀表板：溫度帶、降雨量、颱風接近頻率、日出日落。
+    數字來自氣象庁 1991-2020 年平年值（那霸）與台風接近数平年值，寫在各月 frontmatter 裡。
+    每個長條預設寬度是 0，捲到看得到時 assets/months.js 用 IntersectionObserver
+    加 .in-view class 才展開——跟站上其他 hover 互動的卡片刻意做出不同的手感。"""
+    try:
+        avg_t = float(month["avg_temp"])
+        max_t = float(month["max_temp"])
+        min_t = float(month["min_temp"])
+        rain = float(month["rain_mm"])
+        typhoon = float(month["typhoon_avg"])
+    except (KeyError, TypeError, ValueError):
+        return ""
+
+    sunrise = str(month.get("sunrise", ""))
+    sunset = str(month.get("sunset", ""))
+    sr_min = _month_minutes(sunrise)
+    ss_min = _month_minutes(sunset)
+
+    scale_lo, scale_hi = 14.0, 33.0
+    span = scale_hi - scale_lo
+
+    def pct(value):
+        return max(0, min(100, round((value - scale_lo) / span * 100, 1)))
+
+    min_pct, max_pct, avg_pct = pct(min_t), pct(max_t), pct(avg_t)
+    hue = max(10, min(215, round(215 - (avg_t - 17.3) / (29.1 - 17.3) * 205)))
+    rain_pct = max(4, min(100, round(rain / 300 * 100)))
+    dot_count = min(5, round(typhoon / 2.4 * 5))
+    typhoon_dots = "".join(
+        '<span class="dash-typhoon-dot{on}" style="transition-delay:{delay}ms"></span>'.format(
+            on=" is-on" if i < dot_count else "", delay=i * 80,
+        )
+        for i in range(5)
+    )
+
+    day_band = ""
+    if sr_min is not None and ss_min is not None:
+        day_band = (
+            '<div class="dash-day-track">'
+            '<div class="dash-day-fill" data-reveal style="left:{l:.2f}%;width:{w:.2f}%"></div>'
+            '</div>'
+            '<strong>{sunrise} 日出 · {sunset} 日落</strong>'
+        ).format(l=sr_min / 1440 * 100, w=(ss_min - sr_min) / 1440 * 100, sunrise=html.escape(sunrise), sunset=html.escape(sunset))
+
+    return (
+        '<div class="month-dash" data-month-dash style="--month-hue:{hue}">'
+        '  <div class="dash-block dash-temp">'
+        '    <span class="dash-label">氣溫（氣象庁平年值）</span>'
+        '    <div class="dash-temp-track">'
+        '      <div class="dash-temp-fill" data-reveal style="left:{min_pct}%;width:{range_pct}%"></div>'
+        '      <div class="dash-temp-avg" style="left:{avg_pct}%">{avg_t:.1f}°C</div>'
+        '    </div>'
+        '    <div class="dash-temp-labels"><span>最低 {min_t:.1f}°C</span><span>最高 {max_t:.1f}°C</span></div>'
+        '  </div>'
+        '  <div class="dash-row">'
+        '    <div class="dash-block dash-card">'
+        '      <span class="dash-label">月降雨量</span>'
+        '      <div class="dash-bar"><div class="dash-bar-fill" data-reveal style="width:{rain_pct}%"></div></div>'
+        '      <strong>{rain:.0f} mm</strong>'
+        '    </div>'
+        '    <div class="dash-block dash-card">'
+        '      <span class="dash-label">颱風接近平年值</span>'
+        '      <div class="dash-typhoon">{typhoon_dots}</div>'
+        '      <strong>平均 {typhoon:.1f} 個</strong>'
+        '    </div>'
+        '    <div class="dash-block dash-card dash-card-wide">'
+        '      <span class="dash-label">日出・日落</span>'
+        '      {day_band}'
+        '    </div>'
+        '  </div>'
+        '</div>'
+    ).format(
+        hue=hue, min_pct=min_pct, range_pct=round(max_pct - min_pct, 1), avg_pct=avg_pct,
+        avg_t=avg_t, min_t=min_t, max_t=max_t, rain_pct=rain_pct, rain=rain,
+        typhoon_dots=typhoon_dots, typhoon=typhoon, day_band=day_band,
+    )
+
+
+def month_nav_html(months, current_n):
+    by_n = {m["month"]: m for m in months}
+    prev_n = 12 if current_n == 1 else current_n - 1
+    next_n = 1 if current_n == 12 else current_n + 1
+    prev_m, next_m = by_n.get(prev_n), by_n.get(next_n)
+    if not prev_m or not next_m:
+        return ""
+    return (
+        '  <nav class="month-nav">\n'
+        '    <a class="month-nav-link prev" href="../month-{prev_n}/"><span>← 上個月</span><strong>{prev_title}</strong></a>\n'
+        '    <a class="month-nav-link next" href="../month-{next_n}/"><span>下個月 →</span><strong>{next_title}</strong></a>\n'
+        '  </nav>\n'
+    ).format(
+        prev_n=prev_n, next_n=next_n,
+        prev_title=html.escape(str(prev_m.get("title", ""))),
+        next_title=html.escape(str(next_m.get("title", ""))),
+    )
+
+
 def build_month_pages(months):
     """月份速覽頁：/guide/month-<n>/。回傳產生的完整網址清單。"""
     urls = []
@@ -1117,16 +1325,17 @@ def build_month_pages(months):
             "ARTICLE_TITLE": html.escape(str(month.get("title", ""))),
             "ARTICLE_SUMMARY": html.escape(str(month.get("blurb", ""))),
             "ARTICLE_META": "".join(meta_bits),
-            "COVER": "",
+            "COVER": month_dashboard_html(month),
             "BODY": markdown(body_src),
             "IG_SLOT": "",
-            "RELATED": "",
+            "RELATED": month_nav_html(months, n),
         })
         canonical = render_page(
             "guide/month-{}".format(n), main,
             "{}｜OKIPLAYGROUND".format(month.get("title", "")),
             str(month.get("blurb", "")),
             active="guide",
+            page_script='<script src="../../assets/months.js"></script>',
         )
         urls.append(canonical)
     return urls
@@ -1148,7 +1357,7 @@ def month_strip_html(months):
             blurb=html.escape(str(month.get("blurb", "")), quote=True),
         ))
     return (
-        '  <section class="month-strip" id="months" aria-label="按月份看沖繩">\n'
+        '  <section class="month-strip combo-col" id="months" aria-label="按月份看沖繩">\n'
         '    <div class="shell-narrow">\n'
         '      <div class="month-head">\n'
         '        <span class="eyebrow">Month by Month</span>\n'
@@ -1276,6 +1485,8 @@ def build_site(events=None, weather=None, updated=None):
             extra_block = goods_items_html(goods_items)
             show_filters = False
             cards_heading = "深度好物指南"
+        if key == "okinawa":
+            extra_block = region_intro_html()
         build_section(key, posts.get(key) or [], extra_block=extra_block,
                        show_filters=show_filters, cards_heading=cards_heading)
         urls.append(SITE_URL + key + "/")

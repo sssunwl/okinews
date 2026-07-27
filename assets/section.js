@@ -155,4 +155,13 @@
     // change 事件，這裡額外掛一個 resize 監聽確保切回桌機寬度時卡片一定會還原。
     window.addEventListener('resize', applyAll);
   }
+
+  /* 認識沖繩的地區卡片：桌機滑過（:hover/:focus-visible）就看得到說明，
+     這裡額外補一個點擊切換，讓觸控裝置（沒有 hover）也能打開/關掉說明。 */
+  document.querySelectorAll('[data-okiregion-card]').forEach(function (card) {
+    card.addEventListener('click', function () {
+      var expanded = card.classList.toggle('expanded');
+      card.setAttribute('aria-expanded', String(expanded));
+    });
+  });
 })();

@@ -2,7 +2,7 @@
 title: 沖繩潛水入門：體驗潛水 vs 考證照
 slug: first-time-diving
 summary: 第一次潛水不需要先考證照。搞懂體驗潛水跟開放水域證照的差別，再決定要不要往下走。
-tags: [潛水]
+tags: [潛水, 沖繩本島]
 updated: 2026-07-26
 ig:
   cover: 沖繩潛水，第一次該怎麼選

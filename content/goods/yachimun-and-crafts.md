@@ -2,7 +2,7 @@
 title: 沖繩工藝伴手禮：やちむん、琉球玻璃、紅型
 slug: yachimun-and-crafts
 summary: 三種最能代表沖繩的手作工藝，也是最經得起帶回家用的伴手禮。
-tags: [工藝]
+tags: [工藝, 沖繩本島, 南部, 那霸]
 updated: 2026-07-26
 ig:
   cover: 沖繩三大工藝，帶一件回家

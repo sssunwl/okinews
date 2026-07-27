@@ -2,7 +2,7 @@
 title: 在沖繩下水前，先知道這幾件事
 slug: snorkel-safety-basics
 summary: 沖繩的海很漂亮，也很真實。浮潛前該確認的安全基本盤。
-tags: [浮潛, 海灘]
+tags: [浮潛, 海灘, 沖繩本島]
 updated: 2026-07-26
 ig:
   cover: 沖繩下水前，先看這一頁

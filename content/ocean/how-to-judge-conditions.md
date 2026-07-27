@@ -2,7 +2,7 @@
 title: 風向、風力、浪高、潮汐：怎麼判斷今天適不適合下水
 slug: how-to-judge-conditions
 summary: 同一片海，換個風向就從平穩變危險。學會看這四個數字，比到了現場才問快。
-tags: [浮潛, 潛水]
+tags: [浮潛, 潛水, 沖繩本島, 中部, 北部]
 updated: 2026-07-26
 ig:
   cover: 怎麼判斷今天適不適合下水？

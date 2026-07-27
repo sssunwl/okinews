@@ -2,7 +2,7 @@
 title: 沖繩一年的祭典與年中行事
 slug: matsuri-and-rituals
 summary: 從舊曆新年到十月的祭典季，沖繩的節慶大多按舊曆走，跟你熟悉的日本本島曆法不太一樣。
-tags: [傳統, 信仰]
+tags: [傳統, 信仰, 沖繩本島, 沖繩外島]
 updated: 2026-07-26
 ig:
   cover: 沖繩的祭典，跟著舊曆走

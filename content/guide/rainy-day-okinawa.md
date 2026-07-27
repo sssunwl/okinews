@@ -2,7 +2,7 @@
 title: 沖繩下雨怎麼辦
 slug: rainy-day-okinawa
 summary: 沖繩的雨常常是一陣一陣的。與其跨區追晴天，不如在同一區備好室內備案。
-tags: [玩, 親子, 中部]
+tags: [玩, 親子, 沖繩本島]
 updated: 2026-07-26
 ig:
   cover: 沖繩下雨怎麼辦？

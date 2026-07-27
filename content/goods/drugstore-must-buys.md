@@ -2,7 +2,7 @@
 title: 沖繩藥妝店必買清單
 slug: drugstore-must-buys
 summary: 不是每一支面膜都值得扛回家。挑真正解決旅途痛點、回家也會繼續買的那幾樣。
-tags: [藥妝]
+tags: [藥妝, 沖繩本島]
 updated: 2026-07-26
 ig:
   cover: 沖繩藥妝店，買這些就對了

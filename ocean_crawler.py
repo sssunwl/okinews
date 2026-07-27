@@ -166,10 +166,13 @@ def find_tide_turn(sea_levels, times, index):
 
 
 def hour_datetime(now, hour_label):
-    """把「06」「00」這種鐘點標籤換成當天（00 算隔天）的 JST 時間點。"""
+    """把「06」「00」這種鐘點標籤換成下一次會發生的 JST 時間點——
+    如果那個鐘點今天已經過了，就換算成明天同一鐘點，確保永遠是還沒到的時段。"""
     hh = int(hour_label)
-    day = now.date() if hour_label != "00" else now.date() + timedelta(days=1)
-    return datetime(day.year, day.month, day.day, hh, 0, tzinfo=JST)
+    candidate = datetime(now.year, now.month, now.day, hh, 0, tzinfo=JST)
+    if candidate < now:
+        candidate += timedelta(days=1)
+    return candidate
 
 
 def closest_timeline_hour(now):
@@ -195,6 +198,7 @@ def build_timeline(spot, wind, marine, now):
 
         points.append({
             "hour": hour_label,
+            "is_tomorrow": target.date() != now.date(),
             "wind_speed_kn": round(wind_speed, 1),
             "wind_dir_label": wind_dir_label(wind_deg),
             "wave_height_m": round(wave_height, 2),

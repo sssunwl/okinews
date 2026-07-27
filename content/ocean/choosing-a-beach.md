@@ -2,7 +2,7 @@
 title: 沖繩海灘怎麼選：本島 vs 離島
 slug: choosing-a-beach
 summary: 不是每個海灘都適合每一種人。用交通時間跟你想要的體驗來選，比看照片準。
-tags: [海灘]
+tags: [海灘, 沖繩本島, 沖繩外島, 南部, 中部, 北部]
 updated: 2026-07-26
 ig:
   cover: 沖繩海灘，怎麼選才對

@@ -2,7 +2,7 @@
 title: 沖繩超市與便利店，真的值得帶回家的
 slug: konbini-supermarket-picks
 summary: 不是伴手禮店的高價包裝，而是在地人自己家裡也會放的那些。
-tags: [超市, 便利店, 食品]
+tags: [超市, 便利店, 食品, 沖繩本島]
 updated: 2026-07-26
 ig:
   cover: 沖繩超市，比伴手禮店好買

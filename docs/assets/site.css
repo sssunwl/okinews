@@ -136,18 +136,12 @@ img,svg{display:block;max-width:100%}
 .month-strip{padding:8px 0 28px}
 .month-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:12px;flex-wrap:wrap}
 .month-note{font-size:.68rem;color:var(--muted)}
-.month-row{display:grid;grid-template-columns:repeat(12,1fr);gap:6px}
+.month-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(52px,1fr));gap:6px;row-gap:8px}
 .month-tile{border:1px solid var(--line);background:var(--paper);border-radius:12px;padding:10px 4px;text-align:center;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;align-items:center;gap:2px;transition:.2s}
 .month-tile:hover,.month-tile:focus-visible{transform:translateY(-3px);box-shadow:var(--shadow-sm);border-color:var(--blue);background:var(--lagoon-soft)}
 .month-tile strong{font-size:.8rem;letter-spacing:-.01em}
 .month-tile span{font-size:.6rem;color:var(--muted)}
 .month-preview{margin:12px 0 0;padding:12px 16px;background:var(--sand);border-radius:var(--radius);font-size:.8rem;color:var(--muted);min-height:1.6em}
-@media(max-width:720px){
-  .month-row{grid-template-columns:repeat(6,1fr);row-gap:8px}
-}
-@media(max-width:460px){
-  .month-row{grid-template-columns:repeat(4,1fr)}
-}
 
 /* Picks */
 .picks{padding:70px 0 90px}
@@ -396,6 +390,13 @@ footer{background:var(--navy);color:#fff;padding:52px 0 100px}
 /* 內容卡片 */
 .home-section{padding:64px 0}
 .home-section.alt{background:var(--paper)}
+/* 首頁組合列：兩個區塊並排（攻略+月曆、玩水+好物） */
+.combo-row{display:grid;grid-template-columns:1fr 1fr;align-items:start;column-gap:8px}
+.combo-row .combo-col{min-width:0}
+.combo-row .home-section.alt{background:none}
+@media(max-width:900px){
+  .combo-row{grid-template-columns:1fr}
+}
 /* 玩水・即時海況 */
 .ocean-conditions{padding:8px 0 24px}
 .cond-head-row{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;margin-bottom:20px}
@@ -426,9 +427,13 @@ footer{background:var(--navy);color:#fff;padding:52px 0 100px}
 .cond-caution-note{margin:0 0 18px;padding:12px 16px;border-radius:12px;background:var(--gold-bg,#fff3d6);color:#7a5200;font-size:.78rem;line-height:1.6}
 .cond-timeline{position:relative;margin:2px 0 14px;padding:10px 0 4px;border-radius:12px;background:var(--sand)}
 .cond-timeline-head{margin-bottom:8px;padding:0 10px;font-size:.68rem;font-weight:900;color:var(--muted)}
-.cond-hour-row{display:flex;flex-wrap:nowrap;gap:6px;padding:0 10px 4px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.cond-hour-track{display:flex;align-items:center;gap:8px;padding:0 10px}
+.cond-hour-scroll{position:relative;flex:1 1 auto;min-width:0}
+.cond-hour-row{display:flex;flex-wrap:nowrap;gap:6px;padding-bottom:4px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .cond-hour-row::-webkit-scrollbar{display:none}
-.cond-hour{flex:0 0 auto;scroll-snap-align:start;min-width:34px;padding:6px 4px;border:1px solid var(--line);border-radius:8px;background:var(--paper);font-size:.7rem;font-weight:800;color:var(--muted);cursor:pointer;transition:transform .12s ease,background-color .12s ease,border-color .12s ease,box-shadow .12s ease}
+.cond-hour{flex:0 0 auto;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;line-height:1.1;min-width:34px;padding:6px 4px;border:1px solid var(--line);border-radius:8px;background:var(--paper);font-size:.7rem;font-weight:800;color:var(--muted);cursor:pointer;transition:transform .12s ease,background-color .12s ease,border-color .12s ease,box-shadow .12s ease}
+.cond-hour small{font-size:.55rem;font-weight:700;color:var(--blue);margin-top:1px}
+.cond-hour-tomorrow{border-style:dashed}
 .cond-hour:hover{transform:translateY(-2px);border-color:var(--blue);box-shadow:0 4px 10px rgba(6,42,58,.12)}
 .cond-hour:focus-visible{outline:2px solid var(--blue);outline-offset:1px}
 .cond-hour.cond-good{border-color:rgba(63,184,151,.4)}
@@ -438,14 +443,14 @@ footer{background:var(--navy);color:#fff;padding:52px 0 100px}
 .cond-hour.active.cond-good{background:rgba(63,184,151,.18);border-color:#3fb897}
 .cond-hour.active.cond-caution{background:var(--gold-bg,#fff3d6);border-color:#9a6b00}
 .cond-hour.active.cond-avoid{background:rgba(255,102,90,.18);border-color:var(--coral)}
-.cond-hour-now{flex:0 0 auto;scroll-snap-align:start;position:sticky;left:10px;z-index:2;min-width:52px;padding:6px 10px;border:1px solid var(--blue);border-radius:999px;background:var(--paper);font-size:.68rem;font-weight:900;color:var(--blue);cursor:pointer;display:flex;align-items:center;gap:5px;box-shadow:0 0 0 4px var(--sand)}
+.cond-hour-now{flex:0 0 auto;min-width:52px;padding:6px 10px;border:1px solid var(--blue);border-radius:999px;background:var(--paper);font-size:.68rem;font-weight:900;color:var(--blue);cursor:pointer;display:flex;align-items:center;gap:5px}
 .cond-hour-now::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--blue);flex:0 0 auto}
 .cond-hour-now.active{background:var(--blue);color:#fff}
 .cond-hour-now.active::before{background:#fff}
-.cond-hour-now:hover{box-shadow:0 0 0 4px var(--sand),0 4px 10px rgba(6,42,58,.12)}
-.cond-scrollbar{position:relative;margin:0 10px 8px;height:3px;border-radius:999px;background:rgba(8,127,156,.15);overflow:hidden}
+.cond-hour-now:hover{box-shadow:0 4px 10px rgba(6,42,58,.12)}
+.cond-scrollbar{position:relative;margin:0 0 8px;height:3px;border-radius:999px;background:rgba(8,127,156,.15);overflow:hidden}
 .cond-scrollbar-thumb{position:absolute;top:0;left:0;height:100%;border-radius:999px;background:linear-gradient(90deg,rgba(8,127,156,.35),rgba(8,127,156,.65));transition:transform .08s linear}
-.cond-timeline::after{content:"";position:absolute;top:32px;right:0;bottom:16px;width:18px;background:linear-gradient(to right,transparent,var(--sand));pointer-events:none}
+.cond-hour-scroll::after{content:"";position:absolute;top:0;right:0;bottom:8px;width:18px;background:linear-gradient(to right,transparent,var(--sand));pointer-events:none}
 .cond-tabs{display:none}
 @media (prefers-reduced-motion: reduce){.cond-hour,.cond-hour-now{transition:none}.cond-hour:hover{transform:none}}
 @media(max-width:760px){
@@ -456,6 +461,21 @@ footer{background:var(--navy);color:#fff;padding:52px 0 100px}
   .cond-grid-wrap{grid-template-columns:1fr}
 }
 @media(max-width:460px){.cond-grid{grid-template-columns:1fr 1fr 1fr;gap:6px}.cond-grid div{padding:7px 4px}}
+
+/* 認識沖繩：地區介紹卡片（本島/外島兩行，表面只有標題，hover/focus/點一下才看到說明） */
+.okiregion-intro{padding:8px 0 32px}
+.okiregion-intro-note{margin:0 0 20px;font-size:.78rem;color:var(--muted)}
+.okiregion-row-head{display:flex;align-items:baseline;gap:10px;margin:0 0 12px}
+.okiregion-row-head:not(:first-of-type){margin-top:28px}
+.okiregion-row-head h3{margin:0;font-size:1.15rem;letter-spacing:-.02em}
+.okiregion-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.okiregion-card{position:relative;overflow:hidden;text-align:left;border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--paper);padding:16px;cursor:pointer;min-height:96px;transition:border-color .15s ease,box-shadow .15s ease}
+.okiregion-card:hover,.okiregion-card:focus-visible,.okiregion-card.expanded{border-color:var(--blue);box-shadow:var(--shadow-sm)}
+.okiregion-title{display:block;font-size:1rem;font-weight:900;letter-spacing:-.01em}
+.okiregion-title small{display:block;margin-top:3px;font-size:.68rem;font-weight:600;color:var(--muted)}
+.okiregion-blurb{display:block;margin-top:8px;font-size:.78rem;line-height:1.6;color:var(--muted);max-height:0;opacity:0;overflow:hidden;transition:max-height .2s ease,opacity .2s ease}
+.okiregion-card:hover .okiregion-blurb,.okiregion-card:focus-visible .okiregion-blurb,.okiregion-card.expanded .okiregion-blurb{max-height:200px;opacity:1;margin-top:8px}
+@media (prefers-reduced-motion: reduce){.okiregion-card,.okiregion-blurb{transition:none}}
 
 /* 好物：獨立單品卡片格 */
 .goods-items{padding:8px 0 20px}
@@ -524,6 +544,40 @@ footer{background:var(--navy);color:#fff;padding:52px 0 100px}
 .article-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.75rem;color:var(--muted);padding-bottom:24px;border-bottom:1px solid var(--line)}
 .article-meta .tag{background:var(--lagoon-soft);color:var(--blue);border-radius:999px;padding:3px 10px;font-weight:900}
 .article-cover{width:100%;border-radius:var(--radius-lg);margin:26px 0}
+
+/* 月份頁氣候儀表板：溫度帶／降雨量／颱風接近／日出日落，捲到看得到才展開。 */
+.month-dash{margin:26px 0 30px;padding:20px;border-radius:var(--radius-lg);border:1px solid var(--line);background:linear-gradient(180deg,hsl(var(--month-hue) 70% 96%),var(--paper) 60%)}
+.dash-label{display:block;font-size:.66rem;font-weight:900;letter-spacing:.06em;color:var(--muted);margin-bottom:8px;text-transform:uppercase}
+.dash-temp-track{position:relative;height:10px;border-radius:999px;background:linear-gradient(90deg,#4a90d9,#f2b134,#e8543f)}
+.dash-temp-fill{position:absolute;top:-3px;height:16px;border-radius:999px;border:2px solid var(--ink);background:hsla(var(--month-hue),80%,55%,.18);transform:scaleX(0);transform-origin:left;transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.month-dash.in-view .dash-temp-fill{transform:scaleX(1)}
+.dash-temp-avg{position:absolute;top:-34px;transform:translateX(-50%);font-size:.78rem;font-weight:900;white-space:nowrap;opacity:0;transition:opacity .6s ease .4s}
+.month-dash.in-view .dash-temp-avg{opacity:1}
+.dash-temp-labels{display:flex;justify-content:space-between;margin-top:10px;font-size:.72rem;color:var(--muted)}
+.dash-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.dash-card{background:var(--paper);border-radius:var(--radius);padding:14px;border:1px solid var(--line)}
+.dash-card strong{display:block;margin-top:8px;font-size:.92rem}
+.dash-bar{height:8px;border-radius:999px;background:var(--sand);overflow:hidden}
+.dash-bar-fill{height:100%;border-radius:999px;background:hsl(var(--month-hue) 70% 50%);transform:scaleX(0);transform-origin:left;transition:transform 1s cubic-bezier(.16,1,.3,1) .1s}
+.month-dash.in-view .dash-bar-fill{transform:scaleX(1)}
+.dash-typhoon{display:flex;gap:6px}
+.dash-typhoon-dot{width:14px;height:14px;border-radius:50%;background:var(--sand);border:1px solid var(--line);opacity:0;transform:scale(.4);transition:opacity .4s ease,transform .4s ease,background-color .4s ease}
+.dash-typhoon-dot.is-on{background:hsl(var(--month-hue) 75% 55%);border-color:transparent}
+.month-dash.in-view .dash-typhoon-dot{opacity:1;transform:scale(1)}
+.dash-day-track{position:relative;height:8px;border-radius:999px;background:linear-gradient(90deg,#1c2b4a,#f2b134 45%,#f2b134 55%,#1c2b4a)}
+.dash-day-fill{position:absolute;top:-3px;height:14px;border-radius:999px;border:2px solid var(--ink);background:rgba(255,255,255,.55);transform:scaleX(0);transform-origin:left;transition:transform 1s cubic-bezier(.16,1,.3,1) .2s}
+.month-dash.in-view .dash-day-fill{transform:scaleX(1)}
+@media(max-width:640px){.dash-row{grid-template-columns:1fr}}
+@media (prefers-reduced-motion: reduce){.dash-temp-fill,.dash-bar-fill,.dash-typhoon-dot,.dash-day-fill,.dash-temp-avg{transition:none}}
+
+/* 月份頁上一月／下一月導覽 */
+.month-nav{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:32px 0 8px}
+.month-nav-link{display:flex;flex-direction:column;gap:4px;padding:14px 16px;border:1px solid var(--line);border-radius:var(--radius);text-decoration:none;color:var(--ink);transition:.15s}
+.month-nav-link:hover{border-color:var(--blue);box-shadow:var(--shadow-sm)}
+.month-nav-link.next{text-align:right;align-items:flex-end}
+.month-nav-link span{font-size:.68rem;font-weight:900;color:var(--muted);letter-spacing:.04em}
+.month-nav-link strong{font-size:.98rem}
+@media(max-width:520px){.month-nav{grid-template-columns:1fr}.month-nav-link.next{text-align:left;align-items:flex-start}}
 .article-body{font-size:1rem;line-height:1.85}
 .article-body h2{font-size:1.6rem;letter-spacing:-.035em;margin:42px 0 12px}
 .article-body h3{font-size:1.22rem;letter-spacing:-.02em;margin:30px 0 10px}
