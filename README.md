@@ -124,6 +124,10 @@ ig:                         # 選填；有 slides 才會產生 IG 位與 ig-queu
 **內容全自動發佈**，所以 build 時有機器關卡：缺 title / summary / 內文、slug 格式錯、
 日期格式錯的檔案會被跳過而不是產出半成品，跳過原因記在 `docs/build-report.json`。
 
+## 2026-08-02 進度
+
+- 首頁排版收尾：Month by Month 移回 This Week's Weather 正下方；Know Okinawa（沖繩一年的祭典與年中行事）移到與 Travel Guide 並排（右側）。7/27 遺留的本機未提交修改已核對、重建 `docs/` 並提交。
+
 ## 品牌資料
 
 品牌定位、色盤、語氣與內容架構見 `../SonaSNS-Platform/brands/OKIPLAYGROUND/BRAND_DNA.md`。

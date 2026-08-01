@@ -499,7 +499,7 @@ def build_home(posts, events, weather, news, months):
     if okinawa_posts:
         feature = okinawa_posts[0]
         banner = (
-            '  <section class="know-banner">\n'
+            '  <section class="know-banner combo-col">\n'
             '    <div class="shell know-card">\n'
             '      <div><div class="eyebrow">Know Okinawa</div>'
             '<h2>{title}</h2><p>{summary}</p>'
@@ -514,7 +514,7 @@ def build_home(posts, events, weather, news, months):
         )
     else:
         banner = (
-            '  <section class="know-banner">\n'
+            '  <section class="know-banner combo-col">\n'
             '    <div class="shell know-card">\n'
             '      <div><div class="eyebrow">Know Okinawa</div>'
             '<h2>認識沖繩</h2><p>琉球王國、傳統祭典與信仰。內容整理中。</p>'
@@ -855,13 +855,12 @@ def ocean_timeline_html(spot):
         tomorrow = point.get("is_tomorrow")
         buttons.append(
             '<button type="button" class="cond-hour cond-{level}{tmr_class}" '
-            'data-hour="{hour}" data-point=\'{payload}\'{title}>{hour}{tmr_tag}</button>'.format(
+            'data-hour="{hour}" data-point=\'{payload}\'{title}>{hour}</button>'.format(
                 level=html.escape(str(point.get("verdict", "caution"))),
                 tmr_class=" cond-hour-tomorrow" if tomorrow else "",
                 hour=html.escape(hour),
                 payload=payload,
                 title=' title="明天 {}:00"'.format(html.escape(hour)) if tomorrow else "",
-                tmr_tag='<small>明</small>' if tomorrow else "",
             )
         )
 
@@ -1357,7 +1356,7 @@ def month_strip_html(months):
             blurb=html.escape(str(month.get("blurb", "")), quote=True),
         ))
     return (
-        '  <section class="month-strip combo-col" id="months" aria-label="按月份看沖繩">\n'
+        '  <section class="month-strip" id="months" aria-label="按月份看沖繩">\n'
         '    <div class="shell-narrow">\n'
         '      <div class="month-head">\n'
         '        <span class="eyebrow">Month by Month</span>\n'

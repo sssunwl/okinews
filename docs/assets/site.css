@@ -120,8 +120,9 @@ img,svg{display:block;max-width:100%}
 .weather-mini{padding:28px 0 8px}
 .weather-mini-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:12px;flex-wrap:wrap}
 .weather-mini-note{font-size:.68rem;color:var(--muted)}
-.weather-strip{display:grid;grid-template-columns:repeat(7,1fr);gap:7px}
-.wx-card{border:1px solid var(--line);background:var(--paper);border-radius:14px;padding:10px 6px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:3px;transition:.2s}
+.weather-strip{display:flex;flex-wrap:nowrap;gap:7px;overflow-x:auto;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.weather-strip::-webkit-scrollbar{display:none}
+.wx-card{flex:1 1 0;min-width:88px;scroll-snap-align:start;border:1px solid var(--line);background:var(--paper);border-radius:14px;padding:10px 6px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:3px;transition:.2s}
 .wx-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm)}
 .wx-card.today{border-color:var(--blue);background:var(--lagoon-soft)}
 .wx-date{font-size:.62rem;font-weight:900;color:var(--muted)}
@@ -136,8 +137,9 @@ img,svg{display:block;max-width:100%}
 .month-strip{padding:8px 0 28px}
 .month-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:12px;flex-wrap:wrap}
 .month-note{font-size:.68rem;color:var(--muted)}
-.month-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(52px,1fr));gap:6px;row-gap:8px}
-.month-tile{border:1px solid var(--line);background:var(--paper);border-radius:12px;padding:10px 4px;text-align:center;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;align-items:center;gap:2px;transition:.2s}
+.month-row{display:flex;flex-wrap:nowrap;gap:6px;overflow-x:auto;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.month-row::-webkit-scrollbar{display:none}
+.month-tile{flex:1 1 0;min-width:44px;scroll-snap-align:start;border:1px solid var(--line);background:var(--paper);border-radius:12px;padding:10px 4px;text-align:center;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;align-items:center;gap:2px;transition:.2s}
 .month-tile:hover,.month-tile:focus-visible{transform:translateY(-3px);box-shadow:var(--shadow-sm);border-color:var(--blue);background:var(--lagoon-soft)}
 .month-tile strong{font-size:.8rem;letter-spacing:-.01em}
 .month-tile span{font-size:.6rem;color:var(--muted)}
@@ -305,7 +307,6 @@ footer{background:var(--navy);color:#fff;padding:52px 0 100px}
   .pick-grid{grid-template-columns:repeat(2,1fr)}.calendar-layout{grid-template-columns:320px 1fr}
   .region-grid{grid-template-columns:repeat(3,1fr)}.region-card{min-height:240px}
   .community-card{grid-template-columns:1fr}.community-action{justify-content:flex-start}
-  .weather-strip{grid-template-columns:repeat(4,1fr)}
 }
 @media(max-width:720px){
   .shell{width:min(100% - 28px,var(--max))}.nav{height:68px}.brand-copy small{display:none}
@@ -315,7 +316,7 @@ footer{background:var(--navy);color:#fff;padding:52px 0 100px}
   .feature-card h2{margin-top:36px}.feature-action{left:25px;bottom:24px}.ticket{width:158px;right:-5px;bottom:7px}
   .snapshot-grid{grid-template-columns:repeat(2,1fr);gap:20px}.snapshot-item:nth-child(3){border-left:0;padding-left:0}
   .picks,.regions{padding:56px 0}.section-head,.note-top{align-items:start;flex-direction:column}.pick-grid{grid-template-columns:1fr 1fr}.pick-card{min-height:250px}
-  .weather-strip{display:flex;overflow:auto;padding:3px 3px 10px;scroll-snap-type:x mandatory}.wx-card{min-width:88px;scroll-snap-align:start}
+  .weather-strip{padding:3px 3px 10px}
   .explorer{padding:75px 0 90px;border-radius:38px 38px 0 0}.calendar-layout{grid-template-columns:1fr}.calendar-panel{position:relative;top:auto}
   .event-card{grid-template-columns:62px 1fr}.event-actions{grid-column:2;justify-content:flex-start}
   .region-grid{display:flex;overflow:auto;padding:3px 3px 18px;scroll-snap-type:x mandatory}.region-card{min-width:190px;scroll-snap-align:start}
@@ -390,13 +391,20 @@ footer{background:var(--navy);color:#fff;padding:52px 0 100px}
 /* 內容卡片 */
 .home-section{padding:64px 0}
 .home-section.alt{background:var(--paper)}
-/* 首頁組合列：兩個區塊並排（攻略+月曆、玩水+好物） */
-.combo-row{display:grid;grid-template-columns:1fr 1fr;align-items:start;column-gap:8px}
+/* 首頁組合列：兩個區塊並排（攻略+認識沖繩、玩水+好物） */
+.combo-row{width:min(var(--max),calc(100% - 40px));margin:0 auto;display:grid;grid-template-columns:1fr 1fr;align-items:start;column-gap:40px}
 .combo-row .combo-col{min-width:0}
+.combo-row .shell{width:100%;margin:0}
 .combo-row .home-section.alt{background:none}
+.combo-row .know-card{flex-direction:column;align-items:flex-start}
 @media(max-width:900px){
-  .combo-row{grid-template-columns:1fr}
+  .combo-row{grid-template-columns:1fr;row-gap:8px}
 }
+@media(max-width:720px){
+  .combo-row{width:min(100% - 28px,var(--max))}
+}
+/* 區塊底下說明文字（跟 section-more 交換位置後用） */
+.section-tail{margin:20px 0 0;color:var(--muted);max-width:520px;font-size:.9rem}
 /* 玩水・即時海況 */
 .ocean-conditions{padding:8px 0 24px}
 .cond-head-row{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;margin-bottom:20px}
@@ -635,7 +643,7 @@ footer{background:var(--navy);color:#fff;padding:52px 0 100px}
 .news-columns{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
 .news-col-title{font-size:.8rem;font-weight:900;letter-spacing:.04em;color:var(--blue);margin:0 0 14px}
 .news-col-empty{color:var(--muted);font-size:.82rem;background:var(--paper);border:1px dashed var(--line);border-radius:var(--radius);padding:16px;margin:0}
-.news-list{display:grid;gap:16px}
+.news-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;align-items:start}
 .news-item{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);padding:22px 24px}
 .news-meta{display:flex;gap:10px;align-items:center;font-size:.72rem;color:var(--muted);margin-bottom:8px}
 .news-cat{background:var(--lagoon-soft);color:var(--blue);border-radius:999px;padding:2px 10px;font-weight:900}
