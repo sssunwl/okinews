@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-02 17:28",
+  "updated": "2026-08-02 19:43",
   "general_caution": "沖繩多數浪點是礁盤 reef break，干潮時礁石會外露，浪大時更容易割傷擦傷；離岸流、突然變大的湧浪、閃電雷雨一律先上岸。新手不建議在浪超過腰高或有經驗者都收板的時段還硬下水。",
   "spots": [
     {
@@ -78,11 +78,11 @@
         },
         {
           "hour": "18",
-          "is_tomorrow": false,
-          "wind_speed_kn": 4.5,
-          "wind_dir_label": "北北東",
-          "wave_height_m": 0.18,
-          "tide_m": 1.02,
+          "is_tomorrow": true,
+          "wind_speed_kn": 10.2,
+          "wind_dir_label": "北",
+          "wave_height_m": 0.22,
+          "tide_m": 0.9,
           "verdict": "avoid",
           "verdict_label": "不建議下水",
           "verdict_reason": "湧浪只有 0.2 公尺，太平沒什麼浪"
@@ -121,21 +121,21 @@
           "verdict_reason": "湧浪只有 0.2 公尺，太平沒什麼浪"
         }
       ],
-      "closest_timeline_hour": "16",
-      "wind_speed_kn": 4.9,
-      "wind_gust_kn": 12.8,
-      "wind_deg": 34,
-      "wind_dir_label": "東北",
+      "closest_timeline_hour": "18",
+      "wind_speed_kn": 4.0,
+      "wind_gust_kn": 10.9,
+      "wind_deg": 31,
+      "wind_dir_label": "北北東",
       "wave_height_m": 0.18,
       "swell_height_m": 0.18,
-      "swell_period_s": 5.0,
+      "swell_period_s": 5.7,
       "sea_wave_height_m": 0.26,
-      "tide_m": 0.63,
+      "tide_m": 1.42,
       "tide_trend": "上漲",
       "tide_turn": {
-        "kind": "干潮",
-        "time": "15:00",
-        "hours_away": -2
+        "kind": "滿潮",
+        "time": "21:00",
+        "hours_away": 2
       },
       "verdict": "avoid",
       "verdict_label": "不建議下水",
@@ -217,14 +217,14 @@
         },
         {
           "hour": "18",
-          "is_tomorrow": false,
-          "wind_speed_kn": 3.1,
+          "is_tomorrow": true,
+          "wind_speed_kn": 10.1,
           "wind_dir_label": "北",
-          "wave_height_m": 0.1,
-          "tide_m": 0.98,
+          "wave_height_m": 0.18,
+          "tide_m": 0.86,
           "verdict": "avoid",
           "verdict_label": "不建議下水",
-          "verdict_reason": "湧浪只有 0.1 公尺，太平沒什麼浪"
+          "verdict_reason": "湧浪只有 0.2 公尺，太平沒什麼浪"
         },
         {
           "hour": "20",
@@ -260,21 +260,21 @@
           "verdict_reason": "湧浪只有 0.1 公尺，太平沒什麼浪"
         }
       ],
-      "closest_timeline_hour": "16",
-      "wind_speed_kn": 3.1,
-      "wind_gust_kn": 10.1,
-      "wind_deg": 356,
+      "closest_timeline_hour": "18",
+      "wind_speed_kn": 3.2,
+      "wind_gust_kn": 8.0,
+      "wind_deg": 5,
       "wind_dir_label": "北",
       "wave_height_m": 0.1,
       "swell_height_m": 0.1,
-      "swell_period_s": 5.8,
+      "swell_period_s": 6.0,
       "sea_wave_height_m": 0.18,
-      "tide_m": 0.59,
+      "tide_m": 1.37,
       "tide_trend": "上漲",
       "tide_turn": {
-        "kind": "干潮",
-        "time": "15:00",
-        "hours_away": -2
+        "kind": "滿潮",
+        "time": "21:00",
+        "hours_away": 2
       },
       "verdict": "avoid",
       "verdict_label": "不建議下水",
@@ -356,11 +356,11 @@
         },
         {
           "hour": "18",
-          "is_tomorrow": false,
-          "wind_speed_kn": 3.4,
-          "wind_dir_label": "北北東",
-          "wave_height_m": 0.12,
-          "tide_m": 0.98,
+          "is_tomorrow": true,
+          "wind_speed_kn": 10.2,
+          "wind_dir_label": "北",
+          "wave_height_m": 0.1,
+          "tide_m": 0.86,
           "verdict": "avoid",
           "verdict_label": "不建議下水",
           "verdict_reason": "湧浪只有 0.1 公尺，太平沒什麼浪"
@@ -399,21 +399,21 @@
           "verdict_reason": "湧浪只有 0.1 公尺，太平沒什麼浪"
         }
       ],
-      "closest_timeline_hour": "16",
-      "wind_speed_kn": 3.6,
-      "wind_gust_kn": 9.5,
-      "wind_deg": 19,
+      "closest_timeline_hour": "18",
+      "wind_speed_kn": 3.2,
+      "wind_gust_kn": 8.2,
+      "wind_deg": 20,
       "wind_dir_label": "北北東",
       "wave_height_m": 0.12,
       "swell_height_m": 0.12,
       "swell_period_s": 4.5,
-      "sea_wave_height_m": 0.22,
-      "tide_m": 0.6,
+      "sea_wave_height_m": 0.24,
+      "tide_m": 1.38,
       "tide_trend": "上漲",
       "tide_turn": {
-        "kind": "干潮",
-        "time": "15:00",
-        "hours_away": -2
+        "kind": "滿潮",
+        "time": "21:00",
+        "hours_away": 2
       },
       "verdict": "avoid",
       "verdict_label": "不建議下水",
