@@ -1,5 +1,239 @@
 [
   {
+    "date": "2026-08-04",
+    "source": "NHK",
+    "title": "颱風13號接近小笠原諸島",
+    "summary": "大型且非常強的颱風13號正接近小笠原諸島，氣象廳呼籲嚴防高波與暴風，並避免不必要的外出。6日起到週末沖繩、奄美恐有猛烈風勢，需留意最新資訊。",
+    "category": "天氣警報",
+    "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195361000.html",
+    "alert": true
+  },
+  {
+    "date": "2026-08-04",
+    "source": "氣象庁警報",
+    "title": "沖繩本島地區氣象警報・注意報",
+    "summary": "沖繩本島地區在29日中午前，需留意突如其來的強降雨與雷擊。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=471000&lang=ja",
+    "alert": true
+  },
+  {
+    "date": "2026-08-04",
+    "source": "氣象庁警報",
+    "title": "大東島地區發布氣象警報注意",
+    "summary": "大東島地區請注意突如其來的強降雨與雷擊。原文提醒民眾提高警覺。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=472000&lang=ja",
+    "alert": true
+  },
+  {
+    "date": "2026-08-04",
+    "source": "沖縄タイムス",
+    "title": "那霸市醫師會訂定醫療職場防騷擾方針",
+    "summary": "那霸市醫師會為保護醫療人員，訂定防範患者等顧客騷擾的基本方針，並於3日說明。根據針對醫療與照護從業者的問卷，近半數受訪者曾受害，必要時也會與律師、警方合作。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1895365",
+    "alert": false
+  },
+  {
+    "date": "2026-08-04",
+    "source": "沖縄タイムス",
+    "title": "沖繩25地點達真夏日　西表島、石垣市飆34.8度",
+    "summary": "沖繩地區受高氣壓影響，3日全縣25個觀測點氣溫都超過30度，出現真夏日。西表島與石垣市登野城測得34.8度，創下今年最高氣溫。",
+    "category": "天氣警報",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1895380",
+    "alert": false
+  },
+  {
+    "date": "2026-08-04",
+    "source": "沖縄タイムス",
+    "title": "沖繩自動車道ETC使用率79％",
+    "summary": "西日本高速道路在那霸市的會議上報告，2025年度沖繩自動車道ETC使用率為79％，較前年度增加2個百分點。內容提到將強化對租車族與年輕族群的使用推廣。",
+    "category": "交通",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1895304",
+    "alert": false
+  },
+  {
+    "date": "2026-08-04",
+    "source": "沖縄タイムス",
+    "title": "沖繩基礎設施老化　水管與道路標誌待整修",
+    "summary": "沖繩水道管與道路標識等基礎設施老化問題成為課題。2025年11月曾因超過耐用年數的水道管破裂，導致17個市町村停水。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1895302",
+    "alert": false
+  },
+  {
+    "date": "2026-08-04",
+    "source": "沖縄タイムス",
+    "title": "與知事選同日的統一地方選　各地準備進行中",
+    "summary": "沖繩與石垣兩市議選的候選人說明會已結束，整理出目前的準備情況。這次統一地方選將與知事選同日於9月13日投開票。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1895301",
+    "alert": false
+  },
+  {
+    "date": "2026-08-04",
+    "source": "沖縄タイムス",
+    "title": "沖繩縣核准道路地下輸送帶設置",
+    "summary": "名護市邊野古新基地建設相關的民間業者，申請在本部港鹽川地區港口出入口前的道路地下設置皮帶輸送機。縣府已核准該申請。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1895347",
+    "alert": false
+  },
+  {
+    "date": "2026-08-04",
+    "source": "沖縄タイムス",
+    "title": "斷水持續　熊本宇城市災民受熱浪與缺水夾擊",
+    "summary": "熊本地震後，宇城市等地仍持續斷水，災民面臨嚴重缺水問題。當地又遭災害級熱浪影響，居民表示最困擾的是如廁用水。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1895376",
+    "alert": false
+  },
+  {
+    "date": "2026-08-04",
+    "source": "沖縄タイムス",
+    "title": "道路龜裂、老舖菓子店倒塌　熊本地震一週現場紀實",
+    "summary": "熊本縣八代市靠近JR八代站一帶可見地面龜裂與店舖受損，老舖製菓店幾乎被壓扁，只剩屋頂和招牌。對面店家也貼上養生膠帶並標示「倒壞危險」，顯示地震後損害明顯。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1895346",
+    "alert": false
+  },
+  {
+    "date": "2026-08-04",
+    "source": "沖縄タイムス",
+    "title": "社論：熊本地震一週　守住生命",
+    "summary": "熊本縣發生最大震度7地震後，至今天已滿一週。當地在災害級酷暑中受災，3日熊本市與菊池市最高氣溫都創下觀測史上首見的40度以上。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1895289",
+    "alert": false
+  },
+  {
+    "date": "2026-08-04",
+    "source": "沖縄タイムス",
+    "title": "沖繩全科目低於全國平均　仍屬全國水準內",
+    "summary": "縣教育委員會公布2026年度全國學力測試結果，小六國語、算數與國三國語、數學、英語都低於全國平均。各科目雖未達平均，但都仍在「全國水準範圍內」。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1895400",
+    "alert": false
+  },
+  {
+    "date": "2026-08-04",
+    "source": "沖縄タイムス",
+    "title": "全國高校綜體：小禄弓道團體闖進8強",
+    "summary": "全國高校總合體育大會3日舉行多項賽事，男子弓道團體賽中，小禄高中連勝兩場，晉級準々決賽。女子首里高中則在首輪落敗。另方面，女子網球團體賽中，沖繩尚學在準々決賽不敵野田學園。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1895364",
+    "alert": false
+  },
+  {
+    "date": "2026-08-04",
+    "source": "沖縄タイムス",
+    "title": "沖繩市和平紀念日辦音樂劇",
+    "summary": "沖繩市民平和紀念活動將於9月7日傍晚在沖繩市民小劇場舉行。內容包括描寫戰前、戰中、戰後生活的創作音樂劇，以及市和平大使的活動報告，入場免費。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1895265",
+    "alert": false
+  },
+  {
+    "date": "2026-08-04",
+    "source": "沖縄タイムス",
+    "title": "宇堅海灘新設排球場　平良返鄉創隊十年",
+    "summary": "來自うるま市的平良長義さん，在東日本大震災受災地福島市透過排球學習互相扶持的精神，之後回到沖繩成立新隊伍「琉球VECT」。報導提到，他回鄉組隊至今已滿10年，並在宇堅海灘新設球場。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1895259",
+    "alert": false
+  },
+  {
+    "date": "2026-08-04",
+    "source": "沖縄タイムス",
+    "title": "語言聽覺士需求增加　沖繩有資格者不足",
+    "summary": "因腦梗塞後罹患失語症並復職的播音員狩俣倫太郎的經驗，引發外界對國家資格「語言聽覺士」的關注。語言聽覺士是改善語言、聽覺障礙與發展遲緩等溝通問題的專業職種。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1895252",
+    "alert": false
+  },
+  {
+    "date": "2026-08-04",
+    "source": "沖縄タイムス",
+    "title": "讀谷村住民夢想基金助成案突破300件",
+    "summary": "讀谷村設有「諾貝爾和平獎を夢みる村民基金」的獨特助成制度，補助居民運用創意活化地方的事業費用。該制度自1990年度開始，經36年累計核發件數已突破300件。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1895232",
+    "alert": false
+  },
+  {
+    "date": "2026-08-04",
+    "source": "NHK",
+    "title": "熊本地震1週 38人死亡 災害相關死成課題",
+    "summary": "熊本縣7月發生最大震度7地震，4日將滿1週。至今包含疑似災害相關死者在內共有38人死亡。災區持續高溫，部分災民被迫車中住宿，如何防止災害相關死成為緊急課題。",
+    "category": "全國",
+    "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195471000.html",
+    "alert": false
+  },
+  {
+    "date": "2026-08-04",
+    "source": "NHK",
+    "title": "日美表示不排除追加協調干預匯市",
+    "summary": "日美貨幣當局上週為阻止歷史性日圓貶值，曾協調進行買日圓干預。3日又表明不排除追加協調介入，日本方面也將活用美國當局的機制籌措介入所需美元。",
+    "category": "全國",
+    "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195341000.html",
+    "alert": false
+  },
+  {
+    "date": "2026-08-04",
+    "source": "NHK",
+    "title": "伊朗否認協議　川普稱是最後機會",
+    "summary": "伊朗方面否認與美國進行直接協議。美國總統川普則於3日表示協議正在進行，並稱這是伊朗簽署對其有利協議的最後機會。",
+    "category": "全國",
+    "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195481000.html",
+    "alert": false
+  },
+  {
+    "date": "2026-08-04",
+    "source": "NHK",
+    "title": "西日本7月中下旬氣溫創1946年來新高",
+    "summary": "氣象廳表示，7月中旬到下旬全國平均氣溫中，西日本創下自1946年統計以來最高。研究者組成的團體分析，這種高溫若沒有全球暖化，幾乎不可能發生。",
+    "category": "天氣警報",
+    "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195401000.html",
+    "alert": false
+  },
+  {
+    "date": "2026-08-04",
+    "source": "NHK",
+    "title": "政府擬於5日內閣會議決定食品減稅方針",
+    "summary": "政府提出的基本方針案，擬將食品消費稅率自明年4月起兩年內降至1%。自民黨聯合會議已將應對交由小野寺稅調會長處理，政府希望最快5日內在內閣會議決定。",
+    "category": "全國",
+    "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195321000.html",
+    "alert": false
+  },
+  {
+    "date": "2026-08-04",
+    "source": "NHK",
+    "title": "熊本地震：政府續推主動支援並確保預算",
+    "summary": "熊本地震發生將滿1週，政府表示在酷暑下避難生活恐將長期化，將持續以主動供應方式送交飲用水與簡易冷氣等物資到災區。政府也已決定動用本年度預備費，以確保所需預算。",
+    "category": "全國",
+    "url": "http://www3.nhk.or.jp/news/html/20260804/k10015195331000.html",
+    "alert": false
+  },
+  {
+    "date": "2026-08-04",
+    "source": "氣象庁警報",
+    "title": "宮古島地區氣象警報與注意報解除",
+    "summary": "宮古島地區的注意報已解除。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=473000&lang=ja",
+    "alert": false
+  },
+  {
+    "date": "2026-08-04",
+    "source": "氣象庁警報",
+    "title": "八重山地區氣象警報・注意報",
+    "summary": "八重山地區的注意報已解除。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=474000&lang=ja",
+    "alert": false
+  },
+  {
     "date": "2026-08-03",
     "source": "沖縄タイムス",
     "title": "強颱13號恐於6日晚影響沖繩本島",
@@ -24,24 +258,6 @@
     "summary": "大型且非常強烈的颱風13號正朝西移動，小笠原諸島到5日將需嚴防高波與強風。預計6日左右以強勢接近沖繩與奄美，可能出現惡劣天氣，請留意最新資訊。",
     "category": "天氣警報",
     "url": "http://www3.nhk.or.jp/news/html/20260803/k10015194591000.html",
-    "alert": true
-  },
-  {
-    "date": "2026-08-03",
-    "source": "氣象庁警報",
-    "title": "沖繩本島地區氣象警報・注意報",
-    "summary": "沖繩本島地區到29日中午前，請留意突發強降雨與雷擊。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=471000&lang=ja",
-    "alert": true
-  },
-  {
-    "date": "2026-08-03",
-    "source": "氣象庁警報",
-    "title": "大東島地區氣象警報與注意報",
-    "summary": "大東島地區請注意突如其來的強降雨與雷擊。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=472000&lang=ja",
     "alert": true
   },
   {
@@ -213,24 +429,6 @@
     "summary": "女子高爾夫海外大滿貫最終戰全英女子公開賽進行最後一輪。23歲的桑木志帆在延長賽擊敗德國選手，拿下冠軍。這是她首次奪得海外大滿貫。",
     "category": "全國",
     "url": "http://www3.nhk.or.jp/news/html/20260803/k10015194471000.html",
-    "alert": false
-  },
-  {
-    "date": "2026-08-03",
-    "source": "氣象庁警報",
-    "title": "宮古島地區氣象警報・注意報解除",
-    "summary": "宮古島地區的注意報已解除。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=473000&lang=ja",
-    "alert": false
-  },
-  {
-    "date": "2026-08-03",
-    "source": "氣象庁警報",
-    "title": "八重山地區氣象警報・注意報",
-    "summary": "八重山地區的注意報已解除。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=474000&lang=ja",
     "alert": false
   },
   {
@@ -825,204 +1023,6 @@
     "summary": "聯合國安全保障理事會為選出下任秘書長，進行了候選人篩選的首輪非公開投票。據相關人士表示，UNCTAD秘書長格林斯潘獲得最多支持。",
     "category": "全國",
     "url": "http://www3.nhk.or.jp/news/html/20260731/k10015191561000.html",
-    "alert": false
-  },
-  {
-    "date": "2026-07-30",
-    "source": "沖縄タイムス",
-    "title": "6月沖繩觀光客80.57萬人，年減4%",
-    "summary": "沖繩縣公布，6月入域觀光客數為80萬5700人，較去年同月減少4.0%，連續第2個月下滑。縣府表示，因兩次颱風接近導致航空班機停飛，影響了觀光客數。",
-    "category": "觀光",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1891527",
-    "alert": false
-  },
-  {
-    "date": "2026-07-30",
-    "source": "沖縄タイムス",
-    "title": "Orion啤酒出資英國酒廠 強化當地生產",
-    "summary": "Orion啤酒29日宣布，已出資英國啤酒釀造公司Sunrise Beverages 100萬英鎊。未來將正式強化招牌商品「The Draft」的當地生產，並擴大歐洲市場通路。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1891559",
-    "alert": false
-  },
-  {
-    "date": "2026-07-30",
-    "source": "沖縄タイムス",
-    "title": "座間味村夏休縮短、冬休延長試辦",
-    "summary": "座間味村今年在村內全小中學試辦調整學校假期，將夏休縮短約1週、冬休延長。由於村內約9成居民從事包含觀光在內的服務業，夏季為繁忙期，盼讓家庭有更多相處時間。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1891631",
-    "alert": false
-  },
-  {
-    "date": "2026-07-30",
-    "source": "沖縄タイムス",
-    "title": "熊本地震災情嚴重令人心痛",
-    "summary": "報導提到，28日襲擊熊本的震度7地震造成建物倒塌與火災，並出現死傷。文章也提到今年是2016年熊本地震10年，遺族仍難以平復悲傷。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1891578",
-    "alert": false
-  },
-  {
-    "date": "2026-07-30",
-    "source": "沖縄タイムス",
-    "title": "自衛隊參加全島EISA實為公務",
-    "summary": "陸上自衛隊第15旅團內部文書顯示，去年參加沖繩全島EISA祭的目的，是為了提升部隊知名度與親近感，屬實質公務。旅團先前對外曾說明為隊員福利厚生，與實際內容不符。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1891629",
-    "alert": false
-  },
-  {
-    "date": "2026-07-30",
-    "source": "沖縄タイムス",
-    "title": "熊本地震：沖繩縣人會全50戶確認平安",
-    "summary": "熊本地震災情持續明朗化。熊本沖繩縣人會表示，加入的全50戶都已聯絡上並確認平安。不過當地電力與自來水中斷，部分民眾在炎熱天氣下仍感到不安。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1891609",
-    "alert": false
-  },
-  {
-    "date": "2026-07-30",
-    "source": "沖縄タイムス",
-    "title": "沖繩知事選三候選人座談會登場",
-    "summary": "沖繩時報29日在本社舉辦知事選座談會，邀請預定參選的現任知事玉城デニー、古謝玄太與下地幹郎出席。座談會圍繞縣政與基地問題等議題進行討論。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1891576",
-    "alert": false
-  },
-  {
-    "date": "2026-07-30",
-    "source": "沖縄タイムス",
-    "title": "【社論】熊本再遇震度7地震　急救援防二次災害",
-    "summary": "熊本縣再次遭遇最大震度7地震，當地在距離熊本地震10年後正推進復興之際再受重創。社論指出，目前最重要的是加緊救助人命，並防止二次災害。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1891533",
-    "alert": false
-  },
-  {
-    "date": "2026-07-30",
-    "source": "沖縄タイムス",
-    "title": "沖尚夏連霸路：打線成長　強化奏效",
-    "summary": "沖繩尚學在沖繩大會中打出團隊打率3成5、5戰拿下28分的成績，較選拔大會後已有明顯成長。球隊也透過16次犧牲觸擊與9次盜壘強化串聯，開路先鋒仲間夢祈以4成62居隊內最高。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1891595",
-    "alert": false
-  },
-  {
-    "date": "2026-07-30",
-    "source": "沖縄タイムス",
-    "title": "熊本強震後災情逐漸明朗",
-    "summary": "熊本縣在最大震度7地震發生一夜後，29日各地嚴重受災情況逐漸明朗。地震也造成南九州自動車道受損。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1891558",
-    "alert": false
-  },
-  {
-    "date": "2026-07-30",
-    "source": "沖縄タイムス",
-    "title": "Orion啤酒出資英國酒廠 進軍當地生產",
-    "summary": "Orion啤酒宣布出資英國啤酒釀造公司，並加強看板商品「The Draft」的當地生產。過去也曾在英國生產，但主要仍是從沖繩運送県內製造啤酒。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1891524",
-    "alert": false
-  },
-  {
-    "date": "2026-07-30",
-    "source": "沖縄タイムス",
-    "title": "大阪天神祭船渡御　沖繩歌曲獲喝采",
-    "summary": "大阪天滿宮天神祭25日在大阪市大川舉行船渡御，超過100艘船參與。活動中可欣賞篝火、燈籠與奉納煙火交織的景象。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1891513",
-    "alert": false
-  },
-  {
-    "date": "2026-07-30",
-    "source": "沖縄タイムス",
-    "title": "北谷中學奪下縣中學美術賽三連霸",
-    "summary": "第13屆縣中學美術比賽24日在豐見城中學舉行，共30校參賽。團體賽中，北谷中學在平面與立體作品表現出色，拿下三連霸。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1891489",
-    "alert": false
-  },
-  {
-    "date": "2026-07-30",
-    "source": "沖縄タイムス",
-    "title": "宮古島舉辦狩俣昌也功績讚揚會",
-    "summary": "在沖繩宮古島，為長崎維爾卡後衛、出身平良狩俣的狩俣昌也舉行功績讚揚會。活動吸引同學與居民約150人出席，他預計在2025至26球季引退。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1891482",
-    "alert": false
-  },
-  {
-    "date": "2026-07-30",
-    "source": "沖縄タイムス",
-    "title": "宮古島農地違法使用10年　原狀回復未定",
-    "summary": "宮古島市平良松原的農地遭現職市議違法使用已持續10年。縣府依農振法要求原狀復舊，但期限過後兩個月現場仍放置重機與倉庫，回復前景不明。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1891455",
-    "alert": false
-  },
-  {
-    "date": "2026-07-30",
-    "source": "NHK",
-    "title": "熊本縣震度7後餘震持續 續防中暑",
-    "summary": "熊本縣28日觀測到最大震度7的搖晃後，29日夜晚仍出現震度5弱，地震活動持續活躍。30日預估仍有酷暑，進行復舊作業時請做好防中暑措施。",
-    "category": "全國",
-    "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190291000.html",
-    "alert": false
-  },
-  {
-    "date": "2026-07-30",
-    "source": "NHK",
-    "title": "今日持續危險酷暑 熊本恐達猛暑日",
-    "summary": "30日東日本與西日本多地氣溫將升高，部分地區可能超過38度，熊本縣地震受災地也預估出現猛暑日，需徹底做好防中暑措施。另一方面，東北與新潟縣受低氣壓等影響有局部大雨，部分地區已發布「警戒等級4」危險警報，須嚴防土砂災害與低窪地淹水。",
-    "category": "天氣警報",
-    "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190281000.html",
-    "alert": false
-  },
-  {
-    "date": "2026-07-30",
-    "source": "NHK",
-    "title": "熊本氷川町多棟倒塌 5人心肺停止",
-    "summary": "熊本縣表示，29日晚間7時時點，這起地震已造成12人死亡、6人心肺停止、64人受傷，另有至少4人下落不明。震度7的氷川町也傳出多棟建築倒塌，詳細受災情況仍在調查中。",
-    "category": "全國",
-    "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190301000.html",
-    "alert": false
-  },
-  {
-    "date": "2026-07-30",
-    "source": "NHK",
-    "title": "熊本地震受災證明申請陸續開放",
-    "summary": "熊本縣內因28日地震造成住宅重大受損的自治體，已開始或將開始受理「罹災證明書」申請。熊本市自30日起、宇城市自31日起開放受理。",
-    "category": "全國",
-    "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190311000.html",
-    "alert": false
-  },
-  {
-    "date": "2026-07-30",
-    "source": "NHK",
-    "title": "高市首相擬將食品消費稅降至1%",
-    "summary": "日本首相高市預計在30日宣布，將食料品消費稅率自明年4月起、為期2年降至1%。她也打算在自民黨臨時役員會上，要求黨內彙整意見。",
-    "category": "全國",
-    "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190331000.html",
-    "alert": false
-  },
-  {
-    "date": "2026-07-30",
-    "source": "NHK",
-    "title": "FRB政策利率連續5次維持不變",
-    "summary": "美國聯準會召開金融政策會議，29日宣布維持政策利率不變，已連續5次按兵不動。此次會議中有3名委員主張升息並投下反對票，後續政策方向受關注。",
-    "category": "全國",
-    "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190151000.html",
-    "alert": false
-  },
-  {
-    "date": "2026-07-30",
-    "source": "NHK",
-    "title": "川普稱將強烈攻擊伊朗",
-    "summary": "美國總統川普提到伊朗曾試圖攻擊駐中東美軍，表示美方將對伊朗發動強烈報復攻擊。美伊之間再度升高攻擊往來的憂慮也隨之加深。",
-    "category": "全國",
-    "url": "http://www3.nhk.or.jp/news/html/20260730/k10015190271000.html",
     "alert": false
   }
 ]
