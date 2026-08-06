@@ -1281,6 +1281,21 @@
     "official_url": "https://okimu.jp/exhibition/1777187325/"
   },
   {
+    "name": "＝今年も開催！BLOCK PARTY 2026！！＝",
+    "name_zh": "= 今年再次舉辦！ 2026 年街區派對！ ！ =",
+    "date_start": "2026-08-08",
+    "date_end": "2026-08-11",
+    "url": "https://www.okinawastory.jp/event/600022780",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "",
+    "location": "PARCOCITY 2F CENTER PLAZA ・ 沖縄県浦添市西洲３丁目１−１",
+    "price": "",
+    "official_url": "https://www.instagram.com/p/DbH7rkmts2n/"
+  },
+  {
     "name": "【8.8(土)-9(月)開催】 くくるDE肝試しー暗闇の夜会へご招待ー",
     "name_zh": "【8.8（週六）～9（週一）舉行】Kukuru DE勇氣考驗～暗夜派對邀約～",
     "date_start": "2026-08-08",
@@ -1416,21 +1431,6 @@
     "official_url": "https://www.event.nhk.or.jp/e-portal/detail.html?id=4297"
   },
   {
-    "name": "大宜味村夏まつり開催のお知らせ",
-    "name_zh": "大宜味村夏季祭典的通知",
-    "date_start": "2026-08-08",
-    "date_end": "2026-08-09",
-    "url": "https://www.okinawastory.jp/event/600022687",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": "",
-    "image": "",
-    "location": "大宜味村塩屋漁港広場 ・ 沖縄県国頭郡大宜味村塩屋９８７−３",
-    "price": "",
-    "official_url": "https://www.vill.ogimi.okinawa.jp/kanko_bunka_sports/event/971.html"
-  },
-  {
     "name": "旅する琉球漆器　 vol.2　スパイス香る インド・パキスタン",
     "name_zh": "琉球漆器之旅vol.2 香料香印度/巴基斯坦",
     "date_start": "2026-08-08",
@@ -1476,21 +1476,6 @@
     "official_url": "https://oki-park.jp/shurijo/events/detail/10984"
   },
   {
-    "name": "藍染体験",
-    "name_zh": "靛藍染色體驗",
-    "date_start": "2026-08-08",
-    "date_end": "2026-08-11",
-    "url": "https://www.okinawastory.jp/event/600022445",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": "我們將在暑假期間舉辦適合免費研究的琉球眼染色體驗！我們來幫手帕染色吧！",
-    "image": "https://oki-park.jp/userfiles/images/aizome%281%29.JPG",
-    "location": "熱帯・亜熱帯都市緑化植物園 休憩所 ・ 沖縄県国頭郡本部町山川",
-    "price": "有料",
-    "official_url": "https://oki-park.jp/kaiyohaku/events/detail/11025"
-  },
-  {
     "name": "今天是 ⛰️ 山の日",
     "name_zh": "⛰️ 山の日",
     "date_start": "2026-08-11",
@@ -1500,6 +1485,36 @@
     "category": "自然",
     "stars": 4,
     "description": "日本國定假日，山原の森林是沖繩的翠綠心臟，世界自然遺產等你步道探索"
+  },
+  {
+    "name": "第29回グループP展",
+    "name_zh": "第29屆P組展",
+    "date_start": "2026-08-11",
+    "date_end": "2026-08-16",
+    "url": "https://www.okinawastory.jp/event/600022747",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://naha-palette.jp/gallery/cms/wp-content/uploads/2026/08/8%E6%9C%8811%E6%97%A5%EF%BD%9E%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97P%E5%B1%95-1087x1536.jpg",
+    "location": "那覇市民ギャラリー第1展示室 ・ 沖縄県那覇市久茂地１丁目１−１",
+    "price": "免費",
+    "official_url": "https://naha-palette.jp/gallery/event/4760"
+  },
+  {
+    "name": "高校生初個展「未感成展」",
+    "name_zh": "高中生首次個展“Unsensitized Exhibition”",
+    "date_start": "2026-08-11",
+    "date_end": "2026-08-16",
+    "url": "https://www.okinawastory.jp/event/600022746",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://naha-palette.jp/gallery/cms/wp-content/uploads/2026/06/8月11日高校生初個展-pdf.jpg",
+    "location": "那覇市民ギャラリー　第3展示室 ・ 沖縄県那覇市久茂地１丁目１−１",
+    "price": "免費",
+    "official_url": "https://naha-palette.jp/gallery/event/4764"
   },
   {
     "name": "サマーホリデースペシャルランチ",
@@ -1558,6 +1573,21 @@
     "official_url": "https://www.ikutouen.com/2026/07/24/%e3%80%8c%e5%a5%87%e3%80%85%e6%80%aa%e3%80%85%e5%b1%95vol-4%e3%80%8d%e9%96%8b%e5%82%ac%e3%80%802026/"
   },
   {
+    "name": "金城唯喜と若手漆芸作家　沈金展",
+    "name_zh": "",
+    "date_start": "2026-08-14",
+    "date_end": "2026-08-20",
+    "url": "https://www.okinawastory.jp/event/600022781",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://www.okigei.ac.jp/wp-content/uploads/2026/07/2026-zenki10-1072x1536.jpg",
+    "location": "沖縄県立芸術大学附属図書・芸術資料館2階 第1展示室（首里当蔵キャンパス） ・ 沖縄県那覇市首里当蔵町１丁目4",
+    "price": "免費",
+    "official_url": "https://www.okigei.ac.jp/experience/exhibit/%e9%87%91%e5%9f%8e%e5%94%af%e5%96%9c%e3%81%a8%e8%8b%a5%e6%89%8b%e6%bc%86%e8%8a%b8%e4%bd%9c%e5%ae%b6%e3%80%80%e6%b2%88%e9%87%91%e5%b1%95.html"
+  },
+  {
     "name": "與那原大拔河祭",
     "name_zh": "與那原大拔河祭",
     "date_start": "2026-08-15",
@@ -1573,6 +1603,51 @@
     "official_url": "https://www-yonabaru-okinawa.translate.goog/ozunahiki/?_x_tr_sl=ja&_x_tr_tl=zh-TW&_x_tr_hl=ja&_x_tr_pto=wapp"
   },
   {
+    "name": "おきなわ肉フェスティバル",
+    "name_zh": "沖繩肉食節",
+    "date_start": "2026-08-15",
+    "date_end": "2026-08-16",
+    "url": "https://www.okinawastory.jp/event/600022779",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "",
+    "location": "沖縄県総合運動公園陸上競技場前広場 ・ 沖縄県沖縄市比屋根５丁目３−１",
+    "price": "",
+    "official_url": "https://www.instagram.com/meet.festival/"
+  },
+  {
+    "name": "第３８回国頭村まつり開催について",
+    "name_zh": "",
+    "date_start": "2026-08-15",
+    "date_end": "2026-08-16",
+    "url": "https://www.okinawastory.jp/event/600022767",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "",
+    "location": "国頭中学校グラウンド ・ 沖縄県国頭郡国頭村辺土名１４６３",
+    "price": "",
+    "official_url": "https://www.vill.kunigami.okinawa.jp/event_joho/%e7%ac%ac%ef%bc%93%ef%bc%98%e5%9b%9e%e5%9b%bd%e9%a0%ad%e6%9d%91%e3%81%be%e3%81%a4%e3%82%8a%e9%96%8b%e5%82%ac%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/"
+  },
+  {
+    "name": "第27回いぜな尚円王まつりの日程：令和8年8月15日（土）・16日（日）決定!!",
+    "name_zh": "第27屆伊是名松園祭舉辦日期：2020年8月15日（週六）、16日（週日）決定！ ！",
+    "date_start": "2026-08-15",
+    "date_end": "2026-08-16",
+    "url": "https://www.okinawastory.jp/event/600022745",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://izena-fes.com/wp-content/uploads/2024/05/0a38268681c7100e979966c253f021f1.jpg",
+    "location": "伊是名村臨海ふれあい公園 ・ 沖縄県島尻郡伊是名村諸見５６５−４",
+    "price": "",
+    "official_url": "https://izena-fes.com/news/post290/"
+  },
+  {
     "name": "【開催日程決定！】第４４回（2026）与那原大綱曳まつりの日程が決まりました",
     "name_zh": "【活动日程决定了！ ] 第44屆（2026年）與那原拔河節的行程已經確定。",
     "date_start": "2026-08-15",
@@ -1586,6 +1661,36 @@
     "location": "与那原 ・ 沖縄県島尻郡与那原町",
     "price": "",
     "official_url": "https://www.town.yonabaru.okinawa.jp/soshiki/6/8321.html"
+  },
+  {
+    "name": "『科学が生んだおとぎの国―与那原テックミニ企画展―』の開催について",
+    "name_zh": "關於舉辦“科學創造的仙境——與那原科技迷你展”",
+    "date_start": "2026-08-19",
+    "date_end": "2026-08-31",
+    "url": "https://www.okinawastory.jp/event/600022786",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://www.town.yonabaru.okinawa.jp/uploaded/life/9819_28908_img.png",
+    "location": "与那原大綱曳資料館 ・ 沖縄県島尻郡与那原町上与那原１６−２",
+    "price": "",
+    "official_url": "https://www.town.yonabaru.okinawa.jp/soshiki/17/9819.html"
+  },
+  {
+    "name": "『第17回今帰仁まつり』について",
+    "name_zh": "關於“第17屆今歸仁祭”",
+    "date_start": "2026-08-22",
+    "date_end": "2026-08-23",
+    "url": "https://www.okinawastory.jp/event/600022787",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://www.nakijin.jp/material/images/group/1/dai17kaiposuta1.jpg",
+    "location": "今帰仁村総合運動公園 ・ 沖縄県国頭郡今帰仁村仲宗根８５１−１",
+    "price": "",
+    "official_url": "https://www.nakijin.jp/pagtop/topics/5399.html"
   },
   {
     "name": "沖縄県豊見城市でのプレシーズンマッチ開催のお知らせ　東京グレートベアーズ",
@@ -1659,6 +1764,21 @@
     "official_url": "https://www.zentoeisa.com/en/info.html"
   },
   {
+    "name": "第71回 沖縄全島エイサーまつり",
+    "name_zh": "第71屆沖繩全島Eisa節",
+    "date_start": "2026-09-04",
+    "date_end": "2026-09-06",
+    "url": "https://www.okinawastory.jp/event/600022792",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://www.zentoeisa.com/images/common/logo.jpg",
+    "location": "コザ運動公園陸上競技場・胡屋十字路周辺 ・ 沖縄県沖縄市諸見里２丁目１−１",
+    "price": "",
+    "official_url": "https://www.zentoeisa.com/schedule/"
+  },
+  {
     "name": "奧利恩啤酒節",
     "name_zh": "奧利恩啤酒節",
     "date_start": "2026-09-05",
@@ -1672,6 +1792,21 @@
     "location": "沖繩市Koza運動公園（附設操場）",
     "price": "免費",
     "official_url": ""
+  },
+  {
+    "name": "ふわぐさ ナゴパイナップルパーク",
+    "name_zh": "富和草名護鳳梨園",
+    "date_start": "2026-09-05",
+    "date_end": "2026-09-30",
+    "url": "https://www.okinawastory.jp/event/600022784",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://estream-store.com/lp/FUWAGUSA_pineapple/img/logo.webp",
+    "location": "ナゴパイナップルパーク ・ 沖縄県名護市為又１１９５",
+    "price": "",
+    "official_url": "https://estream-store.com/lp/FUWAGUSA_pineapple/"
   },
   {
     "name": "「オリオンビアフェスト2026」の開催について",
@@ -1743,6 +1878,36 @@
     "location": "大崎沖合または名蔵沖合 ・ 沖縄県石垣市名蔵",
     "price": "有料",
     "official_url": "https://www.instagram.com/p/DYXLDKCNVe6/"
+  },
+  {
+    "name": "読書の秋を満喫する「よんなー BOOK days」を開催します。",
+    "name_zh": "我們將舉辦“Yonna BOOK days”，享受秋季閱讀。",
+    "date_start": "2026-09-19",
+    "date_end": "2026-11-08",
+    "url": "https://www.okinawastory.jp/event/600022797",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://banta-cafe.com/wp-content/uploads/2025/07/MG_7469-1560x1040.jpg",
+    "location": "星野リゾート バンタカフェ ・ 沖縄県中頭郡読谷村儀間560",
+    "price": "",
+    "official_url": "https://banta-cafe.com/topics/3945/"
+  },
+  {
+    "name": "第21回うるま市エイサーまつり",
+    "name_zh": "第21屆宇流麻市Eisa節",
+    "date_start": "2026-09-19",
+    "date_end": "2026-09-20",
+    "url": "https://www.okinawastory.jp/event/600022796",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://www.city.uruma.lg.jp/images/10241/eisahp.png",
+    "location": "県道75号線（安慶名十字路～琉球銀行具志川支店付近交差点　※歩行者天国） ・ 沖縄県うるま市安慶名１丁目９−１９",
+    "price": "",
+    "official_url": "https://www.city.uruma.lg.jp/1007003000/event/p000037.html"
   },
   {
     "name": "今天是 👴 敬老の日",
@@ -1828,6 +1993,21 @@
     "category": "文化",
     "stars": 3,
     "description": "10-10音似「銭湯」，泡完溫泉仰望沖繩秋夜星空，是絕佳的放空體驗"
+  },
+  {
+    "name": "ALOHAISAI 2026年開催決定",
+    "name_zh": "ALOHAISAI將於2026年舉行",
+    "date_start": "2026-10-16",
+    "date_end": "2026-10-18",
+    "url": "https://www.okinawastory.jp/event/600022748",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://kariyushi-oceanspa.jp/cms/wp-content/uploads/2026/07/サムネサイズ-2.png",
+    "location": "沖縄かりゆしビーチリゾート・オーシャンスパ ・ 沖縄県国頭郡恩納村名嘉真ヤーシ原2591-1",
+    "price": "",
+    "official_url": "https://kariyushi-oceanspa.jp/topics/2026/07/event-5959/"
   },
   {
     "name": "豐見城產業祭",
