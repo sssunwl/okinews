@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-08 10:50",
+  "updated": "2026-08-08 13:12",
   "general_caution": "沖繩多數浪點是礁盤 reef break，干潮時礁石會外露，浪大時更容易割傷擦傷；離岸流、突然變大的湧浪、閃電雷雨一律先上岸。新手不建議在浪超過腰高或有經驗者都收板的時段還硬下水。",
   "spots": [
     {
@@ -45,14 +45,14 @@
         },
         {
           "hour": "12",
-          "is_tomorrow": false,
-          "wind_speed_kn": 28.7,
-          "wind_dir_label": "南",
-          "wave_height_m": 0.46,
-          "tide_m": 1.13,
+          "is_tomorrow": true,
+          "wind_speed_kn": 21.2,
+          "wind_dir_label": "南南東",
+          "wave_height_m": 0.98,
+          "tide_m": 0.61,
           "verdict": "good",
           "verdict_label": "適合衝浪",
-          "verdict_reason": "湧浪 0.5 公尺、週期 9 秒，浪況算不錯"
+          "verdict_reason": "湧浪 1.0 公尺、週期 8 秒，浪況算不錯"
         },
         {
           "hour": "14",
@@ -121,25 +121,25 @@
           "verdict_reason": "湧浪 0.9 公尺、週期 9 秒，浪況算不錯"
         }
       ],
-      "closest_timeline_hour": "10",
-      "wind_speed_kn": 30.0,
-      "wind_gust_kn": 56.2,
-      "wind_deg": 180,
+      "closest_timeline_hour": "12",
+      "wind_speed_kn": 28.5,
+      "wind_gust_kn": 54.6,
+      "wind_deg": 184,
       "wind_dir_label": "南",
       "wave_height_m": 0.48,
       "swell_height_m": 0.48,
-      "swell_period_s": 8.4,
-      "sea_wave_height_m": 2.9,
-      "tide_m": 0.75,
+      "swell_period_s": 8.8,
+      "sea_wave_height_m": 2.96,
+      "tide_m": 1.34,
       "tide_trend": "上漲",
       "tide_turn": {
-        "kind": "干潮",
-        "time": "09:00",
-        "hours_away": -1
+        "kind": "滿潮",
+        "time": "16:00",
+        "hours_away": 3
       },
       "verdict": "good",
       "verdict_label": "適合衝浪",
-      "verdict_reason": "湧浪 0.5 公尺、週期 8 秒，浪況算不錯"
+      "verdict_reason": "湧浪 0.5 公尺、週期 9 秒，浪況算不錯"
     },
     {
       "slug": "maeda-surf",
@@ -184,14 +184,14 @@
         },
         {
           "hour": "12",
-          "is_tomorrow": false,
-          "wind_speed_kn": 26.9,
-          "wind_dir_label": "南",
-          "wave_height_m": 0.86,
-          "tide_m": 1.14,
-          "verdict": "caution",
-          "verdict_label": "需留意",
-          "verdict_reason": "週期只有 8 秒，比較像風浪，浪型不會太乾淨"
+          "is_tomorrow": true,
+          "wind_speed_kn": 19.4,
+          "wind_dir_label": "南南東",
+          "wave_height_m": 1.24,
+          "tide_m": 0.58,
+          "verdict": "good",
+          "verdict_label": "適合衝浪",
+          "verdict_reason": "湧浪 1.2 公尺、週期 9 秒，浪況算不錯；風向對這個點是離岸風，浪面會比較乾淨"
         },
         {
           "hour": "14",
@@ -260,25 +260,25 @@
           "verdict_reason": "湧浪 1.4 公尺、週期 9 秒，浪況算不錯；風向對這個點是離岸風，浪面會比較乾淨"
         }
       ],
-      "closest_timeline_hour": "10",
-      "wind_speed_kn": 30.4,
-      "wind_gust_kn": 61.0,
-      "wind_deg": 170,
+      "closest_timeline_hour": "12",
+      "wind_speed_kn": 28.2,
+      "wind_gust_kn": 53.8,
+      "wind_deg": 177,
       "wind_dir_label": "南",
-      "wave_height_m": 0.84,
-      "swell_height_m": 0.84,
-      "swell_period_s": 8.2,
-      "sea_wave_height_m": 2.38,
-      "tide_m": 0.77,
+      "wave_height_m": 0.92,
+      "swell_height_m": 0.92,
+      "swell_period_s": 7.8,
+      "sea_wave_height_m": 2.56,
+      "tide_m": 1.36,
       "tide_trend": "上漲",
       "tide_turn": {
-        "kind": "干潮",
-        "time": "09:00",
-        "hours_away": -1
+        "kind": "滿潮",
+        "time": "16:00",
+        "hours_away": 3
       },
-      "verdict": "good",
-      "verdict_label": "適合衝浪",
-      "verdict_reason": "湧浪 0.8 公尺、週期 8 秒，浪況算不錯；風向對這個點是離岸風，浪面會比較乾淨"
+      "verdict": "caution",
+      "verdict_label": "需留意",
+      "verdict_reason": "週期只有 8 秒，比較像風浪，浪型不會太乾淨"
     },
     {
       "slug": "zanpa-surf",
@@ -323,14 +323,14 @@
         },
         {
           "hour": "12",
-          "is_tomorrow": false,
-          "wind_speed_kn": 28.3,
-          "wind_dir_label": "南",
-          "wave_height_m": 1.26,
-          "tide_m": 1.14,
-          "verdict": "caution",
-          "verdict_label": "需留意",
-          "verdict_reason": "週期只有 8 秒，比較像風浪，浪型不會太乾淨"
+          "is_tomorrow": true,
+          "wind_speed_kn": 21.5,
+          "wind_dir_label": "南南東",
+          "wave_height_m": 1.4,
+          "tide_m": 0.59,
+          "verdict": "good",
+          "verdict_label": "適合衝浪",
+          "verdict_reason": "湧浪 1.4 公尺、週期 9 秒，浪況算不錯"
         },
         {
           "hour": "14",
@@ -399,21 +399,21 @@
           "verdict_reason": "湧浪 1.9 公尺、週期 9 秒，浪況算不錯"
         }
       ],
-      "closest_timeline_hour": "10",
-      "wind_speed_kn": 30.8,
-      "wind_gust_kn": 58.9,
-      "wind_deg": 175,
+      "closest_timeline_hour": "12",
+      "wind_speed_kn": 28.7,
+      "wind_gust_kn": 54.4,
+      "wind_deg": 181,
       "wind_dir_label": "南",
-      "wave_height_m": 1.12,
-      "swell_height_m": 1.12,
-      "swell_period_s": 7.5,
-      "sea_wave_height_m": 3.9,
-      "tide_m": 0.78,
+      "wave_height_m": 1.26,
+      "swell_height_m": 1.26,
+      "swell_period_s": 7.9,
+      "sea_wave_height_m": 4.02,
+      "tide_m": 1.35,
       "tide_trend": "上漲",
       "tide_turn": {
-        "kind": "干潮",
-        "time": "09:00",
-        "hours_away": -1
+        "kind": "滿潮",
+        "time": "16:00",
+        "hours_away": 3
       },
       "verdict": "caution",
       "verdict_label": "需留意",
