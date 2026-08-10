@@ -1161,21 +1161,6 @@
     "official_url": "https://oki-park.jp/kaiyohaku/events/detail/11100"
   },
   {
-    "name": "開業20周年特別企画「納涼ビアフェスタ」を8月8日より3日間限定で開催",
-    "name_zh": "8月8日起為期3天的20週年紀念特別活動“Nouryo Beer Festa”",
-    "date_start": "2026-08-08",
-    "date_end": "2026-08-10",
-    "url": "https://www.okinawastory.jp/event/600022710",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": "",
-    "image": "https://www.naha.jalcity.co.jp/wp/wp-content/uploads/2026/07/%E3%83%90%E3%83%8A%E3%83%BC%E4%BB%AE1024_576.jpg",
-    "location": "ホテルJALシティ那覇　1階宴会場「ファミーユ」（完全屋内） ・ 沖縄県那覇市牧志１丁目３−７０",
-    "price": "有料",
-    "official_url": "https://www.naha.jalcity.co.jp/5748/"
-  },
-  {
     "name": "WALL exhibition vol. 4",
     "name_zh": "牆展覽卷。 4",
     "date_start": "2026-08-08",
@@ -1507,6 +1492,21 @@
     "location": "カヌチャリゾート　カヌチャベイホテル＆ヴィラズ／カヌチャゴルフコース ・ 沖縄県名護市安部１５６−２",
     "price": "有料",
     "official_url": "https://www.kanucha.jp/information/1603726"
+  },
+  {
+    "name": "「夏の続きを やんばるで」Free-Flowのハイボールとハンモックで沖縄・やんばるの夜を愉しむレイトサマーイベント",
+    "name_zh": "",
+    "date_start": "2026-09-01",
+    "date_end": "2026-10-31",
+    "url": "https://www.okinawastory.jp/event/600022800",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://s3.ap-northeast-1.amazonaws.com/jp.nnear.upload/1785901083394_highballgarden.jpg",
+    "location": "TWIN-LINE HOTEL YANBARU OKINAWA JAPAN ・ 沖縄県名護市幸喜１０８",
+    "price": "有料",
+    "official_url": "https://twin-line-hotel-yanbaru.jp/post-1696/"
   },
   {
     "name": "沖繩全島Eisa太鼓舞祭",
@@ -2000,6 +2000,21 @@
     "location": "沖縄県 宜野湾港マリーナ・トロピカルビーチ  特設会場 ・ 沖縄県宜野湾市真志喜４丁目２−１",
     "price": "有料",
     "official_url": "https://www800.asia/2026/about/"
+  },
+  {
+    "name": "空手道之日 紀念表演",
+    "name_zh": "空手道之日 紀念表演",
+    "date_start": "2026-11-08",
+    "date_end": "2026-11-08",
+    "url": "https://visitokinawajapan.com/zh-hant/discover/events/karate-day/",
+    "source": "visitokinawa",
+    "category": "",
+    "stars": 0,
+    "description": "每年10月25日的空手道之日，成千上萬名遊客都會聚集在國際通，觀賞空手道武術家們展示其自家門派武術",
+    "image": "https://visitokinawajapan.com/wp-content/uploads/2021/11/ev166_01_karate-day.webp",
+    "location": "",
+    "price": "免費",
+    "official_url": "https://karate-event.jp/en/"
   },
   {
     "name": "今天是 🍶 沖繩泡盛祭",
