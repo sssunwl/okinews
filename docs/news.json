@@ -1,21 +1,57 @@
 [
   {
-    "date": "2026-08-11",
+    "date": "2026-08-12",
     "source": "氣象庁警報",
-    "title": "沖繩本島地區氣象警報・注意報",
-    "summary": "沖繩本島地區在29日中午前，需注意突發強降雨與雷擊。",
+    "title": "沖繩本島地方氣象警報・注意報",
+    "summary": "沖繩本島地區在29日中午前需注意突如其來的強降雨與雷擊。",
     "category": "天氣警報",
     "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=471000&lang=ja",
     "alert": true
   },
   {
-    "date": "2026-08-11",
+    "date": "2026-08-12",
     "source": "氣象庁警報",
-    "title": "大東島地區發布氣象警報與注意報",
-    "summary": "大東島地區需注意突如其來的強降雨與雷擊。請留意天氣變化並提高警覺。",
+    "title": "大東島地區氣象警報・注意報",
+    "summary": "大東島地區需注意突然的強降雨與雷擊。請留意天氣變化，避免前往危險地點。",
     "category": "天氣警報",
     "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=472000&lang=ja",
     "alert": true
+  },
+  {
+    "date": "2026-08-12",
+    "source": "沖縄タイムス",
+    "title": "沖繩23座主要音樂廳無障礙設備保有率僅21.7%",
+    "summary": "琉球愛樂對縣內23座主要音樂廳進行無障礙調查，結果顯示，具備支援身心障礙者觀賞的機材或設備者僅21.7%，不到全國平均的一半。另有47.8%的設施曾有支援身心障礙者觀賞的實績，高於全國平均。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1900119",
+    "alert": false
+  },
+  {
+    "date": "2026-08-12",
+    "source": "沖縄タイムス",
+    "title": "沖繩本島等地12至13日多雲有雨",
+    "summary": "受氣壓谷影響，沖繩本島地方目前多雲，部分地區有降雨。12日至13日各地將以多雲或雨天為主，局部可能伴隨雷雨，12日部分地區恐有大雨。",
+    "category": "天氣警報",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1900593",
+    "alert": false
+  },
+  {
+    "date": "2026-08-12",
+    "source": "氣象庁警報",
+    "title": "宮古島地方氣象警報・注意報解除",
+    "summary": "宮古島地方的注意報已解除。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=473000&lang=ja",
+    "alert": false
+  },
+  {
+    "date": "2026-08-12",
+    "source": "氣象庁警報",
+    "title": "八重山地區氣象警報・注意報",
+    "summary": "八重山地區的注意報已解除。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=474000&lang=ja",
+    "alert": false
   },
   {
     "date": "2026-08-11",
@@ -154,20 +190,110 @@
   },
   {
     "date": "2026-08-11",
-    "source": "氣象庁警報",
-    "title": "宮古島地區氣象警報・注意報解除",
-    "summary": "宮古島地區的注意報已解除。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=473000&lang=ja",
+    "source": "沖縄タイムス",
+    "title": "台灣兒童來沖繩交流棒球並學日語",
+    "summary": "那霸的サイテクカレッジ那覇與台灣顧問公司合作，3日開始邀請台灣兒童來沖繩。參加者將一邊學習日語，一邊與當地少棒隊交流。",
+    "category": "觀光",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1900110",
     "alert": false
   },
   {
     "date": "2026-08-11",
-    "source": "氣象庁警報",
-    "title": "八重山地區氣象警報・注意報",
-    "summary": "八重山地區的注意報已解除。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=474000&lang=ja",
+    "source": "沖縄タイムス",
+    "title": "全日本學生薙刀賽　城間こころ組女子演技奪冠",
+    "summary": "第65回全日本學生薙刀選手權在靜岡縣舉行，鹿屋體育大學的城間こころ與大谷舞桜組在女子演技項目奪冠。她們從首戰到決賽一路晉級，決賽以5比0擊敗日本女子體育大學組合。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1900171",
+    "alert": false
+  },
+  {
+    "date": "2026-08-11",
+    "source": "沖縄タイムス",
+    "title": "名護哈利大會177隊參賽　Team匠奪冠",
+    "summary": "第48屆名護市長盃全島哈利大會於2日在名護漁港舉行，被稱為「哈利甲子園」。本屆共有男子159隊、女子18隊，共177隊參加，最後由「Team匠」奪得優勝。",
+    "category": "觀光",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1900109",
+    "alert": false
+  },
+  {
+    "date": "2026-08-11",
+    "source": "沖縄タイムス",
+    "title": "北谷町役場舉辦核兵器與戰爭展至8月14日",
+    "summary": "北谷町在町役場1樓舉辦和平祈念展「核兵器與戰爭相關的16個問題展」，展期到14日。展覽旨在傳達戰爭與核兵器的悲慘，並呼應町內自1985年以來的非核宣言。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1899534",
+    "alert": false
+  },
+  {
+    "date": "2026-08-11",
+    "source": "沖縄タイムス",
+    "title": "紀錄片介紹美軍環境破壞　16日在名護市圖書館放映",
+    "summary": "探討美軍造成環境破壞及其對世界各地影響的紀錄片《地球最大の敵》將於16日下午2時半在名護市立中央圖書館放映。活動免費入場。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1899524",
+    "alert": false
+  },
+  {
+    "date": "2026-08-11",
+    "source": "沖縄タイムス",
+    "title": "宜野灣海濱公園屋外劇場獲命名權",
+    "summary": "宜野灣市與美國工程公司AEC簽訂命名權契約，對象為宜野灣海濱公園內的屋外劇場及市立體育館。AEC社長表示，希望設施能成為受人喜愛的場所。",
+    "category": "觀光",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1900182",
+    "alert": false
+  },
+  {
+    "date": "2026-08-11",
+    "source": "沖縄タイムス",
+    "title": "8月16日沖繩會展中心辦健康活動",
+    "summary": "由縣內22個保健醫療介護團體等共催的「第1回美らLIFEフェスおきなわ」將於16日中午至下午4時，在宜野灣市沖繩會展中心展廳舉辦。活動免費入場，且不需事先報名。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1900149",
+    "alert": false
+  },
+  {
+    "date": "2026-08-11",
+    "source": "沖縄タイムス",
+    "title": "那霸7酒造所聯名推出限定古酒",
+    "summary": "那霸市內7家泡盛酒造所將10年以上的古酒調和，推出「那霸七蔵之古酒」。這款商品是為祝賀首里城正殿完成而企劃，並希望透過商品傳播泡盛文化。",
+    "category": "觀光",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1900168",
+    "alert": false
+  },
+  {
+    "date": "2026-08-11",
+    "source": "沖縄タイムス",
+    "title": "海葵魚與海葵共生講座在 OIST 舉辦",
+    "summary": "沖繩科學技術大學院大學（OIST）於7月20日舉辦兒童講座，主題為「海葵魚與海葵」。講座配合海之日舉行，內容介紹海洋生物的共生關係。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1900112",
+    "alert": false
+  },
+  {
+    "date": "2026-08-11",
+    "source": "沖縄タイムス",
+    "title": "嘉手納基地5架F22未熄火加油",
+    "summary": "美軍嘉手納基地10日下午被確認有5架暫定配備的F22戰鬥機，在舊海軍駐機場進行不關引擎加油。日美合意並未允許在舊駐機場進行會產生噪音的運用。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1900211",
+    "alert": false
+  },
+  {
+    "date": "2026-08-11",
+    "source": "沖縄タイムス",
+    "title": "颱風13號災民支援　縣內3家地銀與沖繩公庫設融資諮詢",
+    "summary": "沖繩縣內3家地銀與沖繩振興開發金融公庫已設置融資諮詢窗口，支援颱風13號受災者。琉球銀行也針對個人事業主、法人、農業者及個人提供相關修繕與消費性資金的優惠利率。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1900164",
+    "alert": false
+  },
+  {
+    "date": "2026-08-11",
+    "source": "沖縄タイムス",
+    "title": "石垣八島小學以哈里舟推動海洋學習",
+    "summary": "石垣市立八島小學是當地最靠近海邊的學校，從校舍窗外可一望珊瑚礁。學校自2000年度起，每年在地漁業者協助下，透過傳統哈里舟體驗進行「海的學習」。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1900102",
     "alert": false
   },
   {
@@ -645,213 +771,6 @@
     "summary": "曾效力大聯盟水手隊、並於去年在美國入選棒球名人堂的鈴木一朗，參加了為紀念水手隊創隊50週年舉辦的OB全壘打競賽。他多次擊出越過全壘打牆的球，讓許多球迷熱血沸騰。",
     "category": "全國",
     "url": "http://www3.nhk.or.jp/news/html/20260808/k10015200331000.html",
-    "alert": false
-  },
-  {
-    "date": "2026-08-07",
-    "source": "沖縄タイムス",
-    "title": "台風13號前夕 那霸機場湧現離境人潮",
-    "summary": "那霸機場6日因臨時班機手續與候補登記而出現混雜。由於7日已確定全班停飛，想在6日離開那霸的觀光客多次確認航班狀況。",
-    "category": "交通",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1897795",
-    "alert": true
-  },
-  {
-    "date": "2026-08-07",
-    "source": "沖縄タイムス",
-    "title": "台風13號來襲　沖繩各地開設避難所",
-    "summary": "台風13號影響下，沖繩本島多地開設避難所，居民提早避難。うるま市於6日下午開設4處避難所，晚間已有28戶44人避難。",
-    "category": "天氣警報",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1897796",
-    "alert": true
-  },
-  {
-    "date": "2026-08-07",
-    "source": "沖縄タイムス",
-    "title": "台風13號逼近 南北大東島遇暴風",
-    "summary": "大型強烈颱風13號接近時，南大東島與北大東島的居民在家中或避難所度過不安的一天。兩島從上午到中午過後遭遇約30公尺每秒的強風，傍晚雖風雨減弱，但居民仍警戒夜間可能出現強勁回吹。",
-    "category": "天氣警報",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1897794",
-    "alert": true
-  },
-  {
-    "date": "2026-08-07",
-    "source": "沖縄タイムス",
-    "title": "台風13號逼近　沖繩自動車道全線封閉",
-    "summary": "受大型強烈台風13號接近影響，沖繩自動車道等道路出現通行止。沖繩自動車道那霸交流道至許田交流道間，上下線全線自7日凌晨2時起封閉。",
-    "category": "交通",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1897901",
-    "alert": true
-  },
-  {
-    "date": "2026-08-07",
-    "source": "沖縄タイムス",
-    "title": "台風13號致県內2950戶停電",
-    "summary": "受台風13號影響，沖繩県內停電戶數在7日早上6時為2950戶。停電主要集中在沖繩本島北部，也波及中部與南部多個地區。",
-    "category": "交通",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1897569",
-    "alert": true
-  },
-  {
-    "date": "2026-08-07",
-    "source": "NHK",
-    "title": "強颱13號逼近 沖繩本島與奄美嚴防",
-    "summary": "大型且強烈的颱風13號正向西移動，將奄美地區與沖繩本島地區納入暴風圈。當地可能出現足以吹倒部分住宅的猛烈強風，並有發生線狀降水帶的可能，需嚴防暴風、高浪與土砂災害。",
-    "category": "天氣警報",
-    "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198521000.html",
-    "alert": true
-  },
-  {
-    "date": "2026-08-07",
-    "source": "沖縄タイムス",
-    "title": "母胎受爆的80歲女性 10年後出席廣島和平典禮",
-    "summary": "80歲的中原冨美子是在母親腹中受爆的「胎內被爆者」。她6日從那霸市住家前往故鄉廣島市，時隔10年參加和平紀念式典，並表示要以被爆者身分持續訴說原爆的可怕。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1897782",
-    "alert": false
-  },
-  {
-    "date": "2026-08-07",
-    "source": "沖縄タイムス",
-    "title": "沖繩貴金屬空巢案 2人遭逮捕",
-    "summary": "沖繩縣內5日有以貴金屬為目標的空屋竊案嫌犯陸續遭逮捕，合計被害約295萬日圓。警方指出，其中一名25歲男子涉嫌侵入北中城村一名60多歲女性住家，偷走戒指等53件物品。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1897801",
-    "alert": false
-  },
-  {
-    "date": "2026-08-07",
-    "source": "沖縄タイムス",
-    "title": "嘉手納基地即應訓練深夜響警報惹民怨",
-    "summary": "美軍嘉手納基地進行運用即應訓練，深夜與清晨的警報與廣播聲響起。沖繩市、嘉手納町與北谷町接獲多起周邊居民苦情。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1897785",
-    "alert": false
-  },
-  {
-    "date": "2026-08-07",
-    "source": "沖縄タイムス",
-    "title": "在開發中國家看見生命差距",
-    "summary": "文章提到，從醫院到偏遠地區需經車與渡輪約4小時，當地連電力和自來水都沒有，一位母親仍努力照顧孩子療養。曾在柬埔寨與癌症病童及家庭相處約8年半的醫師，也因此反省自己曾隨口說出「有事就馬上來」。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1897774",
-    "alert": false
-  },
-  {
-    "date": "2026-08-07",
-    "source": "沖縄タイムス",
-    "title": "沖繩市鮮魚店推空運魚料理　可同時享受烤魚與生魚片",
-    "summary": "沖繩市上地的「磯ロク鮮魚店」提供使用從大阪中央批發市場空運來的鮮魚製作的午餐，受到好評。店家主打可同時享受烤魚與生魚片，並使用在沖繩流通較少的魚種。",
-    "category": "觀光",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1897658",
-    "alert": false
-  },
-  {
-    "date": "2026-08-07",
-    "source": "沖縄タイムス",
-    "title": "沖繩觀光收入首度突破1兆日圓",
-    "summary": "沖繩縣內觀光收入首次突破1兆日圓，並以遠超過原定計畫的速度達成。明年2月還將導入觀光目的稅（住宿稅），有望成為推動觀光由量轉質的助力。",
-    "category": "觀光",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1897807",
-    "alert": false
-  },
-  {
-    "date": "2026-08-07",
-    "source": "沖縄タイムス",
-    "title": "玉城知事薪資減額案再提案困難",
-    "summary": "沖繩縣議會否決玉城知事為美國華府事務所問題提出的減薪案後，至今沒有新進展。知事表示，在即將到來的知事選前，於臨時議會再提案「日程上非常困難」。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1897755",
-    "alert": false
-  },
-  {
-    "date": "2026-08-07",
-    "source": "沖縄タイムス",
-    "title": "沖繩思想史研究者比屋根照夫逝世，享壽86歲",
-    "summary": "琉球大學名譽教授比屋根照夫2日上午因心衰竭在浦添市內醫院逝世，享壽86歲。其為沖繩近現代思想史研究的重要人物，並曾積極評論沖繩政治與社會狀況。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1897772",
-    "alert": false
-  },
-  {
-    "date": "2026-08-07",
-    "source": "NHK",
-    "title": "九州新幹線新水俣站至鹿兒島中央站恢復行駛",
-    "summary": "受地震影響停駛的九州新幹線，新水俣站與鹿兒島中央站之間已於7日恢復運轉。原文也提到班次大幅減少。",
-    "category": "交通",
-    "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198771000.html",
-    "alert": false
-  },
-  {
-    "date": "2026-08-07",
-    "source": "NHK",
-    "title": "4月30日匯市干預超過6兆日圓",
-    "summary": "政府與日本銀行在今年4月30日進行市場干預，金額超過6兆日圓，為單日買匯規模史上最大。另於大型連假期間的5月4日與6日也實施了市場介入。",
-    "category": "全國",
-    "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198801000.html",
-    "alert": false
-  },
-  {
-    "date": "2026-08-07",
-    "source": "NHK",
-    "title": "6月實質消費支出連續7個月下滑",
-    "summary": "總務省公布6月家計調查，2人以上家庭的消費支出實質上較去年同月減少3.3%，連續7個月下降。每戶平均消費額為29萬886日圓。",
-    "category": "全國",
-    "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198791000.html",
-    "alert": false
-  },
-  {
-    "date": "2026-08-07",
-    "source": "NHK",
-    "title": "熊本7日持續酷暑　受颱風影響需防強風",
-    "summary": "熊本縣7日預估仍將持續酷熱，呼籲民眾持續補充水分並做好防中暑措施。受颱風13號影響，當地風勢增強，氣象廳提醒注意強風。",
-    "category": "天氣警報",
-    "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198731000.html",
-    "alert": false
-  },
-  {
-    "date": "2026-08-07",
-    "source": "NHK",
-    "title": "熊本地震後逾3.6萬戶仍持續停水",
-    "summary": "熊本縣內地震後已過10天，仍有3萬6000多戶持續停水。由於送水配管修復需要時間，縣內全面恢復供水預計要到本月末。",
-    "category": "全國",
-    "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198531000.html",
-    "alert": false
-  },
-  {
-    "date": "2026-08-07",
-    "source": "NHK",
-    "title": "伊朗擬向船舶收費 海運業界反對",
-    "summary": "伊朗媒體報導，霍爾木茲海峽未來可能向船舶徵收費用。美國川普政府先前表明，不接受由伊朗主導管理，通航恢復方式仍不明朗。",
-    "category": "全國",
-    "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198781000.html",
-    "alert": false
-  },
-  {
-    "date": "2026-08-07",
-    "source": "NHK",
-    "title": "熊本阿蘇？（原文）姊妹罹難兄盼詳查當時處置",
-    "summary": "熊本縣嘉島町的「永旺夢樂城熊本」在地震後發生爆炸，導致一名30多歲女性員工身亡。她的哥哥接受NHK採訪，表示希望針對當時的應對方式進行仔細調查。",
-    "category": "全國",
-    "url": "http://www3.nhk.or.jp/news/html/20260807/k10015199501000.html",
-    "alert": false
-  },
-  {
-    "date": "2026-08-07",
-    "source": "NHK",
-    "title": "稅務職員收受高齡女性約1.5億日圓賭博遭免職",
-    "summary": "茨城縣稅務署職員在稅務調查中認識一名高齡女性後，收受約1億5000萬日圓並用於競艇。關東信越國稅局以脫稅等理由，對其作出懲戒免職處分。",
-    "category": "全國",
-    "url": "http://www3.nhk.or.jp/news/html/20260807/k10015199381000.html",
-    "alert": false
-  },
-  {
-    "date": "2026-08-07",
-    "source": "NHK",
-    "title": "熊本地震死亡38人 避難所6630人避難",
-    "summary": "熊本縣內因這次地震，截至7日下午6時，包含疑似災害相關死亡者在內共38人死亡。避難所內有6630人避難。",
-    "category": "全國",
-    "url": "http://www3.nhk.or.jp/news/html/20260807/k10015198921000.html",
     "alert": false
   }
 ]
