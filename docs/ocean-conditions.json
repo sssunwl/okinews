@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-13 01:00",
+  "updated": "2026-08-13 04:05",
   "general_caution": "不管哪個點，只要陣風超過 20 節、浪高超過 1.2 公尺，或當地已發布暴風警報／高浪警報，就直接放棄下水；能見度變差、突然起風湧、或現場出現離岸流跡象時也一樣，先上岸再說。",
   "spots": [
     {
@@ -16,19 +16,19 @@
         {
           "hour": "06",
           "is_tomorrow": false,
-          "wind_speed_kn": 2.8,
-          "wind_dir_label": "北",
+          "wind_speed_kn": 3.8,
+          "wind_dir_label": "西北西",
           "wave_height_m": 0.72,
           "tide_m": 2.06,
           "verdict": "caution",
           "verdict_label": "需留意",
-          "verdict_reason": "浪高 0.7 公尺，比平常大"
+          "verdict_reason": "浪高 0.7 公尺，比平常大；目前風向對這個點是受風側"
         },
         {
           "hour": "08",
           "is_tomorrow": false,
-          "wind_speed_kn": 2.8,
-          "wind_dir_label": "北北東",
+          "wind_speed_kn": 4.2,
+          "wind_dir_label": "北",
           "wave_height_m": 0.7,
           "tide_m": 1.85,
           "verdict": "caution",
@@ -38,8 +38,8 @@
         {
           "hour": "10",
           "is_tomorrow": false,
-          "wind_speed_kn": 2.7,
-          "wind_dir_label": "北北西",
+          "wind_speed_kn": 3.4,
+          "wind_dir_label": "西北",
           "wave_height_m": 0.7,
           "tide_m": 0.93,
           "verdict": "caution",
@@ -49,7 +49,7 @@
         {
           "hour": "12",
           "is_tomorrow": false,
-          "wind_speed_kn": 4.7,
+          "wind_speed_kn": 3.7,
           "wind_dir_label": "北北西",
           "wave_height_m": 0.68,
           "tide_m": 0.05,
@@ -60,7 +60,7 @@
         {
           "hour": "14",
           "is_tomorrow": false,
-          "wind_speed_kn": 5.6,
+          "wind_speed_kn": 5.1,
           "wind_dir_label": "北北西",
           "wave_height_m": 0.7,
           "tide_m": -0.05,
@@ -71,7 +71,7 @@
         {
           "hour": "16",
           "is_tomorrow": false,
-          "wind_speed_kn": 3.2,
+          "wind_speed_kn": 5.3,
           "wind_dir_label": "北",
           "wave_height_m": 0.7,
           "tide_m": 0.71,
@@ -82,8 +82,8 @@
         {
           "hour": "18",
           "is_tomorrow": false,
-          "wind_speed_kn": 3.4,
-          "wind_dir_label": "東北",
+          "wind_speed_kn": 3.3,
+          "wind_dir_label": "北",
           "wave_height_m": 0.72,
           "tide_m": 1.65,
           "verdict": "caution",
@@ -93,8 +93,8 @@
         {
           "hour": "20",
           "is_tomorrow": false,
-          "wind_speed_kn": 3.8,
-          "wind_dir_label": "東",
+          "wind_speed_kn": 2.0,
+          "wind_dir_label": "東北",
           "wave_height_m": 0.72,
           "tide_m": 1.93,
           "verdict": "caution",
@@ -104,7 +104,7 @@
         {
           "hour": "22",
           "is_tomorrow": false,
-          "wind_speed_kn": 2.5,
+          "wind_speed_kn": 1.8,
           "wind_dir_label": "東",
           "wave_height_m": 0.72,
           "tide_m": 1.4,
@@ -115,33 +115,33 @@
         {
           "hour": "00",
           "is_tomorrow": true,
-          "wind_speed_kn": 0.6,
-          "wind_dir_label": "北北西",
+          "wind_speed_kn": 3.0,
+          "wind_dir_label": "東",
           "wave_height_m": 0.74,
           "tide_m": 0.67,
           "verdict": "caution",
           "verdict_label": "需留意",
-          "verdict_reason": "浪高 0.7 公尺，比平常大；目前風向對這個點是受風側"
+          "verdict_reason": "浪高 0.7 公尺，比平常大"
         }
       ],
-      "closest_timeline_hour": "00",
-      "wind_speed_kn": 0.1,
-      "wind_gust_kn": 1.4,
-      "wind_deg": 360,
-      "wind_dir_label": "北",
-      "wave_height_m": 0.74,
-      "swell_height_m": 0.5,
-      "swell_period_s": 5.7,
-      "tide_m": 0.63,
+      "closest_timeline_hour": "06",
+      "wind_speed_kn": 1.9,
+      "wind_gust_kn": 4.1,
+      "wind_deg": 332,
+      "wind_dir_label": "北北西",
+      "wave_height_m": 0.72,
+      "swell_height_m": 0.48,
+      "swell_period_s": 5.8,
+      "tide_m": 1.47,
       "tide_trend": "上漲",
       "tide_turn": {
         "kind": "干潮",
         "time": "01:00",
-        "hours_away": 0
+        "hours_away": -3
       },
       "verdict": "caution",
       "verdict_label": "需留意",
-      "verdict_reason": "浪高 0.7 公尺，比平常大"
+      "verdict_reason": "浪高 0.7 公尺，比平常大；目前風向對這個點是受風側"
     },
     {
       "slug": "cape-maeda",
@@ -157,29 +157,29 @@
         {
           "hour": "06",
           "is_tomorrow": false,
-          "wind_speed_kn": 2.9,
-          "wind_dir_label": "北北東",
+          "wind_speed_kn": 1.7,
+          "wind_dir_label": "西北",
           "wave_height_m": 0.52,
           "tide_m": 2.04,
-          "verdict": "good",
-          "verdict_label": "看起來平穩",
-          "verdict_reason": "風速浪高都在平穩範圍"
+          "verdict": "caution",
+          "verdict_label": "需留意",
+          "verdict_reason": "目前風向對這個點是受風側"
         },
         {
           "hour": "08",
           "is_tomorrow": false,
-          "wind_speed_kn": 2.6,
-          "wind_dir_label": "北北東",
+          "wind_speed_kn": 3.2,
+          "wind_dir_label": "東北",
           "wave_height_m": 0.5,
           "tide_m": 1.88,
           "verdict": "good",
           "verdict_label": "看起來平穩",
-          "verdict_reason": "風速浪高都在平穩範圍"
+          "verdict_reason": "風速浪高都在平穩範圍；風向對這個點是背風側，理論上更穩"
         },
         {
           "hour": "10",
           "is_tomorrow": false,
-          "wind_speed_kn": 2.8,
+          "wind_speed_kn": 3.0,
           "wind_dir_label": "西北",
           "wave_height_m": 0.5,
           "tide_m": 0.99,
@@ -190,8 +190,8 @@
         {
           "hour": "12",
           "is_tomorrow": false,
-          "wind_speed_kn": 6.4,
-          "wind_dir_label": "北北西",
+          "wind_speed_kn": 4.7,
+          "wind_dir_label": "西北",
           "wave_height_m": 0.48,
           "tide_m": 0.11,
           "verdict": "caution",
@@ -201,41 +201,41 @@
         {
           "hour": "14",
           "is_tomorrow": false,
-          "wind_speed_kn": 5.7,
-          "wind_dir_label": "北",
+          "wind_speed_kn": 4.8,
+          "wind_dir_label": "北北西",
           "wave_height_m": 0.48,
           "tide_m": -0.03,
+          "verdict": "caution",
+          "verdict_label": "需留意",
+          "verdict_reason": "目前風向對這個點是受風側"
+        },
+        {
+          "hour": "16",
+          "is_tomorrow": false,
+          "wind_speed_kn": 4.6,
+          "wind_dir_label": "北北西",
+          "wave_height_m": 0.48,
+          "tide_m": 0.67,
+          "verdict": "caution",
+          "verdict_label": "需留意",
+          "verdict_reason": "目前風向對這個點是受風側"
+        },
+        {
+          "hour": "18",
+          "is_tomorrow": false,
+          "wind_speed_kn": 2.6,
+          "wind_dir_label": "北北東",
+          "wave_height_m": 0.48,
+          "tide_m": 1.62,
           "verdict": "good",
           "verdict_label": "看起來平穩",
           "verdict_reason": "風速浪高都在平穩範圍"
         },
         {
-          "hour": "16",
-          "is_tomorrow": false,
-          "wind_speed_kn": 0.9,
-          "wind_dir_label": "東北東",
-          "wave_height_m": 0.48,
-          "tide_m": 0.67,
-          "verdict": "good",
-          "verdict_label": "看起來平穩",
-          "verdict_reason": "風速浪高都在平穩範圍；風向對這個點是背風側，理論上更穩"
-        },
-        {
-          "hour": "18",
-          "is_tomorrow": false,
-          "wind_speed_kn": 1.8,
-          "wind_dir_label": "東南東",
-          "wave_height_m": 0.48,
-          "tide_m": 1.62,
-          "verdict": "good",
-          "verdict_label": "看起來平穩",
-          "verdict_reason": "風速浪高都在平穩範圍；風向對這個點是背風側，理論上更穩"
-        },
-        {
           "hour": "20",
           "is_tomorrow": false,
-          "wind_speed_kn": 3.4,
-          "wind_dir_label": "東南",
+          "wind_speed_kn": 0.6,
+          "wind_dir_label": "東",
           "wave_height_m": 0.48,
           "tide_m": 1.94,
           "verdict": "good",
@@ -245,8 +245,8 @@
         {
           "hour": "22",
           "is_tomorrow": false,
-          "wind_speed_kn": 1.2,
-          "wind_dir_label": "東",
+          "wind_speed_kn": 2.0,
+          "wind_dir_label": "東南東",
           "wave_height_m": 0.48,
           "tide_m": 1.44,
           "verdict": "good",
@@ -257,32 +257,32 @@
           "hour": "00",
           "is_tomorrow": true,
           "wind_speed_kn": 1.5,
-          "wind_dir_label": "西北",
+          "wind_dir_label": "東",
           "wave_height_m": 0.48,
           "tide_m": 0.72,
-          "verdict": "caution",
-          "verdict_label": "需留意",
-          "verdict_reason": "目前風向對這個點是受風側"
+          "verdict": "good",
+          "verdict_label": "看起來平穩",
+          "verdict_reason": "風速浪高都在平穩範圍；風向對這個點是背風側，理論上更穩"
         }
       ],
-      "closest_timeline_hour": "00",
+      "closest_timeline_hour": "06",
       "wind_speed_kn": 1.1,
-      "wind_gust_kn": 2.5,
-      "wind_deg": 56,
-      "wind_dir_label": "東北",
+      "wind_gust_kn": 3.5,
+      "wind_deg": 350,
+      "wind_dir_label": "北",
       "wave_height_m": 0.52,
       "swell_height_m": 0.3,
-      "swell_period_s": 6.5,
-      "tide_m": 0.64,
+      "swell_period_s": 6.2,
+      "tide_m": 1.43,
       "tide_trend": "上漲",
       "tide_turn": {
         "kind": "干潮",
         "time": "01:00",
-        "hours_away": 0
+        "hours_away": -3
       },
       "verdict": "good",
       "verdict_label": "看起來平穩",
-      "verdict_reason": "風速浪高都在平穩範圍；風向對這個點是背風側，理論上更穩"
+      "verdict_reason": "風速浪高都在平穩範圍"
     },
     {
       "slug": "gorilla-chop",
@@ -298,8 +298,8 @@
         {
           "hour": "06",
           "is_tomorrow": false,
-          "wind_speed_kn": 2.7,
-          "wind_dir_label": "北北東",
+          "wind_speed_kn": 2.0,
+          "wind_dir_label": "北",
           "wave_height_m": 0.5,
           "tide_m": 2.02,
           "verdict": "good",
@@ -309,19 +309,19 @@
         {
           "hour": "08",
           "is_tomorrow": false,
-          "wind_speed_kn": 3.4,
-          "wind_dir_label": "北北東",
+          "wind_speed_kn": 3.1,
+          "wind_dir_label": "東北東",
           "wave_height_m": 0.48,
           "tide_m": 1.86,
           "verdict": "good",
           "verdict_label": "看起來平穩",
-          "verdict_reason": "風速浪高都在平穩範圍；風向對這個點是背風側，理論上更穩"
+          "verdict_reason": "風速浪高都在平穩範圍"
         },
         {
           "hour": "10",
           "is_tomorrow": false,
-          "wind_speed_kn": 3.3,
-          "wind_dir_label": "北",
+          "wind_speed_kn": 2.4,
+          "wind_dir_label": "北北西",
           "wave_height_m": 0.48,
           "tide_m": 0.98,
           "verdict": "good",
@@ -331,8 +331,8 @@
         {
           "hour": "12",
           "is_tomorrow": false,
-          "wind_speed_kn": 6.9,
-          "wind_dir_label": "北",
+          "wind_speed_kn": 4.6,
+          "wind_dir_label": "北北西",
           "wave_height_m": 0.48,
           "tide_m": 0.11,
           "verdict": "good",
@@ -342,18 +342,18 @@
         {
           "hour": "14",
           "is_tomorrow": false,
-          "wind_speed_kn": 7.2,
+          "wind_speed_kn": 5.5,
           "wind_dir_label": "北",
           "wave_height_m": 0.48,
           "tide_m": -0.02,
-          "verdict": "caution",
-          "verdict_label": "需留意",
-          "verdict_reason": "風速 7 節，有點感覺"
+          "verdict": "good",
+          "verdict_label": "看起來平穩",
+          "verdict_reason": "風速浪高都在平穩範圍；風向對這個點是背風側，理論上更穩"
         },
         {
           "hour": "16",
           "is_tomorrow": false,
-          "wind_speed_kn": 3.7,
+          "wind_speed_kn": 6.0,
           "wind_dir_label": "北",
           "wave_height_m": 0.48,
           "tide_m": 0.68,
@@ -364,19 +364,19 @@
         {
           "hour": "18",
           "is_tomorrow": false,
-          "wind_speed_kn": 2.4,
-          "wind_dir_label": "東北",
+          "wind_speed_kn": 4.5,
+          "wind_dir_label": "北北東",
           "wave_height_m": 0.48,
           "tide_m": 1.62,
           "verdict": "good",
           "verdict_label": "看起來平穩",
-          "verdict_reason": "風速浪高都在平穩範圍"
+          "verdict_reason": "風速浪高都在平穩範圍；風向對這個點是背風側，理論上更穩"
         },
         {
           "hour": "20",
           "is_tomorrow": false,
           "wind_speed_kn": 2.2,
-          "wind_dir_label": "東",
+          "wind_dir_label": "東北",
           "wave_height_m": 0.46,
           "tide_m": 1.94,
           "verdict": "good",
@@ -386,44 +386,44 @@
         {
           "hour": "22",
           "is_tomorrow": false,
-          "wind_speed_kn": 1.5,
-          "wind_dir_label": "東北",
+          "wind_speed_kn": 1.9,
+          "wind_dir_label": "東",
           "wave_height_m": 0.46,
           "tide_m": 1.44,
           "verdict": "good",
           "verdict_label": "看起來平穩",
-          "verdict_reason": "風速浪高都在平穩範圍；風向對這個點是背風側，理論上更穩"
+          "verdict_reason": "風速浪高都在平穩範圍"
         },
         {
           "hour": "00",
           "is_tomorrow": true,
-          "wind_speed_kn": 1.6,
-          "wind_dir_label": "西北",
+          "wind_speed_kn": 0.2,
+          "wind_dir_label": "南南西",
           "wave_height_m": 0.46,
           "tide_m": 0.73,
-          "verdict": "good",
-          "verdict_label": "看起來平穩",
-          "verdict_reason": "風速浪高都在平穩範圍；風向對這個點是背風側，理論上更穩"
+          "verdict": "caution",
+          "verdict_label": "需留意",
+          "verdict_reason": "目前風向對這個點是受風側"
         }
       ],
-      "closest_timeline_hour": "00",
-      "wind_speed_kn": 1.3,
-      "wind_gust_kn": 3.3,
-      "wind_deg": 86,
-      "wind_dir_label": "東",
+      "closest_timeline_hour": "06",
+      "wind_speed_kn": 2.2,
+      "wind_gust_kn": 4.3,
+      "wind_deg": 29,
+      "wind_dir_label": "北北東",
       "wave_height_m": 0.5,
-      "swell_height_m": 0.32,
-      "swell_period_s": 6.0,
-      "tide_m": 0.65,
+      "swell_height_m": 0.34,
+      "swell_period_s": 5.7,
+      "tide_m": 1.42,
       "tide_trend": "上漲",
       "tide_turn": {
         "kind": "干潮",
         "time": "01:00",
-        "hours_away": 0
+        "hours_away": -3
       },
       "verdict": "good",
       "verdict_label": "看起來平穩",
-      "verdict_reason": "風速浪高都在平穩範圍"
+      "verdict_reason": "風速浪高都在平穩範圍；風向對這個點是背風側，理論上更穩"
     }
   ]
 }
