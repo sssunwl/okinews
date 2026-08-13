@@ -1,21 +1,174 @@
 [
   {
-    "date": "2026-08-13",
+    "date": "2026-08-14",
     "source": "氣象庁警報",
-    "title": "沖繩本島地區氣象警報・注意報",
-    "summary": "沖繩本島地區提醒，至29日中午前需注意突發強降雨與雷擊。",
+    "title": "沖繩本島發布氣象警報・注意報",
+    "summary": "沖繩本島地區到29日中午前，需注意突如其來的強降雨與雷擊。",
     "category": "天氣警報",
     "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=471000&lang=ja",
     "alert": true
   },
   {
-    "date": "2026-08-13",
+    "date": "2026-08-14",
     "source": "氣象庁警報",
-    "title": "大東島地區氣象警報與注意報",
-    "summary": "大東島地區須注意突如其來的強降雨與雷擊。請留意天氣變化並提高警覺。",
+    "title": "大東島地區發布氣象警報與注意報",
+    "summary": "大東島地區請注意突如其來的強降雨與雷擊。",
     "category": "天氣警報",
     "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=472000&lang=ja",
     "alert": true
+  },
+  {
+    "date": "2026-08-14",
+    "source": "沖縄タイムス",
+    "title": "宜野灣海濱公園戶外劇場整修完成",
+    "summary": "宜野灣市真志喜的宜野灣海濱公園戶外劇場改建工程完工，13日舉行落成式。市長佐喜真淳與曾與劇場有淵源的「ケツメイシ」成員大藏等人出席。",
+    "category": "觀光",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1901975",
+    "alert": false
+  },
+  {
+    "date": "2026-08-14",
+    "source": "沖縄タイムス",
+    "title": "普天間飛行場早日關閉訴求集會",
+    "summary": "沖繩國際大學於普天間飛行場直升機墜落事故22週年當天，在校內事故紀念碑附近舉辦和平集會。教職員與居民約120人參加，呼籲早日關閉飛行場，盼望沖繩的安心、安全與和平。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1901980",
+    "alert": false
+  },
+  {
+    "date": "2026-08-14",
+    "source": "沖縄タイムス",
+    "title": "涉持「殭屍煙」　25歲男子再被逮捕",
+    "summary": "宜野灣署表示，宜野灣市一名25歲建築作業員男子因涉嫌持有被稱為「殭屍煙」的指定藥物 etomidate，已於6日再度被逮捕。男子對容疑表示承認。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1901937",
+    "alert": false
+  },
+  {
+    "date": "2026-08-14",
+    "source": "沖縄タイムス",
+    "title": "名桜大入試誤判10名合格者為不合格",
+    "summary": "名桜大學在入學考試中發生統計錯誤，將合格者判成不合格，影響了原本希望升學的10名考生進路。相關報導指出，此事引發外界要求校方深刻反省。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1901929",
+    "alert": false
+  },
+  {
+    "date": "2026-08-14",
+    "source": "沖縄タイムス",
+    "title": "今歸仁村特色咖哩店：番茄酸味與辣椒刺激",
+    "summary": "今歸仁村的 nagicco 主打講究咖哩，特色是番茄的甜味與酸味後，接著出現香料與哈拉佩尼奧的刺激感。文章介紹了這家店的風味特色。",
+    "category": "觀光",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1901796",
+    "alert": false
+  },
+  {
+    "date": "2026-08-14",
+    "source": "沖縄タイムス",
+    "title": "熊本AEON爆炸事故　檢討再入館許可",
+    "summary": "熊本地震後發生爆炸、造成7名租戶員工死亡的「AEON MALL熊本」事故中，AEON表示，避難後曾有多名員工允許従業員再入館。社論呼籲徹底查明原因，避免悲劇重演。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1901856",
+    "alert": false
+  },
+  {
+    "date": "2026-08-14",
+    "source": "沖縄タイムス",
+    "title": "沖繩推「インパクトルビー」火龍果甜點活動",
+    "summary": "沖繩縣15日起在縣內10家「おきなわ食材の店」推出使用火龍果新品種「インパクトルビー」的原創菜單。內容以冰淇淋、刨冰、冰沙等甜點為主，活動至9月27日。",
+    "category": "觀光",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1901886",
+    "alert": false
+  },
+  {
+    "date": "2026-08-14",
+    "source": "沖縄タイムス",
+    "title": "沖繩海濱飯店舉辦啤酒之夜至14日",
+    "summary": "沖繩海濱飯店13日在那霸市久茂地的Times大樓1樓舉辦「Beer Night」。現場有爵士現場演奏，來客可享用啤酒、Highball與泡盛。活動持續到14日。",
+    "category": "觀光",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1901884",
+    "alert": false
+  },
+  {
+    "date": "2026-08-14",
+    "source": "沖縄タイムス",
+    "title": "2026年沖繩產海蘊產量減28%",
+    "summary": "沖繩縣海蘊養殖業振興協議會表示，2026年縣產海蘊生產量為1萬6593噸，較去年減少28%。去年產量為2萬3071噸，創下歷年最高紀錄。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1901881",
+    "alert": false
+  },
+  {
+    "date": "2026-08-14",
+    "source": "沖縄タイムス",
+    "title": "KOUKI FARM以規格外香蕉開發幸福香蕉蛋糕",
+    "summary": "KOUKI FARM以自家農園的有機蘋果香蕉開發蛋糕，使用的是因傷等原因無法出貨的香蕉。產品透過縣的六次產業化創業支援事業開發，今起將在縣內土產店等販售。",
+    "category": "觀光",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1901880",
+    "alert": false
+  },
+  {
+    "date": "2026-08-14",
+    "source": "沖縄タイムス",
+    "title": "抗議嘉手納基地降下訓練常態化",
+    "summary": "沖繩縣議會美軍基地相關特別委員會委員長等人，13日拜訪防衛省與美國駐日大使館。會中遞交抗議決議文與意見書，要求停止嘉手納基地的傘降訓練常態化。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1901947",
+    "alert": false
+  },
+  {
+    "date": "2026-08-14",
+    "source": "沖縄タイムス",
+    "title": "熊本日日新聞在強震後縮減版面續刊",
+    "summary": "熊本縣遭遇最大震度7地震的隔天起，熊本日日新聞仍持續發行，版面約16頁，較平時20至28頁減少最多四成。報導也提到，日本製紙八代工廠事故使用紙穩定供應變得困難。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1901919",
+    "alert": false
+  },
+  {
+    "date": "2026-08-14",
+    "source": "沖縄タイムス",
+    "title": "名桜大入試因試算錯誤誤判10人不合格",
+    "summary": "名護市的名桜大學在入試中，將本來合格的10人判為不合格。校方表示，原因是表計算軟體的計算式出錯，並在成績開示請求後確認發現問題。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1901916",
+    "alert": false
+  },
+  {
+    "date": "2026-08-14",
+    "source": "沖縄タイムス",
+    "title": "陸自對市民接觸採四級隱匿身分基準",
+    "summary": "陸上自衛隊中央情報隊的對外情報部門「現地情報隊」，被揭露曾收集國內市民個資。資料與前隊員證言指出，接觸對象時設有4段式隱匿身分的獨自基準，並由隊長等事前書面決裁、組織性運用。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1901915",
+    "alert": false
+  },
+  {
+    "date": "2026-08-14",
+    "source": "沖縄タイムス",
+    "title": "邊野古抗議者島袋文子為原型　繪本7月出版",
+    "summary": "以住在名護市邊野古、持續反對新基地建設的島袋文子為原型的繪本《邊野古の浜の文子さん》已於7月出版。作者岩下美智子透過長達15年的交流，描寫她對反基地與和平的堅定想法及沖繩戰爭體驗。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1901972",
+    "alert": false
+  },
+  {
+    "date": "2026-08-14",
+    "source": "氣象庁警報",
+    "title": "宮古島地方氣象警報、注意報解除",
+    "summary": "宮古島地方的注意報已解除。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=473000&lang=ja",
+    "alert": false
+  },
+  {
+    "date": "2026-08-14",
+    "source": "氣象庁警報",
+    "title": "八重山地區氣象警報與注意報解除",
+    "summary": "八重山地區的注意報已解除。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=474000&lang=ja",
+    "alert": false
   },
   {
     "date": "2026-08-13",
@@ -150,24 +303,6 @@
     "summary": "2004年8月13日，美軍CH53大型運輸直升機從普天間飛行場起飛後墜落於宜野灣市沖繩國際大學。新聞提到，機體碎片不只落在校內，周邊也有廣範圍受害。",
     "category": "全國",
     "url": "http://www.okinawatimes.co.jp/articles/-/1901143",
-    "alert": false
-  },
-  {
-    "date": "2026-08-13",
-    "source": "氣象庁警報",
-    "title": "宮古島地方氣象警報・注意報解除",
-    "summary": "宮古島地方的氣象注意報已解除。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=473000&lang=ja",
-    "alert": false
-  },
-  {
-    "date": "2026-08-13",
-    "source": "氣象庁警報",
-    "title": "八重山地區氣象警報・注意報",
-    "summary": "八重山地區的氣象注意報已解除。這則通知屬於警報／注意報解除，表示天候狀況已恢復正常。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=474000&lang=ja",
     "alert": false
   },
   {
@@ -564,141 +699,6 @@
     "summary": "文章提到，曾有人警告「死去的哈布也會咬人」。作者回憶20多歲在宇流麻市收割甘蔗時，目睹同伴用鐮刀砍下哈布的頭部，自己靠近觀看時也被提醒要小心。",
     "category": "生活",
     "url": "http://www.okinawatimes.co.jp/articles/-/1899520",
-    "alert": false
-  },
-  {
-    "date": "2026-08-09",
-    "source": "沖縄タイムス",
-    "title": "台風13號強風高潮致石垣漁港浮桟橋破損",
-    "summary": "台風13號8日影響八重山與宮古地區。石垣市石垣漁港內的浮桟橋部分破損，推測有一座因強風與高潮下沉。現場有5艘遊艇停泊，海上保安部已以繩索固定應對。",
-    "category": "交通",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899176",
-    "alert": true
-  },
-  {
-    "date": "2026-08-09",
-    "source": "沖縄タイムス",
-    "title": "颱風13號不規則移動 造成沖繩長時間風雨",
-    "summary": "颱風13號在7日至8日於本部半島北側和久米島北西側出現「托洛科伊達爾運動」，中心像畫圓般蛇行。颱風在沖繩本島北部與久米島附近停留，使風雨影響持續較久。",
-    "category": "天氣警報",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899259",
-    "alert": true
-  },
-  {
-    "date": "2026-08-09",
-    "source": "沖縄タイムス",
-    "title": "沖繩本島9至10日受颱風影響天氣不穩",
-    "summary": "沖繩本島地區受第13號颱風影響，天氣持續不穩。9日可能有雷伴隨局部大雨，10日則多雲，部分地區有雨，且南風將增強。",
-    "category": "天氣警報",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899247",
-    "alert": true
-  },
-  {
-    "date": "2026-08-09",
-    "source": "沖縄タイムス",
-    "title": "台風13號遠離　沖繩本島北部暴風警報持續42小時",
-    "summary": "大型且非常強的台風13號於8日遠離，朝中國大陸方向移動，並持續影響沖繩本島地區、宮古島地區與與那國島地區。沖繩本島北部自6日夜至8日午後曾發布暴風警報，共42小時。",
-    "category": "天氣警報",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899186",
-    "alert": true
-  },
-  {
-    "date": "2026-08-09",
-    "source": "沖縄タイムス",
-    "title": "社論：緩慢颱風　需以長期化為前提備災",
-    "summary": "台風13號影響持續時間拉長，大東島地區與沖繩本島北部、與那國島等地都曾發布暴風警報。原因是颱風在沖繩近海蛇行，導致影響延續。",
-    "category": "天氣警報",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899131",
-    "alert": true
-  },
-  {
-    "date": "2026-08-09",
-    "source": "沖縄タイムス",
-    "title": "台風13號重創沖繩本島北部",
-    "summary": "台風13號橫越沖繩地方，並在本島北部停留42小時。強風造成有人受傷、倒木、建物損害，部分地區也出現停電，恢復日常生活仍需時間。",
-    "category": "天氣警報",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899175",
-    "alert": true
-  },
-  {
-    "date": "2026-08-09",
-    "source": "沖縄タイムス",
-    "title": "《珍妮・潘心情不佳》：霸凌老人的恐怖片",
-    "summary": "這篇文章介紹電影《珍妮・潘心情不佳》，內容圍繞一位在老人院中作威作福的霸凌老人，營造出強烈恐怖感。文章屬於影評與觀後感，並非旅遊相關新聞。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1897679",
-    "alert": false
-  },
-  {
-    "date": "2026-08-09",
-    "source": "沖縄タイムス",
-    "title": "［大弦小弦］作為納稅的外國人也是日本社會一員",
-    "summary": "文中提到一個常見的 YouTube 頻道，常有喜愛日本的在日外國人出現，展現對日本文化的理解與流暢日語表達。並指出政府自去年以來持續推進外國人政策的嚴格化。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899191",
-    "alert": false
-  },
-  {
-    "date": "2026-08-09",
-    "source": "沖縄タイムス",
-    "title": "喜友名龍鳳館包辦九州中學團體形男女冠軍",
-    "summary": "九州中學體育大會8日舉行團體形比賽，喜友名大里龍鳳館男子與女子隊分別奪冠。男子小禄、女子凜道場則獲得第2名。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899193",
-    "alert": false
-  },
-  {
-    "date": "2026-08-09",
-    "source": "沖縄タイムス",
-    "title": "中村ミツ子談戰爭經驗：避難宮崎、忍受飢餓",
-    "summary": "1934年生於北谷村屋良、現居嘉手納町的中村ミツ子回憶童年與家族生活。她提到當時嘉手納相當熱鬧，自己曾在水釜海灘採蛤、在比謝川洗衣，之後因戰爭避難到宮崎，度過飢餓的日子。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899087",
-    "alert": false
-  },
-  {
-    "date": "2026-08-09",
-    "source": "沖縄タイムス",
-    "title": "三個「八」吉日　那霸市役所140對登記結婚",
-    "summary": "令和8年8月8日，許多人趕在吉日提交婚姻登記。那霸市役所截至晚間9時有140對辦理，台風13號的雨風也未減少登記人潮。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899086",
-    "alert": false
-  },
-  {
-    "date": "2026-08-09",
-    "source": "沖縄タイムス",
-    "title": "85歲石垣理容師堅守剪髮70年",
-    "summary": "石垣市新川的「理容てるや」由85歲的照屋晃雄經營，他今年迎來投入理容業70年。作為市內最年長理容師之一，他在常客支持下持續營業，表示會在體力許可下繼續做下去。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899074",
-    "alert": false
-  },
-  {
-    "date": "2026-08-09",
-    "source": "沖縄タイムス",
-    "title": "8國高中生在沖繩研修學習沖繩戰與環境",
-    "summary": "日本國際生活體驗協會在7月12日至25日，於沖繩舉辦全球領袖培育研修。來自7國的8名高中生與1名沖繩高中生，透過平和學習、環境學習及與縣內高中生交流完成14天課程。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899048",
-    "alert": false
-  },
-  {
-    "date": "2026-08-09",
-    "source": "沖縄タイムス",
-    "title": "長崎原爆81週年　沖繩被爆者呼籲無核和平",
-    "summary": "長崎原爆投下屆滿81年。4歲時在長崎被爆的沖繩縣原爆被爆者協議會理事長大城智子表示，核與人類無法共存，呼籲不要再出現像他們一樣的被爆者。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899210",
-    "alert": false
-  },
-  {
-    "date": "2026-08-09",
-    "source": "沖縄タイムス",
-    "title": "甲子園應援可戴「チョンダラー」　禁令條文刪除",
-    "summary": "甲子園去年被注意的「チョンダラー」應援，今年可望解禁。日本高野連已將禁止事項中的「臉部彩繪」與「鄉土民俗變裝等」刪除，但若有安全疑慮仍可能被勸阻。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899187",
     "alert": false
   }
 ]
