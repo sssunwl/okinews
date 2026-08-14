@@ -1,21 +1,174 @@
 [
   {
-    "date": "2026-08-14",
+    "date": "2026-08-15",
     "source": "氣象庁警報",
-    "title": "沖繩本島發布氣象警報・注意報",
-    "summary": "沖繩本島地區到29日中午前，需注意突如其來的強降雨與雷擊。",
+    "title": "沖繩本島地方氣象警報・注意報",
+    "summary": "沖繩本島地方在29日中午前，需留意突如其來的強降雨與雷擊。",
     "category": "天氣警報",
     "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=471000&lang=ja",
     "alert": true
   },
   {
-    "date": "2026-08-14",
+    "date": "2026-08-15",
     "source": "氣象庁警報",
-    "title": "大東島地區發布氣象警報與注意報",
+    "title": "大東島地區氣象警報與注意報",
     "summary": "大東島地區請注意突如其來的強降雨與雷擊。",
     "category": "天氣警報",
     "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=472000&lang=ja",
     "alert": true
+  },
+  {
+    "date": "2026-08-15",
+    "source": "沖縄タイムス",
+    "title": "沖繩戰後失去父親與姊姊 82歲婦人談家族死別",
+    "summary": "宜野灣市82歲的喜納勝子表示，家族在沖繩戰中失去父親，戰後又因美軍車輛事故失去次姊。她也提到，撐起家庭的長姊在戰後不久因過勞與疾病過世。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1902645",
+    "alert": false
+  },
+  {
+    "date": "2026-08-15",
+    "source": "沖縄タイムス",
+    "title": "〈大弦小弦〉從「終戰」回望過去",
+    "summary": "報導回顧吉野文六在1945年5月柏林任職時，因蘇聯逼近而將文件與密碼全數焚毀。戰後他作為外務省美國局長，曾簽署沖繩返還密約文件。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1902662",
+    "alert": false
+  },
+  {
+    "date": "2026-08-15",
+    "source": "沖縄タイムス",
+    "title": "沖繩市公營住宅行動電源爆裂引發火災",
+    "summary": "14日下午，沖繩市一處縣營團地接獲通報有煙冒出。消防指出，21歲男子住處內充電中的行動電源破裂，造成臥室牆壁與地板燒焦，所幸無人受傷。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1902675",
+    "alert": false
+  },
+  {
+    "date": "2026-08-15",
+    "source": "沖縄タイムス",
+    "title": "《愛的碎片》離婚夫妻與孩子們的日常",
+    "summary": "這篇影評介紹電影《きれっぱしの愛》，內容描寫離婚的夫妻與三個孩子、以及一隻狗，在冰島鄉鎮中一起度過平淡日常。文章提到劇情沒有特別大事發生，呈現的是平靜而簡單的生活。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1901770",
+    "alert": false
+  },
+  {
+    "date": "2026-08-15",
+    "source": "沖縄タイムス",
+    "title": "那覇西平良吏美華奪游泳女50自銀牌",
+    "summary": "全國高校總體育大會游泳賽中，來自那覇西高中的平良吏美華在女子50公尺自由式游出25秒57，獲得第2名。她只差冠軍0.03秒，並刷新自己保持的縣紀錄0.17秒。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1902660",
+    "alert": false
+  },
+  {
+    "date": "2026-08-15",
+    "source": "沖縄タイムス",
+    "title": "古謝玄太發表知事選政策　承諾三項指標倍增",
+    "summary": "古謝玄太為沖繩縣知事選提出120項政策，強調要推動沖繩前進。他承諾將讓縣民所得、育兒支援預算與觀光收入三項指標倍增，並以具體數值目標展現實行決心。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1902699",
+    "alert": false
+  },
+  {
+    "date": "2026-08-15",
+    "source": "沖縄タイムス",
+    "title": "社論：8月15日考驗首相發信力",
+    "summary": "社論指出，日本戰後的和平主義與憲法第9條所支撐的國民情感，皆離不開戰爭體驗。隨著親歷者減少，戰爭的慘烈記憶與加害面向正逐漸被遺忘。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1902564",
+    "alert": false
+  },
+  {
+    "date": "2026-08-15",
+    "source": "沖縄タイムス",
+    "title": "獨角戲節沖繩公演 22、23日那霸登場",
+    "summary": "以獨角戲為主軸的戲劇節「INDEPENDENT」將在那霸舉辦沖繩公演。這場全國巡演集結縣內外6人的作品，於22、23日演出。",
+    "category": "觀光",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1902625",
+    "alert": false
+  },
+  {
+    "date": "2026-08-15",
+    "source": "沖縄タイムス",
+    "title": "縣柏青哥協同組合舉辦反暴力團集會",
+    "summary": "沖繩縣柏青哥・老虎機協同組合在浦添市舉辦「暴力團排除運動」。包括業界相關人士與縣民會議等約150人參加，並宣誓不與暴力團及反社會勢力往來。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1902584",
+    "alert": false
+  },
+  {
+    "date": "2026-08-15",
+    "source": "沖縄タイムス",
+    "title": "恩納舉辦健康麻將入門講座",
+    "summary": "恩納村教育委員會社會教育課於7月24日在村立うんな中學舉辦健康麻將初心者講座。由縣健康麻將聯盟會長前花正樹授課，向16名從中學生到70多歲的參加者講解基本規則與牌的知識。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1902577",
+    "alert": false
+  },
+  {
+    "date": "2026-08-15",
+    "source": "沖縄タイムス",
+    "title": "宮古島93歲湧川獲宮崎學童疏開在籍證",
+    "summary": "宮古島市93歲的湧川弘一，獲贈當年在宮崎縣小林國民學校的在籍之證。湧川表示很高興，並說當時在當地停留一年半，雖有辛苦也有快樂回憶。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1902554",
+    "alert": false
+  },
+  {
+    "date": "2026-08-15",
+    "source": "沖縄タイムス",
+    "title": "那覇港町成立協同組合 改善停車位不足",
+    "summary": "那覇市港町的運送、卸售等企業為改善停車位不足，成立了みなと地域協同組合。組合正向地區內企業募集賛助會員，並彙整意見。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1902546",
+    "alert": false
+  },
+  {
+    "date": "2026-08-15",
+    "source": "沖縄タイムス",
+    "title": "國頭桃原晨間會獲拉體操推廣表彰",
+    "summary": "國頭村桃原區的桃原晨間會，因在平日清晨持續於公民館進行廣播體操，獲得2026年度「府縣等表彰」。該團體被肯定為推動廣播體操普及的優良團體，也有助健康與地區交流。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1902537",
+    "alert": false
+  },
+  {
+    "date": "2026-08-15",
+    "source": "沖縄タイムス",
+    "title": "基地返還經濟效益更新為41倍",
+    "summary": "沖繩縣14日公布駐留軍用地跡地利用的經濟波及效果暫定更新結果。已返還的那霸新都心、小禮金城與北谷町桑江・北前3地區，返還前相比的直接經濟效果由28倍更新為41倍。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1902700",
+    "alert": false
+  },
+  {
+    "date": "2026-08-15",
+    "source": "沖縄タイムス",
+    "title": "池城安武倫敦舉辦個展，展現石垣自然與文化",
+    "summary": "石垣島為據點活動的設計師池城安武在英國倫敦的咖啡館舉辦個展「ICHIGUSUKUMODE POP UP」，展期至31日。這是他繼2022年後第二次在同一場地展出。",
+    "category": "觀光",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1902636",
+    "alert": false
+  },
+  {
+    "date": "2026-08-15",
+    "source": "氣象庁警報",
+    "title": "宮古島地方氣象警報・注意報解除",
+    "summary": "宮古島地區的氣象注意報已解除。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=473000&lang=ja",
+    "alert": false
+  },
+  {
+    "date": "2026-08-15",
+    "source": "氣象庁警報",
+    "title": "八重山地區氣象警報・注意報",
+    "summary": "八重山地區的注意報已解除。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=474000&lang=ja",
+    "alert": false
   },
   {
     "date": "2026-08-14",
@@ -150,24 +303,6 @@
     "summary": "以住在名護市邊野古、持續反對新基地建設的島袋文子為原型的繪本《邊野古の浜の文子さん》已於7月出版。作者岩下美智子透過長達15年的交流，描寫她對反基地與和平的堅定想法及沖繩戰爭體驗。",
     "category": "生活",
     "url": "http://www.okinawatimes.co.jp/articles/-/1901972",
-    "alert": false
-  },
-  {
-    "date": "2026-08-14",
-    "source": "氣象庁警報",
-    "title": "宮古島地方氣象警報、注意報解除",
-    "summary": "宮古島地方的注意報已解除。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=473000&lang=ja",
-    "alert": false
-  },
-  {
-    "date": "2026-08-14",
-    "source": "氣象庁警報",
-    "title": "八重山地區氣象警報與注意報解除",
-    "summary": "八重山地區的注意報已解除。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=474000&lang=ja",
     "alert": false
   },
   {
@@ -564,141 +699,6 @@
     "summary": "石垣市立八島小學是當地最靠近海邊的學校，從校舍窗外可一望珊瑚礁。學校自2000年度起，每年在地漁業者協助下，透過傳統哈里舟體驗進行「海的學習」。",
     "category": "生活",
     "url": "http://www.okinawatimes.co.jp/articles/-/1900102",
-    "alert": false
-  },
-  {
-    "date": "2026-08-10",
-    "source": "沖縄タイムス",
-    "title": "台風13號重創沖繩 北部停電持續復舊",
-    "summary": "台風13號於6日至8日接近沖繩，雖已脫離暴風域，9日仍持續影響縣民生活。縣府表示有9人輕傷、9棟民宅與店舖受損，本島北部停電一度達7140戶，預計9日晚至10日中午前陸續復電。",
-    "category": "天氣警報",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899645",
-    "alert": true
-  },
-  {
-    "date": "2026-08-10",
-    "source": "沖縄タイムス",
-    "title": "自民大浜縣議發言惹議　稱玉城知事支持者有極左暴力集團",
-    "summary": "自民黨籍、石垣市區選出的大浜一郎縣議在集會上談及玉城知事支持者時，發表「極左暴力集團」等言論，引發關注。大浜事後解釋，發言是基於縣警曾確認反基地運動人士中有極左暴力集團一事。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899655",
-    "alert": false
-  },
-  {
-    "date": "2026-08-10",
-    "source": "沖縄タイムス",
-    "title": "玉城否認有極左暴力集團作為支援核心",
-    "summary": "針對自民黨大濱一郎縣議稱「玉城知事由極左暴力集團支撐」的發言，玉城表示這種人「絕對不是」支援團體的中心。其選舉母體也對相關言論提出抗議。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899656",
-    "alert": false
-  },
-  {
-    "date": "2026-08-10",
-    "source": "沖縄タイムス",
-    "title": "沖繩知事選參選人專訪：玉城德尼談交通福祉",
-    "summary": "距離9月13日投開票的沖繩知事選約剩一個月。沖繩時報針對表明參選的3名候選人，訪問他們的爭點、政策與想對選民訴求的內容。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899654",
-    "alert": false
-  },
-  {
-    "date": "2026-08-10",
-    "source": "沖縄タイムス",
-    "title": "木村草太：陸自市民思想調查威脅內心自由",
-    "summary": "木村草太指出，若自衛隊員隱瞞身分或目的接近市民並收集個資、建立資料庫，將是重大問題。未經同意以偽裝或不正手段取得資訊，可能違反個人資料保護法。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899685",
-    "alert": false
-  },
-  {
-    "date": "2026-08-10",
-    "source": "沖縄タイムス",
-    "title": "陸自被爆市民思想調查與個資蒐集",
-    "summary": "自衛隊情報部隊被指在未經同意下接觸市民，調查「愛國心」與「對自衛隊感情」等思想信念並製成報告。報導稱相關資料可能達數萬人，恐侵害憲法保障的思想與良心自由。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899603",
-    "alert": false
-  },
-  {
-    "date": "2026-08-10",
-    "source": "沖縄タイムス",
-    "title": "首里高出身城間組奪全國學生女子演武冠軍",
-    "summary": "第65屆全日本學生選手權大會9日在靜岡縣武道館舉行。女子演武由鹿屋體育大城間こころ、大谷舞桜組奪冠，國際武道大平安名はな、富川亜紀組獲第3名。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899617",
-    "alert": false
-  },
-  {
-    "date": "2026-08-10",
-    "source": "沖縄タイムス",
-    "title": "陸自疑蒐集市民思想信條等個資",
-    "summary": "報導指出，陸上自衛隊朝霞駐屯地所屬的中央情報隊，疑似以隱匿身分接近國內大學教授與NPO代表等市民，組織性蒐集個人資訊。內容包含「愛國心」與「對自衛隊感情」等思想信條相關項目。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899614",
-    "alert": false
-  },
-  {
-    "date": "2026-08-10",
-    "source": "沖縄タイムス",
-    "title": "社論：NHK性侵害問題凸顯人權意識薄弱",
-    "summary": "報導指出，放送業界的人權意識不足再度浮現。NHK職員遭節目出演者性侵害後休職，復職時的異動希望也未被接受。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899572",
-    "alert": false
-  },
-  {
-    "date": "2026-08-10",
-    "source": "沖縄タイムス",
-    "title": "佐敷男籃九州中學總體賽遭逆轉",
-    "summary": "九州中學體育大會9日舉行，男子籃球首輪在那霸市民體育館登場。佐敷、本部・上本部，以及高江洲、北谷皆在各自比賽中落敗。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899635",
-    "alert": false
-  },
-  {
-    "date": "2026-08-10",
-    "source": "沖縄タイムス",
-    "title": "比嘉大吾WBA世界戰判定落敗",
-    "summary": "前世界拳王、浦添市出身的比嘉大吾，於7月20日的WBA雛量級王座決定戰中，以1比2判定不敵增田陸。報導提到比賽結果引發異議。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899595",
-    "alert": false
-  },
-  {
-    "date": "2026-08-10",
-    "source": "沖縄タイムス",
-    "title": "沖尚備戰甲子園首戰對橫濱",
-    "summary": "第108屆夏季甲子園第6日，沖繩尚學將在首戰對上橫濱。沖繩尚學目標挑戰夏甲子園二連霸，並調整迎戰對方的王牌投手。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899586",
-    "alert": false
-  },
-  {
-    "date": "2026-08-10",
-    "source": "沖縄タイムス",
-    "title": "讀谷將辦兒童權利主題座談會",
-    "summary": "沖繩縣為推廣7月制定的「縣兒童權利條例」，將於16日在讀谷村文化中心舉辦座談會。活動免費，但需事先報名，名額180人，採先到先得。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899560",
-    "alert": false
-  },
-  {
-    "date": "2026-08-10",
-    "source": "沖縄タイムス",
-    "title": "多良間姊弟出戰全日本少年少女空手道賽",
-    "summary": "多良間小學就讀的姊弟，將參加第26屆全日本少年少女空手道錦標賽。兩人表示希望打出沒有遺憾的比賽，村公所與學校也設置祝賀看板為他們加油。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899528",
-    "alert": false
-  },
-  {
-    "date": "2026-08-10",
-    "source": "沖縄タイムス",
-    "title": "［小原猛的魔物故事］蛇篇：渡嘉敷的哈布",
-    "summary": "文章提到，曾有人警告「死去的哈布也會咬人」。作者回憶20多歲在宇流麻市收割甘蔗時，目睹同伴用鐮刀砍下哈布的頭部，自己靠近觀看時也被提醒要小心。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1899520",
     "alert": false
   }
 ]
