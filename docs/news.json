@@ -1,21 +1,174 @@
 [
   {
-    "date": "2026-08-17",
+    "date": "2026-08-18",
     "source": "氣象庁警報",
-    "title": "沖繩本島地方氣象警報・注意報",
-    "summary": "沖繩本島地方到29日中午前需留意突發強降雨與雷擊。",
+    "title": "沖繩本島留意強降雨與雷擊",
+    "summary": "沖繩本島地區到29日中午前可能出現突發強降雨與雷擊，需留意天氣變化。",
     "category": "天氣警報",
     "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=471000&lang=ja",
     "alert": true
   },
   {
-    "date": "2026-08-17",
+    "date": "2026-08-18",
     "source": "氣象庁警報",
-    "title": "大東島地區發布氣象警報注意",
-    "summary": "大東島地區需注意突如其來的強降雨與雷擊。請留意天氣變化，避免外出時發生危險。",
+    "title": "大東島地區氣象警報與注意報",
+    "summary": "大東島地區請注意突發強降雨與雷擊。原文提醒當地天氣狀況可能轉變，外出需提高警覺。",
     "category": "天氣警報",
     "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=472000&lang=ja",
     "alert": true
+  },
+  {
+    "date": "2026-08-18",
+    "source": "沖縄タイムス",
+    "title": "沖繩相關女性首度獲枯葉劑被害認定",
+    "summary": "美國國防部不承認沖繩曾有枯葉劑，導致退役軍人要證明健康受害相當困難。報導指出，有人即使提出證詞、公文書與論文，申請仍可能被駁回並耗時多年。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1904206",
+    "alert": false
+  },
+  {
+    "date": "2026-08-18",
+    "source": "沖縄タイムス",
+    "title": "從統計數據分析沖繩經濟",
+    "summary": "琉球銀行自創立以來就設有調查部門。曾在集團公司任職的金城毅，除一年支店勤務外，長年從事統計調查工作超過40年。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1904165",
+    "alert": false
+  },
+  {
+    "date": "2026-08-18",
+    "source": "沖縄タイムス",
+    "title": "沖繩各基地曾發生枯葉劑事故　嘉手納最多25人",
+    "summary": "美國退役軍人省的裁決資料顯示，越戰期間沖繩曾受枯葉劑嚴重污染。從那霸軍港到北部訓練場等多處基地都曾發生事故，周邊還出現魚大量死亡等情況。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1904217",
+    "alert": false
+  },
+  {
+    "date": "2026-08-18",
+    "source": "沖縄タイムス",
+    "title": "沖繩知事選3候選人公開討論會",
+    "summary": "為9月13日投開票的知事選，3名擬參選人17日在那霸市參加公開討論會。現任知事玉城デ尼、古謝玄太與下地幹郎出席，說明政策與政治理念，並回應民眾提問。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1904168",
+    "alert": false
+  },
+  {
+    "date": "2026-08-18",
+    "source": "沖縄タイムス",
+    "title": "沖繩知事選3人提觀光發展政見",
+    "summary": "為了9月13日投開票的沖繩知事選，17日在那霸市舉辦以觀光發展為主題的政見發表會。表態參選的3人提出增加觀光收入、明年2月導入住宿稅，以及交通基礎建設等具體對策。",
+    "category": "觀光",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1904167",
+    "alert": false
+  },
+  {
+    "date": "2026-08-18",
+    "source": "沖縄タイムス",
+    "title": "美政府認定70名曾在沖兵補償　近兩年增37人",
+    "summary": "美國政府認定曾在沖繩接觸枯葉劑而罹病、可獲補償的前美軍人已達70人。相較1998至2023年的25年間僅33人，2024與2025年兩年就新增37人，認定數明顯增加。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1904161",
+    "alert": false
+  },
+  {
+    "date": "2026-08-18",
+    "source": "沖縄タイムス",
+    "title": "無人機禁飛區擴大　規制法上月施行",
+    "summary": "改正無人機規制法上月施行，將美軍基地等周邊的禁飛空域由半徑約300公尺擴大到約1公里。此舉是為因應無人機飛行性能提升。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1904110",
+    "alert": false
+  },
+  {
+    "date": "2026-08-18",
+    "source": "沖縄タイムス",
+    "title": "時報盃高爾夫首日　仲村以3桿差領先",
+    "summary": "第61屆時報盃全沖繩選手權首日在北谷町的Bell Beach GC進行預賽回合。一般組由仲村春之介以低於標準2桿的70桿出發，暫居首位，領先第2名3桿。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1904187",
+    "alert": false
+  },
+  {
+    "date": "2026-08-18",
+    "source": "沖縄タイムス",
+    "title": "台中東海大日語生發行雙語資訊雜誌",
+    "summary": "台中東海大學習日語的學生在「報導寫作」課程中，每年發行兩次日中雙語資訊雜誌《花火》。雜誌以學生自主採訪為主，至今已創刊27年。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1904176",
+    "alert": false
+  },
+  {
+    "date": "2026-08-18",
+    "source": "沖縄タイムス",
+    "title": "手機通話前播廣告影片 觀看可累積點數",
+    "summary": "觀光資訊網站「おきなわ便」開始新廣告服務「着AD」，會在智慧型手機通話前播放5秒影片廣告。使用者觀看後可獲得點數，並可在廣告主店家消費或付款時使用。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1904122",
+    "alert": false
+  },
+  {
+    "date": "2026-08-18",
+    "source": "沖縄タイムス",
+    "title": "宮古島狩俣中5生體驗傳統追趕漁",
+    "summary": "宮古島市平良狩俣舉行傳統漁法追趕漁的體驗學習，市立狩俣中學5名學生在漁師指導下下海參與作業。活動共捕獲300公斤，學生也表示收穫良多。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1904036",
+    "alert": false
+  },
+  {
+    "date": "2026-08-18",
+    "source": "沖縄タイムス",
+    "title": "島袋小學正門的兒童青銅像成校園象徵",
+    "summary": "北中城村立島袋小學正門設有兩座兒童青銅像，一座張開雙手仰望天空，另一座坐著微笑注視前方。校長表示，這是守護孩子們的學校象徵。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1904028",
+    "alert": false
+  },
+  {
+    "date": "2026-08-18",
+    "source": "沖縄タイムス",
+    "title": "盂蘭盆節沖繩航線旅客44萬人，年減24.8%",
+    "summary": "航空公司公布盂蘭盆節期間（7日至16日）沖繩航線的使用實績。JAL、JTA、ANA、Skymark等5家合計旅客數為44萬6929人，較去年減少24.8%。",
+    "category": "交通",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1904123",
+    "alert": false
+  },
+  {
+    "date": "2026-08-18",
+    "source": "沖縄タイムス",
+    "title": "サンシャイン捐贈57件制服給沖繩市「笑びん」",
+    "summary": "遊技業的サンシャイン於14日，將褲子、外套等共57件制服，捐贈給在沖繩市經營學生制服回收販售的「子ども応援団笑びん」。這些制服是透過員工與遊技場回收箱蒐集而來。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1904059",
+    "alert": false
+  },
+  {
+    "date": "2026-08-18",
+    "source": "沖縄タイムス",
+    "title": "那霸舉辦LRT研討會盼緩解塞車",
+    "summary": "那霸市11日舉辦研討會，推動公共交通利用，以改善交通壅塞並提升移動便利性。會中邀請正研議導入LRT的宇都宮市職員演講，介紹先進地的現況。",
+    "category": "交通",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1904037",
+    "alert": false
+  },
+  {
+    "date": "2026-08-18",
+    "source": "氣象庁警報",
+    "title": "宮古島地方氣象警報・注意報解除",
+    "summary": "宮古島地方的氣象注意報已解除。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=473000&lang=ja",
+    "alert": false
+  },
+  {
+    "date": "2026-08-18",
+    "source": "氣象庁警報",
+    "title": "八重山地區氣象警報・注意報解除",
+    "summary": "八重山地區的氣象注意報已解除。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=474000&lang=ja",
+    "alert": false
   },
   {
     "date": "2026-08-17",
@@ -150,24 +303,6 @@
     "summary": "第78回實業團分級錦標賽男子A組，由高江洲、大城組奪冠。這則報導主要介紹比賽結果。",
     "category": "生活",
     "url": "http://www.okinawatimes.co.jp/articles/-/1903478",
-    "alert": false
-  },
-  {
-    "date": "2026-08-17",
-    "source": "氣象庁警報",
-    "title": "宮古島地區氣象警報・注意報解除",
-    "summary": "宮古島地區的注意報已解除。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=473000&lang=ja",
-    "alert": false
-  },
-  {
-    "date": "2026-08-17",
-    "source": "氣象庁警報",
-    "title": "八重山地區氣象警報・注意報解除",
-    "summary": "八重山地區的注意報已解除。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=474000&lang=ja",
     "alert": false
   },
   {
@@ -573,141 +708,6 @@
     "summary": "以住在名護市邊野古、持續反對新基地建設的島袋文子為原型的繪本《邊野古の浜の文子さん》已於7月出版。作者岩下美智子透過長達15年的交流，描寫她對反基地與和平的堅定想法及沖繩戰爭體驗。",
     "category": "生活",
     "url": "http://www.okinawatimes.co.jp/articles/-/1901972",
-    "alert": false
-  },
-  {
-    "date": "2026-08-13",
-    "source": "沖縄タイムス",
-    "title": "「香蕉王國」宇流麻舉辦香蕉節",
-    "summary": "「香蕉王國宇流麻」香蕉節將於15日星期六上午11時至下午2時，在宇流麻市的農水產物直賣所「うるマルシェ」舉行。活動目的在推廣市內生產的香蕉消費，現場可品嚐多種品種，並販售甜點。",
-    "category": "觀光",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1901048",
-    "alert": false
-  },
-  {
-    "date": "2026-08-13",
-    "source": "沖縄タイムス",
-    "title": "那霸市今明兩天舉辦哈伯景觀啤酒之夜",
-    "summary": "沖繩哈伯景觀飯店將於13、14日在那霸市久茂地的タイムスビル1樓舉辦「Beer Night」。活動時間為下午5時至8時半，現場可用票券兌換啤酒等飲品與下酒菜，並有爵士現場演奏。",
-    "category": "觀光",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1901126",
-    "alert": false
-  },
-  {
-    "date": "2026-08-13",
-    "source": "沖縄タイムス",
-    "title": "那霸市新開平價鐵板燒「首里天」",
-    "summary": "那霸市泉崎的沖繩卡里尤希度假村EXES那霸1樓，13日將開幕卡ジュアル鐵板燒餐廳「首里天」。店家以當地客與觀光客為對象，主打平價鐵板燒，並設有約20席與包廂。",
-    "category": "觀光",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1901127",
-    "alert": false
-  },
-  {
-    "date": "2026-08-13",
-    "source": "沖縄タイムス",
-    "title": "宮古島鹽與讀谷香草的軟綿銅鑼燒全國販售",
-    "summary": "洋菓子業者蒙特爾自1日起，開始全國販售使用沖繩產香草的「ふんわりどら焼・沖縄バニラ」。這款商品為限期販售至31日，香草原料由在讀谷村栽培香草的業者供應。",
-    "category": "觀光",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1901124",
-    "alert": false
-  },
-  {
-    "date": "2026-08-13",
-    "source": "沖縄タイムス",
-    "title": "沖繩石垣牛與本鮪在紐約推廣",
-    "summary": "沖繩縣7月在美國紐約，針對餐飲與流通業者推廣石垣牛、本鮪等高價位縣產品。縣府盼藉此提升海外知名度與需求，帶動縣內企業拓展銷售通路。",
-    "category": "觀光",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1901123",
-    "alert": false
-  },
-  {
-    "date": "2026-08-13",
-    "source": "沖縄タイムス",
-    "title": "遮陽傘與手持風扇防暑商品熱賣",
-    "summary": "因持續高溫，沖繩縣內超市與雜貨店的遮陽傘、面罩、手持風扇等防暑商品銷售增加。部分業者擴大賣場，並新增兒童用遮陽傘專區。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1901122",
-    "alert": false
-  },
-  {
-    "date": "2026-08-13",
-    "source": "沖縄タイムス",
-    "title": "下地幹郎：堅持和平並強化經濟，主張以沖繩優先改變政治",
-    "summary": "下地幹郎在沖繩縣知事選相關專訪中表示，不打算採取政黨或經濟團體主導的組織型選舉，而是以志工和社群媒體推動新的選舉方式。他也強調將以和平與經濟強化為主軸，主張把沖繩放在第一位。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1901189",
-    "alert": false
-  },
-  {
-    "date": "2026-08-13",
-    "source": "沖縄タイムス",
-    "title": "沖繩知事選剩1個月　各方支持態勢底定",
-    "summary": "距離8月27日公告、9月13日投開票的沖繩縣知事選剩1個月。現任與兩位新人候選人持續舉行集會和街頭演說，經濟、勞動團體及政黨的支持狀況也逐漸明朗。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1901154",
-    "alert": false
-  },
-  {
-    "date": "2026-08-13",
-    "source": "沖縄タイムス",
-    "title": "沖繩知事選3人將於25日公開討論",
-    "summary": "沖繩時報與琉球放送將於25日下午3時舉辦知事選公開討論會，出席者為玉城德尼、古謝玄太與下地幹郎3人。活動採事前報名制，並向讀者募集提問。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1901273",
-    "alert": false
-  },
-  {
-    "date": "2026-08-13",
-    "source": "沖縄タイムス",
-    "title": "沖繩知事選 玉城德尼發表政策",
-    "summary": "玉城德尼為9月13日投開票的沖繩知事選發表政策。內容以經濟、福祉、交通、離島振興、自然與文化振興、能源及和平七大方向為主。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1901153",
-    "alert": false
-  },
-  {
-    "date": "2026-08-13",
-    "source": "沖縄タイムス",
-    "title": "東風平中岩崎宇來奪全國國中舉重65公斤級冠軍",
-    "summary": "第40屆全國男子國中舉重錦標賽10日在富山縣舉行，東風平中三年級的岩崎宇來在男子65公斤級奪冠。成績為抓舉73公斤、挺舉85公斤、總和158公斤。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1901186",
-    "alert": false
-  },
-  {
-    "date": "2026-08-13",
-    "source": "沖縄タイムス",
-    "title": "社論：暑假與兒童貧困　關注飲食與酷暑",
-    "summary": "學校暑假過半，社論關切經濟困難家庭的孩子是否能安心健康地度過。由於暑假沒有學校午餐，加上近年物價上漲，部分家庭可能正為孩子是否吃得飽而擔憂。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1901078",
-    "alert": false
-  },
-  {
-    "date": "2026-08-13",
-    "source": "沖縄タイムス",
-    "title": "伊江LCT爆炸78年：田中回憶親友生還",
-    "summary": "本部町的田中英治回憶，1948年8月6日伊江島發生裝載大量未爆彈與未使用彈藥的美軍LCT爆炸，造成多人死傷。當時他以為在爆炸中喪命的親友喜納正弘，後來平安回來。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1901208",
-    "alert": false
-  },
-  {
-    "date": "2026-08-13",
-    "source": "沖縄タイムス",
-    "title": "仲村破大會紀錄 奪男子U16撐竿跳冠軍",
-    "summary": "第57回全沖繩青少年錦標賽兼JOC青少年奧運盃U16預賽11日在縣綜合運動公園陸上競技場舉行。男子16歲以下撐竿跳由仲村蔵之介（東中）以3公尺90奪冠，並刷新大會紀錄。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1901200",
-    "alert": false
-  },
-  {
-    "date": "2026-08-13",
-    "source": "沖縄タイムス",
-    "title": "美軍直升機墜落22年　回顧沖國大周邊受害",
-    "summary": "2004年8月13日，美軍CH53大型運輸直升機從普天間飛行場起飛後墜落於宜野灣市沖繩國際大學。新聞提到，機體碎片不只落在校內，周邊也有廣範圍受害。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1901143",
     "alert": false
   }
 ]
