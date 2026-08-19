@@ -1093,21 +1093,6 @@
     "description": "迎接祖先靈魂的盂蘭盆節，街區裡常能聽見エイサー太鼓聲"
   },
   {
-    "name": "育陶園「奇々怪々展vol.4」",
-    "name_zh": "幾藤園《琪琪凱凱展vol.4》",
-    "date_start": "2026-08-13",
-    "date_end": "2026-08-19",
-    "url": "https://www.okinawastory.jp/event/600022717",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": "",
-    "image": "https://s3.ap-northeast-1.amazonaws.com/jp.nnear.upload/1784945428349_奇々怪々POP2026.jpg",
-    "location": "イーサ ・ 沖縄県那覇市壺屋１丁目２２−３８",
-    "price": "免費",
-    "official_url": "https://www.ikutouen.com/2026/07/24/%e3%80%8c%e5%a5%87%e3%80%85%e6%80%aa%e3%80%85%e5%b1%95vol-4%e3%80%8d%e9%96%8b%e5%82%ac%e3%80%802026/"
-  },
-  {
     "name": "金城唯喜と若手漆芸作家　沈金展",
     "name_zh": "金城由紀與青年漆藝家Chinkin展",
     "date_start": "2026-08-14",
@@ -1123,6 +1108,51 @@
     "official_url": "https://www.okigei.ac.jp/experience/exhibit/%e9%87%91%e5%9f%8e%e5%94%af%e5%96%9c%e3%81%a8%e8%8b%a5%e6%89%8b%e6%bc%86%e8%8a%b8%e4%bd%9c%e5%ae%b6%e3%80%80%e6%b2%88%e9%87%91%e5%b1%95.html"
   },
   {
+    "name": "田井基文氏写真展 開催！",
+    "name_zh": "泰本文攝影展舉辦！",
+    "date_start": "2026-08-15",
+    "date_end": "2026-09-30",
+    "url": "https://www.okinawastory.jp/event/600022821",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://www.neopark.co.jp/wp-content/uploads/2026/08/db8db530a42e8b7a163a1831d2b807da.jpg",
+    "location": "ネオパークオキナワ　情報館『気になる木展』横　休憩スペース ・ 沖縄県名護市名護4607-41",
+    "price": "",
+    "official_url": "https://www.neopark.co.jp/topics/34661/"
+  },
+  {
+    "name": "第二回 RYUBOやちむん市",
+    "name_zh": "第2屆RYUBO八知門市",
+    "date_start": "2026-08-18",
+    "date_end": "2026-08-24",
+    "url": "https://www.okinawastory.jp/event/600022840",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://ryubo.jp/wp-content/uploads/2026/08/ryubo_yachimunichi2_1000v2-1.jpg",
+    "location": "デパートリウボウ　6F イベントスペース ・ 沖縄県那覇市久茂地１丁目１−１",
+    "price": "",
+    "official_url": "https://ryubo.jp/ryubo-yachimunichi-2nd/"
+  },
+  {
+    "name": "【26.8.19.Wed-31.Mon】「在る風景」金城徹・園田明華 ２人展",
+    "name_zh": "[26.8.19.Wed-31.Mon] 「現存風景」金城徹、園田晶香二人展",
+    "date_start": "2026-08-19",
+    "date_end": "2026-08-31",
+    "url": "https://www.okinawastory.jp/event/600022841",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://www.uds-hotels.com/wp/wp-content/uploads/2026/07/ante_event-1024x598.jpg",
+    "location": "ホテルアンテルーム那覇 GALLERY 9.5 NAHA ・ 沖縄県那覇市前島３丁目２７−１１",
+    "price": "免費",
+    "official_url": "https://www.uds-hotels.com/anteroom/naha/exhibition/event/%e3%80%9026-8-19-wed-31-mon%e3%80%91%e3%80%8c%e5%9c%a8%e3%82%8b%e9%a2%a8%e6%99%af%e3%80%8d%e9%87%91%e5%9f%8e%e5%be%b9%e3%83%bb%e5%9c%92%e7%94%b0%e6%98%8e%e8%8f%af-%ef%bc%92%e4%ba%ba%e5%b1%95/"
+  },
+  {
     "name": "『科学が生んだおとぎの国―与那原テックミニ企画展―』の開催について",
     "name_zh": "關於舉辦“科學創造的仙境——與那原科技迷你展”",
     "date_start": "2026-08-19",
@@ -1136,6 +1166,36 @@
     "location": "与那原大綱曳資料館 ・ 沖縄県島尻郡与那原町上与那原１６−２",
     "price": "",
     "official_url": "https://www.town.yonabaru.okinawa.jp/soshiki/17/9819.html"
+  },
+  {
+    "name": "【沖縄県文化協会】首里城正殿復興記念事業「地域文化の底力とひろがり」開催のおしらせ",
+    "name_zh": "[沖繩縣文化協會]首里城正殿重建紀念事業「地域文化的根基與擴展」的通知",
+    "date_start": "2026-08-22",
+    "date_end": "2026-10-18",
+    "url": "https://www.okinawastory.jp/event/600022846",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://shimakutuba.jp/ctladmin/wp-content/uploads/2026/08/doc01569920260812154917_001-316x448.jpg",
+    "location": "マティダ市民劇場、石垣市民会館、首里城公園 首里杜館、シュガーホール、うるま市民芸術劇場 響ホール、名護市民会館、久米島町農村環境改善センター ・ 沖縄県宮古島市平良下里１０８−１２",
+    "price": "",
+    "official_url": "https://shimakutuba.jp/shimakotoba-info/post6205/"
+  },
+  {
+    "name": "豊見城のいいもの市",
+    "name_zh": "豐見城美食市場",
+    "date_start": "2026-08-22",
+    "date_end": "2026-08-23",
+    "url": "https://www.okinawastory.jp/event/600022814",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://s3.ap-northeast-1.amazonaws.com/jp.nnear.upload/1786577899975_同内容・同デザインA4縦作成依頼.png",
+    "location": "瀬長島 ウミカジテラス ・ 沖縄県豊見城市瀬長１７４−６",
+    "price": "免費",
+    "official_url": "https://www.umikajiterrace.com/"
   },
   {
     "name": "第17回今帰仁まつり",
@@ -1192,6 +1252,36 @@
     "category": "節氣",
     "stars": 4,
     "description": "暑熱漸退，但沖繩的夏天還會延續一個多月，海水依然溫暖清澈"
+  },
+  {
+    "name": "【開催予定】 2026年北中城村道ジュネ―",
+    "name_zh": "[預定]2026年北中城村道6月",
+    "date_start": "2026-08-24",
+    "date_end": "2026-08-27",
+    "url": "https://www.okinawastory.jp/event/600022828",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://www.kitapo.jp/userfiles/images/1_1.png",
+    "location": "北中城村　エンズマリーナ、プラザハウス裏、北中城団地、仲順公園、荻道公民館、喜舎場公民館、島袋小学校、熱田公民館、中央公民館周辺、喜舎場公園、島袋公民館 ・ 沖縄県中頭郡北中城村ライカム５４７",
+    "price": "",
+    "official_url": "https://www.kitapo.jp/event/michijyune2026/"
+  },
+  {
+    "name": "2026年沖縄市平和月間企画in沖縄こどもの国ワンダーミュージアム えほんがつなぐ「平和へのメッセージ」",
+    "name_zh": "2026年沖繩市和平月計畫沖繩兒童之國奇觀博物館「和平的訊息」圖畫書相連",
+    "date_start": "2026-08-29",
+    "date_end": "2026-09-07",
+    "url": "https://www.okinawastory.jp/event/600022824",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://www.okzm.jp/cms/wp-content/uploads/2026/08/26平和月間チラシ-scaled.jpg",
+    "location": "沖縄こどもの国ワンダーミュージアム ・ 沖縄県沖縄市胡屋5-7-1",
+    "price": "",
+    "official_url": "https://www.okzm.jp/event/5131/"
   },
   {
     "name": "「第22回 ジュニアゴルフ・カヌチャカップ」開催【8/29(土)・30(日)】",
@@ -1267,6 +1357,21 @@
     "location": "沖繩市Koza運動公園（附設操場）",
     "price": "免費",
     "official_url": ""
+  },
+  {
+    "name": "9/5～11/29 土日祝日限定 本格中華ランチビュッフェ「飲茶×薬膳フェア」",
+    "name_zh": "9/5~11/29 正宗中式自助午餐「點心x藥禪」僅限週六、週日及假日",
+    "date_start": "2026-09-05",
+    "date_end": "2026-11-29",
+    "url": "https://www.okinawastory.jp/event/600022818",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://s3.ap-northeast-1.amazonaws.com/jp.nnear.upload/1787050093501_800x533(2).jpg",
+    "location": "ホテルゆがふいんおきなわ ・ 沖縄県名護市宮里４５３−１ 2階",
+    "price": "有料",
+    "official_url": "https://www.yugaf.com/topics/detail.php?id=475"
   },
   {
     "name": "ふわぐさ ナゴパイナップルパーク",
@@ -1353,6 +1458,21 @@
     "location": "大崎沖合または名蔵沖合 ・ 沖縄県石垣市名蔵",
     "price": "有料",
     "official_url": "https://www.instagram.com/p/DYXLDKCNVe6/"
+  },
+  {
+    "name": "シルバーウィークスペシャルランチ",
+    "name_zh": "白銀週特別午餐",
+    "date_start": "2026-09-19",
+    "date_end": "2026-09-27",
+    "url": "https://www.okinawastory.jp/event/600022817",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://s3.ap-northeast-1.amazonaws.com/jp.nnear.upload/1787038783933_260423-2550(2).jpg",
+    "location": "THE ORION BEER DINING ・ 沖縄県那覇市安里１丁目２−２１ 1階",
+    "price": "有料",
+    "official_url": "https://ryukyuorion.kenhotels.com/news/349"
   },
   {
     "name": "読書の秋を満喫する「よんなー BOOK days」",
@@ -1500,6 +1620,36 @@
     "official_url": "https://www-city-tomigusuku-lg-jp.translate.goog/soshiki/1/1005/gyomuannai/3/3/9819.html?_x_tr_sl=auto&_x_tr_tl=zh-TW&_x_tr_hl=ja"
   },
   {
+    "name": "沖縄観光闘牛 開催のお知らせ",
+    "name_zh": "沖繩觀光鬥牛活動的通知",
+    "date_start": "2026-10-17",
+    "date_end": "2027-03-20",
+    "url": "https://www.okinawastory.jp/event/600022823",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://ros-cms-data.s3.ap-northeast-1.amazonaws.com/_file/8890/s/902c78ee70.jpg?1786750914",
+    "location": "うるま市石川多目的ドーム 闘牛場 ・ 沖縄県うるま市石川２２９８",
+    "price": "",
+    "official_url": "https://www.lequio-tourist.okinawa/entry.php?eid=355969"
+  },
+  {
+    "name": "第52回読谷まつり・第10回平和コンサートの開催について",
+    "name_zh": "關於第52屆讀谷祭暨第10屆和平音樂會",
+    "date_start": "2026-10-18",
+    "date_end": "2026-10-24",
+    "url": "https://www.okinawastory.jp/event/600022811",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "",
+    "location": "石川多目的ドーム、読谷村運動広場他 ・ 沖縄県うるま市石川２２９８−１",
+    "price": "",
+    "official_url": "https://www.vill.yomitan.okinawa.jp/kanko_bunka_sports/event/matsuri/7174.html"
+  },
+  {
     "name": "第32回伊平屋ムーンライトマラソン",
     "name_zh": "第32屆伊平屋月光馬拉松",
     "date_start": "2026-10-23",
@@ -1610,6 +1760,21 @@
     "category": "文化",
     "stars": 4,
     "description": "首里城一帶常有文化活動，能近距離認識琉球王朝的服飾與藝能"
+  },
+  {
+    "name": "「第15回中城護佐丸まつり」開催のお知らせ",
+    "name_zh": "關於「第15屆中城禦佐丸祭」的通知",
+    "date_start": "2026-11-07",
+    "date_end": "2026-11-08",
+    "url": "https://www.okinawastory.jp/event/600022826",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://www.vill.nakagusuku.okinawa.jp/userfiles/images/heiwa/03d3uoxgky79.jpeg",
+    "location": "中城村公共駐車場 ・ 沖縄県中頭郡中城村安里２１５",
+    "price": "",
+    "official_url": "https://www.vill.nakagusuku.okinawa.jp/article/1786341901/"
   },
   {
     "name": "ツール・ド・おきなわ　国際ロードレース　ジュニア国際ロードレース 100km",
