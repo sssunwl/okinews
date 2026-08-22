@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-23 00:24",
+  "updated": "2026-08-23 03:34",
   "general_caution": "不管哪個點，只要陣風超過 20 節、浪高超過 1.2 公尺，或當地已發布暴風警報／高浪警報，就直接放棄下水；能見度變差、突然起風湧、或現場出現離岸流跡象時也一樣，先上岸再說。",
   "spots": [
     {
@@ -124,24 +124,24 @@
           "verdict_reason": "風速 8 節，有點感覺；浪高 0.8 公尺，比平常大"
         }
       ],
-      "closest_timeline_hour": "00",
-      "wind_speed_kn": 10.5,
-      "wind_gust_kn": 19.8,
+      "closest_timeline_hour": "06",
+      "wind_speed_kn": 7.5,
+      "wind_gust_kn": 13.0,
       "wind_deg": 145,
       "wind_dir_label": "東南",
-      "wave_height_m": 1.24,
-      "swell_height_m": 1.04,
-      "swell_period_s": 5.8,
-      "tide_m": 1.33,
-      "tide_trend": "上漲",
+      "wave_height_m": 1.12,
+      "swell_height_m": 0.96,
+      "swell_period_s": 5.7,
+      "tide_m": 1.42,
+      "tide_trend": "下降",
       "tide_turn": {
         "kind": "滿潮",
         "time": "02:00",
-        "hours_away": 2
+        "hours_away": -1
       },
       "verdict": "avoid",
       "verdict_label": "不建議岸潛",
-      "verdict_reason": "浪高 1.2 公尺偏大"
+      "verdict_reason": "浪高 1.1 公尺偏大"
     },
     {
       "slug": "cape-maeda",
@@ -265,24 +265,24 @@
           "verdict_reason": "風速 8 節，有點感覺"
         }
       ],
-      "closest_timeline_hour": "00",
-      "wind_speed_kn": 12.4,
-      "wind_gust_kn": 22.5,
-      "wind_deg": 155,
-      "wind_dir_label": "南南東",
-      "wave_height_m": 0.82,
+      "closest_timeline_hour": "06",
+      "wind_speed_kn": 8.2,
+      "wind_gust_kn": 14.8,
+      "wind_deg": 145,
+      "wind_dir_label": "東南",
+      "wave_height_m": 0.76,
       "swell_height_m": 0.56,
-      "swell_period_s": 5.2,
-      "tide_m": 1.31,
-      "tide_trend": "上漲",
+      "swell_period_s": 4.5,
+      "tide_m": 1.42,
+      "tide_trend": "下降",
       "tide_turn": {
         "kind": "滿潮",
         "time": "02:00",
-        "hours_away": 2
+        "hours_away": -1
       },
       "verdict": "caution",
       "verdict_label": "需留意",
-      "verdict_reason": "風速 12 節，有點感覺；浪高 0.8 公尺，比平常大"
+      "verdict_reason": "風速 8 節，有點感覺；浪高 0.8 公尺，比平常大"
     },
     {
       "slug": "gorilla-chop",
@@ -406,24 +406,24 @@
           "verdict_reason": "風速浪高都在平穩範圍"
         }
       ],
-      "closest_timeline_hour": "00",
-      "wind_speed_kn": 8.5,
-      "wind_gust_kn": 19.4,
-      "wind_deg": 148,
+      "closest_timeline_hour": "06",
+      "wind_speed_kn": 6.9,
+      "wind_gust_kn": 14.6,
+      "wind_deg": 149,
       "wind_dir_label": "南南東",
-      "wave_height_m": 0.86,
-      "swell_height_m": 0.7,
-      "swell_period_s": 7.1,
-      "tide_m": 1.31,
-      "tide_trend": "上漲",
+      "wave_height_m": 0.78,
+      "swell_height_m": 0.66,
+      "swell_period_s": 6.8,
+      "tide_m": 1.41,
+      "tide_trend": "下降",
       "tide_turn": {
         "kind": "滿潮",
         "time": "02:00",
-        "hours_away": 2
+        "hours_away": -1
       },
       "verdict": "caution",
       "verdict_label": "需留意",
-      "verdict_reason": "風速 8 節，有點感覺；浪高 0.9 公尺，比平常大；目前風向對這個點是受風側"
+      "verdict_reason": "浪高 0.8 公尺，比平常大；目前風向對這個點是受風側"
     }
   ]
 }

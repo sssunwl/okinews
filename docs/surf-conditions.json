@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-23 00:24",
+  "updated": "2026-08-23 03:34",
   "general_caution": "沖繩多數浪點是礁盤 reef break，干潮時礁石會外露，浪大時更容易割傷擦傷；離岸流、突然變大的湧浪、閃電雷雨一律先上岸。新手不建議在浪超過腰高或有經驗者都收板的時段還硬下水。",
   "spots": [
     {
@@ -121,21 +121,21 @@
           "verdict_reason": "週期只有 5 秒，比較像風浪，浪型不會太乾淨"
         }
       ],
-      "closest_timeline_hour": "00",
-      "wind_speed_kn": 10.5,
-      "wind_gust_kn": 19.8,
+      "closest_timeline_hour": "06",
+      "wind_speed_kn": 7.5,
+      "wind_gust_kn": 13.0,
       "wind_deg": 145,
       "wind_dir_label": "東南",
-      "wave_height_m": 1.04,
-      "swell_height_m": 1.04,
-      "swell_period_s": 5.8,
-      "sea_wave_height_m": 1.24,
-      "tide_m": 1.33,
-      "tide_trend": "上漲",
+      "wave_height_m": 0.96,
+      "swell_height_m": 0.96,
+      "swell_period_s": 5.7,
+      "sea_wave_height_m": 1.12,
+      "tide_m": 1.42,
+      "tide_trend": "下降",
       "tide_turn": {
         "kind": "滿潮",
         "time": "02:00",
-        "hours_away": 2
+        "hours_away": -1
       },
       "verdict": "caution",
       "verdict_label": "需留意",
@@ -260,25 +260,25 @@
           "verdict_reason": "湧浪只有 0.3 公尺，太平沒什麼浪"
         }
       ],
-      "closest_timeline_hour": "00",
-      "wind_speed_kn": 12.4,
-      "wind_gust_kn": 22.5,
-      "wind_deg": 155,
-      "wind_dir_label": "南南東",
+      "closest_timeline_hour": "06",
+      "wind_speed_kn": 8.2,
+      "wind_gust_kn": 14.8,
+      "wind_deg": 145,
+      "wind_dir_label": "東南",
       "wave_height_m": 0.56,
       "swell_height_m": 0.56,
-      "swell_period_s": 5.2,
-      "sea_wave_height_m": 0.82,
-      "tide_m": 1.31,
-      "tide_trend": "上漲",
+      "swell_period_s": 4.5,
+      "sea_wave_height_m": 0.76,
+      "tide_m": 1.42,
+      "tide_trend": "下降",
       "tide_turn": {
         "kind": "滿潮",
         "time": "02:00",
-        "hours_away": 2
+        "hours_away": -1
       },
       "verdict": "caution",
       "verdict_label": "需留意",
-      "verdict_reason": "週期只有 5 秒，比較像風浪，浪型不會太乾淨"
+      "verdict_reason": "週期只有 4 秒，比較像風浪，浪型不會太乾淨"
     },
     {
       "slug": "zanpa-surf",
@@ -399,21 +399,21 @@
           "verdict_reason": "週期只有 5 秒，比較像風浪，浪型不會太乾淨"
         }
       ],
-      "closest_timeline_hour": "00",
-      "wind_speed_kn": 12.4,
-      "wind_gust_kn": 22.9,
-      "wind_deg": 153,
-      "wind_dir_label": "南南東",
-      "wave_height_m": 0.9,
-      "swell_height_m": 0.9,
-      "swell_period_s": 7.0,
-      "sea_wave_height_m": 1.24,
-      "tide_m": 1.31,
-      "tide_trend": "上漲",
+      "closest_timeline_hour": "06",
+      "wind_speed_kn": 8.1,
+      "wind_gust_kn": 14.0,
+      "wind_deg": 146,
+      "wind_dir_label": "東南",
+      "wave_height_m": 0.84,
+      "swell_height_m": 0.84,
+      "swell_period_s": 6.8,
+      "sea_wave_height_m": 1.14,
+      "tide_m": 1.42,
+      "tide_trend": "下降",
       "tide_turn": {
         "kind": "滿潮",
-        "time": "02:00",
-        "hours_away": 2
+        "time": "03:00",
+        "hours_away": 0
       },
       "verdict": "caution",
       "verdict_label": "需留意",
