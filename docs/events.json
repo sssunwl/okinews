@@ -1093,21 +1093,6 @@
     "description": "迎接祖先靈魂的盂蘭盆節，街區裡常能聽見エイサー太鼓聲"
   },
   {
-    "name": "田井基文氏写真展",
-    "name_zh": "泰本文攝影展舉辦！",
-    "date_start": "2026-08-15",
-    "date_end": "2026-09-30",
-    "url": "https://www.okinawastory.jp/event/600022821",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": "",
-    "image": "https://www.neopark.co.jp/wp-content/uploads/2026/08/db8db530a42e8b7a163a1831d2b807da.jpg",
-    "location": "ネオパークオキナワ　情報館『気になる木展』横　休憩スペース ・ 沖縄県名護市名護4607-41",
-    "price": "",
-    "official_url": "https://www.neopark.co.jp/topics/34661/"
-  },
-  {
     "name": "第二回 RYUBOやちむん市",
     "name_zh": "第2屆RYUBO八知門市",
     "date_start": "2026-08-18",
@@ -1902,6 +1887,36 @@
     "category": "傳統",
     "stars": 3,
     "description": "孩子的成長祭典，沖繩版七五三穿上琉球傳統服飾，色彩繽紛格外可愛"
+  },
+  {
+    "name": "2026沖縄本島1周サバイバルラン",
+    "name_zh": "",
+    "date_start": "2026-11-20",
+    "date_end": "2026-11-23",
+    "url": "https://www.okinawastory.jp/event/600022212",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "",
+    "location": "沖縄県 本島全域 ・ 沖縄県那覇市辻３丁目２−３６",
+    "price": "有料",
+    "official_url": "https://teamultra-k.info/race/survival2026/"
+  },
+  {
+    "name": "第47回壺屋陶器まつり開催について",
+    "name_zh": "",
+    "date_start": "2026-11-20",
+    "date_end": "2026-11-22",
+    "url": "https://www.okinawastory.jp/event/600022072",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "",
+    "location": "那覇市立壺屋小学校 ・ 沖縄県那覇市牧志３丁目１４−１２",
+    "price": "",
+    "official_url": "https://tuboya.com/information/1115/"
   },
   {
     "name": "今天是 🙏 勤労感謝の日",
