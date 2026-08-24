@@ -1,5 +1,167 @@
 [
   {
+    "date": "2026-08-25",
+    "source": "沖縄タイムス",
+    "title": "颱風18號速報整理：進路、停業、交通與活動停辦資訊",
+    "summary": "本文以時間軸整理颱風18號的最新消息，內容涵蓋進路、休業、交通與活動中止等資訊。文章標示為隨時更新，供讀者確認後續防災與交通狀況。",
+    "category": "天氣警報",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1908387",
+    "alert": true
+  },
+  {
+    "date": "2026-08-25",
+    "source": "沖縄タイムス",
+    "title": "颱風18號逼近沖繩本島　超市擁擠",
+    "summary": "颱風18號接近舊盆期間的沖繩，防颱準備與祭祀採買同時進行，市場和超市出現混雜情況。道ジュネー行程也有變更，另外為知事選準備的看板拆除作業也在進行。",
+    "category": "天氣警報",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1908817",
+    "alert": true
+  },
+  {
+    "date": "2026-08-25",
+    "source": "沖縄タイムス",
+    "title": "台風18號影響沖繩市青年會調整道じゅねー日程",
+    "summary": "預計25日至27日接近沖繩的台風18號，已影響舊盆行事。沖繩市內青年會正檢討調整「道じゅねー」日程，山里青年會則將原定25日至27日的巡行改為27日至29日。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1908818",
+    "alert": true
+  },
+  {
+    "date": "2026-08-25",
+    "source": "沖縄タイムス",
+    "title": "台風18號接近　國道58號等部分路段恐封閉",
+    "summary": "沖繩總合事務局指出，受台風18號接近影響，國道58號、331號及部分臨港道路區間有可能封閉。沖繩自動車道與那霸機場自動車道預計不會封閉，但目前尚未正式決定，後續仍可能依路徑變化。",
+    "category": "交通",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1908888",
+    "alert": true
+  },
+  {
+    "date": "2026-08-25",
+    "source": "沖縄タイムス",
+    "title": "台風18號最接近大東島　本島恐發暴風警報",
+    "summary": "非常強烈的台風18號於25日上午6時接近南大東島東方約50公里，正最接近大東島地區。沖繩氣象台預計25日中午前對沖繩本島地區發布暴風警報。",
+    "category": "天氣警報",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1908883",
+    "alert": true
+  },
+  {
+    "date": "2026-08-25",
+    "source": "沖縄タイムス",
+    "title": "台風逼近沖繩，舊盆迎祖先受影響",
+    "summary": "舊盆首日「ウンケー」當天，台風18號最接近沖繩地區，讓不少人擔心能否平安抵達。文中也提到，今年因厄爾尼諾現象，原本就預期颱風會增多。",
+    "category": "天氣警報",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1908766",
+    "alert": true
+  },
+  {
+    "date": "2026-08-25",
+    "source": "氣象庁警報",
+    "title": "沖繩本島地區氣象警報・注意報",
+    "summary": "沖繩本島地區在29日中午前要留意突發強降雨與雷擊。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=471000&lang=ja",
+    "alert": true
+  },
+  {
+    "date": "2026-08-25",
+    "source": "氣象庁警報",
+    "title": "大東島地區氣象警報・注意報",
+    "summary": "大東島地區請留意突發性強降雨與雷擊。原文提醒當地需注意天氣變化。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=472000&lang=ja",
+    "alert": true
+  },
+  {
+    "date": "2026-08-25",
+    "source": "沖縄タイムス",
+    "title": "沖繩本島計程車調漲　起跳價改為1.65公里650日圓",
+    "summary": "沖繩本島計程車自24日起調漲，普通車起跳價由1.75公里600日圓改為1.65公里650日圓。加算運賃也同步調整，從每400公尺100日圓改為每350公尺100日圓。",
+    "category": "交通",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1908807",
+    "alert": false
+  },
+  {
+    "date": "2026-08-25",
+    "source": "沖縄タイムス",
+    "title": "沖繩本島電照菊農地銅線遭竊擴大",
+    "summary": "沖繩本島電照菊農地的銅線遭竊情況擴大，北部、南部之外，中部也在7月後急增。自去年8月以來一年間，本島8個市町村共發生32件，受害農地約2萬4270坪。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1908805",
+    "alert": false
+  },
+  {
+    "date": "2026-08-25",
+    "source": "沖縄タイムス",
+    "title": "萬豪新品牌飯店將於2027年春在那霸開業",
+    "summary": "那霸市旭町的那霸東急REI酒店將於9月底結束營業。原址預計在2027年春開設「City Express by Marriott 沖繩那霸」，萬豪已與出資公司及營運公司簽署開業契約。",
+    "category": "觀光",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1908833",
+    "alert": false
+  },
+  {
+    "date": "2026-08-25",
+    "source": "沖縄タイムス",
+    "title": "泡盛「菊之露」與足立屋推新款「さんぴんハイ」",
+    "summary": "菊之露酒造與經營居酒屋「足立屋」的足立フーズ合作，推出第二彈聯名商品「足立屋さんぴんハイ」。商品以泡盛「菊之露akari」搭配さんぴん茶調製，將於9月1日起在縣內部分便利商店與足立屋等通路販售。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1908832",
+    "alert": false
+  },
+  {
+    "date": "2026-08-25",
+    "source": "沖縄タイムス",
+    "title": "沖繩銀行與東京星銀行簽協定 支援台灣拓展",
+    "summary": "沖繩銀行與東京星銀行簽署「地區經濟活性化」連携協定。雙方將運用東京星銀行的亞洲網絡與經驗，支援縣內企業海外進出。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1908831",
+    "alert": false
+  },
+  {
+    "date": "2026-08-25",
+    "source": "沖縄タイムス",
+    "title": "推廣鈣鈦礦太陽能電池免費設置",
+    "summary": "沖繩CO2削減推進協議會正推動對業者免費設置次世代「鈣鈦礦太陽能電池」。這種電池比傳統太陽能板更薄、可彎曲，且在陰天或部分遮蔭下也能發電，但設置成本高是主要障礙。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1908830",
+    "alert": false
+  },
+  {
+    "date": "2026-08-25",
+    "source": "沖縄タイムス",
+    "title": "沖繩知事選擬參選人討論經濟與民生",
+    "summary": "沖繩タイムス與琉球放送在那霸市舉辦知事選討論會，現任玉城デニー、古謝玄太與下地幹郎出席。會中針對經濟與生活議題進行論戰。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1908796",
+    "alert": false
+  },
+  {
+    "date": "2026-08-25",
+    "source": "沖縄タイムス",
+    "title": "舊盆前夕市場湧現採買人潮",
+    "summary": "25日是舊盆迎祖先的「ウンケー」。24日那霸市第一牧志公設市場擺滿祭祖食材，吸引許多民眾前來採買。來自糸滿市的一名77歲女性也帶著孫子到市場購買中身與蒟蒻。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1908764",
+    "alert": false
+  },
+  {
+    "date": "2026-08-25",
+    "source": "氣象庁警報",
+    "title": "宮古島地方氣象警報・注意報解除",
+    "summary": "宮古島地方的注意報已解除。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=473000&lang=ja",
+    "alert": false
+  },
+  {
+    "date": "2026-08-25",
+    "source": "氣象庁警報",
+    "title": "八重山地區氣象警報・注意報",
+    "summary": "解除注意報。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=474000&lang=ja",
+    "alert": false
+  },
+  {
     "date": "2026-08-24",
     "source": "沖縄タイムス",
     "title": "台風18號逼近大東島　晚間恐發暴風警報",
@@ -15,24 +177,6 @@
     "summary": "非常強烈的颱風18號正向西北西移動，預計25日至27日以強勢接近沖繩地方。沖繩氣象台表示，大東島地方可能在24日夜間發出暴風警報，本島地方則預定25日午後至傍晚發表。",
     "category": "天氣警報",
     "url": "http://www.okinawatimes.co.jp/articles/-/1908092",
-    "alert": true
-  },
-  {
-    "date": "2026-08-24",
-    "source": "氣象庁警報",
-    "title": "沖繩本島地區氣象警報・注意報",
-    "summary": "沖繩本島地區在29日中午前，需注意突發強降雨與雷擊。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=471000&lang=ja",
-    "alert": true
-  },
-  {
-    "date": "2026-08-24",
-    "source": "氣象庁警報",
-    "title": "大東島地方發布氣象警報・注意報",
-    "summary": "大東島地方需留意突如其來的強降雨與雷擊。請注意天氣變化，避免在戶外逗留。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=472000&lang=ja",
     "alert": true
   },
   {
@@ -150,24 +294,6 @@
     "summary": "名桜大2年山下寧々與北部農林高2年玉城鳳真，將出戰10月在亞塞拜然舉行的世界相撲選手權大會與世界青年相撲選手權大會。14日晚間在名護市宮里公民館舉行壯行會，約150名在地居民到場激勵。",
     "category": "生活",
     "url": "http://www.okinawatimes.co.jp/articles/-/1908069",
-    "alert": false
-  },
-  {
-    "date": "2026-08-24",
-    "source": "氣象庁警報",
-    "title": "宮古島地區氣象警報・注意報",
-    "summary": "宮古島地區的注意報已解除。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=473000&lang=ja",
-    "alert": false
-  },
-  {
-    "date": "2026-08-24",
-    "source": "氣象庁警報",
-    "title": "八重山地區氣象警報・注意報",
-    "summary": "八重山地區的氣象注意報已解除。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=474000&lang=ja",
     "alert": false
   },
   {
@@ -573,141 +699,6 @@
     "summary": "出身長崎、現居北中城村的被爆二世青木容子，5日在安谷屋的工作室首次向當地居民談及父兄在廣島的被爆經歷。她也分享自己對核兵器廢絕的想法。",
     "category": "生活",
     "url": "http://www.okinawatimes.co.jp/articles/-/1906386",
-    "alert": false
-  },
-  {
-    "date": "2026-08-20",
-    "source": "沖縄タイムス",
-    "title": "沖繩20至21日受熱帶低氣壓影響有雨雷",
-    "summary": "沖繩本島目前受熱帶低氣壓影響，天氣多雲，局部有雨和雷雨。20日至21日，沖繩地區將持續出現多雲或降雨，部分地區可能伴隨雷。",
-    "category": "天氣警報",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1905798",
-    "alert": true
-  },
-  {
-    "date": "2026-08-20",
-    "source": "沖縄タイムス",
-    "title": "八重山商工堂姐妹檔奪全國高校保齡球團體女冠軍",
-    "summary": "第30屆全國高校保齡球選手權大會首日，八重山商工在團體女子賽以12局合計2239分奪冠。兩名選手大底愛咲、大底星空是堂姐妹，對站上頒獎台表達喜悅。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1905656",
-    "alert": false
-  },
-  {
-    "date": "2026-08-20",
-    "source": "沖縄タイムス",
-    "title": "在山原感受「驚奇感」的自然之美",
-    "summary": "美國海洋生物學者蕾切爾・卡森曾在著作中寫下親近自然時的喜悅，書名為《Sense of Wonder》。文章介紹這個詞意指對自然神秘與奇妙的感受，也談到持續保有這份感性的珍貴。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1905657",
-    "alert": false
-  },
-  {
-    "date": "2026-08-20",
-    "source": "沖縄タイムス",
-    "title": "【查核】「玉城デニー決定邊野古遷移」為誤傳",
-    "summary": "知事選前，SNS流傳「邊野古遷移是玉城デニー決定」的說法，但內容為錯誤資訊。報導指出，邊野古新基地建設是由自民黨與民主黨為主的政權推進，並非玉城氏決定。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1905655",
-    "alert": false
-  },
-  {
-    "date": "2026-08-20",
-    "source": "沖縄タイムス",
-    "title": "美軍揚陸艦火災調查：判定為人為因素",
-    "summary": "美軍調查指出，去年在沖繩縣宇流麻市白灘附近發生的揚陸艦「紐奧良」火災，原因屬人為因素。報告列出縱火、吸菸與危險物保管等可能原因，但未特定是哪一項。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1905653",
-    "alert": false
-  },
-  {
-    "date": "2026-08-20",
-    "source": "沖縄タイムス",
-    "title": "社論：應遏止那霸機場軍事利用",
-    "summary": "市民團體為讓外界了解軍民共用的那霸機場現況，舉辦了題為「那霸機場很危險！」的座談會。兩天後，航空自衛隊那霸基地的F15戰鬥機在那霸機場第二跑道降落時發生主起落架折損，機身無法移動。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1905638",
-    "alert": false
-  },
-  {
-    "date": "2026-08-20",
-    "source": "沖縄タイムス",
-    "title": "美艦火災報告：幹部頻繁更迭恐致業務混亂",
-    "summary": "美軍登陸艦「紐奧良」在沖繩宇流麻市外海起火的調查報告指出，艦上幹部頻繁交接可能是原因之一。火災前一個月，副長與補給官曾因不祥事一度被更迭。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1905711",
-    "alert": false
-  },
-  {
-    "date": "2026-08-20",
-    "source": "沖縄タイムス",
-    "title": "沖繩縣放棄公布仇恨言論者姓名",
-    "summary": "沖繩縣原依據防止歧視條例，推進公布仇恨言論發言者姓名的程序，但中途放棄。據悉，這是因為發言者透過抗議與提訴要求不要公開而被接受。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1905699",
-    "alert": false
-  },
-  {
-    "date": "2026-08-20",
-    "source": "沖縄タイムス",
-    "title": "沖繩4隊晉級全國舞蹈大賽",
-    "summary": "第14屆全日本小中學生舞蹈大賽九州大會18日在福岡舉行。獲金賞的12隊中，小學生部門4隊及中學生部門4隊取得10月3日東京全國大會資格。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1905693",
-    "alert": false
-  },
-  {
-    "date": "2026-08-20",
-    "source": "沖縄タイムス",
-    "title": "沖繩4家巴士公司締結協定　研議共同經營",
-    "summary": "琉球巴士交通、那覇巴士、沖繩巴士與東陽巴士簽署連攜協定，目標是維持縣內巴士網並改善經營。若獲國家認可，將可協調班次、路線與運費。",
-    "category": "交通",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1905678",
-    "alert": false
-  },
-  {
-    "date": "2026-08-20",
-    "source": "沖縄タイムス",
-    "title": "沖繩知事選公開討論會聚焦青年政策",
-    "summary": "日本青年會議所沖繩地區沖繩區塊協議會19日在糸滿市舉辦「縣知事選2026年青年公開討論會」。三位候選人就年輕人相關政策發表看法，包括加薪與住宿稅等議題。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1905659",
-    "alert": false
-  },
-  {
-    "date": "2026-08-20",
-    "source": "沖縄タイムス",
-    "title": "南城玉城盛明示範籠編技藝",
-    "summary": "南城市大里村高齢者健康センター的稻福區迷你日活動中，90歲的玉城盛明於7月30日示範籠編。玉城表示，他在中學時期觀察籠子後自學編法，並曾將籠子帶到糸滿販售。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1905627",
-    "alert": false
-  },
-  {
-    "date": "2026-08-20",
-    "source": "沖縄タイムス",
-    "title": "楚邊朝市受長者歡迎，成交流樂園",
-    "summary": "讀谷村楚邊自治會每週四舉辦朝市「楚邊ゆんたく商店」，深受當地長者歡迎。因附近商店陸續歇業、外出採買不便，朝市於4年前開始，讓長者能購物並與熟人聊天。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1905610",
-    "alert": false
-  },
-  {
-    "date": "2026-08-20",
-    "source": "沖縄タイムス",
-    "title": "青春躍動　名護市青年Eisa祭盛大登場",
-    "summary": "第36屆名護市青年Eisa祭於16日在21世紀之森公園野外舞台舉行。市內外青年會與幼兒園等10個團體演出，在晴朗天氣下吸引滿場觀眾。",
-    "category": "觀光",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1905598",
-    "alert": false
-  },
-  {
-    "date": "2026-08-20",
-    "source": "沖縄タイムス",
-    "title": "數量占優　小堀進球助沖繩SV晉級天皇杯",
-    "summary": "沖繩SV在天皇杯首戰中，於延長賽以2比1擊敗J3北九州。球隊全場射門21次，明顯多於對手的8次，並在上半場先取得領先。",
-    "category": "觀光",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1905724",
     "alert": false
   }
 ]
