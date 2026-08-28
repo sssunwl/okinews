@@ -1,5 +1,176 @@
 [
   {
+    "date": "2026-08-28",
+    "source": "氣象庁警報",
+    "title": "沖繩本島地方氣象警報・注意報",
+    "summary": "沖繩本島地方在29日中午前，需留意突發強降雨與雷擊。請注意天氣變化，外出時提高警覺。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=471000&lang=ja",
+    "alert": true
+  },
+  {
+    "date": "2026-08-28",
+    "source": "氣象庁警報",
+    "title": "大東島地區氣象警報與注意報",
+    "summary": "大東島地區需留意突如其來的強降雨與雷擊。請提高警覺，注意天氣變化。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=472000&lang=ja",
+    "alert": true
+  },
+  {
+    "date": "2026-08-28",
+    "source": "沖縄タイムス",
+    "title": "那霸舉行祈求繁榮的拔河豐年祭",
+    "summary": "8月，為祈求地區繁榮與五穀豐收，那霸市內各地舉辦豐年祭。上間、真嘉比、小禮等地居民分成東西兩方進行拔河，並以旗頭、道具巡遊和對抗活動炒熱氣氛。",
+    "category": "觀光",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1911363",
+    "alert": false
+  },
+  {
+    "date": "2026-08-28",
+    "source": "沖縄タイムス",
+    "title": "沖繩都市單軌電車全線恢復運行",
+    "summary": "沖繩都市單軌電車於28日中午因壺川至旭橋間發現飛來物而一度全線停駛。清除飛來物後，已於下午2時10分左右恢復全線運行。",
+    "category": "交通",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1911948",
+    "alert": false
+  },
+  {
+    "date": "2026-08-28",
+    "source": "沖縄タイムス",
+    "title": "終戰日談和平重要性　那霸首里大名舉辦和平講座",
+    "summary": "那霸市首里大名町的體操社團在終戰日舉辦和平講話，邀請沖繩國際大學名譽教授石原昌家演講。內容提到學習「和平之礎」建立的經緯。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1911406",
+    "alert": false
+  },
+  {
+    "date": "2026-08-28",
+    "source": "沖縄タイムス",
+    "title": "下地幹郎放棄參選後 自民與其達成政策協議",
+    "summary": "自民黨幹事長鈴木俊一表示，與已取消參選沖繩縣知事選的下地幹郎之間的政策合意，並非有意繞過地方黨部決定。他是在黨本部回答記者提問時作出此說明。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1911962",
+    "alert": false
+  },
+  {
+    "date": "2026-08-28",
+    "source": "沖縄タイムス",
+    "title": "沖繩選手助日本奪世界大師賽400公尺接力金牌",
+    "summary": "在韓國大邱舉行的世界大師田徑錦標賽中，沖繩縣出身選手參與的400公尺接力為日本隊奪牌作出貢獻。男子55至59歲組決賽中，譜久里武擔任最後一棒，助日本隊以47秒60奪冠。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1911493",
+    "alert": false
+  },
+  {
+    "date": "2026-08-28",
+    "source": "沖縄タイムス",
+    "title": "銀天街老字號惣菜店三幸31日歇業",
+    "summary": "沖繩市銀天街經營43年的「そうざいの店 三幸」將於31日結束營業。店內的卡塔哈蘭布與黑糖炸甜甜圈等名物長年受到當地居民喜愛。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1910469",
+    "alert": false
+  },
+  {
+    "date": "2026-08-28",
+    "source": "沖縄タイムス",
+    "title": "［我們家的偶像］膽小又調皮的男孩",
+    "summary": "11個月大的比熊貴賓犬「じりん」是新田さやか一家的一員。牠膽小、愛撒嬌也愛哭，但一家人都覺得牠可愛又珍貴。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1911415",
+    "alert": false
+  },
+  {
+    "date": "2026-08-28",
+    "source": "沖縄タイムス",
+    "title": "［我們家的偶像］感情好姊妹",
+    "summary": "4歲的しずく與かえで是六兄妹中的小妹妹，性格不同卻感情很好。飼主表示，她們是家中可愛又惹人憐愛的寵物。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1911414",
+    "alert": false
+  },
+  {
+    "date": "2026-08-28",
+    "source": "沖縄タイムス",
+    "title": "宜野灣市議選特設網站公開",
+    "summary": "沖繩時報27日公開宜野灣市議選特設網站。網站整理候選人照片、簡介、政治立場與重要政策回答，也可查詢過去開票結果與投票率。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1911526",
+    "alert": false
+  },
+  {
+    "date": "2026-08-28",
+    "source": "沖縄タイムス",
+    "title": "暴風警報下沖繩巴士與單軌仍部分運行",
+    "summary": "台風18號接近沖繩本島期間，氣象廳發布暴風警報，但路線巴士與單軌電車除部分班次外仍持續運行。業者會綜合現場狀況與民間資訊，判斷是否會持續出現平均風速25公尺以上的強風。",
+    "category": "交通",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1911501",
+    "alert": false
+  },
+  {
+    "date": "2026-08-28",
+    "source": "沖縄タイムス",
+    "title": "下地幹郎撤回參選沖繩知事選",
+    "summary": "下地幹郎與自民黨達成政策協議後，取消參選沖繩縣知事選。鈴木宗男表示，曾受黨本部請託並向下地氏進行勸說。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1911283",
+    "alert": false
+  },
+  {
+    "date": "2026-08-28",
+    "source": "沖縄タイムス",
+    "title": "沖繩女孩隊全國亞軍　先制仍遭逆轉落敗",
+    "summary": "女子學童棒球NPB Girls Tournament 2026全國大會決賽，沖繩代表沖繩女孩隊以1比5敗給大分女孩隊，獲得亞軍。沖繩女孩隊在三局上先得1分，但之後被對手逆轉。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1911462",
+    "alert": false
+  },
+  {
+    "date": "2026-08-28",
+    "source": "沖縄タイムス",
+    "title": "波之上SS全國青少年水球奪第4名",
+    "summary": "第49屆全國JOC青少年奧運杯夏季水球賽在京都舉行，波之上SS在15歲以下男子組獲得第4名。球隊先在準決賽與季軍戰接連惜敗，富山雄斗獲選優秀選手。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1911464",
+    "alert": false
+  },
+  {
+    "date": "2026-08-28",
+    "source": "沖縄タイムス",
+    "title": "首里站附近咖哩店主是創作歌手",
+    "summary": "那霸市首里汀良町的咖哩店「穀雨Curry」由52歲的創作歌手鈴木大司經營。鈴木因喜愛香料的深奧，並把長年持續的音樂活動與餐飲一起作為事業主軸，於2024年開店。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1911393",
+    "alert": false
+  },
+  {
+    "date": "2026-08-28",
+    "source": "沖縄タイムス",
+    "title": "致琉球國王與王妃：公開選出大會",
+    "summary": "本篇提到上月在タイムスホール舉辦「首里城復興祭 國王・王妃 公開選出大會」。活動採公開徵選方式，由審查決定，國王與王妃的報名人數都創下歷來最多。",
+    "category": "觀光",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1911499",
+    "alert": false
+  },
+  {
+    "date": "2026-08-28",
+    "source": "氣象庁警報",
+    "title": "宮古島地方氣象警報・注意報解除",
+    "summary": "宮古島地區的氣象注意報已解除。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=473000&lang=ja",
+    "alert": false
+  },
+  {
+    "date": "2026-08-28",
+    "source": "氣象庁警報",
+    "title": "八重山地區氣象注意報解除",
+    "summary": "八重山地區的氣象注意報已解除。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=474000&lang=ja",
+    "alert": false
+  },
+  {
     "date": "2026-08-27",
     "source": "沖縄タイムス",
     "title": "颱風影響　沖繩知事選海報看板無法如期設置",
@@ -15,15 +186,6 @@
     "summary": "受台風18號影響，沖繩本島北部在暴風警報解除後，仍有部分地區停電持續。國頭村安田區一戶人家停電約14小時，居民對接連來襲的颱風感到無奈。",
     "category": "天氣警報",
     "url": "http://www.okinawatimes.co.jp/articles/-/1910701",
-    "alert": true
-  },
-  {
-    "date": "2026-08-27",
-    "source": "氣象庁警報",
-    "title": "大東島地區氣象警報與注意報",
-    "summary": "大東島地區需注意突然出現的強降雨與雷擊。請留意天氣變化並提高警覺。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=472000&lang=ja",
     "alert": true
   },
   {
@@ -141,33 +303,6 @@
     "summary": "9月13日投開票的沖繩縣知事選，另有4名未獲政黨支援的新人表態參選。其一為公司代表比嘉隆（49歲），主張停止新冠疫苗並建立後遺症患者救濟制度。",
     "category": "生活",
     "url": "http://www.okinawatimes.co.jp/articles/-/1910486",
-    "alert": false
-  },
-  {
-    "date": "2026-08-27",
-    "source": "氣象庁警報",
-    "title": "沖繩本島留意突發強降雨與雷擊",
-    "summary": "沖繩本島地區在29日中午前，需注意突發強降雨與雷擊。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=471000&lang=ja",
-    "alert": false
-  },
-  {
-    "date": "2026-08-27",
-    "source": "氣象庁警報",
-    "title": "宮古島地方氣象警報・注意報解除",
-    "summary": "宮古島地方的注意報已解除。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=473000&lang=ja",
-    "alert": false
-  },
-  {
-    "date": "2026-08-27",
-    "source": "氣象庁警報",
-    "title": "八重山地區氣象警報・注意報",
-    "summary": "八重山地區的注意報已解除。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=474000&lang=ja",
     "alert": false
   },
   {
@@ -564,141 +699,6 @@
     "summary": "名桜大2年山下寧々與北部農林高2年玉城鳳真，將出戰10月在亞塞拜然舉行的世界相撲選手權大會與世界青年相撲選手權大會。14日晚間在名護市宮里公民館舉行壯行會，約150名在地居民到場激勵。",
     "category": "生活",
     "url": "http://www.okinawatimes.co.jp/articles/-/1908069",
-    "alert": false
-  },
-  {
-    "date": "2026-08-23",
-    "source": "沖縄タイムス",
-    "title": "宮古島豪雨致5車受困、道路積水",
-    "summary": "宮古島市22日凌晨到早上降下大雨，當地多處道路積水。警方與消防表示，5輛車在淹水道路上一度受困。",
-    "category": "天氣警報",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1907694",
-    "alert": true
-  },
-  {
-    "date": "2026-08-23",
-    "source": "沖縄タイムス",
-    "title": "三颱同時生成　颱風18號恐影響沖繩",
-    "summary": "氣象廳表示，強烈颱風18號正朝西北方移動，中心氣壓950百帕，最大風速40公尺。預估大東島地區25日、沖繩本島地區26日也可能進入暴風圈。",
-    "category": "天氣警報",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1907696",
-    "alert": true
-  },
-  {
-    "date": "2026-08-23",
-    "source": "沖縄タイムス",
-    "title": "宮古島24小時豪雨301毫米　八重山恐有線狀降水帶",
-    "summary": "宮古島地方與石垣島地方受熱帶低氣壓和颱風周邊暖濕空氣影響，22日出現非常猛烈的雨勢。宮古島市城邊新城24小時雨量達301.5毫米，市內多處道路積水、車輛受困，氣象台呼籲注意土石災害。",
-    "category": "天氣警報",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1907659",
-    "alert": true
-  },
-  {
-    "date": "2026-08-23",
-    "source": "沖縄タイムス",
-    "title": "玉城知事舉行總決起大會爭取連任",
-    "summary": "玉城デニー氏22日在宜野灣市舉行知事選總決起大會。他強調自己在疫情應對與兒童貧困對策等方面的8年實績。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1907599",
-    "alert": false
-  },
-  {
-    "date": "2026-08-23",
-    "source": "沖縄タイムス",
-    "title": "「對馬丸」沈沒事件82週年 355人參加慰靈祭",
-    "summary": "疎開船「對馬丸」遭美軍魚雷攻擊沉沒、約1500人罹難滿82年。22日於那霸市若狹「小櫻之塔」舉行慰靈祭，遺族與倖存者等355人參列追悼。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1907658",
-    "alert": false
-  },
-  {
-    "date": "2026-08-23",
-    "source": "沖縄タイムス",
-    "title": "那霸出身高中生開發陪伴母親吃飯App，MIT賽事獲獎",
-    "summary": "那霸市出身、就讀關西創價高中二年級的幸地かれん，為了減少獨居沖繩母親的孤食，開發了名為「コキョウ」的應用程式。她在7月參加美國麻省理工學院主辦的大會，獲得「Design Excellence Award」。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1907657",
-    "alert": false
-  },
-  {
-    "date": "2026-08-23",
-    "source": "沖縄タイムス",
-    "title": "《大統領のケーキ》：戰時中的孩子們",
-    "summary": "故事背景是1990年代的伊拉克，戰爭造成糧食不足，人們生活困苦。學校為慶祝大統領生日，抽中的9歲少女被指派負責做「大統領的蛋糕」。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1906340",
-    "alert": false
-  },
-  {
-    "date": "2026-08-23",
-    "source": "沖縄タイムス",
-    "title": "沖繩知事選支持基盤：古謝玄太大勝玉城デニー",
-    "summary": "沖繩知事選前，國政政黨已決定支持現任玉城デニー與新人古謝玄太。以最近一次衆院選比例代表的縣內政黨得票來看，支持古謝氏的5黨合計，約為支持玉城氏的3倍。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1907598",
-    "alert": false
-  },
-  {
-    "date": "2026-08-23",
-    "source": "沖縄タイムス",
-    "title": "美國制裁ICC所長 日本應要求撤回",
-    "summary": "美國川普政府將國際刑事法院（ICC）所長赤根智子等2人列為制裁對象。社論批評此舉是大國濫權，主張應立即撤回。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1907607",
-    "alert": false
-  },
-  {
-    "date": "2026-08-23",
-    "source": "沖縄タイムス",
-    "title": "堀尾裕子：以機內餐傳遞沖繩味道",
-    "summary": "作者回憶自己對盂蘭盆節的原風景，是祖父母家中的佛間與祭祖景象。內容主要描寫童年時在大人談話聲中，感受迎接祖先回家的氛圍。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1907718",
-    "alert": false
-  },
-  {
-    "date": "2026-08-23",
-    "source": "沖縄タイムス",
-    "title": "電子身分確認帶動非接觸交易擴大",
-    "summary": "隨著數位技術普及，金融機構的非對面交易持續擴大。開戶與貸款契約等服務，已可從申請到簽約在線上完成。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1907709",
-    "alert": false
-  },
-  {
-    "date": "2026-08-23",
-    "source": "沖縄タイムス",
-    "title": "知事選前看板與旗幟陸續出現引發爭議",
-    "summary": "沖繩知事選前，候選人預定者的旗幟陸續被掛出，因涉及公職選舉法禁止事項，在社群上引發討論。文中也提到有將其他議員照片並列成「2連」旗幟的做法，並向縣選管與專家確認是否有問題。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1907693",
-    "alert": false
-  },
-  {
-    "date": "2026-08-23",
-    "source": "沖縄タイムス",
-    "title": "對馬丸沉沒82年慰靈祭　遺族含淚追思",
-    "summary": "疎開船「對馬丸」遭擊沉滿82年，22日在那霸市「小櫻之塔」舉行慰靈祭，355名遺族等出席。與會者含淚追思逝者，並誓言傳承對馬丸事件、避免戰爭重演。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1907683",
-    "alert": false
-  },
-  {
-    "date": "2026-08-23",
-    "source": "沖縄タイムス",
-    "title": "近距離差幾十公分就分出生死　比嘉義雄談戰爭記憶",
-    "summary": "1937年出生於城邊村比嘉、現宮古島市的比嘉義雄，回憶8歲時戰爭來到宮古島。當時島上常遭美軍機機槍掃射，躲在家中也可能被子彈穿透屋頂，難以完全防禦。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1907674",
-    "alert": false
-  },
-  {
-    "date": "2026-08-23",
-    "source": "沖縄タイムス",
-    "title": "宮古島八重干瀬擬統一使用規則",
-    "summary": "宮古島的海洋業者團體成立八重干瀬委員會，著手統一八重干瀬的利用規則。此舉旨在兼顧自然保護與安全，並因應未來業者增加的情況。",
-    "category": "觀光",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1907589",
     "alert": false
   }
 ]
