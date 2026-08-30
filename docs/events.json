@@ -1134,21 +1134,6 @@
     "official_url": "https://www.okzm.jp/event/5131/"
   },
   {
-    "name": "「第22回 ジュニアゴルフ・カヌチャカップ」開催【8/29(土)・30(日)】",
-    "name_zh": "「第22屆青少年高爾夫卡努查杯」舉行[8/29(週六)、30(週日)]",
-    "date_start": "2026-08-29",
-    "date_end": "2026-08-30",
-    "url": "https://www.okinawastory.jp/event/600022351",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": "",
-    "image": "https://www.kanucha.jp/document/uploads/2025/06/20th-Junior-Golf-Kanucha-Cup01.jpg",
-    "location": "カヌチャリゾート　カヌチャベイホテル＆ヴィラズ／カヌチャゴルフコース ・ 沖縄県名護市安部１５６−２",
-    "price": "有料",
-    "official_url": "https://www.kanucha.jp/information/1603726"
-  },
-  {
     "name": "「夏の続きを やんばるで」Free-Flowのハイボールとハンモックで沖縄・やんばるの夜を愉しむレイトサマーイベント",
     "name_zh": "「山原的夏天繼續」夏末活動，您可以在沖繩山原暢飲威士忌和吊床享受夜晚",
     "date_start": "2026-09-01",
@@ -2123,6 +2108,36 @@
     "category": "傳統",
     "stars": 4,
     "description": "感謝勞動節，沖繩農漁業文化底蘊深厚，島上每一件食物都是勞動的成果"
+  },
+  {
+    "name": "KAZE JETSKI Enjoy耐久 in 宮古島",
+    "name_zh": "",
+    "date_start": "2026-11-28",
+    "date_end": "2026-11-29",
+    "url": "https://www.okinawastory.jp/event/600022859",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://content2.kawasaki.com/ContentStorage/KMJ/Events/1055/acd209f6-510f-4b44-bae5-20b1549a6745.jpg?w=400",
+    "location": "宮古島市与那覇前浜ビーチ ・ 沖縄県宮古島市下地与那覇1199",
+    "price": "",
+    "official_url": "https://www.kawasaki-motors.com/ja-jp/events/1409/kazejetskienjoy%E8%80%90%E4%B9%85in%E5%AE%AE%E5%8F%A4%E5%B3%B6"
+  },
+  {
+    "name": "ヨガフェスタ琉球2026開催決定！🏝️🌺",
+    "name_zh": "",
+    "date_start": "2026-11-28",
+    "date_end": "2026-11-29",
+    "url": "https://www.okinawastory.jp/event/600022548",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "",
+    "location": "海洋博公園＆名護21世紀の森公園 ・ 沖縄県国頭郡本部町石川424",
+    "price": "",
+    "official_url": "https://www.instagram.com/yogafest_ryukyu/"
   },
   {
     "name": "今天是 ✉️ 手紙の日",
