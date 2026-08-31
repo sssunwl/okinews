@@ -1,4 +1,4 @@
-/* OKIPLAYGROUND 共用腳本：工具函式、我的行程、導覽 */
+/* OkinawaSundays 共用腳本：工具函式、我的行程、導覽 */
 (function () {
   'use strict';
 
