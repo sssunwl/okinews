@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""OKIPLAYGROUND 站台產生器。
+"""OkinawaSundays 站台產生器。
 
 把 templates/ + content/ + docs/*.json 合成多頁靜態站到 docs/。
 不依賴第三方套件，CI 只要有 Python 3.8+ 就能跑。
@@ -24,7 +24,7 @@ CONTENT = ROOT / "content"
 DOCS = ROOT / "docs"
 
 SITE_URL = os.getenv("SITE_URL", "https://sssunwl.github.io/okinews/").rstrip("/") + "/"
-SITE_NAME = "OKIPLAYGROUND 沖繩遊樂園"
+SITE_NAME = "OkinawaSundays"
 OG_IMAGE = SITE_URL + "assets/og-image.png"
 JST = timezone(timedelta(hours=9))
 
@@ -537,7 +537,7 @@ def build_home(posts, events, weather, news, months):
     ])
     render_page(
         "", main,
-        "OKIPLAYGROUND 沖繩遊樂園｜今天，在沖繩玩什麼？",
+        "OkinawaSundays｜今天，在沖繩玩什麼？",
         "沖繩天氣、每日新聞、活動年曆與旅遊攻略。整理成繁體中文，幫你快速決定今天要去哪裡。",
         active="", page_data=data,
         page_script='<script src="assets/home.js"></script>',
@@ -629,7 +629,7 @@ def build_event_pages(events):
         })
         canonical = render_page(
             "events/{}".format(slug), main,
-            "{}｜OKIPLAYGROUND".format(name),
+            "{}｜OkinawaSundays".format(name),
             (description or name)[:150],
             active="events",
         )
@@ -641,7 +641,7 @@ def build_events(events, updated_count):
     main = template("events.html")
     render_page(
         "events", main,
-        "沖繩活動年曆｜OKIPLAYGROUND",
+        "沖繩活動年曆｜OkinawaSundays",
         "沖繩祭典、花火、季節活動與文化日的年曆。可依日期、關鍵字與地區查詢，共 {} 筆資料。".format(updated_count),
         active="events",
         page_data=json_block("eventData", events),
@@ -1039,7 +1039,7 @@ def build_section(key, posts, extra_block="", show_filters=True, cards_heading="
     })
     render_page(
         key, main,
-        "{}｜OKIPLAYGROUND".format(meta["title"]),
+        "{}｜OkinawaSundays".format(meta["title"]),
         meta["lead"],
         active=key,
         page_script='<script src="../assets/section.js"></script>' if (filters or extra_block) else "",
@@ -1116,7 +1116,7 @@ def build_article(post, siblings):
     })
     return render_page(
         "{}/{}".format(post["section"], post["slug"]), main,
-        "{}｜OKIPLAYGROUND".format(post.get("title", "")),
+        "{}｜OkinawaSundays".format(post.get("title", "")),
         str(post.get("summary", "")),
         active=post["section"],
         og_type="article",
@@ -1191,7 +1191,7 @@ def build_news(news):
         '  </section>\n'
     ).format(body)
 
-    render_page("news", main, "沖繩新聞・日本大事｜OKIPLAYGROUND",
+    render_page("news", main, "沖繩新聞・日本大事｜OkinawaSundays",
                 "每日彙整沖繩在地新聞與日本重要消息的繁體中文摘要，並標出會影響旅客的交通、天氣與活動異動。",
                 active="news")
 
@@ -1331,7 +1331,7 @@ def build_month_pages(months):
         })
         canonical = render_page(
             "guide/month-{}".format(n), main,
-            "{}｜OKIPLAYGROUND".format(month.get("title", "")),
+            "{}｜OkinawaSundays".format(month.get("title", "")),
             str(month.get("blurb", "")),
             active="guide",
             page_script='<script src="../../assets/months.js"></script>',
@@ -1372,7 +1372,7 @@ def month_strip_html(months):
 def build_toolkit():
     main = template("toolkit.html")
     rates = read_json("rates.json", {})
-    render_page("toolkit", main, "旅行小抄｜OKIPLAYGROUND",
+    render_page("toolkit", main, "旅行小抄｜OkinawaSundays",
                 "沖繩旅行實用資訊：緊急電話、機場與自駕重點、匯率換算與旅遊日語。",
                 page_data=json_block("ratesData", rates),
                 page_script='<script src="../assets/toolkit.js"></script>')
