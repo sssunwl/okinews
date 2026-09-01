@@ -1,21 +1,174 @@
 [
   {
-    "date": "2026-08-31",
+    "date": "2026-09-01",
     "source": "氣象庁警報",
     "title": "沖繩本島地區氣象警報・注意報",
-    "summary": "沖繩本島地區到29日中午前，需留意突如其來的強降雨與雷擊。",
+    "summary": "沖繩本島地區在29日中午前要注意突如其來的強降雨與雷擊。請留意天氣變化並提高警覺。",
     "category": "天氣警報",
     "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=471000&lang=ja",
     "alert": true
   },
   {
-    "date": "2026-08-31",
+    "date": "2026-09-01",
     "source": "氣象庁警報",
-    "title": "大東島地區氣象警報・注意報",
-    "summary": "大東島地區需注意突發強降雨與雷擊。請留意天氣變化並提高警覺。",
+    "title": "大東島地區氣象警報與注意報",
+    "summary": "大東島地區請注意突如其來的強降雨與雷擊。",
     "category": "天氣警報",
     "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=472000&lang=ja",
     "alert": true
+  },
+  {
+    "date": "2026-09-01",
+    "source": "沖縄タイムス",
+    "title": "沖繩SV遭沼津逆轉 1比2吞開幕敗",
+    "summary": "JFL第1節中，沖繩SV在縣綜合運動公園陸上競技場以1比2遭沼津逆轉，無緣開門紅。球隊先於上半場8分鐘率先進球，但之後被追平並在下半場失分。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1914172",
+    "alert": false
+  },
+  {
+    "date": "2026-09-01",
+    "source": "沖縄タイムス",
+    "title": "酷暑影響闘牛　全島大會取消夏季舉辦",
+    "summary": "沖繩因高溫影響闘牛比賽狀況，夏季舉辦的全島闘牛大會已決定取消。報導也提到，現場在盛夏時氣溫高、觀眾感受到強烈熱氣。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1914225",
+    "alert": false
+  },
+  {
+    "date": "2026-09-01",
+    "source": "沖縄タイムス",
+    "title": "琉銀Visa簽帳卡換新設計　推3款式並送回饋",
+    "summary": "琉球銀行25日宣布，琉銀Visa簽帳卡已更新設計，共有「朱」、「紅型」、「玄」3種款式。9月1日起，新加入會員在期間內使用5次以上可獲得2000日圓回饋。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1914141",
+    "alert": false
+  },
+  {
+    "date": "2026-09-01",
+    "source": "沖縄タイムス",
+    "title": "沖繩市議選候選人名單特設網站公開",
+    "summary": "沖繩タイムス31日公開沖繩市議選特設網站，整理預定參選者的照片、簡介與各項立場。網站也提供過去開票結果和投票率供查閱。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1914189",
+    "alert": false
+  },
+  {
+    "date": "2026-09-01",
+    "source": "沖縄タイムス",
+    "title": "沖繩推小型家電免費回收再資源化實證",
+    "summary": "沖繩ヤマト運輸與宮里31日開始在浦添市進行實證事業，免費回收電腦、手機、數位相機等小型家電。回收物中的金、銀等金屬將進行再資源化。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1914244",
+    "alert": false
+  },
+  {
+    "date": "2026-09-01",
+    "source": "沖縄タイムス",
+    "title": "沖繩7月景氣維持擴大　觀光需求帶動",
+    "summary": "琉銀綜合研究所與沖銀經濟研究所公布7月縣內景況。琉銀總研指出，在旺盛觀光需求帶動下，景氣可望維持穩健，連續35個月維持「緩やかに拡大している」。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1914245",
+    "alert": false
+  },
+  {
+    "date": "2026-09-01",
+    "source": "沖縄タイムス",
+    "title": "今歸仁工廠開始榨取香檸檬",
+    "summary": "沖繩飲料製造業者沖繩Aloe於31日在今歸仁村工廠開始榨取香檸檬。工廠預計在10月達到高峰，並持續運作到11月左右。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1914247",
+    "alert": false
+  },
+  {
+    "date": "2026-09-01",
+    "source": "沖縄タイムス",
+    "title": "接連颱風重創沖繩農業　收成與出貨量減少",
+    "summary": "受接連颱風影響，沖繩縣內農作物出現收成與出貨量減少、栽植延遲等損害。今年颱風來襲頻繁，農地才剛整備又再度受災，農家面臨收入減少與修繕負擔。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1914243",
+    "alert": false
+  },
+  {
+    "date": "2026-09-01",
+    "source": "沖縄タイムス",
+    "title": "沖繩事務機器商奧基志姆新任役員體制獲通過",
+    "summary": "沖繩浦添市的事務機器販售業者奧基志姆，於31日召開臨時股東會與臨時董事會，通過新役員體制案。母公司チエル社長川居睦出任代表董事，チエル相關役員也就任奧基志姆董事。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1914249",
+    "alert": false
+  },
+  {
+    "date": "2026-09-01",
+    "source": "沖縄タイムス",
+    "title": "沖繩本島等地9月1日至2日多雲有雨",
+    "summary": "受熱帶低氣壓及可能轉為颱風的影響，沖繩本島、宮古島、八重山與大東島地區大致多雲，部分地區有雨。1日至2日各地預計仍以多雲或短暫降雨為主。",
+    "category": "天氣警報",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1914325",
+    "alert": false
+  },
+  {
+    "date": "2026-09-01",
+    "source": "沖縄タイムス",
+    "title": "那霸機場便利商店的沖繩便當受矚目",
+    "summary": "那霸機場內的便利商店陳列著多款沖繩便當，午餐時段吸引觀光客、當地民眾與機場員工排隊購買。連旅行中的孩子也對這些便當投以關注。",
+    "category": "觀光",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1914048",
+    "alert": false
+  },
+  {
+    "date": "2026-09-01",
+    "source": "沖縄タイムス",
+    "title": "陸自遭控偽裝身分蒐集個資　公益通報未受理",
+    "summary": "陸上自衛隊地方情報隊被指隱瞞身分接近市民，未經同意蒐集涉及內心的個人資訊。對此提出違反個資法的公益通報後，陸幕監理部未予受理，並稱隱匿身分屬任務範圍內。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1914200",
+    "alert": false
+  },
+  {
+    "date": "2026-09-01",
+    "source": "沖縄タイムス",
+    "title": "自然面前人類渺小",
+    "summary": "文章提到，亞洲多條主要河川源自喜馬拉雅山脈的冰河，長久以來支撐人類文明。上月，尼泊爾與中國邊境的喜馬拉雅山區發生土石流災害。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1914160",
+    "alert": false
+  },
+  {
+    "date": "2026-09-01",
+    "source": "沖縄タイムス",
+    "title": "沖繩統一地方選開跑　26市町村議選將投票",
+    "summary": "粟國村議會議員選舉於1日公告，沖繩統一地方選正式開始。26個市町村議選將於9月13日投開票，竹富町則在12日投票；截至31日，共有424人預計參選。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1914186",
+    "alert": false
+  },
+  {
+    "date": "2026-09-01",
+    "source": "沖縄タイムス",
+    "title": "下地幹郎退選　沖繩知事選戰略生變",
+    "summary": "9月13日投開票的知事選中，前眾議員下地幹郎在公告前夕撤回參選，讓主要兩名候選人的選戰策略出現變化。表示將獲下地氏支援的古謝玄太氏陣營，正摸索如何合作。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1914185",
+    "alert": false
+  },
+  {
+    "date": "2026-09-01",
+    "source": "氣象庁警報",
+    "title": "宮古島地區氣象警報・注意報",
+    "summary": "宮古島地區的注意報已解除。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=473000&lang=ja",
+    "alert": false
+  },
+  {
+    "date": "2026-09-01",
+    "source": "氣象庁警報",
+    "title": "八重山地區氣象警報・注意報解除",
+    "summary": "八重山地區的注意報已解除。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=474000&lang=ja",
+    "alert": false
   },
   {
     "date": "2026-08-31",
@@ -150,24 +303,6 @@
     "summary": "縣中學生秋季手球大賽30日舉行決賽，女子由浦添以24比16擊敗ITS・U15，睽違32年拿下第5冠。男子則由神森以36比20擊敗ネオレーヴェン沖縄，時隔3年獲得第18冠。",
     "category": "生活",
     "url": "http://www.okinawatimes.co.jp/articles/-/1913416",
-    "alert": false
-  },
-  {
-    "date": "2026-08-31",
-    "source": "氣象庁警報",
-    "title": "宮古島地方氣象警報・注意報解除",
-    "summary": "宮古島地方的氣象注意報已解除。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=473000&lang=ja",
-    "alert": false
-  },
-  {
-    "date": "2026-08-31",
-    "source": "氣象庁警報",
-    "title": "八重山地區氣象警報與注意報",
-    "summary": "八重山地區的注意報已解除。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=474000&lang=ja",
     "alert": false
   },
   {
@@ -573,141 +708,6 @@
     "summary": "本篇提到上月在タイムスホール舉辦「首里城復興祭 國王・王妃 公開選出大會」。活動採公開徵選方式，由審查決定，國王與王妃的報名人數都創下歷來最多。",
     "category": "觀光",
     "url": "http://www.okinawatimes.co.jp/articles/-/1911499",
-    "alert": false
-  },
-  {
-    "date": "2026-08-27",
-    "source": "沖縄タイムス",
-    "title": "颱風影響　沖繩知事選海報看板無法如期設置",
-    "summary": "受接近沖繩的颱風18號影響，多個自治體的知事選海報看板未能趕上在27日告示日完成設置。因適逢舊盆，施工人力也較難確保，候選人陣營對延誤表達困惑。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1910523",
-    "alert": true
-  },
-  {
-    "date": "2026-08-27",
-    "source": "沖縄タイムス",
-    "title": "台風18號影響 北部停電14小時",
-    "summary": "受台風18號影響，沖繩本島北部在暴風警報解除後，仍有部分地區停電持續。國頭村安田區一戶人家停電約14小時，居民對接連來襲的颱風感到無奈。",
-    "category": "天氣警報",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1910701",
-    "alert": true
-  },
-  {
-    "date": "2026-08-27",
-    "source": "沖縄タイムス",
-    "title": "沖繩浦添舉辦銀髮族聯合企業說明會",
-    "summary": "24日在浦添市舉辦以銀髮族為主要對象的聯合企業說明會。食品、住宿、保育等18家公司設攤，介紹事業內容與待遇。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1910420",
-    "alert": false
-  },
-  {
-    "date": "2026-08-27",
-    "source": "沖縄タイムス",
-    "title": "沖繩市胡屋・仲宗根道遊行29日登場",
-    "summary": "沖繩市胡屋・仲宗根共有會的獅子舞道遊行與演舞將於29日下午5點半舉行。隊伍將從集會所出發，沿胡屋、仲宗根町一帶巡行約1小時後返回。",
-    "category": "觀光",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1910331",
-    "alert": false
-  },
-  {
-    "date": "2026-08-27",
-    "source": "沖縄タイムス",
-    "title": "沖繩知事選告示 6人參選",
-    "summary": "第15回沖繩縣知事選於27日告示，創下過去最多的6人參選，17天選戰正式開始。報導以時間軸整理候選人首日動向與各地活動。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1910730",
-    "alert": false
-  },
-  {
-    "date": "2026-08-27",
-    "source": "沖縄タイムス",
-    "title": "沖繩渡名喜島保育所31日將開所",
-    "summary": "渡名喜村唯一的「となき保育所」預定於31日開所。該保育所因長年難以確保保育士而未能啟用，今年已成功聘到保育士，且已有入所申請。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1910525",
-    "alert": false
-  },
-  {
-    "date": "2026-08-27",
-    "source": "沖縄タイムス",
-    "title": "屋良朝助在守禮門前宣布參選沖繩知事",
-    "summary": "沖繩縣知事選於27日公告，琉球獨立黨新人屋良朝助在那霸市首里城守禮門前發表首場演說。報導內容主要提到他認為沖繩正面臨危機。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1910864",
-    "alert": false
-  },
-  {
-    "date": "2026-08-27",
-    "source": "沖縄タイムス",
-    "title": "酒駕取締激增　新法上路後一個月超半年量",
-    "summary": "新修正道路交通法於7月21日施行後，沖繩縣內酒駕取締件數明顯增加。原文指出，施行僅一個月就已超過前半年總量。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1910526",
-    "alert": false
-  },
-  {
-    "date": "2026-08-27",
-    "source": "沖縄タイムス",
-    "title": "玉城デニー在本部町為沖繩知事選首場演說",
-    "summary": "沖繩縣知事選27日公告，現任知事玉城デニー在本部町備瀨發表首場演說。內容提到他訴求兩屆8年的政績，並表示第三任期將持續推動福祉與交通政策。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1910851",
-    "alert": false
-  },
-  {
-    "date": "2026-08-27",
-    "source": "沖縄タイムス",
-    "title": "沖繩女孩隊逆轉勝靜岡　首度闖進全國決賽",
-    "summary": "女子學童棒球NPB Girls Tournament 2026全日本大會準決賽於26日舉行，沖繩代表沖繩女孩隊以8比3逆轉擊敗靜岡東部天使少女隊。這是沖繩縣代表首次闖進決賽。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1910451",
-    "alert": false
-  },
-  {
-    "date": "2026-08-27",
-    "source": "沖縄タイムス",
-    "title": "兼島俊宣示導入手機系統 參選沖繩知事選",
-    "summary": "沖繩縣知事選27日公告後，新人兼島俊氏在縣廳記者俱樂部發表首場演說。內容提到，他主張導入手機系統，將地方聲音反映到縣政。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1910801",
-    "alert": false
-  },
-  {
-    "date": "2026-08-27",
-    "source": "沖縄タイムス",
-    "title": "下地幹郎突然撤回參選知事選",
-    "summary": "下地幹郎宣布撤回沖繩知事選參選，並在記者會上說明原因。支持者對他反覆改變方針感到失望，認為「第三的選擇」消失了。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1910440",
-    "alert": false
-  },
-  {
-    "date": "2026-08-27",
-    "source": "沖縄タイムス",
-    "title": "沖繩知事選比嘉隆主張停止新冠疫苗",
-    "summary": "沖繩縣知事選27日公告，無黨籍新人比嘉隆在宜野灣市選舉事務所前發表首場演說。內容提到他以「停止新冠疫苗」作為參選主張。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1910792",
-    "alert": false
-  },
-  {
-    "date": "2026-08-27",
-    "source": "沖縄タイムス",
-    "title": "古謝玄太在縣廳前發表知事選首場演說",
-    "summary": "沖繩縣知事選27日公告後，新人古謝玄太在那霸市縣廳前率先發表第一聲。選戰中，他將人口最多的縣都那霸列為重點選區，目標是爭取勝利。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1910738",
-    "alert": false
-  },
-  {
-    "date": "2026-08-27",
-    "source": "沖縄タイムス",
-    "title": "沖繩縣知事選 再有4名新人表態參選",
-    "summary": "9月13日投開票的沖繩縣知事選，另有4名未獲政黨支援的新人表態參選。其一為公司代表比嘉隆（49歲），主張停止新冠疫苗並建立後遺症患者救濟制度。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1910486",
     "alert": false
   }
 ]
