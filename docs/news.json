@@ -1,29 +1,182 @@
 [
   {
+    "date": "2026-09-04",
+    "source": "沖縄タイムス",
+    "title": "浦添城間未爆彈9月5日處理　9:10起交管",
+    "summary": "浦添市城間民有地發現的1發美製5吋艦砲彈，將於9月5日上午9時半進行不發彈處理。作業前自9時10分起實施避難誘導、交通規制與立入限制，預定11時半左右解除。",
+    "category": "交通",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1916688",
+    "alert": true
+  },
+  {
+    "date": "2026-09-04",
+    "source": "沖縄タイムス",
+    "title": "颱風24號路徑複雜，今恐對本島「U轉」",
+    "summary": "北西遠離中的颱風24號，4日可能轉向南下，重新接近沖繩本島地區與大東島地區。由於周邊高氣壓包圍，預料路徑複雜，且可能在沖繩附近停留較久。",
+    "category": "天氣警報",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1916682",
+    "alert": true
+  },
+  {
+    "date": "2026-09-04",
+    "source": "氣象庁警報",
+    "title": "沖繩本島地方氣象警報與注意報",
+    "summary": "沖繩本島地方在29日中午前，需留意突如其來的強降雨與雷擊。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=471000&lang=ja",
+    "alert": true
+  },
+  {
+    "date": "2026-09-04",
+    "source": "沖縄タイムス",
+    "title": "沖繩縣議補選：宇流麻市區3人參選",
+    "summary": "沖繩縣議會議員補選4日公告，宇流麻市區補1席共有3人登記參選。投開票日與知事選同為9月13日。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1916867",
+    "alert": false
+  },
+  {
+    "date": "2026-09-04",
+    "source": "沖縄タイムス",
+    "title": "沖繩最低工資將調升63日圓",
+    "summary": "沖繩地方最低賃金審議會決定，2026年度沖繩縣最低工資調升63日圓，達1086日圓。此為考量物價上漲帶來的生活負擔，漲幅為歷來第二大。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1916733",
+    "alert": false
+  },
+  {
+    "date": "2026-09-04",
+    "source": "沖縄タイムス",
+    "title": "沖繩最低工資調升63日圓",
+    "summary": "沖繩本次最低工資調升63日圓，較國家基準多7日圓，被認為是相當進一步的調升。此舉考量縣內人手不足與物價上漲，預期可帶動實質所得提升並支撐個人消費。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1916734",
+    "alert": false
+  },
+  {
+    "date": "2026-09-04",
+    "source": "沖縄タイムス",
+    "title": "「玉城德尼喊消除美軍基地」說法不正確",
+    "summary": "針對沖繩縣知事選的擴散短片，內容稱現任知事玉城德尼「必死地喊著要消除美軍基地」。事實查核指出，他並未要求美軍基地完全撤去，整體說法屬不正確。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1916694",
+    "alert": false
+  },
+  {
+    "date": "2026-09-04",
+    "source": "沖縄タイムス",
+    "title": "南風原町議會推動開放議會與報告會",
+    "summary": "南風原町議會14年前開始舉辦「議會報告會」，由議員向居民說明議會制度，推動開放議會。報導也提到各自治體在住民報告會與網路直播等做法上，推動程度不一。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1916642",
+    "alert": false
+  },
+  {
+    "date": "2026-09-04",
+    "source": "沖縄タイムス",
+    "title": "沖繩縣知事選：古謝與玉城振興政策不同",
+    "summary": "沖繩縣知事選中，新人古謝玄太與現任玉城デ尼在振興與經濟發展上主張不同。報導也整理了兩人對沖繩關係預算的看法。",
+    "category": "全國",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1916753",
+    "alert": false
+  },
+  {
+    "date": "2026-09-04",
+    "source": "沖縄タイムス",
+    "title": "部活動地域展開面臨嚴峻現實",
+    "summary": "高中棒球已有多校組隊參賽，秋季縣大會也將有6支以「連合」「合同」名義出場。背景是少子化與參與人口減少，單校維持社團運作愈來愈困難，連吹奏樂部也受衝擊。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1916711",
+    "alert": false
+  },
+  {
+    "date": "2026-09-04",
+    "source": "沖縄タイムス",
+    "title": "北谷町疑酒駕肇逃　36歲男子遭逮捕",
+    "summary": "沖繩署1日以涉嫌違反道路交通法的肇逃與危險駕駛致傷，緊急逮捕北谷町一名36歲自營業男子。男子據稱已承認犯行。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1915098",
+    "alert": false
+  },
+  {
+    "date": "2026-09-04",
+    "source": "沖縄タイムス",
+    "title": "沖繩最低時薪調升至1086日圓",
+    "summary": "沖繩地方最低賃金審議會答申，2026年度縣內最低時薪將調升63日圓至1086日圓。這一金額比中央最低賃金審議會提出的目安高7日圓。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1916707",
+    "alert": false
+  },
+  {
+    "date": "2026-09-04",
+    "source": "沖縄タイムス",
+    "title": "沖繩最低時薪擬調升至1086日圓",
+    "summary": "沖繩地方最低賃金審議會已向沖繩勞動局答申，建議2026年度最低工資調升為時薪1086日圓。較現行1023日圓增加63日圓，為歷來第二高的調升幅度。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1916661",
+    "alert": false
+  },
+  {
+    "date": "2026-09-04",
+    "source": "沖縄タイムス",
+    "title": "沖繩傳承漁具「ミーカガン」在基隆文化館展出",
+    "summary": "台灣基隆八斗子的民間展示施設「八斗子漁村文化館」展出沖繩漁民傳來的水中眼鏡「ミーカガン」等物品。館方近期重新開幕，並加強了展品說明。",
+    "category": "觀光",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1916673",
+    "alert": false
+  },
+  {
+    "date": "2026-09-04",
+    "source": "沖縄タイムス",
+    "title": "浦添中高生體驗保育　6施設學習現場工作",
+    "summary": "浦添市8月5日首次主辦「てだっこ保育キャリアチャレンジ」，讓市內中高生在6處兒童園等設施，與保育士和園兒交流並學習保育工作。活動目的是協助解決保育士人力不足。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1916654",
+    "alert": false
+  },
+  {
+    "date": "2026-09-04",
+    "source": "沖縄タイムス",
+    "title": "南城知念安座真舉行傳統「ヌーバレー」",
+    "summary": "8月28日，南城市知念安座真區舉行傳統行事「ヌーバレー」。活動中在區內6處拝所為無縁仏送行，並祈求區民健康與無病息災。",
+    "category": "生活",
+    "url": "http://www.okinawatimes.co.jp/articles/-/1916633",
+    "alert": false
+  },
+  {
+    "date": "2026-09-04",
+    "source": "氣象庁警報",
+    "title": "大東島地區氣象警報與注意報",
+    "summary": "大東島地區請留意突如其來的強降雨與雷擊。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=472000&lang=ja",
+    "alert": false
+  },
+  {
+    "date": "2026-09-04",
+    "source": "氣象庁警報",
+    "title": "宮古島地區氣象注意報解除",
+    "summary": "宮古島地區的氣象注意報已解除。此次內容僅為解除通知，未提及其他新的警報或影響。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=473000&lang=ja",
+    "alert": false
+  },
+  {
+    "date": "2026-09-04",
+    "source": "氣象庁警報",
+    "title": "八重山地區氣象警報・注意報",
+    "summary": "八重山地區的注意報已解除。",
+    "category": "天氣警報",
+    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=474000&lang=ja",
+    "alert": false
+  },
+  {
     "date": "2026-09-03",
     "source": "沖縄タイムス",
     "title": "【台風24號】可能接近沖繩本島，影響恐延長",
     "summary": "氣象廳表示，台風24號3日上午6時位於南大東島西南方約100公里海域。預計其後將北上，並在3日下午前後接近沖繩本島地方。",
     "category": "天氣警報",
     "url": "http://www.okinawatimes.co.jp/articles/-/1915933",
-    "alert": true
-  },
-  {
-    "date": "2026-09-03",
-    "source": "氣象庁警報",
-    "title": "沖繩本島地區氣象警報・注意報",
-    "summary": "沖繩本島地區在29日中午前，請注意突發強降雨與雷擊。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=471000&lang=ja",
-    "alert": true
-  },
-  {
-    "date": "2026-09-03",
-    "source": "氣象庁警報",
-    "title": "大東島地區氣象警報與注意報",
-    "summary": "大東島地區請注意突如其來的強降雨與雷擊。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=472000&lang=ja",
     "alert": true
   },
   {
@@ -150,24 +303,6 @@
     "summary": "宮古島市選舉管理委員會在大神島實施市內首次「移動期日前投票」。島民在廣場或建物下填寫候選人姓名，將票投入放在車上投票箱內。",
     "category": "生活",
     "url": "http://www.okinawatimes.co.jp/articles/-/1915849",
-    "alert": false
-  },
-  {
-    "date": "2026-09-03",
-    "source": "氣象庁警報",
-    "title": "宮古島地方氣象警報・注意報解除",
-    "summary": "宮古島地區的氣象注意報已解除。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=473000&lang=ja",
-    "alert": false
-  },
-  {
-    "date": "2026-09-03",
-    "source": "氣象庁警報",
-    "title": "八重山地方氣象警報・注意報解除",
-    "summary": "八重山地方的注意報已解除。",
-    "category": "天氣警報",
-    "url": "https://www.jma.go.jp/bosai/warning/#area_type=class20s&area_code=474000&lang=ja",
     "alert": false
   },
   {
@@ -573,141 +708,6 @@
     "summary": "縣中學生秋季手球大賽30日舉行決賽，女子由浦添以24比16擊敗ITS・U15，睽違32年拿下第5冠。男子則由神森以36比20擊敗ネオレーヴェン沖縄，時隔3年獲得第18冠。",
     "category": "生活",
     "url": "http://www.okinawatimes.co.jp/articles/-/1913416",
-    "alert": false
-  },
-  {
-    "date": "2026-08-30",
-    "source": "沖縄タイムス",
-    "title": "那霸市末吉公園首次發現八重山產大型螢火蟲幼蟲",
-    "summary": "國內最大級的螢火蟲「八重山螢火蟲」幼蟲，29日確認在那霸市末吉公園出現。這是園內首次被發現，且屬於縣指定外來種。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1912984",
-    "alert": false
-  },
-  {
-    "date": "2026-08-30",
-    "source": "沖縄タイムス",
-    "title": "宮古島集合住宅火災　43歲男子送醫後不治",
-    "summary": "宮古島市平良久貝的集合住宅28日上午發生火災，獨居在起火房間的43歲男子送醫時已無意識。宮古島署29日表示，該男子於當天下午3時10分死亡，並調查起火原因。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1912987",
-    "alert": false
-  },
-  {
-    "date": "2026-08-30",
-    "source": "沖縄タイムス",
-    "title": "花城沖繩市長所代表自民黨支部　補登2024年100萬元捐款",
-    "summary": "關於花城大輔沖繩市長擔任代表的自民黨沖繩市區第一支部，先前未記載來自沖繩縣醫師聯盟中部分部的100萬元捐款一事，花城市長29日承認該支部確實收到了這筆款項。相關內容將列入2024年政治資金收支報告書。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1912986",
-    "alert": false
-  },
-  {
-    "date": "2026-08-30",
-    "source": "沖縄タイムス",
-    "title": "突發頭暈可能是熱中症　高齡者室內夜間也要注意",
-    "summary": "沖繩酷暑下，74歲女性在夏天白天於室內沒開冷氣整理時，突然感到頭暈，休息後才緩解。報導提醒，高齡者即使在屋內或夜間，也可能出現熱中症症狀。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1912973",
-    "alert": false
-  },
-  {
-    "date": "2026-08-30",
-    "source": "沖縄タイムス",
-    "title": "琉球Asteeda連敗失去榜首",
-    "summary": "T聯賽男子賽事中，琉球Asteeda在石川金澤以1比3敗給金澤，吞下2連敗。球隊通算成績變為2勝2敗，讓出榜首位置。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1912964",
-    "alert": false
-  },
-  {
-    "date": "2026-08-30",
-    "source": "沖縄タイムス",
-    "title": "FC琉球主場開幕戰萬人應援　2球拿下本季首勝",
-    "summary": "J3第4節中，FC琉球在主場首戰以2比1擊敗相模原，拿下本季首勝。比賽中由照內利和在上半場率先破門。",
-    "category": "觀光",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1912957",
-    "alert": false
-  },
-  {
-    "date": "2026-08-30",
-    "source": "沖縄タイムス",
-    "title": "沖繩確認次世代交通願景　9月後討論具體措施",
-    "summary": "沖繩縣24日在縣廳召開「次世代交通願景沖繩」策定本部會議，與玉城知事及縣部局長共享各區域交通目標的方向。會中也確認，將於9月以後討論具體的推動措施。",
-    "category": "交通",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1912904",
-    "alert": false
-  },
-  {
-    "date": "2026-08-30",
-    "source": "沖縄タイムス",
-    "title": "8月30日至31日沖繩本島地區天氣",
-    "summary": "沖繩本島地區目前大致晴朗，但局部有短暫陣雨。30日大致晴天，31日將受氣壓谷影響，天氣轉陰並有短暫降雨。",
-    "category": "天氣警報",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1913025",
-    "alert": false
-  },
-  {
-    "date": "2026-08-30",
-    "source": "沖縄タイムス",
-    "title": "［大弦小弦］推銷照片：傳達的記者魂",
-    "summary": "文章回憶已故報導攝影家石川文洋生前談到，向週刊誌等推銷自己的照片時，即使被年輕編輯冷淡對待也不在意，重點是能否刊登。作者因此對這位知名攝影家的謙遜印象深刻。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1912956",
-    "alert": false
-  },
-  {
-    "date": "2026-08-30",
-    "source": "沖縄タイムス",
-    "title": "FC琉球主場開幕戰2比1勝相模原",
-    "summary": "FC琉球29日在沖繩縣綜合運動公園陸上競技場進行本季主場首戰，以2比1擊敗相模原，拿下首勝。球隊上半場先後由照內利和與富所悠進球奠定勝局。",
-    "category": "觀光",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1912954",
-    "alert": false
-  },
-  {
-    "date": "2026-08-30",
-    "source": "沖縄タイムス",
-    "title": "《卡本特・貝西》以爵士跨越歧視",
-    "summary": "文章介紹卡本特・貝西如何在美國奴隸制度之後，透過音樂跨越黑人與白人之間長久存在的界線。內容以電影觀點談及他對爵士樂的革新。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1911386",
-    "alert": false
-  },
-  {
-    "date": "2026-08-30",
-    "source": "沖縄タイムス",
-    "title": "沖繩縣知事選首個週末　兩候選人街頭拉票",
-    "summary": "沖繩縣知事選告示後的首個週末，29日新人古謝玄太氏與現任玉城デ尼氏在街頭熱情呼籲支持。當天氣溫超過30度，兩人持續訴求政策。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1912953",
-    "alert": false
-  },
-  {
-    "date": "2026-08-30",
-    "source": "沖縄タイムス",
-    "title": "社論：三黨合流受挫　需尋新對抗軸",
-    "summary": "中道改革連合、立憲民主黨與公明黨的三黨合流構想，已由立憲民主黨決定暫緩，並通知另外兩黨。主要原因是黨內參院議員與地方組織反對聲音多，顯示相關問題根深。",
-    "category": "全國",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1912889",
-    "alert": false
-  },
-  {
-    "date": "2026-08-30",
-    "source": "沖縄タイムス",
-    "title": "玉城盛明回憶戰時疏開與部隊駐屯",
-    "summary": "南城市大里稻福的玉城盛明回憶，戰前稻福聚落位於山上，自己曾赤腳下山上學，回程爬坡很辛苦。文中也提到日本兵曾駐屯在村內的公民館與馬場。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1912843",
-    "alert": false
-  },
-  {
-    "date": "2026-08-30",
-    "source": "沖縄タイムス",
-    "title": "城之森學童舉辦食體驗　挑戰道地塔可與麻糬",
-    "summary": "城之森學童俱樂部在うるま市安慶名舉辦食體驗活動，兩天共有超過100名孩童參加。活動中，孩子們體驗從揉麵開始製作墨西哥風塔可，也接觸異文化與老字號麻糬店的堅持。",
-    "category": "生活",
-    "url": "http://www.okinawatimes.co.jp/articles/-/1912830",
     "alert": false
   }
 ]
