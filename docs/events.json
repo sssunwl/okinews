@@ -1104,21 +1104,6 @@
     "description": "暑熱漸退，但沖繩的夏天還會延續一個多月，海水依然溫暖清澈"
   },
   {
-    "name": "えほんがつなぐ「平和へのメッセージ」",
-    "name_zh": "2026年沖繩市和平月計畫沖繩兒童之國奇觀博物館「和平的訊息」圖畫書相連",
-    "date_start": "2026-08-29",
-    "date_end": "2026-09-07",
-    "url": "https://www.okinawastory.jp/event/600022824",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": "",
-    "image": "https://www.okzm.jp/cms/wp-content/uploads/2026/08/26平和月間チラシ-scaled.jpg",
-    "location": "沖縄こどもの国ワンダーミュージアム ・ 沖縄県沖縄市胡屋5-7-1",
-    "price": "",
-    "official_url": "https://www.okzm.jp/event/5131/"
-  },
-  {
     "name": "サウナとカフェで紅芋を堪能「ご褒美紅芋スイーツナイト」",
     "name_zh": "",
     "date_start": "2026-09-01",
@@ -1162,6 +1147,21 @@
     "location": "デパートリウボウ 2F ryubo art gallery ・ 沖縄県那覇市久茂地1-1-1",
     "price": "",
     "official_url": "https://ryubo.jp/ishimine-kaori/"
+  },
+  {
+    "name": "【期間限定】映画『マッチング TRUE LOVE』タイアップメニュー",
+    "name_zh": "",
+    "date_start": "2026-09-01",
+    "date_end": "2026-10-10",
+    "url": "https://www.okinawastory.jp/event/600022830",
+    "source": "okinawastory",
+    "category": "",
+    "stars": 0,
+    "description": "",
+    "image": "https://www.cypresshotels.jp/kumejima/datas/news/images/1_020260806155121_L4uJH.jpg",
+    "location": "サイプレスリゾート久米島 ・ 沖縄県島尻郡久米島町大原８０３−１",
+    "price": "有料",
+    "official_url": "https://www.cypresshotels.jp/kumejima/news/detail.php?id=188"
   },
   {
     "name": "「夏の続きを やんばるで」Free-Flowのハイボールとハンモックで沖縄・やんばるの夜を愉しむレイトサマーイベント",
