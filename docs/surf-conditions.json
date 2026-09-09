@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-10 05:41",
+  "updated": "2026-09-10 08:03",
   "general_caution": "沖繩多數浪點是礁盤 reef break，干潮時礁石會外露，浪大時更容易割傷擦傷；離岸流、突然變大的湧浪、閃電雷雨一律先上岸。新手不建議在浪超過腰高或有經驗者都收板的時段還硬下水。",
   "spots": [
     {
@@ -12,22 +12,22 @@
       "timeline": [
         {
           "hour": "06",
-          "is_tomorrow": false,
-          "wind_speed_kn": 4.7,
-          "wind_dir_label": "北北東",
+          "is_tomorrow": true,
+          "wind_speed_kn": 1.9,
+          "wind_dir_label": "東南東",
           "wave_height_m": 0.48,
-          "tide_m": 1.88,
+          "tide_m": 1.9,
           "verdict": "caution",
           "verdict_label": "需留意",
           "verdict_reason": "週期只有 6 秒，比較像風浪，浪型不會太乾淨"
         },
         {
           "hour": "08",
-          "is_tomorrow": false,
-          "wind_speed_kn": 4.8,
-          "wind_dir_label": "北北東",
-          "wave_height_m": 0.5,
-          "tide_m": 1.34,
+          "is_tomorrow": true,
+          "wind_speed_kn": 4.4,
+          "wind_dir_label": "東南東",
+          "wave_height_m": 0.46,
+          "tide_m": 1.62,
           "verdict": "caution",
           "verdict_label": "需留意",
           "verdict_reason": "週期只有 6 秒，比較像風浪，浪型不會太乾淨"
@@ -121,21 +121,21 @@
           "verdict_reason": "週期只有 7 秒，比較像風浪，浪型不會太乾淨；目前潮位偏低，礁盤可能外露，下水／走位要注意腳下"
         }
       ],
-      "closest_timeline_hour": "06",
-      "wind_speed_kn": 5.1,
-      "wind_gust_kn": 9.1,
-      "wind_deg": 13,
+      "closest_timeline_hour": "08",
+      "wind_speed_kn": 4.8,
+      "wind_gust_kn": 10.7,
+      "wind_deg": 21,
       "wind_dir_label": "北北東",
-      "wave_height_m": 0.48,
-      "swell_height_m": 0.48,
-      "swell_period_s": 5.7,
-      "sea_wave_height_m": 0.62,
-      "tide_m": 1.84,
-      "tide_trend": "上漲",
+      "wave_height_m": 0.5,
+      "swell_height_m": 0.5,
+      "swell_period_s": 6.0,
+      "sea_wave_height_m": 0.64,
+      "tide_m": 1.34,
+      "tide_trend": "下降",
       "tide_turn": {
         "kind": "滿潮",
         "time": "06:00",
-        "hours_away": 1
+        "hours_away": -2
       },
       "verdict": "caution",
       "verdict_label": "需留意",
@@ -151,22 +151,22 @@
       "timeline": [
         {
           "hour": "06",
-          "is_tomorrow": false,
-          "wind_speed_kn": 5.1,
-          "wind_dir_label": "北北東",
-          "wave_height_m": 0.7,
-          "tide_m": 1.86,
+          "is_tomorrow": true,
+          "wind_speed_kn": 2.2,
+          "wind_dir_label": "東",
+          "wave_height_m": 0.66,
+          "tide_m": 1.88,
           "verdict": "caution",
           "verdict_label": "需留意",
-          "verdict_reason": "週期只有 5 秒，比較像風浪，浪型不會太乾淨"
+          "verdict_reason": "週期只有 6 秒，比較像風浪，浪型不會太乾淨"
         },
         {
           "hour": "08",
-          "is_tomorrow": false,
-          "wind_speed_kn": 4.6,
-          "wind_dir_label": "北北東",
-          "wave_height_m": 0.74,
-          "tide_m": 1.36,
+          "is_tomorrow": true,
+          "wind_speed_kn": 4.0,
+          "wind_dir_label": "東南東",
+          "wave_height_m": 0.64,
+          "tide_m": 1.64,
           "verdict": "caution",
           "verdict_label": "需留意",
           "verdict_reason": "週期只有 6 秒，比較像風浪，浪型不會太乾淨"
@@ -260,25 +260,25 @@
           "verdict_reason": "週期只有 6 秒，比較像風浪，浪型不會太乾淨；目前潮位偏低，礁盤可能外露，下水／走位要注意腳下"
         }
       ],
-      "closest_timeline_hour": "06",
-      "wind_speed_kn": 5.7,
-      "wind_gust_kn": 10.1,
-      "wind_deg": 16,
+      "closest_timeline_hour": "08",
+      "wind_speed_kn": 4.6,
+      "wind_gust_kn": 10.9,
+      "wind_deg": 21,
       "wind_dir_label": "北北東",
-      "wave_height_m": 0.66,
-      "swell_height_m": 0.66,
-      "swell_period_s": 5.3,
-      "sea_wave_height_m": 0.74,
-      "tide_m": 1.8,
-      "tide_trend": "上漲",
+      "wave_height_m": 0.74,
+      "swell_height_m": 0.74,
+      "swell_period_s": 5.7,
+      "sea_wave_height_m": 0.76,
+      "tide_m": 1.36,
+      "tide_trend": "下降",
       "tide_turn": {
         "kind": "滿潮",
         "time": "06:00",
-        "hours_away": 1
+        "hours_away": -2
       },
       "verdict": "caution",
       "verdict_label": "需留意",
-      "verdict_reason": "週期只有 5 秒，比較像風浪，浪型不會太乾淨"
+      "verdict_reason": "週期只有 6 秒，比較像風浪，浪型不會太乾淨"
     },
     {
       "slug": "zanpa-surf",
@@ -290,22 +290,22 @@
       "timeline": [
         {
           "hour": "06",
-          "is_tomorrow": false,
-          "wind_speed_kn": 5.1,
-          "wind_dir_label": "北北東",
-          "wave_height_m": 1.02,
-          "tide_m": 1.87,
+          "is_tomorrow": true,
+          "wind_speed_kn": 2.0,
+          "wind_dir_label": "東南東",
+          "wave_height_m": 0.96,
+          "tide_m": 1.89,
           "verdict": "caution",
           "verdict_label": "需留意",
           "verdict_reason": "週期只有 6 秒，比較像風浪，浪型不會太乾淨"
         },
         {
           "hour": "08",
-          "is_tomorrow": false,
-          "wind_speed_kn": 4.8,
-          "wind_dir_label": "北北東",
-          "wave_height_m": 1.08,
-          "tide_m": 1.36,
+          "is_tomorrow": true,
+          "wind_speed_kn": 4.6,
+          "wind_dir_label": "東南東",
+          "wave_height_m": 0.92,
+          "tide_m": 1.64,
           "verdict": "caution",
           "verdict_label": "需留意",
           "verdict_reason": "週期只有 6 秒，比較像風浪，浪型不會太乾淨"
@@ -399,21 +399,21 @@
           "verdict_reason": "週期只有 7 秒，比較像風浪，浪型不會太乾淨；目前潮位偏低，礁盤可能外露，下水／走位要注意腳下"
         }
       ],
-      "closest_timeline_hour": "06",
-      "wind_speed_kn": 5.3,
-      "wind_gust_kn": 9.5,
-      "wind_deg": 15,
+      "closest_timeline_hour": "08",
+      "wind_speed_kn": 4.8,
+      "wind_gust_kn": 10.9,
+      "wind_deg": 19,
       "wind_dir_label": "北北東",
-      "wave_height_m": 1.0,
-      "swell_height_m": 1.0,
-      "swell_period_s": 5.9,
-      "sea_wave_height_m": 1.08,
-      "tide_m": 1.81,
-      "tide_trend": "上漲",
+      "wave_height_m": 1.08,
+      "swell_height_m": 1.08,
+      "swell_period_s": 6.5,
+      "sea_wave_height_m": 1.14,
+      "tide_m": 1.36,
+      "tide_trend": "下降",
       "tide_turn": {
         "kind": "滿潮",
         "time": "06:00",
-        "hours_away": 1
+        "hours_away": -2
       },
       "verdict": "caution",
       "verdict_label": "需留意",
