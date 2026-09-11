@@ -1104,21 +1104,6 @@
     "description": "暑熱漸退，但沖繩的夏天還會延續一個多月，海水依然溫暖清澈"
   },
   {
-    "name": "琉球舞踊と琉装体験を楽しめる！9月・10月毎週土曜日およびシルバーウィーク（9/20～22）に開催♪",
-    "name_zh": "",
-    "date_start": "2026-09-05",
-    "date_end": "2026-10-31",
-    "url": "https://www.okinawastory.jp/event/600022984",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": "",
-    "image": "https://s3.ap-northeast-1.amazonaws.com/jp.nnear.upload/1788419696812_琉球舞踊と琉装体験（本部グリーンパークホテル）.jpg",
-    "location": "本部グリーンパークホテル＆ゴルフ場 ・ 沖縄県国頭郡本部町古島４０４",
-    "price": "有料",
-    "official_url": "https://www.motobu-green.com/news/20260820.html"
-  },
-  {
     "name": "クイナの日ヤンバルクイナ月間「絵本「17ひきのマングース」絵本原画展」",
     "name_zh": "",
     "date_start": "2026-09-05",
@@ -1535,7 +1520,7 @@
     "official_url": "https://okimu.jp/event/1786676330/"
   },
   {
-    "name": "国際レッサーパンダデー2026 9/19-9/23",
+    "name": "国際レッサーパンダデー2026",
     "name_zh": "",
     "date_start": "2026-09-19",
     "date_end": "2026-09-28",
@@ -1580,7 +1565,7 @@
     "official_url": "https://www.bios-hill.co.jp/"
   },
   {
-    "name": "ちゃーがんじゅーウィーク 9/19-9/23",
+    "name": "ちゃーがんじゅーウィーク",
     "name_zh": "",
     "date_start": "2026-09-19",
     "date_end": "2026-09-23",
@@ -1595,7 +1580,7 @@
     "official_url": "https://www.neopark.co.jp/topics/34743/"
   },
   {
-    "name": "【9/19～23】おきみゅーの秋まつり!! 2026",
+    "name": "おきみゅーの秋まつり!! 2026",
     "name_zh": "",
     "date_start": "2026-09-19",
     "date_end": "2026-09-23",
@@ -1670,7 +1655,7 @@
     "official_url": "https://dorigin-www.ashibinaa.com/news_detail.html?code=1632"
   },
   {
-    "name": "美術館コレクション展　2026.9.19－2027.3.28",
+    "name": "美術館コレクション展",
     "name_zh": "",
     "date_start": "2026-09-19",
     "date_end": "2027-03-28",
