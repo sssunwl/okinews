@@ -1104,51 +1104,6 @@
     "description": "暑熱漸退，但沖繩的夏天還會延續一個多月，海水依然溫暖清澈"
   },
   {
-    "name": "クイナの日ヤンバルクイナ月間「絵本「17ひきのマングース」絵本原画展」",
-    "name_zh": "",
-    "date_start": "2026-09-05",
-    "date_end": "2026-10-04",
-    "url": "https://www.okinawastory.jp/event/600022948",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": "",
-    "image": "https://www.okzm.jp/cms/wp-content/uploads/2026/08/%E7%B5%B5%E6%9C%AC%E5%8E%9F%E7%94%BB%E5%B1%95%E3%80%8C17%E5%8C%B9%E3%81%AE%E3%83%9E%E3%83%B3%E3%82%B0%E3%83%BC%E3%82%B9%E3%80%8D%E3%83%9D%E3%82%B9%E3%82%BF%E3%83%BC-723x1024.jpg",
-    "location": "沖縄こどもの国　ニホンイヌワシ舎展示ギャラリー（里山の迷宮エリア） ・ 沖縄県沖縄市胡屋5-7-1",
-    "price": "",
-    "official_url": "https://www.okzm.jp/event/5164/"
-  },
-  {
-    "name": "土日祝日限定 本格中華ランチビュッフェ「飲茶×薬膳フェア」",
-    "name_zh": "9/5~11/29 正宗中式自助午餐「點心x藥禪」僅限週六、週日及假日",
-    "date_start": "2026-09-05",
-    "date_end": "2026-11-29",
-    "url": "https://www.okinawastory.jp/event/600022818",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": "",
-    "image": "https://s3.ap-northeast-1.amazonaws.com/jp.nnear.upload/1787050093501_800x533(2).jpg",
-    "location": "ホテルゆがふいんおきなわ ・ 沖縄県名護市宮里４５３−１ 2階",
-    "price": "有料",
-    "official_url": "https://www.yugaf.com/topics/detail.php?id=475"
-  },
-  {
-    "name": "ふわぐさ ナゴパイナップルパーク",
-    "name_zh": "富和草名護鳳梨園",
-    "date_start": "2026-09-05",
-    "date_end": "2026-09-30",
-    "url": "https://www.okinawastory.jp/event/600022784",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": "",
-    "image": "https://estream-store.com/lp/FUWAGUSA_pineapple/img/logo.webp",
-    "location": "ナゴパイナップルパーク ・ 沖縄県名護市為又１１９５",
-    "price": "",
-    "official_url": "https://estream-store.com/lp/FUWAGUSA_pineapple/"
-  },
-  {
     "name": "令和８年度 糸満大綱引",
     "name_zh": "",
     "date_start": "2026-09-06",
@@ -1280,21 +1235,6 @@
     "official_url": "https://ryubofoodhall.jp/7342/"
   },
   {
-    "name": "大宜味村の手しごと《いぎみてぃぐまIN 那覇》",
-    "name_zh": "",
-    "date_start": "2026-09-11",
-    "date_end": "2026-09-12",
-    "url": "https://www.okinawastory.jp/event/600022963",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": "",
-    "image": "",
-    "location": "沖縄タイムスビル 1F / 2F ・ 沖縄県那覇市久茂地２丁目２−２",
-    "price": "",
-    "official_url": "https://www.instagram.com/igimitiguma/"
-  },
-  {
     "name": "染谷聡 個展「Relational Horizon -片身替わりの地平-」",
     "name_zh": "",
     "date_start": "2026-09-11",
@@ -1308,21 +1248,6 @@
     "location": "WALL_okinawa ・ 沖縄県中頭郡読谷村瀬名波５７１−１",
     "price": "免費",
     "official_url": "https://avex.jp/wall/exhibition/881/"
-  },
-  {
-    "name": "沖縄フリーダイビングカップ2026 石垣大会",
-    "name_zh": "沖繩自由潛水盃2026石垣島錦標賽（9/11-12）",
-    "date_start": "2026-09-11",
-    "date_end": "2026-09-12",
-    "url": "https://www.okinawastory.jp/event/600022296",
-    "source": "okinawastory",
-    "category": "",
-    "stars": 0,
-    "description": "",
-    "image": "",
-    "location": "大崎沖合または名蔵沖合 ・ 沖縄県石垣市名蔵",
-    "price": "有料",
-    "official_url": "https://www.instagram.com/p/DYXLDKCNVe6/"
   },
   {
     "name": "カフェ工房×ふしぎラボ 「アガラサーふぅふぅケーキ」",
